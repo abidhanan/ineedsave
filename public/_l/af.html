@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="af" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Laai video's, foto's en oudio van TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn en honderde ander webwerwe af.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Laai video's, foto's en oudio van TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn en honderde ander webwerwe af.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Slaan oor na inhoud</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Hoofnavigasie">
+        <a href="#cara" data-i18n="nav.how">Hoe om dit te gebruik</a>
+        <a href="#platform" data-i18n="nav.platforms">Platforms</a>
+        <a href="#faq" data-i18n="nav.faq">Gereelde vrae</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Verander taal: Afrikaans">
+        <span class="lang-flag" aria-hidden="true">🇿🇦</span>
+        <span class="lang-code">AF</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Laai video's, foto's en oudio van enige sosiale media af</h1>
+        <p class="lead" data-i18n="hero.lead">Plak 'n skakel van TikTok, Instagram, Facebook, X, Pinterest en meer. Kies 'n gehalte en stoor dit direk op jou toestel.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Skakel na plasing of video</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Plak 'n skakel hier…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Plak</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Vee skakel uit">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Laai af</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Voorbeelde van ondersteunde platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Hoe om af te laai</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Kopieer die skakel</h3>
+            <p data-i18n-html="how.step1.text">Maak die plasing in die app oop, tik op <strong>Deel</strong> en kies dan <strong>Kopieer skakel</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Plak dit hier</h3>
+            <p data-i18n-html="how.step2.text">Plak die skakel in die blokkie hierbo en tik dan op <strong>Laai af</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Kies en stoor</h3>
+            <p data-i18n="how.step3.text">Kies video, MP3-oudio of foto in die gehalte wat jy wil hê.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Ondersteunde platforms</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Video's, foto's en oudio van honderde webwerwe. Party van die gewildstes:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Gereelde vrae</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Is I Need Save gratis?</summary>
+            <p data-i18n-html="faq.a1">Ja, heeltemal gratis. Geen registrasie, aanmelding of app nodig nie.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Waar word my lêers gestoor?</summary>
+            <p data-i18n-html="faq.a2">Op Android en rekenaars gaan lêers na die <strong>Aflaaie</strong>-vouer. Op iPhone en iPad (Safari) word hulle in die <strong>Lêers</strong>-app → <strong>Aflaaie</strong> gestoor. Van daar af kan jy hulle met die Deel-knoppie in Foto's stoor.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Hoekom kan sommige video's nie afgelaai word nie?</summary>
+            <p data-i18n-html="faq.a3">Ons bediener kan nie by private inhoud, inhoud wat aanmelding vereis of inhoud met streekbeperkings uitkom nie. Maak seker die plasing is publiek en probeer dan weer.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Hoe laai ek MP3 af?</summary>
+            <p data-i18n-html="faq.a4">Nadat die skakel verwerk is, kies die <strong>MP3</strong>-opsie onder Oudio. Die klank word uit die video gehaal en na 192 kbps-MP3 omgeskakel.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Het TikTok-video's 'n watermerk?</summary>
+            <p data-i18n-html="faq.a5">Ons verkies altyd die weergawe sonder 'n watermerk as dit beskikbaar is. Opsies met 'n watermerk is gemerk as <strong>Watermerk</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Word my lêers op julle bediener gestoor?</summary>
+            <p data-i18n-html="faq.a6">Nee. Lêers word reguit van die oorspronklike platform na jou toestel gestuur en word nie op ons bediener gehou nie.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Gemaak deur</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Kies taal</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Maak toe">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Soek taal…" aria-label="Soek taal…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Geen taal gevind nie.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Besig om media te haal… dit kan 'n paar sekondes neem.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"af","strings":{"meta.title":"I Need Save — Laai video's, foto's en oudio van enige sosiale media af","meta.description":"Laai video's, foto's en oudio van TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn en honderde ander webwerwe af.","skip":"Slaan oor na inhoud","nav.label":"Hoofnavigasie","nav.how":"Hoe om dit te gebruik","nav.platforms":"Platforms","nav.faq":"Gereelde vrae","lang.button":"Verander taal","lang.title":"Kies taal","lang.search":"Soek taal…","lang.empty":"Geen taal gevind nie.","lang.close":"Maak toe","hero.title":"Laai video's, foto's en oudio van enige sosiale media af","hero.lead":"Plak 'n skakel van TikTok, Instagram, Facebook, X, Pinterest en meer. Kies 'n gehalte en stoor dit direk op jou toestel.","form.label":"Skakel na plasing of video","form.placeholder":"Plak 'n skakel hier…","form.paste":"Plak","form.clear":"Vee skakel uit","form.submit":"Laai af","form.processing":"Besig om te verwerk","chips.label":"Voorbeelde van ondersteunde platforms","how.title":"Hoe om af te laai","how.step1.title":"Kopieer die skakel","how.step1.text":"Maak die plasing in die app oop, tik op \u003cstrong>Deel\u003c/strong> en kies dan \u003cstrong>Kopieer skakel\u003c/strong>.","how.step2.title":"Plak dit hier","how.step2.text":"Plak die skakel in die blokkie hierbo en tik dan op \u003cstrong>Laai af\u003c/strong>.","how.step3.title":"Kies en stoor","how.step3.text":"Kies video, MP3-oudio of foto in die gehalte wat jy wil hê.","platforms.title":"Ondersteunde platforms","platforms.lead":"Video's, foto's en oudio van honderde webwerwe. Party van die gewildstes:","faq.title":"Gereelde vrae","faq.q1":"Is I Need Save gratis?","faq.a1":"Ja, heeltemal gratis. Geen registrasie, aanmelding of app nodig nie.","faq.q2":"Waar word my lêers gestoor?","faq.a2":"Op Android en rekenaars gaan lêers na die \u003cstrong>Aflaaie\u003c/strong>-vouer. Op iPhone en iPad (Safari) word hulle in die \u003cstrong>Lêers\u003c/strong>-app → \u003cstrong>Aflaaie\u003c/strong> gestoor. Van daar af kan jy hulle met die Deel-knoppie in Foto's stoor.","faq.q3":"Hoekom kan sommige video's nie afgelaai word nie?","faq.a3":"Ons bediener kan nie by private inhoud, inhoud wat aanmelding vereis of inhoud met streekbeperkings uitkom nie. Maak seker die plasing is publiek en probeer dan weer.","faq.q4":"Hoe laai ek MP3 af?","faq.a4":"Nadat die skakel verwerk is, kies die \u003cstrong>MP3\u003c/strong>-opsie onder Oudio. Die klank word uit die video gehaal en na 192 kbps-MP3 omgeskakel.","faq.q5":"Het TikTok-video's 'n watermerk?","faq.a5":"Ons verkies altyd die weergawe sonder 'n watermerk as dit beskikbaar is. Opsies met 'n watermerk is gemerk as \u003cstrong>Watermerk\u003c/strong>.","faq.q6":"Word my lêers op julle bediener gestoor?","faq.a6":"Nee. Lêers word reguit van die oorspronklike platform na jou toestel gestuur en word nie op ons bediener gehou nie.","footer.madeBy":"Gemaak deur","results.loading":"Besig om media te haal… dit kan 'n paar sekondes neem.","results.found":"{n} media gevind","results.more":"Wys nog {n} opsies","group.video":"Video","group.audio":"Oudio","group.image":"Foto's","label.thumbnail":"Duimnael","label.photo":"Foto","label.photoN":"Foto {n}","label.video":"Video","label.videoN":"Video {n}","label.audioN":"Oudio {n}","label.original_audio":"Oorspronklike klank","note.original_quality":"Oorspronklike gehalte","note.no_audio":"Geen klank","note.watermark":"Watermerk","download.button":"Laai af","download.preparing":"Berei voor…","toast.preparing":"Jou lêer word voorberei… die aflaai sal outomaties begin.","toast.started":"Aflaai het begin.","toast.failed":"Die aflaai het misluk. Probeer 'n ander gehalte of verwerk die skakel weer.","toast.clipboardEmpty":"Jou knipbord is leeg. Kopieer eers 'n skakel.","toast.clipboardDenied":"Toegang tot die knipbord is geweier. Plak die skakel self.","error.empty":"Plak eers 'n skakel na 'n plasing of video.","error.timeout":"Tyd verstreke. Die bron het te lank geneem om te antwoord. Probeer asseblief weer.","error.offline":"Geen internetverbinding nie. Gaan jou netwerk na en probeer weer.","error.busy":"Die bediener is besig. Probeer asseblief binne 'n oomblik weer.","error.invalid_url":"Ongeldige skakel. Plak die volledige skakel uit die sosialemedia-app.","error.unsupported":"Hierdie skakel word nog nie ondersteun nie. Maak seker dit wys direk na 'n plasing of video.","error.blocked":"Hierdie platform blokkeer tans ons bediener, so hierdie skakel kan nie nou afgelaai word nie.","error.rate_limited":"Die platform beperk tans versoeke van ons bediener. Probeer asseblief binne 'n oomblik weer.","error.login_required":"Hierdie inhoud is privaat, of die platform vereis aanmelding om dit te sien, so dit kan nie afgelaai word nie.","error.not_found":"Inhoud nie gevind nie, of dit is verwyder.","error.geo_blocked":"Hierdie inhoud het streekbeperkings en ons bediener kan nie daarby uitkom nie.","error.failed":"Kon nie media uit hierdie skakel kry nie. Probeer 'n ander skakel of probeer binne 'n oomblik weer.","error.no_media":"Daar is geen aflaaibare media by hierdie skakel nie.","error.server_config":"Die bediener is nog nie reg opgestel nie.","error.server_error":"Iets het op die bediener verkeerd geloop. Probeer asseblief weer."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

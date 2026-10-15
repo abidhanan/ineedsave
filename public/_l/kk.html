@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="kk" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn және жүздеген басқа сайттан бейне, фото және аудио жүктеп алыңыз.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn және жүздеген басқа сайттан бейне, фото және аудио жүктеп алыңыз.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Мазмұнға өту</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Негізгі навигация">
+        <a href="#cara" data-i18n="nav.how">Қалай пайдалану керек</a>
+        <a href="#platform" data-i18n="nav.platforms">Платформалар</a>
+        <a href="#faq" data-i18n="nav.faq">Сұрақтар</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Тілді өзгерту: Қазақ тілі">
+        <span class="lang-flag" aria-hidden="true">🇰🇿</span>
+        <span class="lang-code">KK</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Кез келген әлеуметтік желіден бейне, фото және аудио жүктеп алыңыз</h1>
+        <p class="lead" data-i18n="hero.lead">TikTok, Instagram, Facebook, X, Pinterest және басқа платформалардан сілтеме қойыңыз. Сапасын таңдап, бірден құрылғыңызға сақтаңыз.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Жазба немесе бейне сілтемесі</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Сілтемені осында қойыңыз…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Қою</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Сілтемені тазалау">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Жүктеп алу</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Қолдау көрсетілетін платформалардың мысалдары">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Қалай жүктеп алуға болады</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Сілтемені көшіріңіз</h3>
+            <p data-i18n-html="how.step1.text">Жазбаны қолданбада ашып, <strong>Бөлісу</strong> түймесін түртіңіз, содан кейін <strong>Сілтемені көшіру</strong> пәрменін таңдаңыз.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Осында қойыңыз</h3>
+            <p data-i18n-html="how.step2.text">Сілтемені жоғарыдағы өріске қойып, <strong>Жүктеп алу</strong> түймесін басыңыз.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Таңдап, сақтаңыз</h3>
+            <p data-i18n="how.step3.text">Қажетті сападағы бейнені, MP3 аудионы немесе фотоны таңдаңыз.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Қолдау көрсетілетін платформалар</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Жүздеген сайттан бейне, фото және аудио. Ең танымалдарының кейбірі:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Жиі қойылатын сұрақтар</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save тегін бе?</summary>
+            <p data-i18n-html="faq.a1">Иә, толығымен тегін. Тіркелу, жүйеге кіру немесе қолданба орнату қажет емес.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Файлдарым қайда сақталады?</summary>
+            <p data-i18n-html="faq.a2">Android мен компьютерлерде файлдар <strong>Жүктеп алынғандар</strong> қалтасына түседі. iPhone мен iPad (Safari) құрылғыларында олар <strong>Файлдар</strong> қолданбасы → <strong>Жүктеп алынғандар</strong> қалтасына сақталады. Сол жерден Бөлісу түймесі арқылы оларды Фотосуреттер қолданбасына сақтай аласыз.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Неге кейбір бейнелерді жүктеп алу мүмкін емес?</summary>
+            <p data-i18n-html="faq.a3">Жабық контентке, жүйеге кіруді талап ететін контентке немесе аймақ бойынша шектелген контентке біздің сервер қол жеткізе алмайды. Жазбаның жария екеніне көз жеткізіп, қайталап көріңіз.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">MP3 қалай жүктеп алуға болады?</summary>
+            <p data-i18n-html="faq.a4">Сілтеме өңделгеннен кейін Аудио бөлімінен <strong>MP3</strong> нұсқасын таңдаңыз. Дыбыс бейнеден алынып, 192 kbps MP3 форматына түрлендіріледі.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">TikTok бейнелерінде су белгісі бола ма?</summary>
+            <p data-i18n-html="faq.a5">Қолжетімді болса, біз әрқашан су белгісі жоқ нұсқаны таңдаймыз. Су белгісі бар нұсқалар <strong>Су белгісі</strong> деп белгіленеді.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Файлдарым серверіңізде сақтала ма?</summary>
+            <p data-i18n-html="faq.a6">Жоқ. Файлдар түпнұсқа платформадан тікелей құрылғыңызға жіберіледі және біздің серверде сақталмайды.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Әзірлеген</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Тілді таңдаңыз</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Жабу">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Тілді іздеу…" aria-label="Тілді іздеу…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Тіл табылмады.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Медиа алынуда… бұл бірнеше секундқа созылуы мүмкін.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"kk","strings":{"meta.title":"I Need Save — Кез келген әлеуметтік желіден бейне, фото және аудио жүктеп алыңыз","meta.description":"TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn және жүздеген басқа сайттан бейне, фото және аудио жүктеп алыңыз.","skip":"Мазмұнға өту","nav.label":"Негізгі навигация","nav.how":"Қалай пайдалану керек","nav.platforms":"Платформалар","nav.faq":"Сұрақтар","lang.button":"Тілді өзгерту","lang.title":"Тілді таңдаңыз","lang.search":"Тілді іздеу…","lang.empty":"Тіл табылмады.","lang.close":"Жабу","hero.title":"Кез келген әлеуметтік желіден бейне, фото және аудио жүктеп алыңыз","hero.lead":"TikTok, Instagram, Facebook, X, Pinterest және басқа платформалардан сілтеме қойыңыз. Сапасын таңдап, бірден құрылғыңызға сақтаңыз.","form.label":"Жазба немесе бейне сілтемесі","form.placeholder":"Сілтемені осында қойыңыз…","form.paste":"Қою","form.clear":"Сілтемені тазалау","form.submit":"Жүктеп алу","form.processing":"Өңделуде","chips.label":"Қолдау көрсетілетін платформалардың мысалдары","how.title":"Қалай жүктеп алуға болады","how.step1.title":"Сілтемені көшіріңіз","how.step1.text":"Жазбаны қолданбада ашып, \u003cstrong>Бөлісу\u003c/strong> түймесін түртіңіз, содан кейін \u003cstrong>Сілтемені көшіру\u003c/strong> пәрменін таңдаңыз.","how.step2.title":"Осында қойыңыз","how.step2.text":"Сілтемені жоғарыдағы өріске қойып, \u003cstrong>Жүктеп алу\u003c/strong> түймесін басыңыз.","how.step3.title":"Таңдап, сақтаңыз","how.step3.text":"Қажетті сападағы бейнені, MP3 аудионы немесе фотоны таңдаңыз.","platforms.title":"Қолдау көрсетілетін платформалар","platforms.lead":"Жүздеген сайттан бейне, фото және аудио. Ең танымалдарының кейбірі:","faq.title":"Жиі қойылатын сұрақтар","faq.q1":"I Need Save тегін бе?","faq.a1":"Иә, толығымен тегін. Тіркелу, жүйеге кіру немесе қолданба орнату қажет емес.","faq.q2":"Файлдарым қайда сақталады?","faq.a2":"Android мен компьютерлерде файлдар \u003cstrong>Жүктеп алынғандар\u003c/strong> қалтасына түседі. iPhone мен iPad (Safari) құрылғыларында олар \u003cstrong>Файлдар\u003c/strong> қолданбасы → \u003cstrong>Жүктеп алынғандар\u003c/strong> қалтасына сақталады. Сол жерден Бөлісу түймесі арқылы оларды Фотосуреттер қолданбасына сақтай аласыз.","faq.q3":"Неге кейбір бейнелерді жүктеп алу мүмкін емес?","faq.a3":"Жабық контентке, жүйеге кіруді талап ететін контентке немесе аймақ бойынша шектелген контентке біздің сервер қол жеткізе алмайды. Жазбаның жария екеніне көз жеткізіп, қайталап көріңіз.","faq.q4":"MP3 қалай жүктеп алуға болады?","faq.a4":"Сілтеме өңделгеннен кейін Аудио бөлімінен \u003cstrong>MP3\u003c/strong> нұсқасын таңдаңыз. Дыбыс бейнеден алынып, 192 kbps MP3 форматына түрлендіріледі.","faq.q5":"TikTok бейнелерінде су белгісі бола ма?","faq.a5":"Қолжетімді болса, біз әрқашан су белгісі жоқ нұсқаны таңдаймыз. Су белгісі бар нұсқалар \u003cstrong>Су белгісі\u003c/strong> деп белгіленеді.","faq.q6":"Файлдарым серверіңізде сақтала ма?","faq.a6":"Жоқ. Файлдар түпнұсқа платформадан тікелей құрылғыңызға жіберіледі және біздің серверде сақталмайды.","footer.madeBy":"Әзірлеген","results.loading":"Медиа алынуда… бұл бірнеше секундқа созылуы мүмкін.","results.found":"{n} медиа табылды","results.more":"Тағы {n} нұсқаны көрсету","group.video":"Бейне","group.audio":"Аудио","group.image":"Фотолар","label.thumbnail":"Нобай","label.photo":"Фото","label.photoN":"Фото {n}","label.video":"Бейне","label.videoN":"Бейне {n}","label.audioN":"Аудио {n}","label.original_audio":"Түпнұсқа дыбыс","note.original_quality":"Түпнұсқа сапа","note.no_audio":"Дыбыссыз","note.watermark":"Су белгісі","download.button":"Жүктеп алу","download.preparing":"Дайындалуда…","toast.preparing":"Файлыңыз дайындалуда… жүктеп алу автоматты түрде басталады.","toast.started":"Жүктеп алу басталды.","toast.failed":"Жүктеп алу сәтсіз аяқталды. Басқа сапаны таңдаңыз немесе сілтемені қайта өңдеңіз.","toast.clipboardEmpty":"Алмасу буфері бос. Алдымен сілтемені көшіріңіз.","toast.clipboardDenied":"Алмасу буферіне кіруге рұқсат берілмеді. Сілтемені қолмен қойыңыз.","error.empty":"Алдымен жазба немесе бейне сілтемесін қойыңыз.","error.timeout":"Күту уақыты бітті. Дереккөз тым ұзақ жауап бермеді, қайталап көріңіз.","error.offline":"Интернет байланысы жоқ. Желіні тексеріп, қайталап көріңіз.","error.busy":"Сервер бос емес. Сәлден кейін қайталап көріңіз.","error.invalid_url":"Сілтеме жарамсыз. Әлеуметтік желі қолданбасынан толық сілтемені қойыңыз.","error.unsupported":"Бұл сілтемеге әзірге қолдау көрсетілмейді. Оның тікелей жазбаға немесе бейнеге апаратынына көз жеткізіңіз.","error.blocked":"Бұл платформа қазір біздің серверді бұғаттап тұр, сондықтан бұл сілтемені қазір жүктеп алу мүмкін емес.","error.rate_limited":"Платформа біздің серверден келетін сұрауларды шектеп тұр. Сәлден кейін қайталап көріңіз.","error.login_required":"Бұл контент жабық немесе оны көру үшін платформа жүйеге кіруді талап етеді, сондықтан оны жүктеп алу мүмкін емес.","error.not_found":"Контент табылмады немесе жойылған.","error.geo_blocked":"Бұл контент аймақ бойынша шектелген, біздің сервер оған қол жеткізе алмайды.","error.failed":"Бұл сілтемеден медиа алу мүмкін болмады. Басқа сілтемені қолданып көріңіз немесе сәлден кейін қайталаңыз.","error.no_media":"Бұл сілтемеде жүктеп алуға болатын медиа жоқ.","error.server_config":"Сервер әлі дұрыс бапталмаған.","error.server_error":"Серверде қате шықты. Қайталап көріңіз."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

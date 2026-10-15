@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="lt" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Atsisiųskite vaizdo įrašus, nuotraukas ir garsą iš TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ir šimtų kitų svetainių.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Atsisiųskite vaizdo įrašus, nuotraukas ir garsą iš TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ir šimtų kitų svetainių.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Pereiti prie turinio</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Pagrindinė navigacija">
+        <a href="#cara" data-i18n="nav.how">Kaip naudotis</a>
+        <a href="#platform" data-i18n="nav.platforms">Platformos</a>
+        <a href="#faq" data-i18n="nav.faq">DUK</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Keisti kalbą: Lietuvių">
+        <span class="lang-flag" aria-hidden="true">🇱🇹</span>
+        <span class="lang-code">LT</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Atsisiųskite vaizdo įrašus, nuotraukas ir garsą iš bet kurio socialinio tinklo</h1>
+        <p class="lead" data-i18n="hero.lead">Įklijuokite nuorodą iš TikTok, Instagram, Facebook, X, Pinterest ir kitų. Pasirinkite kokybę ir išsaugokite tiesiai savo įrenginyje.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Įrašo ar vaizdo įrašo nuoroda</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Įklijuokite nuorodą čia…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Įklijuoti</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Išvalyti nuorodą">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Atsisiųsti</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Palaikomų platformų pavyzdžiai">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Kaip atsisiųsti</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Nukopijuokite nuorodą</h3>
+            <p data-i18n-html="how.step1.text">Atidarykite įrašą programėlėje, bakstelėkite <strong>Bendrinti</strong> ir pasirinkite <strong>Kopijuoti nuorodą</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Įklijuokite ją čia</h3>
+            <p data-i18n-html="how.step2.text">Įklijuokite nuorodą į laukelį viršuje ir paspauskite <strong>Atsisiųsti</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Pasirinkite ir išsaugokite</h3>
+            <p data-i18n="how.step3.text">Pasirinkite vaizdo įrašą, MP3 garsą arba nuotrauką norima kokybe.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Palaikomos platformos</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Vaizdo įrašai, nuotraukos ir garsas iš šimtų svetainių. Kai kurios populiariausios:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Dažnai užduodami klausimai</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Ar I Need Save nemokamas?</summary>
+            <p data-i18n-html="faq.a1">Taip, visiškai nemokamas. Nereikia registruotis, prisijungti ar diegti programėlės.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Kur išsaugomi mano failai?</summary>
+            <p data-i18n-html="faq.a2">Android įrenginiuose ir kompiuteriuose failai patenka į aplanką <strong>Atsisiuntimai</strong>. iPhone ir iPad (Safari) jie išsaugomi programėlėje <strong>Failai</strong> → <strong>Atsisiuntimai</strong>. Iš ten mygtuku Bendrinti galite juos išsaugoti programėlėje Nuotraukos.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Kodėl kai kurių vaizdo įrašų negalima atsisiųsti?</summary>
+            <p data-i18n-html="faq.a3">Mūsų serveris negali pasiekti privataus turinio, turinio, kuriam reikia prisijungti, ar regione apriboto turinio. Įsitikinkite, kad įrašas yra viešas, ir bandykite dar kartą.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Kaip atsisiųsti MP3?</summary>
+            <p data-i18n-html="faq.a4">Apdorojus nuorodą, skiltyje Garsas pasirinkite parinktį <strong>MP3</strong>. Garsas paimamas iš vaizdo įrašo ir konvertuojamas į 192 kbps MP3.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Ar TikTok vaizdo įrašai turi vandens ženklą?</summary>
+            <p data-i18n-html="faq.a5">Visada renkamės versiją be vandens ženklo, kai ji yra. Parinktys su vandens ženklu pažymėtos <strong>Vandens ženklas</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Ar mano failai saugomi jūsų serveryje?</summary>
+            <p data-i18n-html="faq.a6">Ne. Failai siunčiami tiesiai iš originalios platformos į jūsų įrenginį ir nėra saugomi mūsų serveryje.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Sukūrė</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Pasirinkite kalbą</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Uždaryti">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Ieškoti kalbos…" aria-label="Ieškoti kalbos…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Kalba nerasta.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Gaunama medija… tai gali užtrukti kelias sekundes.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"lt","strings":{"meta.title":"I Need Save — Atsisiųskite vaizdo įrašus, nuotraukas ir garsą iš bet kurio socialinio tinklo","meta.description":"Atsisiųskite vaizdo įrašus, nuotraukas ir garsą iš TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ir šimtų kitų svetainių.","skip":"Pereiti prie turinio","nav.label":"Pagrindinė navigacija","nav.how":"Kaip naudotis","nav.platforms":"Platformos","nav.faq":"DUK","lang.button":"Keisti kalbą","lang.title":"Pasirinkite kalbą","lang.search":"Ieškoti kalbos…","lang.empty":"Kalba nerasta.","lang.close":"Uždaryti","hero.title":"Atsisiųskite vaizdo įrašus, nuotraukas ir garsą iš bet kurio socialinio tinklo","hero.lead":"Įklijuokite nuorodą iš TikTok, Instagram, Facebook, X, Pinterest ir kitų. Pasirinkite kokybę ir išsaugokite tiesiai savo įrenginyje.","form.label":"Įrašo ar vaizdo įrašo nuoroda","form.placeholder":"Įklijuokite nuorodą čia…","form.paste":"Įklijuoti","form.clear":"Išvalyti nuorodą","form.submit":"Atsisiųsti","form.processing":"Apdorojama","chips.label":"Palaikomų platformų pavyzdžiai","how.title":"Kaip atsisiųsti","how.step1.title":"Nukopijuokite nuorodą","how.step1.text":"Atidarykite įrašą programėlėje, bakstelėkite \u003cstrong>Bendrinti\u003c/strong> ir pasirinkite \u003cstrong>Kopijuoti nuorodą\u003c/strong>.","how.step2.title":"Įklijuokite ją čia","how.step2.text":"Įklijuokite nuorodą į laukelį viršuje ir paspauskite \u003cstrong>Atsisiųsti\u003c/strong>.","how.step3.title":"Pasirinkite ir išsaugokite","how.step3.text":"Pasirinkite vaizdo įrašą, MP3 garsą arba nuotrauką norima kokybe.","platforms.title":"Palaikomos platformos","platforms.lead":"Vaizdo įrašai, nuotraukos ir garsas iš šimtų svetainių. Kai kurios populiariausios:","faq.title":"Dažnai užduodami klausimai","faq.q1":"Ar I Need Save nemokamas?","faq.a1":"Taip, visiškai nemokamas. Nereikia registruotis, prisijungti ar diegti programėlės.","faq.q2":"Kur išsaugomi mano failai?","faq.a2":"Android įrenginiuose ir kompiuteriuose failai patenka į aplanką \u003cstrong>Atsisiuntimai\u003c/strong>. iPhone ir iPad (Safari) jie išsaugomi programėlėje \u003cstrong>Failai\u003c/strong> → \u003cstrong>Atsisiuntimai\u003c/strong>. Iš ten mygtuku Bendrinti galite juos išsaugoti programėlėje Nuotraukos.","faq.q3":"Kodėl kai kurių vaizdo įrašų negalima atsisiųsti?","faq.a3":"Mūsų serveris negali pasiekti privataus turinio, turinio, kuriam reikia prisijungti, ar regione apriboto turinio. Įsitikinkite, kad įrašas yra viešas, ir bandykite dar kartą.","faq.q4":"Kaip atsisiųsti MP3?","faq.a4":"Apdorojus nuorodą, skiltyje Garsas pasirinkite parinktį \u003cstrong>MP3\u003c/strong>. Garsas paimamas iš vaizdo įrašo ir konvertuojamas į 192 kbps MP3.","faq.q5":"Ar TikTok vaizdo įrašai turi vandens ženklą?","faq.a5":"Visada renkamės versiją be vandens ženklo, kai ji yra. Parinktys su vandens ženklu pažymėtos \u003cstrong>Vandens ženklas\u003c/strong>.","faq.q6":"Ar mano failai saugomi jūsų serveryje?","faq.a6":"Ne. Failai siunčiami tiesiai iš originalios platformos į jūsų įrenginį ir nėra saugomi mūsų serveryje.","footer.madeBy":"Sukūrė","results.loading":"Gaunama medija… tai gali užtrukti kelias sekundes.","results.found":"Rasta medijos failų: {n}","results.more":"Rodyti daugiau parinkčių: {n}","group.video":"Vaizdo įrašai","group.audio":"Garsas","group.image":"Nuotraukos","label.thumbnail":"Miniatiūra","label.photo":"Nuotrauka","label.photoN":"Nuotrauka {n}","label.video":"Vaizdo įrašas","label.videoN":"Vaizdo įrašas {n}","label.audioN":"Garsas {n}","label.original_audio":"Originalus garsas","note.original_quality":"Originali kokybė","note.no_audio":"Be garso","note.watermark":"Vandens ženklas","download.button":"Atsisiųsti","download.preparing":"Ruošiama…","toast.preparing":"Ruošiamas jūsų failas… atsisiuntimas prasidės automatiškai.","toast.started":"Atsisiuntimas pradėtas.","toast.failed":"Atsisiųsti nepavyko. Pabandykite kitą kokybę arba apdorokite nuorodą iš naujo.","toast.clipboardEmpty":"Iškarpinė tuščia. Pirmiausia nukopijuokite nuorodą.","toast.clipboardDenied":"Prieiga prie iškarpinės uždrausta. Įklijuokite nuorodą rankiniu būdu.","error.empty":"Pirmiausia įklijuokite įrašo ar vaizdo įrašo nuorodą.","error.timeout":"Baigėsi laikas. Šaltinis per ilgai neatsakė, bandykite dar kartą.","error.offline":"Nėra interneto ryšio. Patikrinkite tinklą ir bandykite dar kartą.","error.busy":"Serveris užimtas. Bandykite dar kartą po akimirkos.","error.invalid_url":"Netinkama nuoroda. Įklijuokite visą nuorodą iš socialinio tinklo programėlės.","error.unsupported":"Ši nuoroda dar nepalaikoma. Įsitikinkite, kad ji veda tiesiai į įrašą ar vaizdo įrašą.","error.blocked":"Ši platforma šiuo metu blokuoja mūsų serverį, todėl šios nuorodos dabar atsisiųsti negalima.","error.rate_limited":"Platforma riboja mūsų serverio užklausas. Bandykite dar kartą po akimirkos.","error.login_required":"Šis turinys yra privatus arba platforma reikalauja prisijungti, kad jį peržiūrėtumėte, todėl jo atsisiųsti negalima.","error.not_found":"Turinys nerastas arba buvo pašalintas.","error.geo_blocked":"Šis turinys apribotas regione, todėl mūsų serveris jo pasiekti negali.","error.failed":"Nepavyko gauti medijos iš šios nuorodos. Pabandykite kitą nuorodą arba bandykite dar kartą po akimirkos.","error.no_media":"Šioje nuorodoje nėra atsisiunčiamos medijos.","error.server_config":"Serveris dar netinkamai sukonfigūruotas.","error.server_error":"Serveryje įvyko klaida. Bandykite dar kartą."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

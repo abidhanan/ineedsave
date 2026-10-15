@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ps" dir="rtl" style="--font-script: &quot;Noto Sans Arabic&quot;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="له TikTok، Instagram، Facebook، X (Twitter)، Pinterest، LinkedIn او سلګونو نورو سایټونو ویډیوګانې، انځورونه او غږونه ډاونلوډ کړئ.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="له TikTok، Instagram، Facebook، X (Twitter)، Pinterest، LinkedIn او سلګونو نورو سایټونو ویډیوګانې، انځورونه او غږونه ډاونلوډ کړئ.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap"></noscript>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">منځپانګې ته ورشئ</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="اصلي نیویګیشن">
+        <a href="#cara" data-i18n="nav.how">د کارولو لارښود</a>
+        <a href="#platform" data-i18n="nav.platforms">پلیټفارمونه</a>
+        <a href="#faq" data-i18n="nav.faq">پوښتنې</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="ژبه بدله کړئ: پښتو">
+        <span class="lang-flag" aria-hidden="true">🇦🇫</span>
+        <span class="lang-code">PS</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">له هرې ټولنیزې رسنۍ ویډیوګانې، انځورونه او غږونه ډاونلوډ کړئ</h1>
+        <p class="lead" data-i18n="hero.lead">له TikTok، Instagram، Facebook، X، Pinterest او نورو څخه لینک پیسټ کړئ. کیفیت وټاکئ، بیا یې مستقیم په خپله وسیله کې خوندي کړئ.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">د پوسټ یا ویډیو لینک</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="لینک دلته پیسټ کړئ…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">پیسټ</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="لینک پاک کړئ">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">ډاونلوډ</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="د ملاتړ شویو پلیټفارمونو بېلګې">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">څنګه ډاونلوډ کړو</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">لینک کاپي کړئ</h3>
+            <p data-i18n-html="how.step1.text">پوسټ په اپلیکیشن کې پرانیزئ، په <strong>شریکول</strong> ټک وکړئ، بیا <strong>لینک کاپي کړئ</strong> وټاکئ.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">دلته یې پیسټ کړئ</h3>
+            <p data-i18n-html="how.step2.text">لینک پورته بکس ته پیسټ کړئ، بیا <strong>ډاونلوډ</strong> کېکاږئ.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">وټاکئ او خوندي یې کړئ</h3>
+            <p data-i18n="how.step3.text">ویډیو، MP3 غږ یا انځور په هغه کیفیت وټاکئ چې غواړئ یې.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">ملاتړ شوي پلیټفارمونه</h2>
+        <p class="section-lead" data-i18n="platforms.lead">له سلګونو سایټونو ویډیوګانې، انځورونه او غږونه. ځینې تر ټولو مشهور یې:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">ډېرې پوښتل شوې پوښتنې</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">ایا I Need Save وړیا دی؟</summary>
+            <p data-i18n-html="faq.a1">هو، بشپړ وړیا دی. نه نوم لیکنې ته اړتیا شته، نه ننوتلو ته او نه اپلیکیشن ته.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">زما فایلونه چېرته خوندي کیږي؟</summary>
+            <p data-i18n-html="faq.a2">په Android او کمپیوټرونو کې فایلونه د <strong>ډاونلوډونه</strong> فولډر ته ځي. په iPhone او iPad (Safari) کې دوی د <strong>فایلونه</strong> اپلیکیشن ← <strong>ډاونلوډونه</strong> کې خوندي کیږي. له هغه ځایه کولی شئ د شریکولو تڼۍ په مرسته یې انځورونو ته خوندي کړئ.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">ولې ځینې ویډیوګانې نشي ډاونلوډ کېدای؟</summary>
+            <p data-i18n-html="faq.a3">زموږ سرور شخصي منځپانګې، هغې منځپانګې چې ننوتل غواړي، یا هغې منځپانګې ته چې د سیمې له مخې محدوده ده، لاسرسی نشي موندلای. ډاډ ترلاسه کړئ چې پوسټ عامه دی، بیا هڅه وکړئ.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">MP3 څنګه ډاونلوډ کړم؟</summary>
+            <p data-i18n-html="faq.a4">کله چې لینک پروسس شو، د غږ په برخه کې <strong>MP3</strong> انتخاب وټاکئ. غږ له ویډیو څخه اخیستل کیږي او په 192 kbps MP3 بدلیږي.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">ایا د TikTok ویډیوګانې واټرمارک لري؟</summary>
+            <p data-i18n-html="faq.a5">کله چې شتون ولري، موږ تل پرته له واټرمارک نسخې ته لومړیتوب ورکوو. هغه انتخابونه چې واټرمارک لري د <strong>واټرمارک</strong> په نښه شوي دي.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">ایا زما فایلونه ستاسو په سرور کې ساتل کیږي؟</summary>
+            <p data-i18n-html="faq.a6">نه. فایلونه له اصلي پلیټفارم څخه مستقیم ستاسو وسیلې ته لیږل کیږي او زموږ په سرور کې نه ساتل کیږي.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">جوړونکی</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">ژبه وټاکئ</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="بندول">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="ژبه ولټوئ…" aria-label="ژبه ولټوئ…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>هیڅ ژبه ونه موندل شوه.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">رسنۍ راوړل کیږي… دا ښايي څو ثانیې ونیسي.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"ps","strings":{"meta.title":"I Need Save — له هرې ټولنیزې رسنۍ ویډیوګانې، انځورونه او غږونه ډاونلوډ کړئ","meta.description":"له TikTok، Instagram، Facebook، X (Twitter)، Pinterest، LinkedIn او سلګونو نورو سایټونو ویډیوګانې، انځورونه او غږونه ډاونلوډ کړئ.","skip":"منځپانګې ته ورشئ","nav.label":"اصلي نیویګیشن","nav.how":"د کارولو لارښود","nav.platforms":"پلیټفارمونه","nav.faq":"پوښتنې","lang.button":"ژبه بدله کړئ","lang.title":"ژبه وټاکئ","lang.search":"ژبه ولټوئ…","lang.empty":"هیڅ ژبه ونه موندل شوه.","lang.close":"بندول","hero.title":"له هرې ټولنیزې رسنۍ ویډیوګانې، انځورونه او غږونه ډاونلوډ کړئ","hero.lead":"له TikTok، Instagram، Facebook، X، Pinterest او نورو څخه لینک پیسټ کړئ. کیفیت وټاکئ، بیا یې مستقیم په خپله وسیله کې خوندي کړئ.","form.label":"د پوسټ یا ویډیو لینک","form.placeholder":"لینک دلته پیسټ کړئ…","form.paste":"پیسټ","form.clear":"لینک پاک کړئ","form.submit":"ډاونلوډ","form.processing":"پروسس کیږي","chips.label":"د ملاتړ شویو پلیټفارمونو بېلګې","how.title":"څنګه ډاونلوډ کړو","how.step1.title":"لینک کاپي کړئ","how.step1.text":"پوسټ په اپلیکیشن کې پرانیزئ، په \u003cstrong>شریکول\u003c/strong> ټک وکړئ، بیا \u003cstrong>لینک کاپي کړئ\u003c/strong> وټاکئ.","how.step2.title":"دلته یې پیسټ کړئ","how.step2.text":"لینک پورته بکس ته پیسټ کړئ، بیا \u003cstrong>ډاونلوډ\u003c/strong> کېکاږئ.","how.step3.title":"وټاکئ او خوندي یې کړئ","how.step3.text":"ویډیو، MP3 غږ یا انځور په هغه کیفیت وټاکئ چې غواړئ یې.","platforms.title":"ملاتړ شوي پلیټفارمونه","platforms.lead":"له سلګونو سایټونو ویډیوګانې، انځورونه او غږونه. ځینې تر ټولو مشهور یې:","faq.title":"ډېرې پوښتل شوې پوښتنې","faq.q1":"ایا I Need Save وړیا دی؟","faq.a1":"هو، بشپړ وړیا دی. نه نوم لیکنې ته اړتیا شته، نه ننوتلو ته او نه اپلیکیشن ته.","faq.q2":"زما فایلونه چېرته خوندي کیږي؟","faq.a2":"په Android او کمپیوټرونو کې فایلونه د \u003cstrong>ډاونلوډونه\u003c/strong> فولډر ته ځي. په iPhone او iPad (Safari) کې دوی د \u003cstrong>فایلونه\u003c/strong> اپلیکیشن ← \u003cstrong>ډاونلوډونه\u003c/strong> کې خوندي کیږي. له هغه ځایه کولی شئ د شریکولو تڼۍ په مرسته یې انځورونو ته خوندي کړئ.","faq.q3":"ولې ځینې ویډیوګانې نشي ډاونلوډ کېدای؟","faq.a3":"زموږ سرور شخصي منځپانګې، هغې منځپانګې چې ننوتل غواړي، یا هغې منځپانګې ته چې د سیمې له مخې محدوده ده، لاسرسی نشي موندلای. ډاډ ترلاسه کړئ چې پوسټ عامه دی، بیا هڅه وکړئ.","faq.q4":"MP3 څنګه ډاونلوډ کړم؟","faq.a4":"کله چې لینک پروسس شو، د غږ په برخه کې \u003cstrong>MP3\u003c/strong> انتخاب وټاکئ. غږ له ویډیو څخه اخیستل کیږي او په 192 kbps MP3 بدلیږي.","faq.q5":"ایا د TikTok ویډیوګانې واټرمارک لري؟","faq.a5":"کله چې شتون ولري، موږ تل پرته له واټرمارک نسخې ته لومړیتوب ورکوو. هغه انتخابونه چې واټرمارک لري د \u003cstrong>واټرمارک\u003c/strong> په نښه شوي دي.","faq.q6":"ایا زما فایلونه ستاسو په سرور کې ساتل کیږي؟","faq.a6":"نه. فایلونه له اصلي پلیټفارم څخه مستقیم ستاسو وسیلې ته لیږل کیږي او زموږ په سرور کې نه ساتل کیږي.","footer.madeBy":"جوړونکی","results.loading":"رسنۍ راوړل کیږي… دا ښايي څو ثانیې ونیسي.","results.found":"{n} رسنۍ وموندل شوې","results.more":"{n} نور انتخابونه وښایاست","group.video":"ویډیو","group.audio":"غږ","group.image":"انځورونه","label.thumbnail":"کوچنی انځور","label.photo":"انځور","label.photoN":"انځور {n}","label.video":"ویډیو","label.videoN":"ویډیو {n}","label.audioN":"غږ {n}","label.original_audio":"اصلي غږ","note.original_quality":"اصلي کیفیت","note.no_audio":"بې غږه","note.watermark":"واټرمارک","download.button":"ډاونلوډ","download.preparing":"چمتو کیږي…","toast.preparing":"ستاسو فایل چمتو کیږي… ډاونلوډ به په اتوماتيک ډول پیل شي.","toast.started":"ډاونلوډ پیل شو.","toast.failed":"ډاونلوډ ناکام شو. بل کیفیت وازمویئ یا لینک بیا پروسس کړئ.","toast.clipboardEmpty":"کلیپ بورډ خالي دی. لومړی یو لینک کاپي کړئ.","toast.clipboardDenied":"کلیپ بورډ ته لاسرسی رد شو. لینک په لاس پیسټ کړئ.","error.empty":"لومړی د پوسټ یا ویډیو لینک پیسټ کړئ.","error.timeout":"وخت پای ته ورسید. سرچینې د ځواب لپاره ډېر وخت ونیو، مهرباني وکړئ بیا هڅه وکړئ.","error.offline":"انټرنیټ نشته. خپله شبکه وګورئ او بیا هڅه وکړئ.","error.busy":"سرور بوخت دی. مهرباني وکړئ یوه شېبه وروسته بیا هڅه وکړئ.","error.invalid_url":"ناسم لینک. د ټولنیزې رسنۍ له اپلیکیشن څخه بشپړ لینک پیسټ کړئ.","error.unsupported":"دا لینک لا تر اوسه نه ملاتړ کیږي. ډاډ ترلاسه کړئ چې مستقیم یو پوسټ یا ویډیو ته اشاره کوي.","error.blocked":"دا پلیټفارم اوس زموږ سرور بندوي، نو دا لینک اوس نشي ډاونلوډ کېدای.","error.rate_limited":"پلیټفارم زموږ د سرور غوښتنې محدودوي. مهرباني وکړئ یوه شېبه وروسته بیا هڅه وکړئ.","error.login_required":"دا منځپانګه شخصي ده، یا پلیټفارم د لیدلو لپاره ننوتل غواړي، نو نشي ډاونلوډ کېدای.","error.not_found":"منځپانګه ونه موندل شوه یا لرې شوې ده.","error.geo_blocked":"دا منځپانګه د سیمې له مخې محدوده ده او زموږ سرور ورته لاسرسی نشي موندلای.","error.failed":"له دې لینک څخه رسنۍ ترلاسه نشوه. بل لینک وازمویئ یا یوه شېبه وروسته بیا هڅه وکړئ.","error.no_media":"په دې لینک کې د ډاونلوډ وړ رسنۍ نشته.","error.server_config":"سرور لا تر اوسه سم تنظیم شوی نه دی.","error.server_error":"په سرور کې یوه ستونزه رامنځته شوه. مهرباني وکړئ بیا هڅه وکړئ."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

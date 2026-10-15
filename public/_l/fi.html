@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fi" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Lataa videoita, kuvia ja ääntä TikTokista, Instagramista, Facebookista, X:stä (Twitter), Pinterestistä, LinkedInistä ja sadoilta muilta sivustoilta.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Lataa videoita, kuvia ja ääntä TikTokista, Instagramista, Facebookista, X:stä (Twitter), Pinterestistä, LinkedInistä ja sadoilta muilta sivustoilta.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Siirry sisältöön</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Päävalikko">
+        <a href="#cara" data-i18n="nav.how">Käyttöohjeet</a>
+        <a href="#platform" data-i18n="nav.platforms">Alustat</a>
+        <a href="#faq" data-i18n="nav.faq">UKK</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Vaihda kieltä: Suomi">
+        <span class="lang-flag" aria-hidden="true">🇫🇮</span>
+        <span class="lang-code">FI</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Lataa videoita, kuvia ja ääntä mistä tahansa sosiaalisesta mediasta</h1>
+        <p class="lead" data-i18n="hero.lead">Liitä linkki TikTokista, Instagramista, Facebookista, X:stä, Pinterestistä ja muualta. Valitse laatu ja tallenna suoraan laitteellesi.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Julkaisun tai videon linkki</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Liitä linkki tähän…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Liitä</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Tyhjennä linkki">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Lataa</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Esimerkkejä tuetuista alustoista">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Näin lataat</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Kopioi linkki</h3>
+            <p data-i18n-html="how.step1.text">Avaa julkaisu sovelluksessa, napauta <strong>Jaa</strong> ja valitse <strong>Kopioi linkki</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Liitä se tähän</h3>
+            <p data-i18n-html="how.step2.text">Liitä linkki yllä olevaan kenttään ja paina <strong>Lataa</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Valitse ja tallenna</h3>
+            <p data-i18n="how.step3.text">Valitse video, MP3-ääni tai kuva haluamassasi laadussa.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Tuetut alustat</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Videoita, kuvia ja ääntä sadoilta sivustoilta. Suosituimpia ovat:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Usein kysytyt kysymykset</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Onko I Need Save ilmainen?</summary>
+            <p data-i18n-html="faq.a1">Kyllä, täysin ilmainen. Ei rekisteröitymistä, kirjautumista tai sovellusta.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Minne tiedostoni tallentuvat?</summary>
+            <p data-i18n-html="faq.a2">Androidilla ja tietokoneilla tiedostot menevät <strong>Lataukset</strong>-kansioon. iPhonella ja iPadilla (Safari) ne tallentuvat <strong>Tiedostot</strong>-appiin → <strong>Lataukset</strong>. Sieltä voit tallentaa ne Kuviin Jaa-painikkeella.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Miksi joitakin videoita ei voi ladata?</summary>
+            <p data-i18n-html="faq.a3">Palvelimemme ei pääse käsiksi yksityiseen sisältöön, kirjautumista vaativaan sisältöön tai alueellisesti rajoitettuun sisältöön. Varmista, että julkaisu on julkinen, ja yritä uudelleen.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Miten lataan MP3:n?</summary>
+            <p data-i18n-html="faq.a4">Kun linkki on käsitelty, valitse Ääni-kohdasta <strong>MP3</strong>. Ääni otetaan videosta ja muunnetaan 192 kbps:n MP3-tiedostoksi.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Onko TikTok-videoissa vesileima?</summary>
+            <p data-i18n-html="faq.a5">Valitsemme aina version ilman vesileimaa, kun se on saatavilla. Vesileimalliset vaihtoehdot on merkitty tekstillä <strong>Vesileima</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Tallennetaanko tiedostoni palvelimellenne?</summary>
+            <p data-i18n-html="faq.a6">Ei. Tiedostot lähetetään alkuperäiseltä alustalta suoraan laitteellesi, eikä niitä säilytetä palvelimellamme.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Tekijä</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Valitse kieli</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Sulje">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Hae kieltä…" aria-label="Hae kieltä…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Kieltä ei löytynyt.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Haetaan mediaa… tämä voi kestää muutaman sekunnin.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"fi","strings":{"meta.title":"I Need Save — Lataa videoita, kuvia ja ääntä mistä tahansa sosiaalisesta mediasta","meta.description":"Lataa videoita, kuvia ja ääntä TikTokista, Instagramista, Facebookista, X:stä (Twitter), Pinterestistä, LinkedInistä ja sadoilta muilta sivustoilta.","skip":"Siirry sisältöön","nav.label":"Päävalikko","nav.how":"Käyttöohjeet","nav.platforms":"Alustat","nav.faq":"UKK","lang.button":"Vaihda kieltä","lang.title":"Valitse kieli","lang.search":"Hae kieltä…","lang.empty":"Kieltä ei löytynyt.","lang.close":"Sulje","hero.title":"Lataa videoita, kuvia ja ääntä mistä tahansa sosiaalisesta mediasta","hero.lead":"Liitä linkki TikTokista, Instagramista, Facebookista, X:stä, Pinterestistä ja muualta. Valitse laatu ja tallenna suoraan laitteellesi.","form.label":"Julkaisun tai videon linkki","form.placeholder":"Liitä linkki tähän…","form.paste":"Liitä","form.clear":"Tyhjennä linkki","form.submit":"Lataa","form.processing":"Käsitellään","chips.label":"Esimerkkejä tuetuista alustoista","how.title":"Näin lataat","how.step1.title":"Kopioi linkki","how.step1.text":"Avaa julkaisu sovelluksessa, napauta \u003cstrong>Jaa\u003c/strong> ja valitse \u003cstrong>Kopioi linkki\u003c/strong>.","how.step2.title":"Liitä se tähän","how.step2.text":"Liitä linkki yllä olevaan kenttään ja paina \u003cstrong>Lataa\u003c/strong>.","how.step3.title":"Valitse ja tallenna","how.step3.text":"Valitse video, MP3-ääni tai kuva haluamassasi laadussa.","platforms.title":"Tuetut alustat","platforms.lead":"Videoita, kuvia ja ääntä sadoilta sivustoilta. Suosituimpia ovat:","faq.title":"Usein kysytyt kysymykset","faq.q1":"Onko I Need Save ilmainen?","faq.a1":"Kyllä, täysin ilmainen. Ei rekisteröitymistä, kirjautumista tai sovellusta.","faq.q2":"Minne tiedostoni tallentuvat?","faq.a2":"Androidilla ja tietokoneilla tiedostot menevät \u003cstrong>Lataukset\u003c/strong>-kansioon. iPhonella ja iPadilla (Safari) ne tallentuvat \u003cstrong>Tiedostot\u003c/strong>-appiin → \u003cstrong>Lataukset\u003c/strong>. Sieltä voit tallentaa ne Kuviin Jaa-painikkeella.","faq.q3":"Miksi joitakin videoita ei voi ladata?","faq.a3":"Palvelimemme ei pääse käsiksi yksityiseen sisältöön, kirjautumista vaativaan sisältöön tai alueellisesti rajoitettuun sisältöön. Varmista, että julkaisu on julkinen, ja yritä uudelleen.","faq.q4":"Miten lataan MP3:n?","faq.a4":"Kun linkki on käsitelty, valitse Ääni-kohdasta \u003cstrong>MP3\u003c/strong>. Ääni otetaan videosta ja muunnetaan 192 kbps:n MP3-tiedostoksi.","faq.q5":"Onko TikTok-videoissa vesileima?","faq.a5":"Valitsemme aina version ilman vesileimaa, kun se on saatavilla. Vesileimalliset vaihtoehdot on merkitty tekstillä \u003cstrong>Vesileima\u003c/strong>.","faq.q6":"Tallennetaanko tiedostoni palvelimellenne?","faq.a6":"Ei. Tiedostot lähetetään alkuperäiseltä alustalta suoraan laitteellesi, eikä niitä säilytetä palvelimellamme.","footer.madeBy":"Tekijä","results.loading":"Haetaan mediaa… tämä voi kestää muutaman sekunnin.","results.found":"Mediaa löytyi: {n}","results.more":"Näytä {n} vaihtoehtoa lisää","group.video":"Video","group.audio":"Ääni","group.image":"Kuvat","label.thumbnail":"Pikkukuva","label.photo":"Kuva","label.photoN":"Kuva {n}","label.video":"Video","label.videoN":"Video {n}","label.audioN":"Ääni {n}","label.original_audio":"Alkuperäinen ääni","note.original_quality":"Alkuperäinen laatu","note.no_audio":"Ei ääntä","note.watermark":"Vesileima","download.button":"Lataa","download.preparing":"Valmistellaan…","toast.preparing":"Tiedostoa valmistellaan… lataus alkaa automaattisesti.","toast.started":"Lataus aloitettu.","toast.failed":"Lataus epäonnistui. Kokeile toista laatua tai käsittele linkki uudelleen.","toast.clipboardEmpty":"Leikepöytä on tyhjä. Kopioi ensin linkki.","toast.clipboardDenied":"Pääsy leikepöydälle estettiin. Liitä linkki käsin.","error.empty":"Liitä ensin julkaisun tai videon linkki.","error.timeout":"Aikakatkaisu. Lähde vastasi liian hitaasti, yritä uudelleen.","error.offline":"Ei internetyhteyttä. Tarkista verkkoyhteys ja yritä uudelleen.","error.busy":"Palvelin on ruuhkautunut. Yritä hetken päästä uudelleen.","error.invalid_url":"Virheellinen linkki. Liitä koko linkki somesovelluksesta.","error.unsupported":"Tätä linkkiä ei vielä tueta. Varmista, että se osoittaa suoraan julkaisuun tai videoon.","error.blocked":"Tämä alusta estää tällä hetkellä palvelimemme, joten linkkiä ei voi juuri nyt ladata.","error.rate_limited":"Alusta rajoittaa palvelimemme pyyntöjä. Yritä hetken päästä uudelleen.","error.login_required":"Tämä sisältö on yksityinen tai sen katsominen vaatii kirjautumista, joten sitä ei voi ladata.","error.not_found":"Sisältöä ei löytynyt tai se on poistettu.","error.geo_blocked":"Tämä sisältö on alueellisesti rajoitettu, eikä palvelimemme tavoita sitä.","error.failed":"Mediaa ei saatu tästä linkistä. Kokeile toista linkkiä tai yritä hetken päästä uudelleen.","error.no_media":"Tässä linkissä ei ole ladattavaa mediaa.","error.server_config":"Palvelinta ei ole vielä määritetty oikein.","error.server_error":"Palvelimella tapahtui virhe. Yritä uudelleen."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

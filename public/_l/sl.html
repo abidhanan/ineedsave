@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="sl" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Prenesite videe, fotografije in zvok iz storitev TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn in več sto drugih spletnih mest.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Prenesite videe, fotografije in zvok iz storitev TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn in več sto drugih spletnih mest.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Preskoči na vsebino</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Glavna navigacija">
+        <a href="#cara" data-i18n="nav.how">Navodila</a>
+        <a href="#platform" data-i18n="nav.platforms">Platforme</a>
+        <a href="#faq" data-i18n="nav.faq">Vprašanja</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Spremeni jezik: Slovenščina">
+        <span class="lang-flag" aria-hidden="true">🇸🇮</span>
+        <span class="lang-code">SL</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Prenesite videe, fotografije in zvok s katerega koli družbenega omrežja</h1>
+        <p class="lead" data-i18n="hero.lead">Prilepite povezavo iz storitev TikTok, Instagram, Facebook, X, Pinterest in drugih. Izberite kakovost in datoteko shranite neposredno v svojo napravo.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Povezava do objave ali videa</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Sem prilepite povezavo…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Prilepi</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Počisti povezavo">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Prenesi</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Primeri podprtih platform">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Kako prenesti</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Kopirajte povezavo</h3>
+            <p data-i18n-html="how.step1.text">Odprite objavo v aplikaciji, tapnite <strong>Deli</strong> in izberite <strong>Kopiraj povezavo</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Prilepite jo sem</h3>
+            <p data-i18n-html="how.step2.text">Prilepite povezavo v polje zgoraj in pritisnite <strong>Prenesi</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Izberite in shranite</h3>
+            <p data-i18n="how.step3.text">Izberite video, zvok MP3 ali fotografijo v želeni kakovosti.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Podprte platforme</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Videi, fotografije in zvok z več sto spletnih mest. Nekatera najbolj priljubljena:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Pogosta vprašanja</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Ali je I Need Save brezplačen?</summary>
+            <p data-i18n-html="faq.a1">Da, popolnoma brezplačen. Ne potrebujete registracije, prijave ali aplikacije.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Kam se shranijo datoteke?</summary>
+            <p data-i18n-html="faq.a2">V napravah Android in računalnikih se datoteke shranijo v mapo <strong>Prenosi</strong>. V napravah iPhone in iPad (Safari) se shranijo v aplikacijo <strong>Datoteke</strong> → <strong>Prenosi</strong>. Od tam jih lahko z gumbom Deli shranite v Fotografije.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Zakaj nekaterih videov ni mogoče prenesti?</summary>
+            <p data-i18n-html="faq.a3">Naš strežnik ne more dostopati do zasebne vsebine, vsebine, ki zahteva prijavo, ali regionalno omejene vsebine. Preverite, ali je objava javna, in poskusite znova.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Kako prenesem MP3?</summary>
+            <p data-i18n-html="faq.a4">Ko je povezava obdelana, v razdelku Zvok izberite možnost <strong>MP3</strong>. Zvok se izlušči iz videa in pretvori v MP3 s 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Ali imajo videi iz storitve TikTok vodni žig?</summary>
+            <p data-i18n-html="faq.a5">Kadar je na voljo, vedno izberemo različico brez vodnega žiga. Možnosti z vodnim žigom so označene z oznako <strong>Vodni žig</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Ali se moje datoteke shranjujejo na vašem strežniku?</summary>
+            <p data-i18n-html="faq.a6">Ne. Datoteke se pošljejo z izvirne platforme neposredno v vašo napravo in se ne hranijo na našem strežniku.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Avtor:</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Izberite jezik</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Zapri">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Iskanje jezika…" aria-label="Iskanje jezika…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Jezika ni mogoče najti.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Pridobivanje medijev… to lahko traja nekaj sekund.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"sl","strings":{"meta.title":"I Need Save — Prenesite videe, fotografije in zvok s katerega koli družbenega omrežja","meta.description":"Prenesite videe, fotografije in zvok iz storitev TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn in več sto drugih spletnih mest.","skip":"Preskoči na vsebino","nav.label":"Glavna navigacija","nav.how":"Navodila","nav.platforms":"Platforme","nav.faq":"Vprašanja","lang.button":"Spremeni jezik","lang.title":"Izberite jezik","lang.search":"Iskanje jezika…","lang.empty":"Jezika ni mogoče najti.","lang.close":"Zapri","hero.title":"Prenesite videe, fotografije in zvok s katerega koli družbenega omrežja","hero.lead":"Prilepite povezavo iz storitev TikTok, Instagram, Facebook, X, Pinterest in drugih. Izberite kakovost in datoteko shranite neposredno v svojo napravo.","form.label":"Povezava do objave ali videa","form.placeholder":"Sem prilepite povezavo…","form.paste":"Prilepi","form.clear":"Počisti povezavo","form.submit":"Prenesi","form.processing":"Obdelava","chips.label":"Primeri podprtih platform","how.title":"Kako prenesti","how.step1.title":"Kopirajte povezavo","how.step1.text":"Odprite objavo v aplikaciji, tapnite \u003cstrong>Deli\u003c/strong> in izberite \u003cstrong>Kopiraj povezavo\u003c/strong>.","how.step2.title":"Prilepite jo sem","how.step2.text":"Prilepite povezavo v polje zgoraj in pritisnite \u003cstrong>Prenesi\u003c/strong>.","how.step3.title":"Izberite in shranite","how.step3.text":"Izberite video, zvok MP3 ali fotografijo v želeni kakovosti.","platforms.title":"Podprte platforme","platforms.lead":"Videi, fotografije in zvok z več sto spletnih mest. Nekatera najbolj priljubljena:","faq.title":"Pogosta vprašanja","faq.q1":"Ali je I Need Save brezplačen?","faq.a1":"Da, popolnoma brezplačen. Ne potrebujete registracije, prijave ali aplikacije.","faq.q2":"Kam se shranijo datoteke?","faq.a2":"V napravah Android in računalnikih se datoteke shranijo v mapo \u003cstrong>Prenosi\u003c/strong>. V napravah iPhone in iPad (Safari) se shranijo v aplikacijo \u003cstrong>Datoteke\u003c/strong> → \u003cstrong>Prenosi\u003c/strong>. Od tam jih lahko z gumbom Deli shranite v Fotografije.","faq.q3":"Zakaj nekaterih videov ni mogoče prenesti?","faq.a3":"Naš strežnik ne more dostopati do zasebne vsebine, vsebine, ki zahteva prijavo, ali regionalno omejene vsebine. Preverite, ali je objava javna, in poskusite znova.","faq.q4":"Kako prenesem MP3?","faq.a4":"Ko je povezava obdelana, v razdelku Zvok izberite možnost \u003cstrong>MP3\u003c/strong>. Zvok se izlušči iz videa in pretvori v MP3 s 192 kbps.","faq.q5":"Ali imajo videi iz storitve TikTok vodni žig?","faq.a5":"Kadar je na voljo, vedno izberemo različico brez vodnega žiga. Možnosti z vodnim žigom so označene z oznako \u003cstrong>Vodni žig\u003c/strong>.","faq.q6":"Ali se moje datoteke shranjujejo na vašem strežniku?","faq.a6":"Ne. Datoteke se pošljejo z izvirne platforme neposredno v vašo napravo in se ne hranijo na našem strežniku.","footer.madeBy":"Avtor:","results.loading":"Pridobivanje medijev… to lahko traja nekaj sekund.","results.found":"Najdeni mediji: {n}","results.more":"Prikaži več možnosti ({n})","group.video":"Video","group.audio":"Zvok","group.image":"Fotografije","label.thumbnail":"Sličica","label.photo":"Fotografija","label.photoN":"Fotografija {n}","label.video":"Video","label.videoN":"Video {n}","label.audioN":"Zvok {n}","label.original_audio":"Izvirni zvok","note.original_quality":"Izvirna kakovost","note.no_audio":"Brez zvoka","note.watermark":"Vodni žig","download.button":"Prenesi","download.preparing":"Pripravljanje…","toast.preparing":"Pripravljamo datoteko… prenos se bo začel samodejno.","toast.started":"Prenos se je začel.","toast.failed":"Prenos ni uspel. Poskusite z drugo kakovostjo ali znova obdelajte povezavo.","toast.clipboardEmpty":"Odložišče je prazno. Najprej kopirajte povezavo.","toast.clipboardDenied":"Dostop do odložišča je bil zavrnjen. Povezavo prilepite ročno.","error.empty":"Najprej prilepite povezavo do objave ali videa.","error.timeout":"Časovna omejitev je potekla. Vir se je predolgo odzival, poskusite znova.","error.offline":"Ni internetne povezave. Preverite omrežje in poskusite znova.","error.busy":"Strežnik je zaseden. Poskusite znova čez trenutek.","error.invalid_url":"Neveljavna povezava. Prilepite celotno povezavo iz aplikacije družbenega omrežja.","error.unsupported":"Ta povezava še ni podprta. Preverite, ali vodi neposredno do objave ali videa.","error.blocked":"Ta platforma trenutno blokira naš strežnik, zato s te povezave zdaj ni mogoče prenašati.","error.rate_limited":"Platforma omejuje zahteve z našega strežnika. Poskusite znova čez trenutek.","error.login_required":"Ta vsebina je zasebna ali pa platforma za ogled zahteva prijavo, zato je ni mogoče prenesti.","error.not_found":"Vsebine ni bilo mogoče najti ali pa je bila odstranjena.","error.geo_blocked":"Ta vsebina je regionalno omejena in naš strežnik do nje ne more dostopati.","error.failed":"Iz te povezave ni bilo mogoče pridobiti medijev. Poskusite z drugo povezavo ali znova čez trenutek.","error.no_media":"Na tej povezavi ni medijev za prenos.","error.server_config":"Strežnik še ni pravilno nastavljen.","error.server_error":"Na strežniku je prišlo do napake. Poskusite znova."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

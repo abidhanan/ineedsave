@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="sw" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Pakua video, picha na sauti kutoka TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn na mamia ya tovuti nyingine.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Pakua video, picha na sauti kutoka TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn na mamia ya tovuti nyingine.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Ruka hadi maudhui</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Urambazaji mkuu">
+        <a href="#cara" data-i18n="nav.how">Jinsi ya kutumia</a>
+        <a href="#platform" data-i18n="nav.platforms">Majukwaa</a>
+        <a href="#faq" data-i18n="nav.faq">Maswali</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Badilisha lugha: Kiswahili">
+        <span class="lang-flag" aria-hidden="true">🇰🇪</span>
+        <span class="lang-code">SW</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Pakua video, picha na sauti kutoka mitandao yoyote ya kijamii</h1>
+        <p class="lead" data-i18n="hero.lead">Bandika kiungo kutoka TikTok, Instagram, Facebook, X, Pinterest na mengineyo. Chagua ubora, kisha uhifadhi moja kwa moja kwenye kifaa chako.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Kiungo cha chapisho au video</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Bandika kiungo hapa…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Bandika</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Futa kiungo">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Pakua</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Mifano ya majukwaa yanayotumika">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Jinsi ya kupakua</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Nakili kiungo</h3>
+            <p data-i18n-html="how.step1.text">Fungua chapisho kwenye programu, gusa <strong>Shiriki</strong>, kisha uchague <strong>Nakili kiungo</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Kibandike hapa</h3>
+            <p data-i18n-html="how.step2.text">Bandika kiungo kwenye kisanduku kilicho hapo juu, kisha ubonyeze <strong>Pakua</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Chagua na uhifadhi</h3>
+            <p data-i18n="how.step3.text">Chagua video, sauti ya MP3 au picha kwa ubora unaotaka.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Majukwaa yanayotumika</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Video, picha na sauti kutoka mamia ya tovuti. Baadhi ya maarufu zaidi:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Maswali yanayoulizwa mara kwa mara</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Je, I Need Save ni bure?</summary>
+            <p data-i18n-html="faq.a1">Ndiyo, ni bure kabisa. Huhitaji kujisajili, kuingia wala programu.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Faili zangu huhifadhiwa wapi?</summary>
+            <p data-i18n-html="faq.a2">Kwenye Android na kompyuta, faili huenda kwenye folda ya <strong>Vipakuliwa</strong>. Kwenye iPhone na iPad (Safari), huhifadhiwa kwenye programu ya <strong>Faili</strong> → <strong>Vipakuliwa</strong>. Kutoka hapo unaweza kuzihifadhi kwenye Picha kwa kitufe cha Shiriki.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Kwa nini baadhi ya video haziwezi kupakuliwa?</summary>
+            <p data-i18n-html="faq.a3">Seva yetu haiwezi kufikia maudhui ya faragha, maudhui yanayohitaji kuingia, au maudhui yaliyozuiliwa kwa eneo. Hakikisha chapisho ni la umma, kisha ujaribu tena.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Ninapakuaje MP3?</summary>
+            <p data-i18n-html="faq.a4">Baada ya kiungo kuchakatwa, chagua chaguo la <strong>MP3</strong> chini ya Sauti. Sauti hutolewa kwenye video na kubadilishwa kuwa MP3 ya 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Je, video za TikTok zina alama ya maji?</summary>
+            <p data-i18n-html="faq.a5">Daima tunapendelea toleo lisilo na alama ya maji linapopatikana. Chaguo zenye alama ya maji zimewekwa lebo <strong>Alama ya maji</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Je, faili zangu huhifadhiwa kwenye seva yenu?</summary>
+            <p data-i18n-html="faq.a6">Hapana. Faili hutumwa kutoka jukwaa asili moja kwa moja hadi kwenye kifaa chako na hazihifadhiwi kwenye seva yetu.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Imetengenezwa na</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Chagua lugha</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Funga">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Tafuta lugha…" aria-label="Tafuta lugha…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Hakuna lugha iliyopatikana.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Inaleta maudhui… hii inaweza kuchukua sekunde chache.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"sw","strings":{"meta.title":"I Need Save — Pakua video, picha na sauti kutoka mitandao yoyote ya kijamii","meta.description":"Pakua video, picha na sauti kutoka TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn na mamia ya tovuti nyingine.","skip":"Ruka hadi maudhui","nav.label":"Urambazaji mkuu","nav.how":"Jinsi ya kutumia","nav.platforms":"Majukwaa","nav.faq":"Maswali","lang.button":"Badilisha lugha","lang.title":"Chagua lugha","lang.search":"Tafuta lugha…","lang.empty":"Hakuna lugha iliyopatikana.","lang.close":"Funga","hero.title":"Pakua video, picha na sauti kutoka mitandao yoyote ya kijamii","hero.lead":"Bandika kiungo kutoka TikTok, Instagram, Facebook, X, Pinterest na mengineyo. Chagua ubora, kisha uhifadhi moja kwa moja kwenye kifaa chako.","form.label":"Kiungo cha chapisho au video","form.placeholder":"Bandika kiungo hapa…","form.paste":"Bandika","form.clear":"Futa kiungo","form.submit":"Pakua","form.processing":"Inachakata","chips.label":"Mifano ya majukwaa yanayotumika","how.title":"Jinsi ya kupakua","how.step1.title":"Nakili kiungo","how.step1.text":"Fungua chapisho kwenye programu, gusa \u003cstrong>Shiriki\u003c/strong>, kisha uchague \u003cstrong>Nakili kiungo\u003c/strong>.","how.step2.title":"Kibandike hapa","how.step2.text":"Bandika kiungo kwenye kisanduku kilicho hapo juu, kisha ubonyeze \u003cstrong>Pakua\u003c/strong>.","how.step3.title":"Chagua na uhifadhi","how.step3.text":"Chagua video, sauti ya MP3 au picha kwa ubora unaotaka.","platforms.title":"Majukwaa yanayotumika","platforms.lead":"Video, picha na sauti kutoka mamia ya tovuti. Baadhi ya maarufu zaidi:","faq.title":"Maswali yanayoulizwa mara kwa mara","faq.q1":"Je, I Need Save ni bure?","faq.a1":"Ndiyo, ni bure kabisa. Huhitaji kujisajili, kuingia wala programu.","faq.q2":"Faili zangu huhifadhiwa wapi?","faq.a2":"Kwenye Android na kompyuta, faili huenda kwenye folda ya \u003cstrong>Vipakuliwa\u003c/strong>. Kwenye iPhone na iPad (Safari), huhifadhiwa kwenye programu ya \u003cstrong>Faili\u003c/strong> → \u003cstrong>Vipakuliwa\u003c/strong>. Kutoka hapo unaweza kuzihifadhi kwenye Picha kwa kitufe cha Shiriki.","faq.q3":"Kwa nini baadhi ya video haziwezi kupakuliwa?","faq.a3":"Seva yetu haiwezi kufikia maudhui ya faragha, maudhui yanayohitaji kuingia, au maudhui yaliyozuiliwa kwa eneo. Hakikisha chapisho ni la umma, kisha ujaribu tena.","faq.q4":"Ninapakuaje MP3?","faq.a4":"Baada ya kiungo kuchakatwa, chagua chaguo la \u003cstrong>MP3\u003c/strong> chini ya Sauti. Sauti hutolewa kwenye video na kubadilishwa kuwa MP3 ya 192 kbps.","faq.q5":"Je, video za TikTok zina alama ya maji?","faq.a5":"Daima tunapendelea toleo lisilo na alama ya maji linapopatikana. Chaguo zenye alama ya maji zimewekwa lebo \u003cstrong>Alama ya maji\u003c/strong>.","faq.q6":"Je, faili zangu huhifadhiwa kwenye seva yenu?","faq.a6":"Hapana. Faili hutumwa kutoka jukwaa asili moja kwa moja hadi kwenye kifaa chako na hazihifadhiwi kwenye seva yetu.","footer.madeBy":"Imetengenezwa na","results.loading":"Inaleta maudhui… hii inaweza kuchukua sekunde chache.","results.found":"Maudhui {n} yamepatikana","results.more":"Onyesha chaguo {n} zaidi","group.video":"Video","group.audio":"Sauti","group.image":"Picha","label.thumbnail":"Picha ndogo","label.photo":"Picha","label.photoN":"Picha {n}","label.video":"Video","label.videoN":"Video {n}","label.audioN":"Sauti {n}","label.original_audio":"Sauti asili","note.original_quality":"Ubora asili","note.no_audio":"Bila sauti","note.watermark":"Alama ya maji","download.button":"Pakua","download.preparing":"Inaandaa…","toast.preparing":"Tunaandaa faili lako… upakuaji utaanza wenyewe.","toast.started":"Upakuaji umeanza.","toast.failed":"Upakuaji haukufaulu. Jaribu ubora mwingine au uchakate kiungo tena.","toast.clipboardEmpty":"Ubao wako wa kunakili ni tupu. Nakili kiungo kwanza.","toast.clipboardDenied":"Ruhusa ya kufikia ubao wa kunakili imekataliwa. Bandika kiungo wewe mwenyewe.","error.empty":"Bandika kiungo cha chapisho au video kwanza.","error.timeout":"Muda umekwisha. Chanzo kilichukua muda mrefu kujibu, tafadhali jaribu tena.","error.offline":"Hakuna muunganisho wa intaneti. Angalia mtandao wako kisha ujaribu tena.","error.busy":"Seva ina shughuli nyingi. Tafadhali jaribu tena baada ya muda mfupi.","error.invalid_url":"Kiungo si sahihi. Bandika kiungo kamili kutoka programu ya mtandao wa kijamii.","error.unsupported":"Kiungo hiki bado hakitumiki. Hakikisha kinaelekeza moja kwa moja kwenye chapisho au video.","error.blocked":"Jukwaa hili kwa sasa linazuia seva yetu, kwa hivyo kiungo hiki hakiwezi kupakuliwa sasa hivi.","error.rate_limited":"Jukwaa linapunguza maombi kutoka seva yetu. Tafadhali jaribu tena baada ya muda mfupi.","error.login_required":"Maudhui haya ni ya faragha, au jukwaa linahitaji uingie ili kuyaona, kwa hivyo hayawezi kupakuliwa.","error.not_found":"Maudhui hayakupatikana au yameondolewa.","error.geo_blocked":"Maudhui haya yamezuiliwa kwa eneo na hayawezi kufikiwa na seva yetu.","error.failed":"Imeshindwa kupata maudhui kutoka kiungo hiki. Jaribu kiungo kingine au ujaribu tena baada ya muda mfupi.","error.no_media":"Hakuna maudhui yanayoweza kupakuliwa kwenye kiungo hiki.","error.server_config":"Seva bado haijasanidiwa ipasavyo.","error.server_error":"Hitilafu imetokea kwenye seva. Tafadhali jaribu tena."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

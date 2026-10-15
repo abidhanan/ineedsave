@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="mi" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Tikiake i ngā ataata, whakaahua me te oro mai i TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn me ngā rau o ētahi atu pae.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Tikiake i ngā ataata, whakaahua me te oro mai i TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn me ngā rau o ētahi atu pae.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Peke ki te ihirangi</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Whakatere matua">
+        <a href="#cara" data-i18n="nav.how">Me pēhea te whakamahi</a>
+        <a href="#platform" data-i18n="nav.platforms">Ngā pūhara</a>
+        <a href="#faq" data-i18n="nav.faq">Ngā pātai</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Huri reo: Māori">
+        <span class="lang-flag" aria-hidden="true">🇳🇿</span>
+        <span class="lang-code">MI</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Tikiake i ngā ataata, whakaahua me te oro mai i ngā pāpāho pāpori katoa</h1>
+        <p class="lead" data-i18n="hero.lead">Whakapiria he hono mai i TikTok, Instagram, Facebook, X, Pinterest me ētahi atu. Kōwhiria te kounga, kātahi ka tiaki tika ki tō pūrere.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Hono o te pou, o te ataata rānei</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Whakapiria he hono ki konei…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Whakapiri</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Ūkuia te hono">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Tikiake</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Ngā tauira o ngā pūhara e tautokohia ana">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Me pēhea te tikiake</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Tāruatia te hono</h3>
+            <p data-i18n-html="how.step1.text">Huakina te pou i roto i te taupānga, pātōtia <strong>Tiri</strong>, kātahi ka kōwhiri i <strong>Tārua hono</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Whakapiria ki konei</h3>
+            <p data-i18n-html="how.step2.text">Whakapiria te hono ki te pouaka i runga ake, kātahi ka pēhi i <strong>Tikiake</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Kōwhiri, ka tiaki</h3>
+            <p data-i18n="how.step3.text">Kōwhiria he ataata, he oro MP3, he whakaahua rānei i te kounga e hiahia ana koe.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Ngā pūhara e tautokohia ana</h2>
+        <p class="section-lead" data-i18n="platforms.lead">He ataata, he whakaahua, he oro mai i ngā rau pae. Ko ētahi o ngā mea rongonui rawa:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Ngā pātai auau</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">He kore utu a I Need Save?</summary>
+            <p data-i18n-html="faq.a1">Āe, he kore utu katoa. Kāore e hiahiatia he rēhitatanga, he takiuru, he taupānga rānei.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Ka tiakina ōku kōnae ki hea?</summary>
+            <p data-i18n-html="faq.a2">I Android me ngā rorohiko, ka haere ngā kōnae ki te kōpaki <strong>Ngā Tikiake</strong>. I iPhone me iPad (Safari), ka tiakina ki te taupānga <strong>Kōnae</strong> → <strong>Ngā Tikiake</strong>. Mai i reira ka taea e koe te tiaki ki Whakaahua mā te pātene Tiri.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">He aha e kore ai e taea ētahi ataata te tikiake?</summary>
+            <p data-i18n-html="faq.a3">Kāore e taea e tō mātou tūmau te toro atu ki te ihirangi tūmataiti, ki te ihirangi e hiahia ana kia takiuru, ki te ihirangi kua herea ā-rohe rānei. Kia mōhio he tūmatanui te pou, kātahi ka ngana anō.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Me pēhea taku tikiake MP3?</summary>
+            <p data-i18n-html="faq.a4">Ka oti te hono te tukatuka, kōwhiria te kōwhiringa <strong>MP3</strong> i raro i te Oro. Ka tangohia te oro i te ataata, ka hurihia hei MP3 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">He tohu wai kei ngā ataata TikTok?</summary>
+            <p data-i18n-html="faq.a5">Ka hiahia tonu mātou ki te putanga kāore he tohu wai, ina wātea ana. Ko ngā kōwhiringa he tohu wai kei roto kua tapaina ki te <strong>Tohu wai</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Ka tiakina ōku kōnae ki tō koutou tūmau?</summary>
+            <p data-i18n-html="faq.a6">Kāo. Ka tukuna tika ngā kōnae mai i te pūhara taketake ki tō pūrere, ā, kāore e puritia ki tō mātou tūmau.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Nā</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Kōwhiria te reo</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Katia">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Rapua he reo…" aria-label="Rapua he reo…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Kāore i kitea he reo.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">E tiki ana i ngā kōnae… he hēkona torutoru pea te roa.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"mi","strings":{"meta.title":"I Need Save — Tikiake i ngā ataata, whakaahua me te oro mai i ngā pāpāho pāpori katoa","meta.description":"Tikiake i ngā ataata, whakaahua me te oro mai i TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn me ngā rau o ētahi atu pae.","skip":"Peke ki te ihirangi","nav.label":"Whakatere matua","nav.how":"Me pēhea te whakamahi","nav.platforms":"Ngā pūhara","nav.faq":"Ngā pātai","lang.button":"Huri reo","lang.title":"Kōwhiria te reo","lang.search":"Rapua he reo…","lang.empty":"Kāore i kitea he reo.","lang.close":"Katia","hero.title":"Tikiake i ngā ataata, whakaahua me te oro mai i ngā pāpāho pāpori katoa","hero.lead":"Whakapiria he hono mai i TikTok, Instagram, Facebook, X, Pinterest me ētahi atu. Kōwhiria te kounga, kātahi ka tiaki tika ki tō pūrere.","form.label":"Hono o te pou, o te ataata rānei","form.placeholder":"Whakapiria he hono ki konei…","form.paste":"Whakapiri","form.clear":"Ūkuia te hono","form.submit":"Tikiake","form.processing":"E tukatuka ana","chips.label":"Ngā tauira o ngā pūhara e tautokohia ana","how.title":"Me pēhea te tikiake","how.step1.title":"Tāruatia te hono","how.step1.text":"Huakina te pou i roto i te taupānga, pātōtia \u003cstrong>Tiri\u003c/strong>, kātahi ka kōwhiri i \u003cstrong>Tārua hono\u003c/strong>.","how.step2.title":"Whakapiria ki konei","how.step2.text":"Whakapiria te hono ki te pouaka i runga ake, kātahi ka pēhi i \u003cstrong>Tikiake\u003c/strong>.","how.step3.title":"Kōwhiri, ka tiaki","how.step3.text":"Kōwhiria he ataata, he oro MP3, he whakaahua rānei i te kounga e hiahia ana koe.","platforms.title":"Ngā pūhara e tautokohia ana","platforms.lead":"He ataata, he whakaahua, he oro mai i ngā rau pae. Ko ētahi o ngā mea rongonui rawa:","faq.title":"Ngā pātai auau","faq.q1":"He kore utu a I Need Save?","faq.a1":"Āe, he kore utu katoa. Kāore e hiahiatia he rēhitatanga, he takiuru, he taupānga rānei.","faq.q2":"Ka tiakina ōku kōnae ki hea?","faq.a2":"I Android me ngā rorohiko, ka haere ngā kōnae ki te kōpaki \u003cstrong>Ngā Tikiake\u003c/strong>. I iPhone me iPad (Safari), ka tiakina ki te taupānga \u003cstrong>Kōnae\u003c/strong> → \u003cstrong>Ngā Tikiake\u003c/strong>. Mai i reira ka taea e koe te tiaki ki Whakaahua mā te pātene Tiri.","faq.q3":"He aha e kore ai e taea ētahi ataata te tikiake?","faq.a3":"Kāore e taea e tō mātou tūmau te toro atu ki te ihirangi tūmataiti, ki te ihirangi e hiahia ana kia takiuru, ki te ihirangi kua herea ā-rohe rānei. Kia mōhio he tūmatanui te pou, kātahi ka ngana anō.","faq.q4":"Me pēhea taku tikiake MP3?","faq.a4":"Ka oti te hono te tukatuka, kōwhiria te kōwhiringa \u003cstrong>MP3\u003c/strong> i raro i te Oro. Ka tangohia te oro i te ataata, ka hurihia hei MP3 192 kbps.","faq.q5":"He tohu wai kei ngā ataata TikTok?","faq.a5":"Ka hiahia tonu mātou ki te putanga kāore he tohu wai, ina wātea ana. Ko ngā kōwhiringa he tohu wai kei roto kua tapaina ki te \u003cstrong>Tohu wai\u003c/strong>.","faq.q6":"Ka tiakina ōku kōnae ki tō koutou tūmau?","faq.a6":"Kāo. Ka tukuna tika ngā kōnae mai i te pūhara taketake ki tō pūrere, ā, kāore e puritia ki tō mātou tūmau.","footer.madeBy":"Nā","results.loading":"E tiki ana i ngā kōnae… he hēkona torutoru pea te roa.","results.found":"{n} kōnae i kitea","results.more":"Whakaaturia ētahi atu kōwhiringa e {n}","group.video":"Ataata","group.audio":"Oro","group.image":"Whakaahua","label.thumbnail":"Whakaahua iti","label.photo":"Whakaahua","label.photoN":"Whakaahua {n}","label.video":"Ataata","label.videoN":"Ataata {n}","label.audioN":"Oro {n}","label.original_audio":"Oro taketake","note.original_quality":"Kounga taketake","note.no_audio":"Kāore he oro","note.watermark":"Tohu wai","download.button":"Tikiake","download.preparing":"E whakarite ana…","toast.preparing":"E whakarite ana i tō kōnae… ka tīmata aunoa te tikiake.","toast.started":"Kua tīmata te tikiake.","toast.failed":"I rahua te tikiake. Whakamātauria tētahi atu kounga, tukatukahia anō rānei te hono.","toast.clipboardEmpty":"Kei te piatu tō papatopenga. Tāruatia he hono i te tuatahi.","toast.clipboardDenied":"I whakakāhoretia te uru ki te papatopenga. Whakapiria ā-ringa te hono.","error.empty":"Whakapiria he hono pou, ataata rānei i te tuatahi.","error.timeout":"Kua pau te wā. I roa rawa te pūtake ki te whakautu, ngana anō koa.","error.offline":"Kāore he hononga ipurangi. Tirohia tō whatunga, ka ngana anō.","error.busy":"Kei te pukumahi te tūmau. Ngana anō ā tōna wā poto, koa.","error.invalid_url":"He hono hē. Whakapiria te hono katoa mai i te taupānga pāpāho pāpori.","error.unsupported":"Kāore anō tēnei hono kia tautokohia. Kia mōhio ka tohu tika ia ki tētahi pou, ataata rānei.","error.blocked":"Kei te aukati tēnei pūhara i tō mātou tūmau i tēnei wā, nā reira kāore e taea tēnei hono te tikiake ināianei.","error.rate_limited":"Kei te whakawhāiti te pūhara i ngā tono mai i tō mātou tūmau. Ngana anō ā tōna wā poto, koa.","error.login_required":"He tūmataiti tēnei ihirangi, kei te hiahia rānei te pūhara kia takiuru koe kia kite ai, nā reira kāore e taea te tikiake.","error.not_found":"Kāore i kitea te ihirangi, kua tangohia rānei.","error.geo_blocked":"Kua herea ā-rohe tēnei ihirangi, ā, kāore e taea e tō mātou tūmau te toro atu.","error.failed":"Kāore i taea te tiki kōnae mai i tēnei hono. Whakamātauria tētahi atu hono, ngana anō rānei ā tōna wā poto.","error.no_media":"Kāore he kōnae ka taea te tikiake i tēnei hono.","error.server_config":"Kāore anō te tūmau kia whakaritea tikahia.","error.server_error":"I hē tētahi mea i te tūmau. Ngana anō koa."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

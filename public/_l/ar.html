@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ar" dir="rtl" style="--font-script: &quot;Noto Sans Arabic&quot;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="نزّل الفيديوهات والصور والمقاطع الصوتية من TikTok وInstagram وFacebook وX (Twitter) وPinterest وLinkedIn ومئات المواقع الأخرى.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="نزّل الفيديوهات والصور والمقاطع الصوتية من TikTok وInstagram وFacebook وX (Twitter) وPinterest وLinkedIn ومئات المواقع الأخرى.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap"></noscript>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">انتقل إلى المحتوى</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="التنقل الرئيسي">
+        <a href="#cara" data-i18n="nav.how">طريقة الاستخدام</a>
+        <a href="#platform" data-i18n="nav.platforms">المنصات</a>
+        <a href="#faq" data-i18n="nav.faq">الأسئلة الشائعة</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="تغيير اللغة: العربية">
+        <span class="lang-flag" aria-hidden="true">🇸🇦</span>
+        <span class="lang-code">AR</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">نزّل الفيديوهات والصور والصوتيات من أي منصة تواصل اجتماعي</h1>
+        <p class="lead" data-i18n="hero.lead">الصق رابطًا من TikTok أو Instagram أو Facebook أو X أو Pinterest وغيرها. اختر الجودة، ثم احفظه مباشرةً على جهازك.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">رابط المنشور أو الفيديو</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="الصق الرابط هنا…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">لصق</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="مسح الرابط">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">تنزيل</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="أمثلة على المنصات المدعومة">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">طريقة التنزيل</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">انسخ الرابط</h3>
+            <p data-i18n-html="how.step1.text">افتح المنشور في التطبيق، واضغط على <strong>مشاركة</strong>، ثم اختر <strong>نسخ الرابط</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">الصقه هنا</h3>
+            <p data-i18n-html="how.step2.text">الصق الرابط في المربع أعلاه، ثم اضغط على <strong>تنزيل</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">اختر واحفظ</h3>
+            <p data-i18n="how.step3.text">اختر الفيديو أو الصوت بصيغة MP3 أو الصورة بالجودة التي تريدها.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">المنصات المدعومة</h2>
+        <p class="section-lead" data-i18n="platforms.lead">فيديوهات وصور وصوتيات من مئات المواقع. إليك بعض أشهرها:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">الأسئلة الشائعة</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">هل I Need Save مجاني؟</summary>
+            <p data-i18n-html="faq.a1">نعم، مجاني تمامًا. لا حاجة إلى إنشاء حساب أو تسجيل الدخول أو تثبيت تطبيق.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">أين تُحفظ ملفاتي؟</summary>
+            <p data-i18n-html="faq.a2">على Android والكمبيوتر، تُحفظ الملفات في مجلد <strong>التنزيلات</strong>. وعلى iPhone وiPad (Safari)، تُحفظ في تطبيق <strong>الملفات</strong> ← <strong>التنزيلات</strong>. ومن هناك يمكنك حفظها في الصور باستخدام زر المشاركة.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">لماذا لا يمكن تنزيل بعض الفيديوهات؟</summary>
+            <p data-i18n-html="faq.a3">لا يستطيع خادمنا الوصول إلى المحتوى الخاص، أو المحتوى الذي يتطلب تسجيل الدخول، أو المحتوى المقيّد حسب المنطقة. تأكد من أن المنشور عام، ثم حاول مرة أخرى.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">كيف أنزّل ملف MP3؟</summary>
+            <p data-i18n-html="faq.a4">بعد معالجة الرابط، اختر خيار <strong>MP3</strong> ضمن قسم الصوت. يُستخرج الصوت من الفيديو ويُحوَّل إلى MP3 بجودة 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">هل تحتوي فيديوهات TikTok على علامة مائية؟</summary>
+            <p data-i18n-html="faq.a5">نفضّل دائمًا النسخة التي بدون علامة مائية عند توفرها. أما الخيارات التي تحتوي على علامة مائية فتحمل التسمية <strong>علامة مائية</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">هل تُخزَّن ملفاتي على خادمكم؟</summary>
+            <p data-i18n-html="faq.a6">لا. تُرسل الملفات من المنصة الأصلية مباشرةً إلى جهازك، ولا يتم الاحتفاظ بها على خادمنا.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">صُنع بواسطة</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">اختر اللغة</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="إغلاق">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="ابحث عن لغة…" aria-label="ابحث عن لغة…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>لم يتم العثور على أي لغة.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">جارٍ جلب الوسائط… قد يستغرق ذلك بضع ثوانٍ.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"ar","strings":{"meta.title":"I Need Save — تنزيل الفيديوهات والصور والصوتيات من أي منصة تواصل اجتماعي","meta.description":"نزّل الفيديوهات والصور والمقاطع الصوتية من TikTok وInstagram وFacebook وX (Twitter) وPinterest وLinkedIn ومئات المواقع الأخرى.","skip":"انتقل إلى المحتوى","nav.label":"التنقل الرئيسي","nav.how":"طريقة الاستخدام","nav.platforms":"المنصات","nav.faq":"الأسئلة الشائعة","lang.button":"تغيير اللغة","lang.title":"اختر اللغة","lang.search":"ابحث عن لغة…","lang.empty":"لم يتم العثور على أي لغة.","lang.close":"إغلاق","hero.title":"نزّل الفيديوهات والصور والصوتيات من أي منصة تواصل اجتماعي","hero.lead":"الصق رابطًا من TikTok أو Instagram أو Facebook أو X أو Pinterest وغيرها. اختر الجودة، ثم احفظه مباشرةً على جهازك.","form.label":"رابط المنشور أو الفيديو","form.placeholder":"الصق الرابط هنا…","form.paste":"لصق","form.clear":"مسح الرابط","form.submit":"تنزيل","form.processing":"جارٍ المعالجة","chips.label":"أمثلة على المنصات المدعومة","how.title":"طريقة التنزيل","how.step1.title":"انسخ الرابط","how.step1.text":"افتح المنشور في التطبيق، واضغط على \u003cstrong>مشاركة\u003c/strong>، ثم اختر \u003cstrong>نسخ الرابط\u003c/strong>.","how.step2.title":"الصقه هنا","how.step2.text":"الصق الرابط في المربع أعلاه، ثم اضغط على \u003cstrong>تنزيل\u003c/strong>.","how.step3.title":"اختر واحفظ","how.step3.text":"اختر الفيديو أو الصوت بصيغة MP3 أو الصورة بالجودة التي تريدها.","platforms.title":"المنصات المدعومة","platforms.lead":"فيديوهات وصور وصوتيات من مئات المواقع. إليك بعض أشهرها:","faq.title":"الأسئلة الشائعة","faq.q1":"هل I Need Save مجاني؟","faq.a1":"نعم، مجاني تمامًا. لا حاجة إلى إنشاء حساب أو تسجيل الدخول أو تثبيت تطبيق.","faq.q2":"أين تُحفظ ملفاتي؟","faq.a2":"على Android والكمبيوتر، تُحفظ الملفات في مجلد \u003cstrong>التنزيلات\u003c/strong>. وعلى iPhone وiPad (Safari)، تُحفظ في تطبيق \u003cstrong>الملفات\u003c/strong> ← \u003cstrong>التنزيلات\u003c/strong>. ومن هناك يمكنك حفظها في الصور باستخدام زر المشاركة.","faq.q3":"لماذا لا يمكن تنزيل بعض الفيديوهات؟","faq.a3":"لا يستطيع خادمنا الوصول إلى المحتوى الخاص، أو المحتوى الذي يتطلب تسجيل الدخول، أو المحتوى المقيّد حسب المنطقة. تأكد من أن المنشور عام، ثم حاول مرة أخرى.","faq.q4":"كيف أنزّل ملف MP3؟","faq.a4":"بعد معالجة الرابط، اختر خيار \u003cstrong>MP3\u003c/strong> ضمن قسم الصوت. يُستخرج الصوت من الفيديو ويُحوَّل إلى MP3 بجودة 192 kbps.","faq.q5":"هل تحتوي فيديوهات TikTok على علامة مائية؟","faq.a5":"نفضّل دائمًا النسخة التي بدون علامة مائية عند توفرها. أما الخيارات التي تحتوي على علامة مائية فتحمل التسمية \u003cstrong>علامة مائية\u003c/strong>.","faq.q6":"هل تُخزَّن ملفاتي على خادمكم؟","faq.a6":"لا. تُرسل الملفات من المنصة الأصلية مباشرةً إلى جهازك، ولا يتم الاحتفاظ بها على خادمنا.","footer.madeBy":"صُنع بواسطة","results.loading":"جارٍ جلب الوسائط… قد يستغرق ذلك بضع ثوانٍ.","results.found":"تم العثور على {n} من الوسائط","results.more":"عرض {n} خيارات إضافية","group.video":"فيديو","group.audio":"صوت","group.image":"صور","label.thumbnail":"صورة مصغّرة","label.photo":"صورة","label.photoN":"صورة {n}","label.video":"فيديو","label.videoN":"فيديو {n}","label.audioN":"صوت {n}","label.original_audio":"الصوت الأصلي","note.original_quality":"الجودة الأصلية","note.no_audio":"بدون صوت","note.watermark":"علامة مائية","download.button":"تنزيل","download.preparing":"جارٍ التحضير…","toast.preparing":"جارٍ تحضير ملفك… سيبدأ التنزيل تلقائيًا.","toast.started":"بدأ التنزيل.","toast.failed":"فشل التنزيل. جرّب جودة أخرى أو عالِج الرابط مرة أخرى.","toast.clipboardEmpty":"الحافظة فارغة. انسخ رابطًا أولًا.","toast.clipboardDenied":"تم رفض الوصول إلى الحافظة. الصق الرابط يدويًا.","error.empty":"الصق رابط منشور أو فيديو أولًا.","error.timeout":"انتهت المهلة. استغرق المصدر وقتًا طويلًا للرد، يُرجى المحاولة مرة أخرى.","error.offline":"لا يوجد اتصال بالإنترنت. تحقق من الشبكة وحاول مرة أخرى.","error.busy":"الخادم مشغول. يُرجى المحاولة مرة أخرى بعد قليل.","error.invalid_url":"رابط غير صالح. الصق الرابط كاملًا من تطبيق التواصل الاجتماعي.","error.unsupported":"هذا الرابط غير مدعوم بعد. تأكد من أنه يشير مباشرةً إلى منشور أو فيديو.","error.blocked":"هذه المنصة تحظر خادمنا حاليًا، لذا لا يمكن تنزيل هذا الرابط الآن.","error.rate_limited":"تحدّ المنصة من الطلبات الواردة من خادمنا. يُرجى المحاولة مرة أخرى بعد قليل.","error.login_required":"هذا المحتوى خاص، أو تتطلب المنصة تسجيل الدخول لعرضه، لذا لا يمكن تنزيله.","error.not_found":"المحتوى غير موجود أو تمت إزالته.","error.geo_blocked":"هذا المحتوى مقيّد حسب المنطقة ولا يستطيع خادمنا الوصول إليه.","error.failed":"تعذّر الحصول على الوسائط من هذا الرابط. جرّب رابطًا آخر أو حاول مرة أخرى بعد قليل.","error.no_media":"لا توجد وسائط قابلة للتنزيل في هذا الرابط.","error.server_config":"لم يتم إعداد الخادم بشكل صحيح بعد.","error.server_error":"حدث خطأ ما في الخادم. يُرجى المحاولة مرة أخرى."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

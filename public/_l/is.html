@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="is" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Sæktu myndskeið, myndir og hljóð af TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn og hundruðum annarra vefsvæða.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Sæktu myndskeið, myndir og hljóð af TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn og hundruðum annarra vefsvæða.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Fara í efni</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Aðalvalmynd">
+        <a href="#cara" data-i18n="nav.how">Leiðbeiningar</a>
+        <a href="#platform" data-i18n="nav.platforms">Miðlar</a>
+        <a href="#faq" data-i18n="nav.faq">Algengar spurningar</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Breyta tungumáli: Íslenska">
+        <span class="lang-flag" aria-hidden="true">🇮🇸</span>
+        <span class="lang-code">IS</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Sæktu myndskeið, myndir og hljóð af öllum samfélagsmiðlum</h1>
+        <p class="lead" data-i18n="hero.lead">Límdu tengil frá TikTok, Instagram, Facebook, X, Pinterest og fleiri miðlum. Veldu gæði og vistaðu beint í tækið þitt.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Tengill á færslu eða myndskeið</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Límdu tengil hér…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Líma</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Hreinsa tengil">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Sækja</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Dæmi um studda miðla">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Svona sækirðu</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Afritaðu tengilinn</h3>
+            <p data-i18n-html="how.step1.text">Opnaðu færsluna í forritinu, ýttu á <strong>Deila</strong> og veldu svo <strong>Afrita tengil</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Límdu hann hér</h3>
+            <p data-i18n-html="how.step2.text">Límdu tengilinn í reitinn hér fyrir ofan og ýttu á <strong>Sækja</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Veldu og vistaðu</h3>
+            <p data-i18n="how.step3.text">Veldu myndskeið, MP3-hljóð eða mynd í þeim gæðum sem þú vilt.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Studdir miðlar</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Myndskeið, myndir og hljóð frá hundruðum vefsvæða. Nokkur þau vinsælustu:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Algengar spurningar</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Er I Need Save ókeypis?</summary>
+            <p data-i18n-html="faq.a1">Já, alveg ókeypis. Engin skráning, innskráning eða forrit nauðsynlegt.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Hvar eru skrárnar mínar vistaðar?</summary>
+            <p data-i18n-html="faq.a2">Í Android og tölvum fara skrárnar í möppuna <strong>Niðurhal</strong>. Í iPhone og iPad (Safari) eru þær vistaðar í forritinu <strong>Skrár</strong> → <strong>Niðurhal</strong>. Þaðan geturðu vistað þær í Myndir með Deila-hnappinum.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Af hverju er ekki hægt að sækja sum myndskeið?</summary>
+            <p data-i18n-html="faq.a3">Þjónninn okkar nær ekki í lokað efni, efni sem krefst innskráningar eða efni sem er svæðisbundið. Gakktu úr skugga um að færslan sé opinber og reyndu aftur.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Hvernig sæki ég MP3?</summary>
+            <p data-i18n-html="faq.a4">Þegar búið er að vinna úr tenglinum skaltu velja <strong>MP3</strong> undir Hljóð. Hljóðið er tekið úr myndskeiðinu og umbreytt í 192 kbps MP3.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Eru TikTok-myndskeið með vatnsmerki?</summary>
+            <p data-i18n-html="faq.a5">Við veljum alltaf útgáfuna án vatnsmerkis þegar hún er í boði. Valkostir með vatnsmerki eru merktir <strong>Vatnsmerki</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Eru skrárnar mínar geymdar á þjóninum ykkar?</summary>
+            <p data-i18n-html="faq.a6">Nei. Skrárnar eru sendar beint frá upprunalega miðlinum í tækið þitt og eru ekki geymdar á þjóninum okkar.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Gert af</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Veldu tungumál</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Loka">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Leita að tungumáli…" aria-label="Leita að tungumáli…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Ekkert tungumál fannst.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Sæki efni… þetta getur tekið nokkrar sekúndur.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"is","strings":{"meta.title":"I Need Save — Sæktu myndskeið, myndir og hljóð af öllum samfélagsmiðlum","meta.description":"Sæktu myndskeið, myndir og hljóð af TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn og hundruðum annarra vefsvæða.","skip":"Fara í efni","nav.label":"Aðalvalmynd","nav.how":"Leiðbeiningar","nav.platforms":"Miðlar","nav.faq":"Algengar spurningar","lang.button":"Breyta tungumáli","lang.title":"Veldu tungumál","lang.search":"Leita að tungumáli…","lang.empty":"Ekkert tungumál fannst.","lang.close":"Loka","hero.title":"Sæktu myndskeið, myndir og hljóð af öllum samfélagsmiðlum","hero.lead":"Límdu tengil frá TikTok, Instagram, Facebook, X, Pinterest og fleiri miðlum. Veldu gæði og vistaðu beint í tækið þitt.","form.label":"Tengill á færslu eða myndskeið","form.placeholder":"Límdu tengil hér…","form.paste":"Líma","form.clear":"Hreinsa tengil","form.submit":"Sækja","form.processing":"Í vinnslu","chips.label":"Dæmi um studda miðla","how.title":"Svona sækirðu","how.step1.title":"Afritaðu tengilinn","how.step1.text":"Opnaðu færsluna í forritinu, ýttu á \u003cstrong>Deila\u003c/strong> og veldu svo \u003cstrong>Afrita tengil\u003c/strong>.","how.step2.title":"Límdu hann hér","how.step2.text":"Límdu tengilinn í reitinn hér fyrir ofan og ýttu á \u003cstrong>Sækja\u003c/strong>.","how.step3.title":"Veldu og vistaðu","how.step3.text":"Veldu myndskeið, MP3-hljóð eða mynd í þeim gæðum sem þú vilt.","platforms.title":"Studdir miðlar","platforms.lead":"Myndskeið, myndir og hljóð frá hundruðum vefsvæða. Nokkur þau vinsælustu:","faq.title":"Algengar spurningar","faq.q1":"Er I Need Save ókeypis?","faq.a1":"Já, alveg ókeypis. Engin skráning, innskráning eða forrit nauðsynlegt.","faq.q2":"Hvar eru skrárnar mínar vistaðar?","faq.a2":"Í Android og tölvum fara skrárnar í möppuna \u003cstrong>Niðurhal\u003c/strong>. Í iPhone og iPad (Safari) eru þær vistaðar í forritinu \u003cstrong>Skrár\u003c/strong> → \u003cstrong>Niðurhal\u003c/strong>. Þaðan geturðu vistað þær í Myndir með Deila-hnappinum.","faq.q3":"Af hverju er ekki hægt að sækja sum myndskeið?","faq.a3":"Þjónninn okkar nær ekki í lokað efni, efni sem krefst innskráningar eða efni sem er svæðisbundið. Gakktu úr skugga um að færslan sé opinber og reyndu aftur.","faq.q4":"Hvernig sæki ég MP3?","faq.a4":"Þegar búið er að vinna úr tenglinum skaltu velja \u003cstrong>MP3\u003c/strong> undir Hljóð. Hljóðið er tekið úr myndskeiðinu og umbreytt í 192 kbps MP3.","faq.q5":"Eru TikTok-myndskeið með vatnsmerki?","faq.a5":"Við veljum alltaf útgáfuna án vatnsmerkis þegar hún er í boði. Valkostir með vatnsmerki eru merktir \u003cstrong>Vatnsmerki\u003c/strong>.","faq.q6":"Eru skrárnar mínar geymdar á þjóninum ykkar?","faq.a6":"Nei. Skrárnar eru sendar beint frá upprunalega miðlinum í tækið þitt og eru ekki geymdar á þjóninum okkar.","footer.madeBy":"Gert af","results.loading":"Sæki efni… þetta getur tekið nokkrar sekúndur.","results.found":"Efni fannst: {n}","results.more":"Sýna {n} valkosti í viðbót","group.video":"Myndskeið","group.audio":"Hljóð","group.image":"Myndir","label.thumbnail":"Smámynd","label.photo":"Mynd","label.photoN":"Mynd {n}","label.video":"Myndskeið","label.videoN":"Myndskeið {n}","label.audioN":"Hljóð {n}","label.original_audio":"Upprunalegt hljóð","note.original_quality":"Upprunaleg gæði","note.no_audio":"Ekkert hljóð","note.watermark":"Vatnsmerki","download.button":"Sækja","download.preparing":"Undirbý…","toast.preparing":"Undirbý skrána þína… niðurhalið hefst sjálfkrafa.","toast.started":"Niðurhal hafið.","toast.failed":"Niðurhalið mistókst. Prófaðu önnur gæði eða vinndu aftur úr tenglinum.","toast.clipboardEmpty":"Klippiborðið er tómt. Afritaðu fyrst tengil.","toast.clipboardDenied":"Aðgangi að klippiborði var hafnað. Límdu tengilinn handvirkt.","error.empty":"Límdu fyrst tengil á færslu eða myndskeið.","error.timeout":"Tíminn rann út. Uppruninn var of lengi að svara, reyndu aftur.","error.offline":"Engin nettenging. Athugaðu netið og reyndu aftur.","error.busy":"Þjónninn er upptekinn. Reyndu aftur eftir smástund.","error.invalid_url":"Ógildur tengill. Límdu allan tengilinn úr samfélagsmiðlaforritinu.","error.unsupported":"Þessi tengill er ekki studdur enn. Gakktu úr skugga um að hann vísi beint á færslu eða myndskeið.","error.blocked":"Þessi miðill lokar á þjóninn okkar eins og er, svo ekki er hægt að sækja þennan tengil núna.","error.rate_limited":"Miðillinn takmarkar beiðnir frá þjóninum okkar. Reyndu aftur eftir smástund.","error.login_required":"Þetta efni er lokað eða miðillinn krefst innskráningar til að skoða það, svo ekki er hægt að sækja það.","error.not_found":"Efnið fannst ekki eða hefur verið fjarlægt.","error.geo_blocked":"Þetta efni er svæðisbundið og þjónninn okkar nær ekki í það.","error.failed":"Ekki tókst að sækja efni af þessum tengli. Prófaðu annan tengil eða reyndu aftur eftir smástund.","error.no_media":"Ekkert efni til að sækja á þessum tengli.","error.server_config":"Þjónninn er ekki rétt stilltur enn.","error.server_error":"Eitthvað fór úrskeiðis á þjóninum. Reyndu aftur."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

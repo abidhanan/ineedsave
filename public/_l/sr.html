@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="sr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Преузмите видео записе, фотографије и аудио са мрежа TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn и стотина других сајтова.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Преузмите видео записе, фотографије и аудио са мрежа TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn и стотина других сајтова.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Пређи на садржај</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Главна навигација">
+        <a href="#cara" data-i18n="nav.how">Како се користи</a>
+        <a href="#platform" data-i18n="nav.platforms">Платформе</a>
+        <a href="#faq" data-i18n="nav.faq">Питања</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Промени језик: Српски">
+        <span class="lang-flag" aria-hidden="true">🇷🇸</span>
+        <span class="lang-code">SR</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Преузмите видео записе, фотографије и аудио са било које друштвене мреже</h1>
+        <p class="lead" data-i18n="hero.lead">Налепите линк са мрежа TikTok, Instagram, Facebook, X, Pinterest и других. Изаберите квалитет и сачувајте фајл директно на уређај.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Линк објаве или видеа</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Налепите линк овде…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Налепи</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Обриши линк">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Преузми</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Примери подржаних платформи">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Како преузети</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Копирајте линк</h3>
+            <p data-i18n-html="how.step1.text">Отворите објаву у апликацији, додирните <strong>Дели</strong>, па изаберите <strong>Копирај линк</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Налепите га овде</h3>
+            <p data-i18n-html="how.step2.text">Налепите линк у поље изнад, па притисните <strong>Преузми</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Изаберите и сачувајте</h3>
+            <p data-i18n="how.step3.text">Изаберите видео, MP3 аудио или фотографију у жељеном квалитету.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Подржане платформе</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Видео записи, фотографије и аудио са стотина сајтова. Неки од најпопуларнијих:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Често постављана питања</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Да ли је I Need Save бесплатан?</summary>
+            <p data-i18n-html="faq.a1">Да, потпуно бесплатан. Није потребна регистрација, пријављивање ни апликација.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Где се чувају фајлови?</summary>
+            <p data-i18n-html="faq.a2">На Android уређајима и рачунарима фајлови иду у фасциклу <strong>Преузимања</strong>. На iPhone и iPad уређајима (Safari) чувају се у апликацији <strong>Фајлови</strong> → <strong>Преузимања</strong>. Одатле их можете сачувати у Фотографије помоћу дугмета Дели.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Зашто неки видео снимци не могу да се преузму?</summary>
+            <p data-i18n-html="faq.a3">Наш сервер не може да приступи приватном садржају, садржају за који је потребна пријава или садржају са регионалним ограничењем. Проверите да ли је објава јавна, па покушајте поново.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Како да преузмем MP3?</summary>
+            <p data-i18n-html="faq.a4">Када се линк обради, изаберите опцију <strong>MP3</strong> у одељку Аудио. Звук се издваја из видеа и конвертује у MP3 од 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Да ли TikTok видео снимци имају водени жиг?</summary>
+            <p data-i18n-html="faq.a5">Увек бирамо верзију без воденог жига када је доступна. Опције са воденим жигом означене су као <strong>Водени жиг</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Да ли се моји фајлови чувају на вашем серверу?</summary>
+            <p data-i18n-html="faq.a6">Не. Фајлови се шаљу са оригиналне платформе директно на ваш уређај и не чувају се на нашем серверу.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Аутор:</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Изаберите језик</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Затвори">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Претражи језике…" aria-label="Претражи језике…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Језик није пронађен.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Преузимамо медије… ово може потрајати неколико секунди.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"sr","strings":{"meta.title":"I Need Save — Преузмите видео записе, фотографије и аудио са било које друштвене мреже","meta.description":"Преузмите видео записе, фотографије и аудио са мрежа TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn и стотина других сајтова.","skip":"Пређи на садржај","nav.label":"Главна навигација","nav.how":"Како се користи","nav.platforms":"Платформе","nav.faq":"Питања","lang.button":"Промени језик","lang.title":"Изаберите језик","lang.search":"Претражи језике…","lang.empty":"Језик није пронађен.","lang.close":"Затвори","hero.title":"Преузмите видео записе, фотографије и аудио са било које друштвене мреже","hero.lead":"Налепите линк са мрежа TikTok, Instagram, Facebook, X, Pinterest и других. Изаберите квалитет и сачувајте фајл директно на уређај.","form.label":"Линк објаве или видеа","form.placeholder":"Налепите линк овде…","form.paste":"Налепи","form.clear":"Обриши линк","form.submit":"Преузми","form.processing":"Обрада","chips.label":"Примери подржаних платформи","how.title":"Како преузети","how.step1.title":"Копирајте линк","how.step1.text":"Отворите објаву у апликацији, додирните \u003cstrong>Дели\u003c/strong>, па изаберите \u003cstrong>Копирај линк\u003c/strong>.","how.step2.title":"Налепите га овде","how.step2.text":"Налепите линк у поље изнад, па притисните \u003cstrong>Преузми\u003c/strong>.","how.step3.title":"Изаберите и сачувајте","how.step3.text":"Изаберите видео, MP3 аудио или фотографију у жељеном квалитету.","platforms.title":"Подржане платформе","platforms.lead":"Видео записи, фотографије и аудио са стотина сајтова. Неки од најпопуларнијих:","faq.title":"Често постављана питања","faq.q1":"Да ли је I Need Save бесплатан?","faq.a1":"Да, потпуно бесплатан. Није потребна регистрација, пријављивање ни апликација.","faq.q2":"Где се чувају фајлови?","faq.a2":"На Android уређајима и рачунарима фајлови иду у фасциклу \u003cstrong>Преузимања\u003c/strong>. На iPhone и iPad уређајима (Safari) чувају се у апликацији \u003cstrong>Фајлови\u003c/strong> → \u003cstrong>Преузимања\u003c/strong>. Одатле их можете сачувати у Фотографије помоћу дугмета Дели.","faq.q3":"Зашто неки видео снимци не могу да се преузму?","faq.a3":"Наш сервер не може да приступи приватном садржају, садржају за који је потребна пријава или садржају са регионалним ограничењем. Проверите да ли је објава јавна, па покушајте поново.","faq.q4":"Како да преузмем MP3?","faq.a4":"Када се линк обради, изаберите опцију \u003cstrong>MP3\u003c/strong> у одељку Аудио. Звук се издваја из видеа и конвертује у MP3 од 192 kbps.","faq.q5":"Да ли TikTok видео снимци имају водени жиг?","faq.a5":"Увек бирамо верзију без воденог жига када је доступна. Опције са воденим жигом означене су као \u003cstrong>Водени жиг\u003c/strong>.","faq.q6":"Да ли се моји фајлови чувају на вашем серверу?","faq.a6":"Не. Фајлови се шаљу са оригиналне платформе директно на ваш уређај и не чувају се на нашем серверу.","footer.madeBy":"Аутор:","results.loading":"Преузимамо медије… ово може потрајати неколико секунди.","results.found":"Пронађени фајлови: {n}","results.more":"Прикажи још опција ({n})","group.video":"Видео","group.audio":"Аудио","group.image":"Фотографије","label.thumbnail":"Сличица","label.photo":"Фотографија","label.photoN":"Фотографија {n}","label.video":"Видео","label.videoN":"Видео {n}","label.audioN":"Аудио {n}","label.original_audio":"Оригинални звук","note.original_quality":"Оригинални квалитет","note.no_audio":"Без звука","note.watermark":"Водени жиг","download.button":"Преузми","download.preparing":"Припрема…","toast.preparing":"Припремамо фајл… преузимање ће почети аутоматски.","toast.started":"Преузимање је почело.","toast.failed":"Преузимање није успело. Пробајте други квалитет или поново обрадите линк.","toast.clipboardEmpty":"Привремена меморија је празна. Прво копирајте линк.","toast.clipboardDenied":"Приступ привременој меморији је одбијен. Налепите линк ручно.","error.empty":"Прво налепите линк објаве или видеа.","error.timeout":"Време је истекло. Извор је предуго одговарао, покушајте поново.","error.offline":"Нема интернет везе. Проверите мрежу и покушајте поново.","error.busy":"Сервер је заузет. Покушајте поново за тренутак.","error.invalid_url":"Неважећи линк. Налепите цео линк из апликације друштвене мреже.","error.unsupported":"Овај линк још није подржан. Проверите да ли води директно на објаву или видео.","error.blocked":"Ова платформа тренутно блокира наш сервер, па са овог линка сада није могуће преузимање.","error.rate_limited":"Платформа ограничава захтеве са нашег сервера. Покушајте поново за тренутак.","error.login_required":"Овај садржај је приватан или платформа захтева пријаву да би се видео, па не може да се преузме.","error.not_found":"Садржај није пронађен или је уклоњен.","error.geo_blocked":"Овај садржај је регионално ограничен и наш сервер не може да му приступи.","error.failed":"Није могуће преузети медије са овог линка. Пробајте други линк или покушајте поново за тренутак.","error.no_media":"На овом линку нема медија за преузимање.","error.server_config":"Сервер још није исправно подешен.","error.server_error":"Дошло је до грешке на серверу. Покушајте поново."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

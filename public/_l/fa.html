@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="fa" dir="rtl" style="--font-script: &quot;Noto Sans Arabic&quot;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="ویدیو، عکس و صدا را از TikTok، Instagram، Facebook، X (Twitter)، Pinterest، LinkedIn و صدها سایت دیگر دانلود کنید.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="ویدیو، عکس و صدا را از TikTok، Instagram، Facebook، X (Twitter)، Pinterest، LinkedIn و صدها سایت دیگر دانلود کنید.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap"></noscript>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">رفتن به محتوا</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="ناوبری اصلی">
+        <a href="#cara" data-i18n="nav.how">راهنمای استفاده</a>
+        <a href="#platform" data-i18n="nav.platforms">پلتفرم‌ها</a>
+        <a href="#faq" data-i18n="nav.faq">سؤالات متداول</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="تغییر زبان: فارسی">
+        <span class="lang-flag" aria-hidden="true">🇮🇷</span>
+        <span class="lang-code">FA</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">دانلود ویدیو، عکس و صدا از هر شبکه اجتماعی</h1>
+        <p class="lead" data-i18n="hero.lead">لینکی از TikTok، Instagram، Facebook، X، Pinterest و موارد دیگر را جای‌گذاری کنید. کیفیت را انتخاب کنید و آن را مستقیم در دستگاهتان ذخیره کنید.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">لینک پست یا ویدیو</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="لینک را اینجا جای‌گذاری کنید…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">جای‌گذاری</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="پاک کردن لینک">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">دانلود</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="نمونه‌هایی از پلتفرم‌های پشتیبانی‌شده">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">روش دانلود</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">لینک را کپی کنید</h3>
+            <p data-i18n-html="how.step1.text">پست را در برنامه باز کنید، روی <strong>اشتراک‌گذاری</strong> ضربه بزنید و سپس <strong>کپی پیوند</strong> را انتخاب کنید.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">اینجا جای‌گذاری کنید</h3>
+            <p data-i18n-html="how.step2.text">لینک را در کادر بالا جای‌گذاری کنید و سپس <strong>دانلود</strong> را بزنید.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">انتخاب و ذخیره</h3>
+            <p data-i18n="how.step3.text">ویدیو، صدای MP3 یا عکس را با کیفیت دلخواهتان انتخاب کنید.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">پلتفرم‌های پشتیبانی‌شده</h2>
+        <p class="section-lead" data-i18n="platforms.lead">ویدیو، عکس و صدا از صدها سایت. برخی از محبوب‌ترین‌ها:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">سؤالات متداول</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">آیا I Need Save رایگان است؟</summary>
+            <p data-i18n-html="faq.a1">بله، کاملاً رایگان. نیازی به ثبت‌نام، ورود به حساب یا نصب برنامه نیست.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">فایل‌هایم کجا ذخیره می‌شوند؟</summary>
+            <p data-i18n-html="faq.a2">در Android و رایانه، فایل‌ها در پوشه <strong>دانلودها</strong> ذخیره می‌شوند. در iPhone و iPad (Safari)، در برنامه <strong>فایل‌ها</strong> ← <strong>دانلودها</strong> ذخیره می‌شوند. از آنجا می‌توانید با دکمه اشتراک‌گذاری آن‌ها را در عکس‌ها ذخیره کنید.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">چرا برخی ویدیوها دانلود نمی‌شوند؟</summary>
+            <p data-i18n-html="faq.a3">سرور ما به محتوای خصوصی، محتوایی که نیاز به ورود به حساب دارد یا محتوایی که محدودیت منطقه‌ای دارد دسترسی ندارد. مطمئن شوید پست عمومی است و دوباره امتحان کنید.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">چطور MP3 دانلود کنم؟</summary>
+            <p data-i18n-html="faq.a4">پس از پردازش لینک، گزینه <strong>MP3</strong> را در بخش صدا انتخاب کنید. صدا از ویدیو جدا شده و به MP3 با کیفیت 192 kbps تبدیل می‌شود.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">آیا ویدیوهای TikTok واترمارک دارند؟</summary>
+            <p data-i18n-html="faq.a5">ما همیشه در صورت وجود، نسخه بدون واترمارک را ترجیح می‌دهیم. گزینه‌هایی که واترمارک دارند با برچسب <strong>واترمارک</strong> مشخص شده‌اند.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">آیا فایل‌هایم روی سرور شما ذخیره می‌شوند؟</summary>
+            <p data-i18n-html="faq.a6">خیر. فایل‌ها مستقیماً از پلتفرم اصلی به دستگاه شما ارسال می‌شوند و روی سرور ما نگهداری نمی‌شوند.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">ساخته شده توسط</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">انتخاب زبان</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="بستن">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="جستجوی زبان…" aria-label="جستجوی زبان…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>زبانی پیدا نشد.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">در حال دریافت رسانه… ممکن است چند ثانیه طول بکشد.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"fa","strings":{"meta.title":"I Need Save — دانلود ویدیو، عکس و صدا از هر شبکه اجتماعی","meta.description":"ویدیو، عکس و صدا را از TikTok، Instagram، Facebook، X (Twitter)، Pinterest، LinkedIn و صدها سایت دیگر دانلود کنید.","skip":"رفتن به محتوا","nav.label":"ناوبری اصلی","nav.how":"راهنمای استفاده","nav.platforms":"پلتفرم‌ها","nav.faq":"سؤالات متداول","lang.button":"تغییر زبان","lang.title":"انتخاب زبان","lang.search":"جستجوی زبان…","lang.empty":"زبانی پیدا نشد.","lang.close":"بستن","hero.title":"دانلود ویدیو، عکس و صدا از هر شبکه اجتماعی","hero.lead":"لینکی از TikTok، Instagram، Facebook، X، Pinterest و موارد دیگر را جای‌گذاری کنید. کیفیت را انتخاب کنید و آن را مستقیم در دستگاهتان ذخیره کنید.","form.label":"لینک پست یا ویدیو","form.placeholder":"لینک را اینجا جای‌گذاری کنید…","form.paste":"جای‌گذاری","form.clear":"پاک کردن لینک","form.submit":"دانلود","form.processing":"در حال پردازش","chips.label":"نمونه‌هایی از پلتفرم‌های پشتیبانی‌شده","how.title":"روش دانلود","how.step1.title":"لینک را کپی کنید","how.step1.text":"پست را در برنامه باز کنید، روی \u003cstrong>اشتراک‌گذاری\u003c/strong> ضربه بزنید و سپس \u003cstrong>کپی پیوند\u003c/strong> را انتخاب کنید.","how.step2.title":"اینجا جای‌گذاری کنید","how.step2.text":"لینک را در کادر بالا جای‌گذاری کنید و سپس \u003cstrong>دانلود\u003c/strong> را بزنید.","how.step3.title":"انتخاب و ذخیره","how.step3.text":"ویدیو، صدای MP3 یا عکس را با کیفیت دلخواهتان انتخاب کنید.","platforms.title":"پلتفرم‌های پشتیبانی‌شده","platforms.lead":"ویدیو، عکس و صدا از صدها سایت. برخی از محبوب‌ترین‌ها:","faq.title":"سؤالات متداول","faq.q1":"آیا I Need Save رایگان است؟","faq.a1":"بله، کاملاً رایگان. نیازی به ثبت‌نام، ورود به حساب یا نصب برنامه نیست.","faq.q2":"فایل‌هایم کجا ذخیره می‌شوند؟","faq.a2":"در Android و رایانه، فایل‌ها در پوشه \u003cstrong>دانلودها\u003c/strong> ذخیره می‌شوند. در iPhone و iPad (Safari)، در برنامه \u003cstrong>فایل‌ها\u003c/strong> ← \u003cstrong>دانلودها\u003c/strong> ذخیره می‌شوند. از آنجا می‌توانید با دکمه اشتراک‌گذاری آن‌ها را در عکس‌ها ذخیره کنید.","faq.q3":"چرا برخی ویدیوها دانلود نمی‌شوند؟","faq.a3":"سرور ما به محتوای خصوصی، محتوایی که نیاز به ورود به حساب دارد یا محتوایی که محدودیت منطقه‌ای دارد دسترسی ندارد. مطمئن شوید پست عمومی است و دوباره امتحان کنید.","faq.q4":"چطور MP3 دانلود کنم؟","faq.a4":"پس از پردازش لینک، گزینه \u003cstrong>MP3\u003c/strong> را در بخش صدا انتخاب کنید. صدا از ویدیو جدا شده و به MP3 با کیفیت 192 kbps تبدیل می‌شود.","faq.q5":"آیا ویدیوهای TikTok واترمارک دارند؟","faq.a5":"ما همیشه در صورت وجود، نسخه بدون واترمارک را ترجیح می‌دهیم. گزینه‌هایی که واترمارک دارند با برچسب \u003cstrong>واترمارک\u003c/strong> مشخص شده‌اند.","faq.q6":"آیا فایل‌هایم روی سرور شما ذخیره می‌شوند؟","faq.a6":"خیر. فایل‌ها مستقیماً از پلتفرم اصلی به دستگاه شما ارسال می‌شوند و روی سرور ما نگهداری نمی‌شوند.","footer.madeBy":"ساخته شده توسط","results.loading":"در حال دریافت رسانه… ممکن است چند ثانیه طول بکشد.","results.found":"{n} رسانه پیدا شد","results.more":"نمایش {n} گزینه دیگر","group.video":"ویدیو","group.audio":"صدا","group.image":"عکس‌ها","label.thumbnail":"تصویر بندانگشتی","label.photo":"عکس","label.photoN":"عکس {n}","label.video":"ویدیو","label.videoN":"ویدیو {n}","label.audioN":"صدا {n}","label.original_audio":"صدای اصلی","note.original_quality":"کیفیت اصلی","note.no_audio":"بدون صدا","note.watermark":"واترمارک","download.button":"دانلود","download.preparing":"در حال آماده‌سازی…","toast.preparing":"در حال آماده‌سازی فایل شما… دانلود به‌طور خودکار شروع می‌شود.","toast.started":"دانلود شروع شد.","toast.failed":"دانلود ناموفق بود. کیفیت دیگری را امتحان کنید یا لینک را دوباره پردازش کنید.","toast.clipboardEmpty":"کلیپ‌بورد خالی است. ابتدا یک لینک کپی کنید.","toast.clipboardDenied":"دسترسی به کلیپ‌بورد رد شد. لینک را دستی جای‌گذاری کنید.","error.empty":"ابتدا لینک یک پست یا ویدیو را جای‌گذاری کنید.","error.timeout":"زمان انتظار به پایان رسید. پاسخ منبع بیش از حد طول کشید، لطفاً دوباره امتحان کنید.","error.offline":"اتصال اینترنت برقرار نیست. شبکه خود را بررسی کنید و دوباره امتحان کنید.","error.busy":"سرور شلوغ است. لطفاً کمی بعد دوباره امتحان کنید.","error.invalid_url":"لینک نامعتبر است. لینک کامل را از برنامه شبکه اجتماعی جای‌گذاری کنید.","error.unsupported":"این لینک هنوز پشتیبانی نمی‌شود. مطمئن شوید که مستقیماً به یک پست یا ویدیو اشاره می‌کند.","error.blocked":"این پلتفرم در حال حاضر سرور ما را مسدود کرده است، بنابراین فعلاً نمی‌توان این لینک را دانلود کرد.","error.rate_limited":"پلتفرم درخواست‌های سرور ما را محدود کرده است. لطفاً کمی بعد دوباره امتحان کنید.","error.login_required":"این محتوا خصوصی است یا پلتفرم برای مشاهده آن ورود به حساب را الزامی کرده است، بنابراین قابل دانلود نیست.","error.not_found":"محتوا پیدا نشد یا حذف شده است.","error.geo_blocked":"این محتوا محدودیت منطقه‌ای دارد و سرور ما به آن دسترسی ندارد.","error.failed":"دریافت رسانه از این لینک ممکن نشد. لینک دیگری را امتحان کنید یا کمی بعد دوباره تلاش کنید.","error.no_media":"در این لینک رسانه قابل دانلودی وجود ندارد.","error.server_config":"سرور هنوز به‌درستی پیکربندی نشده است.","error.server_error":"مشکلی در سرور پیش آمد. لطفاً دوباره امتحان کنید."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

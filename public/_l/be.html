@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="be" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Спампоўвайце відэа, фота і аўдыя з TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn і соцень іншых сайтаў.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Спампоўвайце відэа, фота і аўдыя з TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn і соцень іншых сайтаў.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Перайсці да змесціва</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Галоўнае меню">
+        <a href="#cara" data-i18n="nav.how">Як карыстацца</a>
+        <a href="#platform" data-i18n="nav.platforms">Платформы</a>
+        <a href="#faq" data-i18n="nav.faq">Пытанні</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Змяніць мову: Беларуская">
+        <span class="lang-flag" aria-hidden="true">🇧🇾</span>
+        <span class="lang-code">BE</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Спампоўвайце відэа, фота і аўдыя з любых сацсетак</h1>
+        <p class="lead" data-i18n="hero.lead">Устаўце спасылку з TikTok, Instagram, Facebook, X, Pinterest і іншых сэрвісаў. Выберыце якасць і захавайце файл проста на прыладу.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Спасылка на допіс або відэа</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Устаўце спасылку сюды…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Уставіць</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Ачысціць спасылку">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Спампаваць</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Прыклады падтрымліваемых платформ">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Як спампаваць</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Скапіруйце спасылку</h3>
+            <p data-i18n-html="how.step1.text">Адкрыйце допіс у праграме, націсніце <strong>Падзяліцца</strong> і выберыце <strong>Скапіраваць спасылку</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Устаўце яе сюды</h3>
+            <p data-i18n-html="how.step2.text">Устаўце спасылку ў поле вышэй і націсніце <strong>Спампаваць</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Выберыце і захавайце</h3>
+            <p data-i18n="how.step3.text">Выберыце відэа, аўдыя MP3 або фота ў патрэбнай якасці.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Падтрымліваемыя платформы</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Відэа, фота і аўдыя з соцень сайтаў. Самыя папулярныя з іх:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Частыя пытанні</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save — гэта бясплатна?</summary>
+            <p data-i18n-html="faq.a1">Так, цалкам бясплатна. Не патрэбныя ні рэгістрацыя, ні ўваход, ні праграма.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Куды захоўваюцца файлы?</summary>
+            <p data-i18n-html="faq.a2">На Android і камп’ютарах файлы трапляюць у папку <strong>Спампоўкі</strong>. На iPhone і iPad (Safari) яны захоўваюцца ў праграме <strong>Файлы</strong> → <strong>Спампоўкі</strong>. Адтуль іх можна захаваць у «Фота» праз кнопку «Падзяліцца».</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Чаму некаторыя відэа не спампоўваюцца?</summary>
+            <p data-i18n-html="faq.a3">Наш сервер не мае доступу да прыватнага змесціва, змесціва, для якога патрэбны ўваход, або змесціва з рэгіянальнымі абмежаваннямі. Пераканайцеся, што допіс агульнадаступны, і паспрабуйце яшчэ раз.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Як спампаваць MP3?</summary>
+            <p data-i18n-html="faq.a4">Пасля апрацоўкі спасылкі выберыце варыянт <strong>MP3</strong> у раздзеле «Аўдыя». Гук бярэцца з відэа і канвертуецца ў MP3 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Ці ёсць на відэа з TikTok вадзяны знак?</summary>
+            <p data-i18n-html="faq.a5">Мы заўсёды выбіраем версію без вадзянога знака, калі яна даступная. Варыянты з вадзяным знакам пазначаны як <strong>Вадзяны знак</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Ці захоўваюцца мае файлы на вашым серверы?</summary>
+            <p data-i18n-html="faq.a6">Не. Файлы перадаюцца з арыгінальнай платформы проста на вашу прыладу і не захоўваюцца на нашым серверы.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Аўтар:</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Выберыце мову</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Закрыць">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Пошук мовы…" aria-label="Пошук мовы…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Мова не знойдзена.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Атрымліваем медыяфайлы… гэта можа заняць некалькі секунд.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"be","strings":{"meta.title":"I Need Save — спампоўвайце відэа, фота і аўдыя з любых сацсетак","meta.description":"Спампоўвайце відэа, фота і аўдыя з TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn і соцень іншых сайтаў.","skip":"Перайсці да змесціва","nav.label":"Галоўнае меню","nav.how":"Як карыстацца","nav.platforms":"Платформы","nav.faq":"Пытанні","lang.button":"Змяніць мову","lang.title":"Выберыце мову","lang.search":"Пошук мовы…","lang.empty":"Мова не знойдзена.","lang.close":"Закрыць","hero.title":"Спампоўвайце відэа, фота і аўдыя з любых сацсетак","hero.lead":"Устаўце спасылку з TikTok, Instagram, Facebook, X, Pinterest і іншых сэрвісаў. Выберыце якасць і захавайце файл проста на прыладу.","form.label":"Спасылка на допіс або відэа","form.placeholder":"Устаўце спасылку сюды…","form.paste":"Уставіць","form.clear":"Ачысціць спасылку","form.submit":"Спампаваць","form.processing":"Апрацоўка","chips.label":"Прыклады падтрымліваемых платформ","how.title":"Як спампаваць","how.step1.title":"Скапіруйце спасылку","how.step1.text":"Адкрыйце допіс у праграме, націсніце \u003cstrong>Падзяліцца\u003c/strong> і выберыце \u003cstrong>Скапіраваць спасылку\u003c/strong>.","how.step2.title":"Устаўце яе сюды","how.step2.text":"Устаўце спасылку ў поле вышэй і націсніце \u003cstrong>Спампаваць\u003c/strong>.","how.step3.title":"Выберыце і захавайце","how.step3.text":"Выберыце відэа, аўдыя MP3 або фота ў патрэбнай якасці.","platforms.title":"Падтрымліваемыя платформы","platforms.lead":"Відэа, фота і аўдыя з соцень сайтаў. Самыя папулярныя з іх:","faq.title":"Частыя пытанні","faq.q1":"I Need Save — гэта бясплатна?","faq.a1":"Так, цалкам бясплатна. Не патрэбныя ні рэгістрацыя, ні ўваход, ні праграма.","faq.q2":"Куды захоўваюцца файлы?","faq.a2":"На Android і камп’ютарах файлы трапляюць у папку \u003cstrong>Спампоўкі\u003c/strong>. На iPhone і iPad (Safari) яны захоўваюцца ў праграме \u003cstrong>Файлы\u003c/strong> → \u003cstrong>Спампоўкі\u003c/strong>. Адтуль іх можна захаваць у «Фота» праз кнопку «Падзяліцца».","faq.q3":"Чаму некаторыя відэа не спампоўваюцца?","faq.a3":"Наш сервер не мае доступу да прыватнага змесціва, змесціва, для якога патрэбны ўваход, або змесціва з рэгіянальнымі абмежаваннямі. Пераканайцеся, што допіс агульнадаступны, і паспрабуйце яшчэ раз.","faq.q4":"Як спампаваць MP3?","faq.a4":"Пасля апрацоўкі спасылкі выберыце варыянт \u003cstrong>MP3\u003c/strong> у раздзеле «Аўдыя». Гук бярэцца з відэа і канвертуецца ў MP3 192 kbps.","faq.q5":"Ці ёсць на відэа з TikTok вадзяны знак?","faq.a5":"Мы заўсёды выбіраем версію без вадзянога знака, калі яна даступная. Варыянты з вадзяным знакам пазначаны як \u003cstrong>Вадзяны знак\u003c/strong>.","faq.q6":"Ці захоўваюцца мае файлы на вашым серверы?","faq.a6":"Не. Файлы перадаюцца з арыгінальнай платформы проста на вашу прыладу і не захоўваюцца на нашым серверы.","footer.madeBy":"Аўтар:","results.loading":"Атрымліваем медыяфайлы… гэта можа заняць некалькі секунд.","results.found":"Знойдзена файлаў: {n}","results.more":"Паказаць яшчэ варыянты ({n})","group.video":"Відэа","group.audio":"Аўдыя","group.image":"Фота","label.thumbnail":"Вокладка","label.photo":"Фота","label.photoN":"Фота {n}","label.video":"Відэа","label.videoN":"Відэа {n}","label.audioN":"Аўдыя {n}","label.original_audio":"Арыгінальны гук","note.original_quality":"Арыгінальная якасць","note.no_audio":"Без гуку","note.watermark":"Вадзяны знак","download.button":"Спампаваць","download.preparing":"Падрыхтоўка…","toast.preparing":"Рыхтуем файл… спампоўванне пачнецца аўтаматычна.","toast.started":"Спампоўванне пачалося.","toast.failed":"Не ўдалося спампаваць файл. Выберыце іншую якасць або апрацуйце спасылку яшчэ раз.","toast.clipboardEmpty":"Буфер абмену пусты. Спачатку скапіруйце спасылку.","toast.clipboardDenied":"Няма доступу да буфера абмену. Устаўце спасылку ўручную.","error.empty":"Спачатку ўстаўце спасылку на допіс або відэа.","error.timeout":"Час чакання скончыўся. Крыніца занадта доўга не адказвала, паспрабуйце яшчэ раз.","error.offline":"Няма падключэння да інтэрнэту. Праверце сетку і паспрабуйце яшчэ раз.","error.busy":"Сервер перагружаны. Паспрабуйце яшчэ раз крыху пазней.","error.invalid_url":"Няправільная спасылка. Устаўце поўную спасылку з праграмы сацсеткі.","error.unsupported":"Гэтая спасылка пакуль не падтрымліваецца. Пераканайцеся, што яна вядзе непасрэдна на допіс або відэа.","error.blocked":"Гэтая платформа зараз блакуе наш сервер, таму спампаваць па гэтай спасылцы пакуль немагчыма.","error.rate_limited":"Платформа абмяжоўвае запыты з нашага сервера. Паспрабуйце яшчэ раз крыху пазней.","error.login_required":"Гэта змесціва прыватнае або платформа патрабуе ўваходу для прагляду, таму спампаваць яго немагчыма.","error.not_found":"Змесціва не знойдзена або было выдалена.","error.geo_blocked":"Гэта змесціва мае рэгіянальныя абмежаванні, і наш сервер не мае да яго доступу.","error.failed":"Не ўдалося атрымаць медыяфайлы па гэтай спасылцы. Паспрабуйце іншую спасылку або паўтарыце крыху пазней.","error.no_media":"Па гэтай спасылцы няма файлаў для спампоўвання.","error.server_config":"Сервер яшчэ не наладжаны належным чынам.","error.server_error":"На серверы нешта пайшло не так. Паспрабуйце яшчэ раз."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

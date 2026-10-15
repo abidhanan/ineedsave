@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ht" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Telechaje videyo, foto ak odyo sou TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ak plizyè santèn lòt sit.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Telechaje videyo, foto ak odyo sou TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ak plizyè santèn lòt sit.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Ale nan kontni an</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Navigasyon prensipal">
+        <a href="#cara" data-i18n="nav.how">Kijan pou itilize l</a>
+        <a href="#platform" data-i18n="nav.platforms">Platfòm</a>
+        <a href="#faq" data-i18n="nav.faq">Kesyon</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Chanje lang: Kreyòl ayisyen">
+        <span class="lang-flag" aria-hidden="true">🇭🇹</span>
+        <span class="lang-code">HT</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Telechaje videyo, foto ak odyo sou nenpòt rezo sosyal</h1>
+        <p class="lead" data-i18n="hero.lead">Kole yon lyen ki soti sou TikTok, Instagram, Facebook, X, Pinterest ak lòt ankò. Chwazi yon kalite, epi anrejistre l dirèkteman sou aparèy ou.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Lyen piblikasyon oswa videyo</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Kole yon lyen la a…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Kole</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Efase lyen an">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Telechaje</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Egzanp platfòm nou sipòte">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Kijan pou telechaje</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Kopye lyen an</h3>
+            <p data-i18n-html="how.step1.text">Louvri piblikasyon an nan aplikasyon an, peze <strong>Pataje</strong>, epi chwazi <strong>Kopye lyen</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Kole l la a</h3>
+            <p data-i18n-html="how.step2.text">Kole lyen an nan bwat ki anwo a, epi peze <strong>Telechaje</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Chwazi epi anrejistre</h3>
+            <p data-i18n="how.step3.text">Chwazi videyo, odyo MP3, oswa foto nan kalite ou vle a.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Platfòm nou sipòte</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Videyo, foto ak odyo ki soti sou plizyè santèn sit. Men kèk nan sa ki pi popilè yo:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Kesyon moun poze souvan</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Èske I Need Save gratis?</summary>
+            <p data-i18n-html="faq.a1">Wi, li totalman gratis. Ou pa bezwen enskri, konekte, ni enstale okenn aplikasyon.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Ki kote fichye m yo anrejistre?</summary>
+            <p data-i18n-html="faq.a2">Sou Android ak òdinatè, fichye yo ale nan dosye <strong>Telechajman</strong>. Sou iPhone ak iPad (Safari), yo anrejistre nan aplikasyon <strong>Fichye</strong> → <strong>Telechajman</strong>. Apati la, ou ka anrejistre yo nan Foto ak bouton Pataje a.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Poukisa gen kèk videyo ki pa ka telechaje?</summary>
+            <p data-i18n-html="faq.a3">Sèvè nou an pa ka rive jwenn kontni prive, kontni ki mande pou w konekte, oswa kontni ki bloke selon rejyon. Asire w piblikasyon an piblik, epi eseye ankò.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Kijan pou m telechaje MP3?</summary>
+            <p data-i18n-html="faq.a4">Apre lyen an fin trete, chwazi opsyon <strong>MP3</strong> anba Odyo. Nou pran son an nan videyo a epi nou konvèti l an MP3 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Èske videyo TikTok yo gen filigràn?</summary>
+            <p data-i18n-html="faq.a5">Nou toujou prefere vèsyon ki pa gen filigràn nan lè li disponib. Opsyon ki gen filigràn yo make <strong>Filigràn</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Èske nou kenbe fichye m yo sou sèvè nou an?</summary>
+            <p data-i18n-html="faq.a6">Non. Fichye yo voye dirèkteman soti nan platfòm orijinal la rive sou aparèy ou, epi nou pa kenbe yo sou sèvè nou an.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Fèt pa</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Chwazi lang</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Fèmen">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Chèche yon lang…" aria-label="Chèche yon lang…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Pa jwenn okenn lang.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">N ap chèche medya yo… sa ka pran kèk segonn.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"ht","strings":{"meta.title":"I Need Save — Telechaje videyo, foto ak odyo sou nenpòt rezo sosyal","meta.description":"Telechaje videyo, foto ak odyo sou TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ak plizyè santèn lòt sit.","skip":"Ale nan kontni an","nav.label":"Navigasyon prensipal","nav.how":"Kijan pou itilize l","nav.platforms":"Platfòm","nav.faq":"Kesyon","lang.button":"Chanje lang","lang.title":"Chwazi lang","lang.search":"Chèche yon lang…","lang.empty":"Pa jwenn okenn lang.","lang.close":"Fèmen","hero.title":"Telechaje videyo, foto ak odyo sou nenpòt rezo sosyal","hero.lead":"Kole yon lyen ki soti sou TikTok, Instagram, Facebook, X, Pinterest ak lòt ankò. Chwazi yon kalite, epi anrejistre l dirèkteman sou aparèy ou.","form.label":"Lyen piblikasyon oswa videyo","form.placeholder":"Kole yon lyen la a…","form.paste":"Kole","form.clear":"Efase lyen an","form.submit":"Telechaje","form.processing":"Ap trete","chips.label":"Egzanp platfòm nou sipòte","how.title":"Kijan pou telechaje","how.step1.title":"Kopye lyen an","how.step1.text":"Louvri piblikasyon an nan aplikasyon an, peze \u003cstrong>Pataje\u003c/strong>, epi chwazi \u003cstrong>Kopye lyen\u003c/strong>.","how.step2.title":"Kole l la a","how.step2.text":"Kole lyen an nan bwat ki anwo a, epi peze \u003cstrong>Telechaje\u003c/strong>.","how.step3.title":"Chwazi epi anrejistre","how.step3.text":"Chwazi videyo, odyo MP3, oswa foto nan kalite ou vle a.","platforms.title":"Platfòm nou sipòte","platforms.lead":"Videyo, foto ak odyo ki soti sou plizyè santèn sit. Men kèk nan sa ki pi popilè yo:","faq.title":"Kesyon moun poze souvan","faq.q1":"Èske I Need Save gratis?","faq.a1":"Wi, li totalman gratis. Ou pa bezwen enskri, konekte, ni enstale okenn aplikasyon.","faq.q2":"Ki kote fichye m yo anrejistre?","faq.a2":"Sou Android ak òdinatè, fichye yo ale nan dosye \u003cstrong>Telechajman\u003c/strong>. Sou iPhone ak iPad (Safari), yo anrejistre nan aplikasyon \u003cstrong>Fichye\u003c/strong> → \u003cstrong>Telechajman\u003c/strong>. Apati la, ou ka anrejistre yo nan Foto ak bouton Pataje a.","faq.q3":"Poukisa gen kèk videyo ki pa ka telechaje?","faq.a3":"Sèvè nou an pa ka rive jwenn kontni prive, kontni ki mande pou w konekte, oswa kontni ki bloke selon rejyon. Asire w piblikasyon an piblik, epi eseye ankò.","faq.q4":"Kijan pou m telechaje MP3?","faq.a4":"Apre lyen an fin trete, chwazi opsyon \u003cstrong>MP3\u003c/strong> anba Odyo. Nou pran son an nan videyo a epi nou konvèti l an MP3 192 kbps.","faq.q5":"Èske videyo TikTok yo gen filigràn?","faq.a5":"Nou toujou prefere vèsyon ki pa gen filigràn nan lè li disponib. Opsyon ki gen filigràn yo make \u003cstrong>Filigràn\u003c/strong>.","faq.q6":"Èske nou kenbe fichye m yo sou sèvè nou an?","faq.a6":"Non. Fichye yo voye dirèkteman soti nan platfòm orijinal la rive sou aparèy ou, epi nou pa kenbe yo sou sèvè nou an.","footer.madeBy":"Fèt pa","results.loading":"N ap chèche medya yo… sa ka pran kèk segonn.","results.found":"Nou jwenn {n} medya","results.more":"Montre {n} lòt opsyon","group.video":"Videyo","group.audio":"Odyo","group.image":"Foto","label.thumbnail":"Ti imaj","label.photo":"Foto","label.photoN":"Foto {n}","label.video":"Videyo","label.videoN":"Videyo {n}","label.audioN":"Odyo {n}","label.original_audio":"Son orijinal","note.original_quality":"Kalite orijinal","note.no_audio":"San son","note.watermark":"Filigràn","download.button":"Telechaje","download.preparing":"Ap prepare…","toast.preparing":"N ap prepare fichye ou a… telechajman an ap kòmanse otomatikman.","toast.started":"Telechajman an kòmanse.","toast.failed":"Telechajman an echwe. Eseye yon lòt kalite oswa trete lyen an ankò.","toast.clipboardEmpty":"Klipbòd ou a vid. Kopye yon lyen anvan.","toast.clipboardDenied":"Aksè nan klipbòd la refize. Kole lyen an ak men w.","error.empty":"Kole yon lyen piblikasyon oswa videyo anvan.","error.timeout":"Tan an fini. Sous la pran twòp tan pou l reponn, tanpri eseye ankò.","error.offline":"Pa gen koneksyon entènèt. Verifye rezo w la epi eseye ankò.","error.busy":"Sèvè a okipe. Tanpri eseye ankò nan yon ti moman.","error.invalid_url":"Lyen an pa valab. Kole lyen konplè a ki soti nan aplikasyon rezo sosyal la.","error.unsupported":"Nou poko sipòte lyen sa a. Asire w li mennen dirèkteman sou yon piblikasyon oswa yon videyo.","error.blocked":"Platfòm sa a ap bloke sèvè nou an kounye a, kidonk nou pa ka telechaje lyen sa a pou kounye a.","error.rate_limited":"Platfòm nan ap limite demann ki soti nan sèvè nou an. Tanpri eseye ankò nan yon ti moman.","error.login_required":"Kontni sa a prive, oswa platfòm nan mande pou w konekte pou w wè l, kidonk nou pa ka telechaje l.","error.not_found":"Nou pa jwenn kontni an, oswa yo retire l.","error.geo_blocked":"Kontni sa a bloke selon rejyon, e sèvè nou an pa ka rive jwenn li.","error.failed":"Nou pa t ka jwenn medya nan lyen sa a. Eseye yon lòt lyen oswa eseye ankò nan yon ti moman.","error.no_media":"Pa gen okenn medya ou ka telechaje nan lyen sa a.","error.server_config":"Sèvè a poko konfigire kòrèkteman.","error.server_error":"Gen yon bagay ki pa mache sou sèvè a. Tanpri eseye ankò."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

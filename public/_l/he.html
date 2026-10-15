@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="he" dir="rtl" style="--font-script: &quot;Noto Sans Hebrew&quot;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="הורידו סרטונים, תמונות ואודיו מ-TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ומאות אתרים נוספים.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="הורידו סרטונים, תמונות ואודיו מ-TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ומאות אתרים נוספים.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;700&display=swap"></noscript>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">דילוג לתוכן</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="ניווט ראשי">
+        <a href="#cara" data-i18n="nav.how">איך משתמשים</a>
+        <a href="#platform" data-i18n="nav.platforms">פלטפורמות</a>
+        <a href="#faq" data-i18n="nav.faq">שאלות נפוצות</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="שינוי שפה: עברית">
+        <span class="lang-flag" aria-hidden="true">🇮🇱</span>
+        <span class="lang-code">HE</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">הורדת סרטונים, תמונות ואודיו מכל רשת חברתית</h1>
+        <p class="lead" data-i18n="hero.lead">הדביקו קישור מ-TikTok, Instagram, Facebook, X, Pinterest ועוד. בחרו איכות ושמרו ישירות במכשיר.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">קישור לפוסט או לסרטון</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="הדביקו כאן קישור…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">הדבקה</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="ניקוי הקישור">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">הורדה</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="דוגמאות לפלטפורמות נתמכות">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">איך מורידים</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">העתיקו את הקישור</h3>
+            <p data-i18n-html="how.step1.text">פתחו את הפוסט באפליקציה, הקישו על <strong>שיתוף</strong> ובחרו <strong>העתקת קישור</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">הדביקו כאן</h3>
+            <p data-i18n-html="how.step2.text">הדביקו את הקישור בתיבה שלמעלה ולחצו על <strong>הורדה</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">בוחרים ושומרים</h3>
+            <p data-i18n="how.step3.text">בחרו סרטון, אודיו MP3 או תמונה באיכות הרצויה.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">פלטפורמות נתמכות</h2>
+        <p class="section-lead" data-i18n="platforms.lead">סרטונים, תמונות ואודיו ממאות אתרים. כמה מהפופולריים ביותר:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">שאלות נפוצות</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">האם I Need Save בחינם?</summary>
+            <p data-i18n-html="faq.a1">כן, לגמרי בחינם. אין צורך בהרשמה, בהתחברות או באפליקציה.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">איפה הקבצים שלי נשמרים?</summary>
+            <p data-i18n-html="faq.a2">ב-Android ובמחשב, הקבצים נשמרים בתיקייה <strong>הורדות</strong>. ב-iPhone וב-iPad (Safari) הם נשמרים באפליקציה <strong>קבצים</strong> ← <strong>הורדות</strong>. משם אפשר לשמור אותם באפליקציית התמונות באמצעות כפתור השיתוף.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">למה אי אפשר להוריד חלק מהסרטונים?</summary>
+            <p data-i18n-html="faq.a3">השרת שלנו לא יכול לגשת לתוכן פרטי, לתוכן שדורש התחברות או לתוכן שמוגבל לפי אזור. ודאו שהפוסט ציבורי ונסו שוב.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">איך מורידים MP3?</summary>
+            <p data-i18n-html="faq.a4">אחרי שהקישור מעובד, בחרו באפשרות <strong>MP3</strong> תחת אודיו. הצליל נלקח מהסרטון ומומר ל-MP3 באיכות 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">האם בסרטוני TikTok יש סימן מים?</summary>
+            <p data-i18n-html="faq.a5">תמיד נעדיף את הגרסה ללא סימן מים כשהיא זמינה. אפשרויות שכוללות סימן מים מסומנות בתווית <strong>סימן מים</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">האם הקבצים שלי נשמרים בשרת שלכם?</summary>
+            <p data-i18n-html="faq.a6">לא. הקבצים נשלחים מהפלטפורמה המקורית ישירות למכשיר שלכם ולא נשמרים בשרת שלנו.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">נוצר על ידי</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">בחירת שפה</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="סגירה">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="חיפוש שפה…" aria-label="חיפוש שפה…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>לא נמצאה שפה.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">מאחזרים מדיה… זה עשוי לקחת כמה שניות.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"he","strings":{"meta.title":"I Need Save — הורדת סרטונים, תמונות ואודיו מכל רשת חברתית","meta.description":"הורידו סרטונים, תמונות ואודיו מ-TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ומאות אתרים נוספים.","skip":"דילוג לתוכן","nav.label":"ניווט ראשי","nav.how":"איך משתמשים","nav.platforms":"פלטפורמות","nav.faq":"שאלות נפוצות","lang.button":"שינוי שפה","lang.title":"בחירת שפה","lang.search":"חיפוש שפה…","lang.empty":"לא נמצאה שפה.","lang.close":"סגירה","hero.title":"הורדת סרטונים, תמונות ואודיו מכל רשת חברתית","hero.lead":"הדביקו קישור מ-TikTok, Instagram, Facebook, X, Pinterest ועוד. בחרו איכות ושמרו ישירות במכשיר.","form.label":"קישור לפוסט או לסרטון","form.placeholder":"הדביקו כאן קישור…","form.paste":"הדבקה","form.clear":"ניקוי הקישור","form.submit":"הורדה","form.processing":"בעיבוד","chips.label":"דוגמאות לפלטפורמות נתמכות","how.title":"איך מורידים","how.step1.title":"העתיקו את הקישור","how.step1.text":"פתחו את הפוסט באפליקציה, הקישו על \u003cstrong>שיתוף\u003c/strong> ובחרו \u003cstrong>העתקת קישור\u003c/strong>.","how.step2.title":"הדביקו כאן","how.step2.text":"הדביקו את הקישור בתיבה שלמעלה ולחצו על \u003cstrong>הורדה\u003c/strong>.","how.step3.title":"בוחרים ושומרים","how.step3.text":"בחרו סרטון, אודיו MP3 או תמונה באיכות הרצויה.","platforms.title":"פלטפורמות נתמכות","platforms.lead":"סרטונים, תמונות ואודיו ממאות אתרים. כמה מהפופולריים ביותר:","faq.title":"שאלות נפוצות","faq.q1":"האם I Need Save בחינם?","faq.a1":"כן, לגמרי בחינם. אין צורך בהרשמה, בהתחברות או באפליקציה.","faq.q2":"איפה הקבצים שלי נשמרים?","faq.a2":"ב-Android ובמחשב, הקבצים נשמרים בתיקייה \u003cstrong>הורדות\u003c/strong>. ב-iPhone וב-iPad (Safari) הם נשמרים באפליקציה \u003cstrong>קבצים\u003c/strong> ← \u003cstrong>הורדות\u003c/strong>. משם אפשר לשמור אותם באפליקציית התמונות באמצעות כפתור השיתוף.","faq.q3":"למה אי אפשר להוריד חלק מהסרטונים?","faq.a3":"השרת שלנו לא יכול לגשת לתוכן פרטי, לתוכן שדורש התחברות או לתוכן שמוגבל לפי אזור. ודאו שהפוסט ציבורי ונסו שוב.","faq.q4":"איך מורידים MP3?","faq.a4":"אחרי שהקישור מעובד, בחרו באפשרות \u003cstrong>MP3\u003c/strong> תחת אודיו. הצליל נלקח מהסרטון ומומר ל-MP3 באיכות 192 kbps.","faq.q5":"האם בסרטוני TikTok יש סימן מים?","faq.a5":"תמיד נעדיף את הגרסה ללא סימן מים כשהיא זמינה. אפשרויות שכוללות סימן מים מסומנות בתווית \u003cstrong>סימן מים\u003c/strong>.","faq.q6":"האם הקבצים שלי נשמרים בשרת שלכם?","faq.a6":"לא. הקבצים נשלחים מהפלטפורמה המקורית ישירות למכשיר שלכם ולא נשמרים בשרת שלנו.","footer.madeBy":"נוצר על ידי","results.loading":"מאחזרים מדיה… זה עשוי לקחת כמה שניות.","results.found":"נמצאו {n} פריטי מדיה","results.more":"הצגת {n} אפשרויות נוספות","group.video":"וידאו","group.audio":"אודיו","group.image":"תמונות","label.thumbnail":"תמונה ממוזערת","label.photo":"תמונה","label.photoN":"תמונה {n}","label.video":"סרטון","label.videoN":"סרטון {n}","label.audioN":"אודיו {n}","label.original_audio":"צליל מקורי","note.original_quality":"איכות מקורית","note.no_audio":"ללא קול","note.watermark":"סימן מים","download.button":"הורדה","download.preparing":"בהכנה…","toast.preparing":"הקובץ שלכם בהכנה… ההורדה תתחיל אוטומטית.","toast.started":"ההורדה התחילה.","toast.failed":"ההורדה נכשלה. נסו איכות אחרת או עבדו את הקישור מחדש.","toast.clipboardEmpty":"הלוח ריק. העתיקו קודם קישור.","toast.clipboardDenied":"הגישה ללוח נדחתה. הדביקו את הקישור ידנית.","error.empty":"הדביקו קודם קישור לפוסט או לסרטון.","error.timeout":"תם הזמן הקצוב. המקור לא הגיב בזמן, נסו שוב.","error.offline":"אין חיבור לאינטרנט. בדקו את הרשת ונסו שוב.","error.busy":"השרת עמוס. נסו שוב בעוד רגע.","error.invalid_url":"קישור לא תקין. הדביקו את הקישור המלא מאפליקציית הרשת החברתית.","error.unsupported":"הקישור הזה עדיין לא נתמך. ודאו שהוא מוביל ישירות לפוסט או לסרטון.","error.blocked":"הפלטפורמה הזו חוסמת כרגע את השרת שלנו, ולכן אי אפשר להוריד את הקישור הזה כרגע.","error.rate_limited":"הפלטפורמה מגבילה את הבקשות מהשרת שלנו. נסו שוב בעוד רגע.","error.login_required":"התוכן הזה פרטי, או שהפלטפורמה דורשת התחברות כדי לצפות בו, ולכן אי אפשר להוריד אותו.","error.not_found":"התוכן לא נמצא או שהוסר.","error.geo_blocked":"התוכן הזה מוגבל לפי אזור, והשרת שלנו לא יכול לגשת אליו.","error.failed":"לא הצלחנו לקבל מדיה מהקישור הזה. נסו קישור אחר או נסו שוב בעוד רגע.","error.no_media":"אין בקישור הזה מדיה שאפשר להוריד.","error.server_config":"השרת עדיין לא מוגדר כראוי.","error.server_error":"משהו השתבש בשרת. נסו שוב."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="tl" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Mag-download ng video, larawan, at audio mula sa TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn, at daan-daan pang ibang site.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Mag-download ng video, larawan, at audio mula sa TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn, at daan-daan pang ibang site.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Lumaktaw sa nilalaman</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Pangunahing navigation">
+        <a href="#cara" data-i18n="nav.how">Paano gamitin</a>
+        <a href="#platform" data-i18n="nav.platforms">Mga platform</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Palitan ang wika: Filipino">
+        <span class="lang-flag" aria-hidden="true">🇵🇭</span>
+        <span class="lang-code">TL</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Mag-download ng video, larawan, at audio mula sa anumang social media</h1>
+        <p class="lead" data-i18n="hero.lead">Mag-paste ng link mula sa TikTok, Instagram, Facebook, X, Pinterest, at iba pa. Pumili ng quality, saka i-save diretso sa device mo.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Link ng post o video</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="I-paste ang link dito…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">I-paste</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="I-clear ang link">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">I-download</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Mga halimbawa ng suportadong platform">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Paano mag-download</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Kopyahin ang link</h3>
+            <p data-i18n-html="how.step1.text">Buksan ang post sa app, i-tap ang <strong>Ibahagi</strong>, saka piliin ang <strong>Kopyahin ang link</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">I-paste dito</h3>
+            <p data-i18n-html="how.step2.text">I-paste ang link sa kahon sa itaas, saka pindutin ang <strong>I-download</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Pumili at i-save</h3>
+            <p data-i18n="how.step3.text">Pumili ng video, MP3 audio, o larawan sa quality na gusto mo.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Mga suportadong platform</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Mga video, larawan, at audio mula sa daan-daang site. Ilan sa pinakasikat:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Mga madalas itanong</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Libre ba ang I Need Save?</summary>
+            <p data-i18n-html="faq.a1">Oo, ganap na libre. Walang kailangang sign-up, login, o app.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Saan naise-save ang mga file ko?</summary>
+            <p data-i18n-html="faq.a2">Sa Android at computer, napupunta ang mga file sa folder na <strong>Mga Download</strong>. Sa iPhone at iPad (Safari), naka-save ang mga ito sa <strong>Files</strong> app → <strong>Downloads</strong>. Mula roon, puwede mo itong i-save sa Photos gamit ang Share button.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Bakit hindi ma-download ang ilang video?</summary>
+            <p data-i18n-html="faq.a3">Hindi maaabot ng server namin ang pribadong content, content na nangangailangan ng login, o content na naka-restrict ayon sa rehiyon. Siguraduhing public ang post, saka subukan ulit.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Paano mag-download ng MP3?</summary>
+            <p data-i18n-html="faq.a4">Pagkatapos maproseso ang link, piliin ang opsyong <strong>MP3</strong> sa ilalim ng Audio. Kinukuha ang tunog mula sa video at kino-convert sa 192 kbps na MP3.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">May watermark ba ang mga TikTok video?</summary>
+            <p data-i18n-html="faq.a5">Lagi naming inuuna ang bersyong walang watermark kapag available. Ang mga opsyong may watermark ay may label na <strong>Watermark</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Naka-store ba ang mga file ko sa server ninyo?</summary>
+            <p data-i18n-html="faq.a6">Hindi. Diretsong ipinapadala ang mga file mula sa orihinal na platform papunta sa device mo at hindi itinatago sa server namin.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Ginawa ni</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Pumili ng wika</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Isara">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Maghanap ng wika…" aria-label="Maghanap ng wika…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Walang nahanap na wika.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Kinukuha ang media… maaaring tumagal ito nang ilang segundo.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"tl","strings":{"meta.title":"I Need Save — Mag-download ng video, larawan at audio mula sa anumang social media","meta.description":"Mag-download ng video, larawan, at audio mula sa TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn, at daan-daan pang ibang site.","skip":"Lumaktaw sa nilalaman","nav.label":"Pangunahing navigation","nav.how":"Paano gamitin","nav.platforms":"Mga platform","nav.faq":"FAQ","lang.button":"Palitan ang wika","lang.title":"Pumili ng wika","lang.search":"Maghanap ng wika…","lang.empty":"Walang nahanap na wika.","lang.close":"Isara","hero.title":"Mag-download ng video, larawan, at audio mula sa anumang social media","hero.lead":"Mag-paste ng link mula sa TikTok, Instagram, Facebook, X, Pinterest, at iba pa. Pumili ng quality, saka i-save diretso sa device mo.","form.label":"Link ng post o video","form.placeholder":"I-paste ang link dito…","form.paste":"I-paste","form.clear":"I-clear ang link","form.submit":"I-download","form.processing":"Pinoproseso","chips.label":"Mga halimbawa ng suportadong platform","how.title":"Paano mag-download","how.step1.title":"Kopyahin ang link","how.step1.text":"Buksan ang post sa app, i-tap ang \u003cstrong>Ibahagi\u003c/strong>, saka piliin ang \u003cstrong>Kopyahin ang link\u003c/strong>.","how.step2.title":"I-paste dito","how.step2.text":"I-paste ang link sa kahon sa itaas, saka pindutin ang \u003cstrong>I-download\u003c/strong>.","how.step3.title":"Pumili at i-save","how.step3.text":"Pumili ng video, MP3 audio, o larawan sa quality na gusto mo.","platforms.title":"Mga suportadong platform","platforms.lead":"Mga video, larawan, at audio mula sa daan-daang site. Ilan sa pinakasikat:","faq.title":"Mga madalas itanong","faq.q1":"Libre ba ang I Need Save?","faq.a1":"Oo, ganap na libre. Walang kailangang sign-up, login, o app.","faq.q2":"Saan naise-save ang mga file ko?","faq.a2":"Sa Android at computer, napupunta ang mga file sa folder na \u003cstrong>Mga Download\u003c/strong>. Sa iPhone at iPad (Safari), naka-save ang mga ito sa \u003cstrong>Files\u003c/strong> app → \u003cstrong>Downloads\u003c/strong>. Mula roon, puwede mo itong i-save sa Photos gamit ang Share button.","faq.q3":"Bakit hindi ma-download ang ilang video?","faq.a3":"Hindi maaabot ng server namin ang pribadong content, content na nangangailangan ng login, o content na naka-restrict ayon sa rehiyon. Siguraduhing public ang post, saka subukan ulit.","faq.q4":"Paano mag-download ng MP3?","faq.a4":"Pagkatapos maproseso ang link, piliin ang opsyong \u003cstrong>MP3\u003c/strong> sa ilalim ng Audio. Kinukuha ang tunog mula sa video at kino-convert sa 192 kbps na MP3.","faq.q5":"May watermark ba ang mga TikTok video?","faq.a5":"Lagi naming inuuna ang bersyong walang watermark kapag available. Ang mga opsyong may watermark ay may label na \u003cstrong>Watermark\u003c/strong>.","faq.q6":"Naka-store ba ang mga file ko sa server ninyo?","faq.a6":"Hindi. Diretsong ipinapadala ang mga file mula sa orihinal na platform papunta sa device mo at hindi itinatago sa server namin.","footer.madeBy":"Ginawa ni","results.loading":"Kinukuha ang media… maaaring tumagal ito nang ilang segundo.","results.found":"{n} media ang nahanap","results.more":"Ipakita ang {n} pang opsyon","group.video":"Video","group.audio":"Audio","group.image":"Mga larawan","label.thumbnail":"Thumbnail","label.photo":"Larawan","label.photoN":"Larawan {n}","label.video":"Video","label.videoN":"Video {n}","label.audioN":"Audio {n}","label.original_audio":"Orihinal na tunog","note.original_quality":"Orihinal na quality","note.no_audio":"Walang tunog","note.watermark":"Watermark","download.button":"I-download","download.preparing":"Inihahanda…","toast.preparing":"Inihahanda ang file mo… awtomatikong magsisimula ang download.","toast.started":"Nagsimula na ang download.","toast.failed":"Hindi natuloy ang download. Sumubok ng ibang quality o iproseso ulit ang link.","toast.clipboardEmpty":"Walang laman ang clipboard mo. Kumopya muna ng link.","toast.clipboardDenied":"Tinanggihan ang access sa clipboard. Manu-manong i-paste ang link.","error.empty":"Mag-paste muna ng link ng post o video.","error.timeout":"Nag-time out. Masyadong natagalan ang source sa pagsagot, pakisubukan ulit.","error.offline":"Walang koneksyon sa internet. Tingnan ang network mo at subukan ulit.","error.busy":"Abala ang server. Pakisubukan ulit maya-maya.","error.invalid_url":"Hindi valid ang link. I-paste ang buong link mula sa social media app.","error.unsupported":"Hindi pa suportado ang link na ito. Siguraduhing direkta itong tumuturo sa isang post o video.","error.blocked":"Bina-block ng platform na ito ang server namin sa ngayon, kaya hindi pa ma-download ang link na ito.","error.rate_limited":"Nililimitahan ng platform ang mga request mula sa server namin. Pakisubukan ulit maya-maya.","error.login_required":"Pribado ang content na ito, o kailangang mag-login para makita ito sa platform, kaya hindi ito ma-download.","error.not_found":"Hindi nahanap ang content o inalis na ito.","error.geo_blocked":"Naka-restrict ayon sa rehiyon ang content na ito at hindi ito maaabot ng server namin.","error.failed":"Hindi makuha ang media mula sa link na ito. Sumubok ng ibang link o subukan ulit maya-maya.","error.no_media":"Walang ma-download na media sa link na ito.","error.server_config":"Hindi pa tama ang pagkaka-configure ng server.","error.server_error":"Nagkaproblema sa server. Pakisubukan ulit."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

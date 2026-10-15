@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="el" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Κατεβάστε βίντεο, φωτογραφίες και ήχο από TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn και εκατοντάδες άλλους ιστότοπους.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Κατεβάστε βίντεο, φωτογραφίες και ήχο από TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn και εκατοντάδες άλλους ιστότοπους.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Μετάβαση στο περιεχόμενο</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Κύρια πλοήγηση">
+        <a href="#cara" data-i18n="nav.how">Οδηγίες</a>
+        <a href="#platform" data-i18n="nav.platforms">Πλατφόρμες</a>
+        <a href="#faq" data-i18n="nav.faq">Συχνές ερωτήσεις</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Αλλαγή γλώσσας: Ελληνικά">
+        <span class="lang-flag" aria-hidden="true">🇬🇷</span>
+        <span class="lang-code">EL</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Κατεβάστε βίντεο, φωτογραφίες και ήχο από οποιοδήποτε κοινωνικό δίκτυο</h1>
+        <p class="lead" data-i18n="hero.lead">Επικολλήστε έναν σύνδεσμο από TikTok, Instagram, Facebook, X, Pinterest και άλλα. Επιλέξτε ποιότητα και αποθηκεύστε το απευθείας στη συσκευή σας.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Σύνδεσμος ανάρτησης ή βίντεο</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Επικολλήστε έναν σύνδεσμο εδώ…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Επικόλληση</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Διαγραφή συνδέσμου">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Λήψη</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Παραδείγματα υποστηριζόμενων πλατφορμών">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Πώς να κατεβάσετε</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Αντιγράψτε τον σύνδεσμο</h3>
+            <p data-i18n-html="how.step1.text">Ανοίξτε την ανάρτηση στην εφαρμογή, πατήστε <strong>Κοινοποίηση</strong> και επιλέξτε <strong>Αντιγραφή συνδέσμου</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Επικολλήστε τον εδώ</h3>
+            <p data-i18n-html="how.step2.text">Επικολλήστε τον σύνδεσμο στο πλαίσιο παραπάνω και πατήστε <strong>Λήψη</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Επιλέξτε και αποθηκεύστε</h3>
+            <p data-i18n="how.step3.text">Επιλέξτε βίντεο, ήχο MP3 ή φωτογραφία στην ποιότητα που θέλετε.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Υποστηριζόμενες πλατφόρμες</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Βίντεο, φωτογραφίες και ήχος από εκατοντάδες ιστότοπους. Μερικοί από τους πιο δημοφιλείς:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Συχνές ερωτήσεις</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Είναι δωρεάν το I Need Save;</summary>
+            <p data-i18n-html="faq.a1">Ναι, εντελώς δωρεάν. Δεν χρειάζεται εγγραφή, σύνδεση ή εφαρμογή.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Πού αποθηκεύονται τα αρχεία μου;</summary>
+            <p data-i18n-html="faq.a2">Σε Android και υπολογιστές, τα αρχεία πηγαίνουν στον φάκελο <strong>Λήψεις</strong>. Σε iPhone και iPad (Safari), αποθηκεύονται στην εφαρμογή <strong>Αρχεία</strong> → <strong>Λήψεις</strong>. Από εκεί μπορείτε να τα αποθηκεύσετε στις Φωτογραφίες με το κουμπί Κοινοποίηση.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Γιατί δεν μπορούν να ληφθούν ορισμένα βίντεο;</summary>
+            <p data-i18n-html="faq.a3">Ο διακομιστής μας δεν έχει πρόσβαση σε ιδιωτικό περιεχόμενο, σε περιεχόμενο που απαιτεί σύνδεση ή σε περιεχόμενο με γεωγραφικούς περιορισμούς. Βεβαιωθείτε ότι η ανάρτηση είναι δημόσια και δοκιμάστε ξανά.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Πώς κατεβάζω MP3;</summary>
+            <p data-i18n-html="faq.a4">Αφού ολοκληρωθεί η επεξεργασία του συνδέσμου, επιλέξτε <strong>MP3</strong> στην ενότητα Ήχος. Ο ήχος εξάγεται από το βίντεο και μετατρέπεται σε MP3 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Έχουν υδατογράφημα τα βίντεο του TikTok;</summary>
+            <p data-i18n-html="faq.a5">Προτιμάμε πάντα την έκδοση χωρίς υδατογράφημα, όταν είναι διαθέσιμη. Οι επιλογές με υδατογράφημα επισημαίνονται ως <strong>Υδατογράφημα</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Αποθηκεύονται τα αρχεία μου στον διακομιστή σας;</summary>
+            <p data-i18n-html="faq.a6">Όχι. Τα αρχεία στέλνονται απευθείας από την αρχική πλατφόρμα στη συσκευή σας και δεν διατηρούνται στον διακομιστή μας.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Δημιουργήθηκε από</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Επιλογή γλώσσας</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Κλείσιμο">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Αναζήτηση γλώσσας…" aria-label="Αναζήτηση γλώσσας…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Δεν βρέθηκε γλώσσα.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Ανάκτηση πολυμέσων… μπορεί να διαρκέσει λίγα δευτερόλεπτα.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"el","strings":{"meta.title":"I Need Save — Κατεβάστε βίντεο, φωτογραφίες και ήχο από οποιοδήποτε κοινωνικό δίκτυο","meta.description":"Κατεβάστε βίντεο, φωτογραφίες και ήχο από TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn και εκατοντάδες άλλους ιστότοπους.","skip":"Μετάβαση στο περιεχόμενο","nav.label":"Κύρια πλοήγηση","nav.how":"Οδηγίες","nav.platforms":"Πλατφόρμες","nav.faq":"Συχνές ερωτήσεις","lang.button":"Αλλαγή γλώσσας","lang.title":"Επιλογή γλώσσας","lang.search":"Αναζήτηση γλώσσας…","lang.empty":"Δεν βρέθηκε γλώσσα.","lang.close":"Κλείσιμο","hero.title":"Κατεβάστε βίντεο, φωτογραφίες και ήχο από οποιοδήποτε κοινωνικό δίκτυο","hero.lead":"Επικολλήστε έναν σύνδεσμο από TikTok, Instagram, Facebook, X, Pinterest και άλλα. Επιλέξτε ποιότητα και αποθηκεύστε το απευθείας στη συσκευή σας.","form.label":"Σύνδεσμος ανάρτησης ή βίντεο","form.placeholder":"Επικολλήστε έναν σύνδεσμο εδώ…","form.paste":"Επικόλληση","form.clear":"Διαγραφή συνδέσμου","form.submit":"Λήψη","form.processing":"Επεξεργασία","chips.label":"Παραδείγματα υποστηριζόμενων πλατφορμών","how.title":"Πώς να κατεβάσετε","how.step1.title":"Αντιγράψτε τον σύνδεσμο","how.step1.text":"Ανοίξτε την ανάρτηση στην εφαρμογή, πατήστε \u003cstrong>Κοινοποίηση\u003c/strong> και επιλέξτε \u003cstrong>Αντιγραφή συνδέσμου\u003c/strong>.","how.step2.title":"Επικολλήστε τον εδώ","how.step2.text":"Επικολλήστε τον σύνδεσμο στο πλαίσιο παραπάνω και πατήστε \u003cstrong>Λήψη\u003c/strong>.","how.step3.title":"Επιλέξτε και αποθηκεύστε","how.step3.text":"Επιλέξτε βίντεο, ήχο MP3 ή φωτογραφία στην ποιότητα που θέλετε.","platforms.title":"Υποστηριζόμενες πλατφόρμες","platforms.lead":"Βίντεο, φωτογραφίες και ήχος από εκατοντάδες ιστότοπους. Μερικοί από τους πιο δημοφιλείς:","faq.title":"Συχνές ερωτήσεις","faq.q1":"Είναι δωρεάν το I Need Save;","faq.a1":"Ναι, εντελώς δωρεάν. Δεν χρειάζεται εγγραφή, σύνδεση ή εφαρμογή.","faq.q2":"Πού αποθηκεύονται τα αρχεία μου;","faq.a2":"Σε Android και υπολογιστές, τα αρχεία πηγαίνουν στον φάκελο \u003cstrong>Λήψεις\u003c/strong>. Σε iPhone και iPad (Safari), αποθηκεύονται στην εφαρμογή \u003cstrong>Αρχεία\u003c/strong> → \u003cstrong>Λήψεις\u003c/strong>. Από εκεί μπορείτε να τα αποθηκεύσετε στις Φωτογραφίες με το κουμπί Κοινοποίηση.","faq.q3":"Γιατί δεν μπορούν να ληφθούν ορισμένα βίντεο;","faq.a3":"Ο διακομιστής μας δεν έχει πρόσβαση σε ιδιωτικό περιεχόμενο, σε περιεχόμενο που απαιτεί σύνδεση ή σε περιεχόμενο με γεωγραφικούς περιορισμούς. Βεβαιωθείτε ότι η ανάρτηση είναι δημόσια και δοκιμάστε ξανά.","faq.q4":"Πώς κατεβάζω MP3;","faq.a4":"Αφού ολοκληρωθεί η επεξεργασία του συνδέσμου, επιλέξτε \u003cstrong>MP3\u003c/strong> στην ενότητα Ήχος. Ο ήχος εξάγεται από το βίντεο και μετατρέπεται σε MP3 192 kbps.","faq.q5":"Έχουν υδατογράφημα τα βίντεο του TikTok;","faq.a5":"Προτιμάμε πάντα την έκδοση χωρίς υδατογράφημα, όταν είναι διαθέσιμη. Οι επιλογές με υδατογράφημα επισημαίνονται ως \u003cstrong>Υδατογράφημα\u003c/strong>.","faq.q6":"Αποθηκεύονται τα αρχεία μου στον διακομιστή σας;","faq.a6":"Όχι. Τα αρχεία στέλνονται απευθείας από την αρχική πλατφόρμα στη συσκευή σας και δεν διατηρούνται στον διακομιστή μας.","footer.madeBy":"Δημιουργήθηκε από","results.loading":"Ανάκτηση πολυμέσων… μπορεί να διαρκέσει λίγα δευτερόλεπτα.","results.found":"Βρέθηκαν πολυμέσα: {n}","results.more":"Εμφάνιση {n} ακόμη επιλογών","group.video":"Βίντεο","group.audio":"Ήχος","group.image":"Φωτογραφίες","label.thumbnail":"Μικρογραφία","label.photo":"Φωτογραφία","label.photoN":"Φωτογραφία {n}","label.video":"Βίντεο","label.videoN":"Βίντεο {n}","label.audioN":"Ήχος {n}","label.original_audio":"Αρχικός ήχος","note.original_quality":"Αρχική ποιότητα","note.no_audio":"Χωρίς ήχο","note.watermark":"Υδατογράφημα","download.button":"Λήψη","download.preparing":"Προετοιμασία…","toast.preparing":"Προετοιμασία του αρχείου σας… η λήψη θα ξεκινήσει αυτόματα.","toast.started":"Η λήψη ξεκίνησε.","toast.failed":"Η λήψη απέτυχε. Δοκιμάστε άλλη ποιότητα ή επεξεργαστείτε ξανά τον σύνδεσμο.","toast.clipboardEmpty":"Το πρόχειρο είναι κενό. Αντιγράψτε πρώτα έναν σύνδεσμο.","toast.clipboardDenied":"Δεν επιτράπηκε η πρόσβαση στο πρόχειρο. Επικολλήστε τον σύνδεσμο χειροκίνητα.","error.empty":"Επικολλήστε πρώτα έναν σύνδεσμο ανάρτησης ή βίντεο.","error.timeout":"Λήξη χρονικού ορίου. Η πηγή άργησε πολύ να απαντήσει, δοκιμάστε ξανά.","error.offline":"Δεν υπάρχει σύνδεση στο διαδίκτυο. Ελέγξτε το δίκτυό σας και δοκιμάστε ξανά.","error.busy":"Ο διακομιστής είναι απασχολημένος. Δοκιμάστε ξανά σε λίγο.","error.invalid_url":"Μη έγκυρος σύνδεσμος. Επικολλήστε ολόκληρο τον σύνδεσμο από την εφαρμογή κοινωνικής δικτύωσης.","error.unsupported":"Αυτός ο σύνδεσμος δεν υποστηρίζεται ακόμη. Βεβαιωθείτε ότι οδηγεί απευθείας σε ανάρτηση ή βίντεο.","error.blocked":"Αυτή η πλατφόρμα μπλοκάρει προς το παρόν τον διακομιστή μας, οπότε ο σύνδεσμος δεν μπορεί να ληφθεί αυτή τη στιγμή.","error.rate_limited":"Η πλατφόρμα περιορίζει τα αιτήματα από τον διακομιστή μας. Δοκιμάστε ξανά σε λίγο.","error.login_required":"Αυτό το περιεχόμενο είναι ιδιωτικό ή η πλατφόρμα απαιτεί σύνδεση για να το δείτε, οπότε δεν μπορεί να ληφθεί.","error.not_found":"Το περιεχόμενο δεν βρέθηκε ή έχει αφαιρεθεί.","error.geo_blocked":"Αυτό το περιεχόμενο έχει γεωγραφικούς περιορισμούς και ο διακομιστής μας δεν έχει πρόσβαση σε αυτό.","error.failed":"Δεν ήταν δυνατή η ανάκτηση πολυμέσων από αυτόν τον σύνδεσμο. Δοκιμάστε άλλον σύνδεσμο ή δοκιμάστε ξανά σε λίγο.","error.no_media":"Δεν υπάρχουν πολυμέσα για λήψη σε αυτόν τον σύνδεσμο.","error.server_config":"Ο διακομιστής δεν έχει ρυθμιστεί σωστά ακόμη.","error.server_error":"Κάτι πήγε στραβά στον διακομιστή. Δοκιμάστε ξανά."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

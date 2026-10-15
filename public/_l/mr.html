@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="mr" dir="ltr" style="--font-script: &quot;Noto Sans Devanagari&quot;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn आणि इतर शेकडो साइटवरून व्हिडिओ, फोटो आणि ऑडिओ डाउनलोड करा.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn आणि इतर शेकडो साइटवरून व्हिडिओ, फोटो आणि ऑडिओ डाउनलोड करा.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap"></noscript>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">मुख्य मजकुराकडे जा</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="मुख्य नेव्हिगेशन">
+        <a href="#cara" data-i18n="nav.how">कसे वापरावे</a>
+        <a href="#platform" data-i18n="nav.platforms">प्लॅटफॉर्म</a>
+        <a href="#faq" data-i18n="nav.faq">प्रश्नोत्तरे</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="भाषा बदला: मराठी">
+        <span class="lang-flag" aria-hidden="true">🇮🇳</span>
+        <span class="lang-code">MR</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">कोणत्याही सोशल मीडियावरून व्हिडिओ, फोटो आणि ऑडिओ डाउनलोड करा</h1>
+        <p class="lead" data-i18n="hero.lead">TikTok, Instagram, Facebook, X, Pinterest आणि इतर प्लॅटफॉर्मवरील लिंक पेस्ट करा. क्वालिटी निवडा, मग ते थेट तुमच्या डिव्हाइसवर सेव्ह करा.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">पोस्ट किंवा व्हिडिओची लिंक</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="लिंक इथे पेस्ट करा…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">पेस्ट करा</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="लिंक काढा">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">डाउनलोड करा</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="सपोर्ट असलेल्या प्लॅटफॉर्मची उदाहरणे">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">डाउनलोड कसे करावे</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">लिंक कॉपी करा</h3>
+            <p data-i18n-html="how.step1.text">ॲपमध्ये पोस्ट उघडा, <strong>शेअर करा</strong> वर टॅप करा, मग <strong>लिंक कॉपी करा</strong> निवडा.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">इथे पेस्ट करा</h3>
+            <p data-i18n-html="how.step2.text">वरील बॉक्समध्ये लिंक पेस्ट करा, मग <strong>डाउनलोड करा</strong> दाबा.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">निवडा आणि सेव्ह करा</h3>
+            <p data-i18n="how.step3.text">तुम्हाला हव्या त्या क्वालिटीमध्ये व्हिडिओ, MP3 ऑडिओ किंवा फोटो निवडा.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">सपोर्ट असलेले प्लॅटफॉर्म</h2>
+        <p class="section-lead" data-i18n="platforms.lead">शेकडो साइटवरून व्हिडिओ, फोटो आणि ऑडिओ. त्यांपैकी काही सर्वात लोकप्रिय:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">वारंवार विचारले जाणारे प्रश्न</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save विनामूल्य आहे का?</summary>
+            <p data-i18n-html="faq.a1">हो, पूर्णपणे विनामूल्य. साइन अप, लॉग इन किंवा ॲपची गरज नाही.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">माझ्या फाइल कुठे सेव्ह होतात?</summary>
+            <p data-i18n-html="faq.a2">Android आणि कॉम्प्युटरवर फाइल <strong>डाउनलोड्स</strong> फोल्डरमध्ये जातात. iPhone आणि iPad (Safari) वर त्या <strong>फाइल्स</strong> ॲप → <strong>डाउनलोड्स</strong> मध्ये सेव्ह होतात. तिथून तुम्ही शेअर बटण वापरून त्या फोटोमध्ये सेव्ह करू शकता.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">काही व्हिडिओ डाउनलोड का होत नाहीत?</summary>
+            <p data-i18n-html="faq.a3">खाजगी कंटेंट, लॉग इन आवश्यक असलेला कंटेंट किंवा प्रदेशानुसार प्रतिबंधित कंटेंट यांच्यापर्यंत आमचा सर्व्हर पोहोचू शकत नाही. पोस्ट सार्वजनिक असल्याची खात्री करा, मग पुन्हा प्रयत्न करा.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">MP3 कसे डाउनलोड करावे?</summary>
+            <p data-i18n-html="faq.a4">लिंकवर प्रक्रिया झाल्यानंतर, ऑडिओ अंतर्गत <strong>MP3</strong> पर्याय निवडा. व्हिडिओमधील आवाज घेऊन तो 192 kbps MP3 मध्ये रूपांतरित केला जातो.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">TikTok व्हिडिओवर वॉटरमार्क असतो का?</summary>
+            <p data-i18n-html="faq.a5">उपलब्ध असल्यास आम्ही नेहमी वॉटरमार्क नसलेल्या आवृत्तीला प्राधान्य देतो. वॉटरमार्क असलेल्या पर्यायांवर <strong>वॉटरमार्क</strong> असे लेबल असते.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">माझ्या फाइल तुमच्या सर्व्हरवर स्टोअर होतात का?</summary>
+            <p data-i18n-html="faq.a6">नाही. फाइल मूळ प्लॅटफॉर्मवरून थेट तुमच्या डिव्हाइसवर पाठवल्या जातात आणि आमच्या सर्व्हरवर ठेवल्या जात नाहीत.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">निर्माते</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">भाषा निवडा</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="बंद करा">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="भाषा शोधा…" aria-label="भाषा शोधा…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>कोणतीही भाषा सापडली नाही.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">मीडिया आणत आहोत… याला काही सेकंद लागू शकतात.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"mr","strings":{"meta.title":"I Need Save — कोणत्याही सोशल मीडियावरून व्हिडिओ, फोटो आणि ऑडिओ डाउनलोड करा","meta.description":"TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn आणि इतर शेकडो साइटवरून व्हिडिओ, फोटो आणि ऑडिओ डाउनलोड करा.","skip":"मुख्य मजकुराकडे जा","nav.label":"मुख्य नेव्हिगेशन","nav.how":"कसे वापरावे","nav.platforms":"प्लॅटफॉर्म","nav.faq":"प्रश्नोत्तरे","lang.button":"भाषा बदला","lang.title":"भाषा निवडा","lang.search":"भाषा शोधा…","lang.empty":"कोणतीही भाषा सापडली नाही.","lang.close":"बंद करा","hero.title":"कोणत्याही सोशल मीडियावरून व्हिडिओ, फोटो आणि ऑडिओ डाउनलोड करा","hero.lead":"TikTok, Instagram, Facebook, X, Pinterest आणि इतर प्लॅटफॉर्मवरील लिंक पेस्ट करा. क्वालिटी निवडा, मग ते थेट तुमच्या डिव्हाइसवर सेव्ह करा.","form.label":"पोस्ट किंवा व्हिडिओची लिंक","form.placeholder":"लिंक इथे पेस्ट करा…","form.paste":"पेस्ट करा","form.clear":"लिंक काढा","form.submit":"डाउनलोड करा","form.processing":"प्रक्रिया सुरू आहे","chips.label":"सपोर्ट असलेल्या प्लॅटफॉर्मची उदाहरणे","how.title":"डाउनलोड कसे करावे","how.step1.title":"लिंक कॉपी करा","how.step1.text":"ॲपमध्ये पोस्ट उघडा, \u003cstrong>शेअर करा\u003c/strong> वर टॅप करा, मग \u003cstrong>लिंक कॉपी करा\u003c/strong> निवडा.","how.step2.title":"इथे पेस्ट करा","how.step2.text":"वरील बॉक्समध्ये लिंक पेस्ट करा, मग \u003cstrong>डाउनलोड करा\u003c/strong> दाबा.","how.step3.title":"निवडा आणि सेव्ह करा","how.step3.text":"तुम्हाला हव्या त्या क्वालिटीमध्ये व्हिडिओ, MP3 ऑडिओ किंवा फोटो निवडा.","platforms.title":"सपोर्ट असलेले प्लॅटफॉर्म","platforms.lead":"शेकडो साइटवरून व्हिडिओ, फोटो आणि ऑडिओ. त्यांपैकी काही सर्वात लोकप्रिय:","faq.title":"वारंवार विचारले जाणारे प्रश्न","faq.q1":"I Need Save विनामूल्य आहे का?","faq.a1":"हो, पूर्णपणे विनामूल्य. साइन अप, लॉग इन किंवा ॲपची गरज नाही.","faq.q2":"माझ्या फाइल कुठे सेव्ह होतात?","faq.a2":"Android आणि कॉम्प्युटरवर फाइल \u003cstrong>डाउनलोड्स\u003c/strong> फोल्डरमध्ये जातात. iPhone आणि iPad (Safari) वर त्या \u003cstrong>फाइल्स\u003c/strong> ॲप → \u003cstrong>डाउनलोड्स\u003c/strong> मध्ये सेव्ह होतात. तिथून तुम्ही शेअर बटण वापरून त्या फोटोमध्ये सेव्ह करू शकता.","faq.q3":"काही व्हिडिओ डाउनलोड का होत नाहीत?","faq.a3":"खाजगी कंटेंट, लॉग इन आवश्यक असलेला कंटेंट किंवा प्रदेशानुसार प्रतिबंधित कंटेंट यांच्यापर्यंत आमचा सर्व्हर पोहोचू शकत नाही. पोस्ट सार्वजनिक असल्याची खात्री करा, मग पुन्हा प्रयत्न करा.","faq.q4":"MP3 कसे डाउनलोड करावे?","faq.a4":"लिंकवर प्रक्रिया झाल्यानंतर, ऑडिओ अंतर्गत \u003cstrong>MP3\u003c/strong> पर्याय निवडा. व्हिडिओमधील आवाज घेऊन तो 192 kbps MP3 मध्ये रूपांतरित केला जातो.","faq.q5":"TikTok व्हिडिओवर वॉटरमार्क असतो का?","faq.a5":"उपलब्ध असल्यास आम्ही नेहमी वॉटरमार्क नसलेल्या आवृत्तीला प्राधान्य देतो. वॉटरमार्क असलेल्या पर्यायांवर \u003cstrong>वॉटरमार्क\u003c/strong> असे लेबल असते.","faq.q6":"माझ्या फाइल तुमच्या सर्व्हरवर स्टोअर होतात का?","faq.a6":"नाही. फाइल मूळ प्लॅटफॉर्मवरून थेट तुमच्या डिव्हाइसवर पाठवल्या जातात आणि आमच्या सर्व्हरवर ठेवल्या जात नाहीत.","footer.madeBy":"निर्माते","results.loading":"मीडिया आणत आहोत… याला काही सेकंद लागू शकतात.","results.found":"{n} मीडिया सापडले","results.more":"आणखी {n} पर्याय दाखवा","group.video":"व्हिडिओ","group.audio":"ऑडिओ","group.image":"फोटो","label.thumbnail":"थंबनेल","label.photo":"फोटो","label.photoN":"फोटो {n}","label.video":"व्हिडिओ","label.videoN":"व्हिडिओ {n}","label.audioN":"ऑडिओ {n}","label.original_audio":"मूळ आवाज","note.original_quality":"मूळ क्वालिटी","note.no_audio":"आवाज नाही","note.watermark":"वॉटरमार्क","download.button":"डाउनलोड करा","download.preparing":"तयार होत आहे…","toast.preparing":"तुमची फाइल तयार होत आहे… डाउनलोड आपोआप सुरू होईल.","toast.started":"डाउनलोड सुरू झाले.","toast.failed":"डाउनलोड अयशस्वी झाले. दुसरी क्वालिटी वापरून पाहा किंवा लिंकवर पुन्हा प्रक्रिया करा.","toast.clipboardEmpty":"तुमचा क्लिपबोर्ड रिकामा आहे. आधी एखादी लिंक कॉपी करा.","toast.clipboardDenied":"क्लिपबोर्ड ॲक्सेस नाकारला गेला. लिंक स्वतः पेस्ट करा.","error.empty":"आधी पोस्ट किंवा व्हिडिओची लिंक पेस्ट करा.","error.timeout":"वेळ संपली. स्रोताने प्रतिसाद द्यायला खूप वेळ घेतला, कृपया पुन्हा प्रयत्न करा.","error.offline":"इंटरनेट कनेक्शन नाही. तुमचे नेटवर्क तपासा आणि पुन्हा प्रयत्न करा.","error.busy":"सर्व्हर व्यस्त आहे. कृपया थोड्या वेळाने पुन्हा प्रयत्न करा.","error.invalid_url":"अवैध लिंक. सोशल मीडिया ॲपमधून पूर्ण लिंक पेस्ट करा.","error.unsupported":"ही लिंक अद्याप सपोर्ट होत नाही. ती थेट एखाद्या पोस्ट किंवा व्हिडिओची लिंक असल्याची खात्री करा.","error.blocked":"हा प्लॅटफॉर्म सध्या आमचा सर्व्हर ब्लॉक करत आहे, त्यामुळे ही लिंक आत्ता डाउनलोड करता येत नाही.","error.rate_limited":"प्लॅटफॉर्म आमच्या सर्व्हरकडून येणाऱ्या विनंत्या मर्यादित करत आहे. कृपया थोड्या वेळाने पुन्हा प्रयत्न करा.","error.login_required":"हा कंटेंट खाजगी आहे, किंवा तो पाहण्यासाठी प्लॅटफॉर्मवर लॉग इन करणे आवश्यक आहे, त्यामुळे तो डाउनलोड करता येत नाही.","error.not_found":"कंटेंट सापडला नाही किंवा तो काढून टाकला गेला आहे.","error.geo_blocked":"हा कंटेंट प्रदेशानुसार प्रतिबंधित आहे आणि आमचा सर्व्हर त्यापर्यंत पोहोचू शकत नाही.","error.failed":"या लिंकवरून मीडिया मिळू शकला नाही. दुसरी लिंक वापरून पाहा किंवा थोड्या वेळाने पुन्हा प्रयत्न करा.","error.no_media":"या लिंकवर डाउनलोड करता येण्याजोगा कोणताही मीडिया नाही.","error.server_config":"सर्व्हर अद्याप योग्यरीत्या कॉन्फिगर केलेला नाही.","error.server_error":"सर्व्हरवर काहीतरी चूक झाली. कृपया पुन्हा प्रयत्न करा."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

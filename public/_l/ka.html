@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ka" dir="ltr" style="--font-script: &quot;Noto Sans Georgian&quot;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="ჩამოტვირთეთ ვიდეო, ფოტო და აუდიო TikTok-იდან, Instagram-იდან, Facebook-იდან, X-იდან (Twitter), Pinterest-იდან, LinkedIn-იდან და ასობით სხვა საიტიდან.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="ჩამოტვირთეთ ვიდეო, ფოტო და აუდიო TikTok-იდან, Instagram-იდან, Facebook-იდან, X-იდან (Twitter), Pinterest-იდან, LinkedIn-იდან და ასობით სხვა საიტიდან.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&display=swap"></noscript>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">კონტენტზე გადასვლა</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="მთავარი ნავიგაცია">
+        <a href="#cara" data-i18n="nav.how">როგორ გამოვიყენოთ</a>
+        <a href="#platform" data-i18n="nav.platforms">პლატფორმები</a>
+        <a href="#faq" data-i18n="nav.faq">კითხვები</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="ენის შეცვლა: ქართული">
+        <span class="lang-flag" aria-hidden="true">🇬🇪</span>
+        <span class="lang-code">KA</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">ჩამოტვირთეთ ვიდეო, ფოტო და აუდიო ნებისმიერი სოციალური ქსელიდან</h1>
+        <p class="lead" data-i18n="hero.lead">ჩასვით ბმული TikTok-იდან, Instagram-იდან, Facebook-იდან, X-იდან, Pinterest-იდან და სხვა პლატფორმებიდან. აირჩიეთ ხარისხი და შეინახეთ პირდაპირ თქვენს მოწყობილობაზე.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">პოსტის ან ვიდეოს ბმული</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="ჩასვით ბმული აქ…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">ჩასმა</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="ბმულის გასუფთავება">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">ჩამოტვირთვა</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="მხარდაჭერილი პლატფორმების მაგალითები">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">როგორ ჩამოვტვირთოთ</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">დააკოპირეთ ბმული</h3>
+            <p data-i18n-html="how.step1.text">გახსენით პოსტი აპში, შეეხეთ <strong>გაზიარებას</strong>, შემდეგ აირჩიეთ <strong>ბმულის კოპირება</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">ჩასვით აქ</h3>
+            <p data-i18n-html="how.step2.text">ჩასვით ბმული ზემოთ მოცემულ ველში და დააჭირეთ <strong>ჩამოტვირთვას</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">აირჩიეთ და შეინახეთ</h3>
+            <p data-i18n="how.step3.text">აირჩიეთ ვიდეო, MP3 აუდიო ან ფოტო სასურველი ხარისხით.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">მხარდაჭერილი პლატფორმები</h2>
+        <p class="section-lead" data-i18n="platforms.lead">ვიდეო, ფოტო და აუდიო ასობით საიტიდან. რამდენიმე ყველაზე პოპულარული:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">ხშირად დასმული კითხვები</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save უფასოა?</summary>
+            <p data-i18n-html="faq.a1">დიახ, სრულიად უფასოა. რეგისტრაცია, შესვლა ან აპი საჭირო არ არის.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">სად ინახება ჩემი ფაილები?</summary>
+            <p data-i18n-html="faq.a2">Android-სა და კომპიუტერებზე ფაილები <strong>ჩამოტვირთვები</strong> საქაღალდეში ინახება. iPhone-სა და iPad-ზე (Safari) ისინი ინახება აპში <strong>ფაილები</strong> → <strong>ჩამოტვირთვები</strong>. იქიდან გაზიარების ღილაკით შეგიძლიათ ისინი ფოტოებში შეინახოთ.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">რატომ ვერ ხერხდება ზოგიერთი ვიდეოს ჩამოტვირთვა?</summary>
+            <p data-i18n-html="faq.a3">ჩვენი სერვერი ვერ წვდება პირად კონტენტს, კონტენტს, რომელიც შესვლას მოითხოვს, ან რეგიონით შეზღუდულ კონტენტს. დარწმუნდით, რომ პოსტი საჯაროა და სცადეთ ხელახლა.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">როგორ ჩამოვტვირთო MP3?</summary>
+            <p data-i18n-html="faq.a4">ბმულის დამუშავების შემდეგ აუდიოს განყოფილებაში აირჩიეთ <strong>MP3</strong>. ხმა ვიდეოდან აიღება და 192 kbps MP3-ად გარდაიქმნება.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">აქვს თუ არა TikTok-ის ვიდეოებს წყლის ნიშანი?</summary>
+            <p data-i18n-html="faq.a5">როცა შესაძლებელია, ყოველთვის უპირატესობას ვანიჭებთ წყლის ნიშნის გარეშე ვერსიას. წყლის ნიშნიანი ვარიანტები მონიშნულია, როგორც <strong>წყლის ნიშანი</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">ინახება თუ არა ჩემი ფაილები თქვენს სერვერზე?</summary>
+            <p data-i18n-html="faq.a6">არა. ფაილები ორიგინალი პლატფორმიდან პირდაპირ თქვენს მოწყობილობაზე იგზავნება და ჩვენს სერვერზე არ ინახება.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">ავტორი</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">აირჩიეთ ენა</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="დახურვა">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="ენის ძიება…" aria-label="ენის ძიება…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>ენა ვერ მოიძებნა.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">მედია იტვირთება… ამას შეიძლება რამდენიმე წამი დასჭირდეს.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"ka","strings":{"meta.title":"I Need Save — ჩამოტვირთეთ ვიდეო, ფოტო და აუდიო ნებისმიერი სოციალური ქსელიდან","meta.description":"ჩამოტვირთეთ ვიდეო, ფოტო და აუდიო TikTok-იდან, Instagram-იდან, Facebook-იდან, X-იდან (Twitter), Pinterest-იდან, LinkedIn-იდან და ასობით სხვა საიტიდან.","skip":"კონტენტზე გადასვლა","nav.label":"მთავარი ნავიგაცია","nav.how":"როგორ გამოვიყენოთ","nav.platforms":"პლატფორმები","nav.faq":"კითხვები","lang.button":"ენის შეცვლა","lang.title":"აირჩიეთ ენა","lang.search":"ენის ძიება…","lang.empty":"ენა ვერ მოიძებნა.","lang.close":"დახურვა","hero.title":"ჩამოტვირთეთ ვიდეო, ფოტო და აუდიო ნებისმიერი სოციალური ქსელიდან","hero.lead":"ჩასვით ბმული TikTok-იდან, Instagram-იდან, Facebook-იდან, X-იდან, Pinterest-იდან და სხვა პლატფორმებიდან. აირჩიეთ ხარისხი და შეინახეთ პირდაპირ თქვენს მოწყობილობაზე.","form.label":"პოსტის ან ვიდეოს ბმული","form.placeholder":"ჩასვით ბმული აქ…","form.paste":"ჩასმა","form.clear":"ბმულის გასუფთავება","form.submit":"ჩამოტვირთვა","form.processing":"მუშავდება","chips.label":"მხარდაჭერილი პლატფორმების მაგალითები","how.title":"როგორ ჩამოვტვირთოთ","how.step1.title":"დააკოპირეთ ბმული","how.step1.text":"გახსენით პოსტი აპში, შეეხეთ \u003cstrong>გაზიარებას\u003c/strong>, შემდეგ აირჩიეთ \u003cstrong>ბმულის კოპირება\u003c/strong>.","how.step2.title":"ჩასვით აქ","how.step2.text":"ჩასვით ბმული ზემოთ მოცემულ ველში და დააჭირეთ \u003cstrong>ჩამოტვირთვას\u003c/strong>.","how.step3.title":"აირჩიეთ და შეინახეთ","how.step3.text":"აირჩიეთ ვიდეო, MP3 აუდიო ან ფოტო სასურველი ხარისხით.","platforms.title":"მხარდაჭერილი პლატფორმები","platforms.lead":"ვიდეო, ფოტო და აუდიო ასობით საიტიდან. რამდენიმე ყველაზე პოპულარული:","faq.title":"ხშირად დასმული კითხვები","faq.q1":"I Need Save უფასოა?","faq.a1":"დიახ, სრულიად უფასოა. რეგისტრაცია, შესვლა ან აპი საჭირო არ არის.","faq.q2":"სად ინახება ჩემი ფაილები?","faq.a2":"Android-სა და კომპიუტერებზე ფაილები \u003cstrong>ჩამოტვირთვები\u003c/strong> საქაღალდეში ინახება. iPhone-სა და iPad-ზე (Safari) ისინი ინახება აპში \u003cstrong>ფაილები\u003c/strong> → \u003cstrong>ჩამოტვირთვები\u003c/strong>. იქიდან გაზიარების ღილაკით შეგიძლიათ ისინი ფოტოებში შეინახოთ.","faq.q3":"რატომ ვერ ხერხდება ზოგიერთი ვიდეოს ჩამოტვირთვა?","faq.a3":"ჩვენი სერვერი ვერ წვდება პირად კონტენტს, კონტენტს, რომელიც შესვლას მოითხოვს, ან რეგიონით შეზღუდულ კონტენტს. დარწმუნდით, რომ პოსტი საჯაროა და სცადეთ ხელახლა.","faq.q4":"როგორ ჩამოვტვირთო MP3?","faq.a4":"ბმულის დამუშავების შემდეგ აუდიოს განყოფილებაში აირჩიეთ \u003cstrong>MP3\u003c/strong>. ხმა ვიდეოდან აიღება და 192 kbps MP3-ად გარდაიქმნება.","faq.q5":"აქვს თუ არა TikTok-ის ვიდეოებს წყლის ნიშანი?","faq.a5":"როცა შესაძლებელია, ყოველთვის უპირატესობას ვანიჭებთ წყლის ნიშნის გარეშე ვერსიას. წყლის ნიშნიანი ვარიანტები მონიშნულია, როგორც \u003cstrong>წყლის ნიშანი\u003c/strong>.","faq.q6":"ინახება თუ არა ჩემი ფაილები თქვენს სერვერზე?","faq.a6":"არა. ფაილები ორიგინალი პლატფორმიდან პირდაპირ თქვენს მოწყობილობაზე იგზავნება და ჩვენს სერვერზე არ ინახება.","footer.madeBy":"ავტორი","results.loading":"მედია იტვირთება… ამას შეიძლება რამდენიმე წამი დასჭირდეს.","results.found":"ნაპოვნია {n} მედია","results.more":"კიდევ {n} ვარიანტის ჩვენება","group.video":"ვიდეო","group.audio":"აუდიო","group.image":"ფოტოები","label.thumbnail":"მინიატიურა","label.photo":"ფოტო","label.photoN":"ფოტო {n}","label.video":"ვიდეო","label.videoN":"ვიდეო {n}","label.audioN":"აუდიო {n}","label.original_audio":"ორიგინალი ხმა","note.original_quality":"ორიგინალი ხარისხი","note.no_audio":"ხმის გარეშე","note.watermark":"წყლის ნიშანი","download.button":"ჩამოტვირთვა","download.preparing":"მზადდება…","toast.preparing":"თქვენი ფაილი მზადდება… ჩამოტვირთვა ავტომატურად დაიწყება.","toast.started":"ჩამოტვირთვა დაიწყო.","toast.failed":"ჩამოტვირთვა ვერ მოხერხდა. სცადეთ სხვა ხარისხი ან ხელახლა დაამუშავეთ ბმული.","toast.clipboardEmpty":"ბუფერი ცარიელია. ჯერ დააკოპირეთ ბმული.","toast.clipboardDenied":"ბუფერზე წვდომა უარყოფილია. ჩასვით ბმული ხელით.","error.empty":"ჯერ ჩასვით პოსტის ან ვიდეოს ბმული.","error.timeout":"დრო ამოიწურა. წყარომ პასუხს ძალიან დიდხანს მოანდომა, გთხოვთ, სცადოთ ხელახლა.","error.offline":"ინტერნეტთან კავშირი არ არის. შეამოწმეთ ქსელი და სცადეთ ხელახლა.","error.busy":"სერვერი დაკავებულია. გთხოვთ, ცოტა ხანში სცადოთ ხელახლა.","error.invalid_url":"არასწორი ბმული. ჩასვით სრული ბმული სოციალური ქსელის აპიდან.","error.unsupported":"ეს ბმული ჯერ არ არის მხარდაჭერილი. დარწმუნდით, რომ ის პირდაპირ პოსტზე ან ვიდეოზე მიუთითებს.","error.blocked":"ეს პლატფორმა ამჟამად ბლოკავს ჩვენს სერვერს, ამიტომ ამ ბმულის ჩამოტვირთვა ახლა შეუძლებელია.","error.rate_limited":"პლატფორმა ზღუდავს ჩვენი სერვერის მოთხოვნებს. გთხოვთ, ცოტა ხანში სცადოთ ხელახლა.","error.login_required":"ეს კონტენტი პირადია ან პლატფორმა მის სანახავად შესვლას მოითხოვს, ამიტომ მისი ჩამოტვირთვა შეუძლებელია.","error.not_found":"კონტენტი ვერ მოიძებნა ან წაშლილია.","error.geo_blocked":"ეს კონტენტი რეგიონით შეზღუდულია და ჩვენი სერვერი მას ვერ წვდება.","error.failed":"ამ ბმულიდან მედიის მიღება ვერ მოხერხდა. სცადეთ სხვა ბმული ან ცოტა ხანში ხელახლა.","error.no_media":"ამ ბმულზე ჩამოსატვირთი მედია არ არის.","error.server_config":"სერვერი ჯერ სწორად არ არის კონფიგურირებული.","error.server_error":"სერვერზე რაღაც შეცდომა მოხდა. გთხოვთ, სცადოთ ხელახლა."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

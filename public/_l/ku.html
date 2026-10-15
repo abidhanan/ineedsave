@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ku" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Ji TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn û bi sedan malperên din vîdeo, wêne û deng daxîne.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Ji TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn û bi sedan malperên din vîdeo, wêne û deng daxîne.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Here naverokê</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Navîgasyona sereke">
+        <a href="#cara" data-i18n="nav.how">Çawa tê bikaranîn</a>
+        <a href="#platform" data-i18n="nav.platforms">Platform</a>
+        <a href="#faq" data-i18n="nav.faq">Pirs</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Zimên biguherîne: Kurdî">
+        <span class="lang-flag" aria-hidden="true">🇮🇶</span>
+        <span class="lang-code">KU</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Ji her medyaya civakî vîdeo, wêne û deng daxîne</h1>
+        <p class="lead" data-i18n="hero.lead">Girêdanekê ji TikTok, Instagram, Facebook, X, Pinterest û yên din bi cih bike. Kalîteyê hilbijêre, paşê rasterast li cîhaza xwe tomar bike.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Girêdana şandiyê an vîdeoyê</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Girêdanê li vir bi cih bike…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Bi cih bike</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Girêdanê paqij bike">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Daxîne</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Mînakên platformên piştgirîkirî">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Çawa tê daxistin</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Girêdanê kopî bike</h3>
+            <p data-i18n-html="how.step1.text">Şandiyê di sepanê de veke, li <strong>Parve bike</strong> bitikîne, paşê <strong>Girêdanê kopî bike</strong> hilbijêre.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Li vir bi cih bike</h3>
+            <p data-i18n-html="how.step2.text">Girêdanê têxe qutiya li jor, paşê li <strong>Daxîne</strong> bitikîne.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Hilbijêre û tomar bike</h3>
+            <p data-i18n="how.step3.text">Vîdeo, dengê MP3 an wêne bi kalîteya ku tu dixwazî hilbijêre.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Platformên piştgirîkirî</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Ji bi sedan malperan vîdeo, wêne û deng. Hin ji yên herî populer:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Pirsên pir tên pirsîn</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Ma I Need Save belaş e?</summary>
+            <p data-i18n-html="faq.a1">Erê, bi tevahî belaş e. Ne tomarbûn, ne têketin û ne jî sepan pêwîst e.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Pelên min li ku têne tomarkirin?</summary>
+            <p data-i18n-html="faq.a2">Li ser Android û komputeran, pel diçin peldanka <strong>Daxistin</strong>. Li ser iPhone û iPad (Safari), ew di sepana <strong>Pel</strong> → <strong>Daxistin</strong> de têne tomarkirin. Ji wir tu dikarî bi bişkoka Parve bike wan li Wêneyan tomar bikî.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Çima hin vîdeo nayên daxistin?</summary>
+            <p data-i18n-html="faq.a3">Servera me nikare xwe bigihîne naveroka taybet, naveroka ku têketinê dixwaze, an naveroka ku li gorî herêmê sînordar e. Piştrast bibe ku şandî giştî ye, paşê dîsa biceribîne.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Ez çawa MP3 dadixînim?</summary>
+            <p data-i18n-html="faq.a4">Piştî ku girêdan hat pêvajokirin, di beşa Deng de vebijêrka <strong>MP3</strong> hilbijêre. Deng ji vîdeoyê tê girtin û dibe MP3 ya 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Ma li ser vîdeoyên TikTok nîşana avê heye?</summary>
+            <p data-i18n-html="faq.a5">Dema ku hebe, em her tim guhertoya bê nîşana avê tercîh dikin. Vebijêrkên bi nîşana avê wekî <strong>Nîşana avê</strong> hatine nîşankirin.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Ma pelên min li ser servera we têne hilanîn?</summary>
+            <p data-i18n-html="faq.a6">Na. Pel ji platforma resen rasterast ji cîhaza te re têne şandin û li ser servera me nayên hilanîn.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Afirîner</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Zimên hilbijêre</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Bigire">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Li zimên bigere…" aria-label="Li zimên bigere…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Tu ziman nehat dîtin.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Medya tê anîn… dibe ku çend çirkeyan bidome.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"ku","strings":{"meta.title":"I Need Save — Ji her medyaya civakî vîdeo, wêne û deng daxîne","meta.description":"Ji TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn û bi sedan malperên din vîdeo, wêne û deng daxîne.","skip":"Here naverokê","nav.label":"Navîgasyona sereke","nav.how":"Çawa tê bikaranîn","nav.platforms":"Platform","nav.faq":"Pirs","lang.button":"Zimên biguherîne","lang.title":"Zimên hilbijêre","lang.search":"Li zimên bigere…","lang.empty":"Tu ziman nehat dîtin.","lang.close":"Bigire","hero.title":"Ji her medyaya civakî vîdeo, wêne û deng daxîne","hero.lead":"Girêdanekê ji TikTok, Instagram, Facebook, X, Pinterest û yên din bi cih bike. Kalîteyê hilbijêre, paşê rasterast li cîhaza xwe tomar bike.","form.label":"Girêdana şandiyê an vîdeoyê","form.placeholder":"Girêdanê li vir bi cih bike…","form.paste":"Bi cih bike","form.clear":"Girêdanê paqij bike","form.submit":"Daxîne","form.processing":"Tê pêvajokirin","chips.label":"Mînakên platformên piştgirîkirî","how.title":"Çawa tê daxistin","how.step1.title":"Girêdanê kopî bike","how.step1.text":"Şandiyê di sepanê de veke, li \u003cstrong>Parve bike\u003c/strong> bitikîne, paşê \u003cstrong>Girêdanê kopî bike\u003c/strong> hilbijêre.","how.step2.title":"Li vir bi cih bike","how.step2.text":"Girêdanê têxe qutiya li jor, paşê li \u003cstrong>Daxîne\u003c/strong> bitikîne.","how.step3.title":"Hilbijêre û tomar bike","how.step3.text":"Vîdeo, dengê MP3 an wêne bi kalîteya ku tu dixwazî hilbijêre.","platforms.title":"Platformên piştgirîkirî","platforms.lead":"Ji bi sedan malperan vîdeo, wêne û deng. Hin ji yên herî populer:","faq.title":"Pirsên pir tên pirsîn","faq.q1":"Ma I Need Save belaş e?","faq.a1":"Erê, bi tevahî belaş e. Ne tomarbûn, ne têketin û ne jî sepan pêwîst e.","faq.q2":"Pelên min li ku têne tomarkirin?","faq.a2":"Li ser Android û komputeran, pel diçin peldanka \u003cstrong>Daxistin\u003c/strong>. Li ser iPhone û iPad (Safari), ew di sepana \u003cstrong>Pel\u003c/strong> → \u003cstrong>Daxistin\u003c/strong> de têne tomarkirin. Ji wir tu dikarî bi bişkoka Parve bike wan li Wêneyan tomar bikî.","faq.q3":"Çima hin vîdeo nayên daxistin?","faq.a3":"Servera me nikare xwe bigihîne naveroka taybet, naveroka ku têketinê dixwaze, an naveroka ku li gorî herêmê sînordar e. Piştrast bibe ku şandî giştî ye, paşê dîsa biceribîne.","faq.q4":"Ez çawa MP3 dadixînim?","faq.a4":"Piştî ku girêdan hat pêvajokirin, di beşa Deng de vebijêrka \u003cstrong>MP3\u003c/strong> hilbijêre. Deng ji vîdeoyê tê girtin û dibe MP3 ya 192 kbps.","faq.q5":"Ma li ser vîdeoyên TikTok nîşana avê heye?","faq.a5":"Dema ku hebe, em her tim guhertoya bê nîşana avê tercîh dikin. Vebijêrkên bi nîşana avê wekî \u003cstrong>Nîşana avê\u003c/strong> hatine nîşankirin.","faq.q6":"Ma pelên min li ser servera we têne hilanîn?","faq.a6":"Na. Pel ji platforma resen rasterast ji cîhaza te re têne şandin û li ser servera me nayên hilanîn.","footer.madeBy":"Afirîner","results.loading":"Medya tê anîn… dibe ku çend çirkeyan bidome.","results.found":"{n} medya hat dîtin","results.more":"{n} vebijêrkên din nîşan bide","group.video":"Vîdeo","group.audio":"Deng","group.image":"Wêne","label.thumbnail":"Wêneyê biçûk","label.photo":"Wêne","label.photoN":"Wêne {n}","label.video":"Vîdeo","label.videoN":"Vîdeo {n}","label.audioN":"Deng {n}","label.original_audio":"Dengê resen","note.original_quality":"Kalîteya resen","note.no_audio":"Bê deng","note.watermark":"Nîşana avê","download.button":"Daxîne","download.preparing":"Tê amadekirin…","toast.preparing":"Pelê te tê amadekirin… daxistin wê bixweber dest pê bike.","toast.started":"Daxistin dest pê kir.","toast.failed":"Daxistin bi ser neket. Kalîteyeke din biceribîne an girêdanê dîsa pêvajo bike.","toast.clipboardEmpty":"Panoya te vala ye. Pêşî girêdanekê kopî bike.","toast.clipboardDenied":"Destûra gihîştina panoyê nehat dayîn. Girêdanê bi destan bi cih bike.","error.empty":"Pêşî girêdana şandiyekê an vîdeoyekê bi cih bike.","error.timeout":"Dem derbas bû. Çavkaniyê pir dereng bersiv da, ji kerema xwe dîsa biceribîne.","error.offline":"Girêdana înternetê tune. Tora xwe kontrol bike û dîsa biceribîne.","error.busy":"Server mijûl e. Ji kerema xwe piştî kêliyekê dîsa biceribîne.","error.invalid_url":"Girêdana nederbasdar. Girêdana tevahî ji sepana medyaya civakî bi cih bike.","error.unsupported":"Ev girêdan hîn nayê piştgirîkirin. Piştrast bibe ku ew rasterast diçe şandiyekê an vîdeoyekê.","error.blocked":"Ev platform niha servera me asteng dike, ji ber vê yekê ev girêdan niha nayê daxistin.","error.rate_limited":"Platform daxwazên ji servera me sînordar dike. Ji kerema xwe piştî kêliyekê dîsa biceribîne.","error.login_required":"Ev naverok taybet e, an jî platform ji bo dîtina wê têketinê dixwaze, ji ber vê yekê nayê daxistin.","error.not_found":"Naverok nehat dîtin an hatiye rakirin.","error.geo_blocked":"Ev naverok li gorî herêmê sînordar e û servera me nikare xwe bigihînê.","error.failed":"Ji vê girêdanê medya nehat wergirtin. Girêdaneke din biceribîne an piştî kêliyekê dîsa biceribîne.","error.no_media":"Di vê girêdanê de medyaya ku bê daxistin tune.","error.server_config":"Server hîn bi rêkûpêk nehatiye mîhengkirin.","error.server_error":"Di serverê de tiştek xelet çû. Ji kerema xwe dîsa biceribîne."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

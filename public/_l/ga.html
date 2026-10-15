@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ga" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Íoslódáil físeáin, grianghraif agus fuaim ó TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn agus na céadta suíomh eile.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Íoslódáil físeáin, grianghraif agus fuaim ó TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn agus na céadta suíomh eile.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Léim go dtí an t-ábhar</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Príomh-nascleanúint">
+        <a href="#cara" data-i18n="nav.how">Conas é a úsáid</a>
+        <a href="#platform" data-i18n="nav.platforms">Ardáin</a>
+        <a href="#faq" data-i18n="nav.faq">Ceisteanna coitianta</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Athraigh teanga: Gaeilge">
+        <span class="lang-flag" aria-hidden="true">🇮🇪</span>
+        <span class="lang-code">GA</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Íoslódáil físeáin, grianghraif agus fuaim ó aon mheán sóisialta</h1>
+        <p class="lead" data-i18n="hero.lead">Greamaigh nasc ó TikTok, Instagram, Facebook, X, Pinterest agus go leor eile. Roghnaigh cáilíocht, agus sábháil é díreach ar do ghléas.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Nasc postála nó físeáin</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Greamaigh nasc anseo…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Greamaigh</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Glan an nasc">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Íoslódáil</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Samplaí d'ardáin a dtacaítear leo">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Conas íoslódáil</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Cóipeáil an nasc</h3>
+            <p data-i18n-html="how.step1.text">Oscail an post san aip, tapáil <strong>Comhroinn</strong>, agus roghnaigh <strong>Cóipeáil nasc</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Greamaigh anseo é</h3>
+            <p data-i18n-html="how.step2.text">Greamaigh an nasc sa bhosca thuas, agus brúigh <strong>Íoslódáil</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Roghnaigh agus sábháil</h3>
+            <p data-i18n="how.step3.text">Roghnaigh físeán, fuaim MP3 nó grianghraf sa cháilíocht is mian leat.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Ardáin a dtacaítear leo</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Físeáin, grianghraif agus fuaim ó na céadta suíomh. Seo cuid de na cinn is coitianta:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Ceisteanna coitianta</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">An bhfuil I Need Save saor in aisce?</summary>
+            <p data-i18n-html="faq.a1">Tá, go hiomlán saor in aisce. Níl gá le clárú, logáil isteach ná aip.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Cá sábháiltear mo chomhaid?</summary>
+            <p data-i18n-html="faq.a2">Ar Android agus ar ríomhairí, téann comhaid chuig an bhfillteán <strong>Íoslódálacha</strong>. Ar iPhone agus iPad (Safari), sábháiltear iad san aip <strong>Comhaid</strong> → <strong>Íoslódálacha</strong>. As sin, is féidir leat iad a shábháil in Grianghraif leis an gcnaipe Comhroinn.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Cén fáth nach féidir roinnt físeán a íoslódáil?</summary>
+            <p data-i18n-html="faq.a3">Ní féidir lenár bhfreastalaí ábhar príobháideach, ábhar a éilíonn logáil isteach, ná ábhar atá srianta de réir réigiúin a bhaint amach. Cinntigh go bhfuil an post poiblí, agus bain triail eile as.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Conas a íoslódálaim MP3?</summary>
+            <p data-i18n-html="faq.a4">Nuair a bheidh an nasc próiseáilte, roghnaigh an rogha <strong>MP3</strong> faoi Fhuaim. Baintear an fhuaim as an bhfíseán agus tiontaítear í go MP3 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">An bhfuil comhartha uisce ar fhíseáin TikTok?</summary>
+            <p data-i18n-html="faq.a5">Is fearr linn i gcónaí an leagan gan chomhartha uisce nuair atá sé ar fáil. Tá lipéad <strong>Comhartha uisce</strong> ar roghanna a bhfuil comhartha uisce orthu.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">An stóráiltear mo chomhaid ar bhur bhfreastalaí?</summary>
+            <p data-i18n-html="faq.a6">Ní stóráiltear. Seoltar comhaid ón ardán bunaidh díreach chuig do ghléas, agus ní choinnítear iad ar ár bhfreastalaí.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Déanta ag</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Roghnaigh teanga</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Dún">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Cuardaigh teanga…" aria-label="Cuardaigh teanga…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Níor aimsíodh teanga ar bith.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Meáin á bhfáil… d'fhéadfadh sé cúpla soicind a thógáil.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"ga","strings":{"meta.title":"I Need Save — Íoslódáil físeáin, grianghraif agus fuaim ó aon mheán sóisialta","meta.description":"Íoslódáil físeáin, grianghraif agus fuaim ó TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn agus na céadta suíomh eile.","skip":"Léim go dtí an t-ábhar","nav.label":"Príomh-nascleanúint","nav.how":"Conas é a úsáid","nav.platforms":"Ardáin","nav.faq":"Ceisteanna coitianta","lang.button":"Athraigh teanga","lang.title":"Roghnaigh teanga","lang.search":"Cuardaigh teanga…","lang.empty":"Níor aimsíodh teanga ar bith.","lang.close":"Dún","hero.title":"Íoslódáil físeáin, grianghraif agus fuaim ó aon mheán sóisialta","hero.lead":"Greamaigh nasc ó TikTok, Instagram, Facebook, X, Pinterest agus go leor eile. Roghnaigh cáilíocht, agus sábháil é díreach ar do ghléas.","form.label":"Nasc postála nó físeáin","form.placeholder":"Greamaigh nasc anseo…","form.paste":"Greamaigh","form.clear":"Glan an nasc","form.submit":"Íoslódáil","form.processing":"Á phróiseáil","chips.label":"Samplaí d'ardáin a dtacaítear leo","how.title":"Conas íoslódáil","how.step1.title":"Cóipeáil an nasc","how.step1.text":"Oscail an post san aip, tapáil \u003cstrong>Comhroinn\u003c/strong>, agus roghnaigh \u003cstrong>Cóipeáil nasc\u003c/strong>.","how.step2.title":"Greamaigh anseo é","how.step2.text":"Greamaigh an nasc sa bhosca thuas, agus brúigh \u003cstrong>Íoslódáil\u003c/strong>.","how.step3.title":"Roghnaigh agus sábháil","how.step3.text":"Roghnaigh físeán, fuaim MP3 nó grianghraf sa cháilíocht is mian leat.","platforms.title":"Ardáin a dtacaítear leo","platforms.lead":"Físeáin, grianghraif agus fuaim ó na céadta suíomh. Seo cuid de na cinn is coitianta:","faq.title":"Ceisteanna coitianta","faq.q1":"An bhfuil I Need Save saor in aisce?","faq.a1":"Tá, go hiomlán saor in aisce. Níl gá le clárú, logáil isteach ná aip.","faq.q2":"Cá sábháiltear mo chomhaid?","faq.a2":"Ar Android agus ar ríomhairí, téann comhaid chuig an bhfillteán \u003cstrong>Íoslódálacha\u003c/strong>. Ar iPhone agus iPad (Safari), sábháiltear iad san aip \u003cstrong>Comhaid\u003c/strong> → \u003cstrong>Íoslódálacha\u003c/strong>. As sin, is féidir leat iad a shábháil in Grianghraif leis an gcnaipe Comhroinn.","faq.q3":"Cén fáth nach féidir roinnt físeán a íoslódáil?","faq.a3":"Ní féidir lenár bhfreastalaí ábhar príobháideach, ábhar a éilíonn logáil isteach, ná ábhar atá srianta de réir réigiúin a bhaint amach. Cinntigh go bhfuil an post poiblí, agus bain triail eile as.","faq.q4":"Conas a íoslódálaim MP3?","faq.a4":"Nuair a bheidh an nasc próiseáilte, roghnaigh an rogha \u003cstrong>MP3\u003c/strong> faoi Fhuaim. Baintear an fhuaim as an bhfíseán agus tiontaítear í go MP3 192 kbps.","faq.q5":"An bhfuil comhartha uisce ar fhíseáin TikTok?","faq.a5":"Is fearr linn i gcónaí an leagan gan chomhartha uisce nuair atá sé ar fáil. Tá lipéad \u003cstrong>Comhartha uisce\u003c/strong> ar roghanna a bhfuil comhartha uisce orthu.","faq.q6":"An stóráiltear mo chomhaid ar bhur bhfreastalaí?","faq.a6":"Ní stóráiltear. Seoltar comhaid ón ardán bunaidh díreach chuig do ghléas, agus ní choinnítear iad ar ár bhfreastalaí.","footer.madeBy":"Déanta ag","results.loading":"Meáin á bhfáil… d'fhéadfadh sé cúpla soicind a thógáil.","results.found":"Meáin aimsithe: {n}","results.more":"Taispeáin {n} rogha eile","group.video":"Físeán","group.audio":"Fuaim","group.image":"Grianghraif","label.thumbnail":"Mionsamhail","label.photo":"Grianghraf","label.photoN":"Grianghraf {n}","label.video":"Físeán","label.videoN":"Físeán {n}","label.audioN":"Fuaim {n}","label.original_audio":"Fuaim bhunaidh","note.original_quality":"Cáilíocht bhunaidh","note.no_audio":"Gan fuaim","note.watermark":"Comhartha uisce","download.button":"Íoslódáil","download.preparing":"Á ullmhú…","toast.preparing":"Do chomhad á ullmhú… tosóidh an íoslódáil go huathoibríoch.","toast.started":"Tá an íoslódáil tosaithe.","toast.failed":"Theip ar an íoslódáil. Bain triail as cáilíocht eile nó próiseáil an nasc arís.","toast.clipboardEmpty":"Tá do ghearrthaisce folamh. Cóipeáil nasc ar dtús.","toast.clipboardDenied":"Diúltaíodh rochtain ar an ngearrthaisce. Greamaigh an nasc de láimh.","error.empty":"Greamaigh nasc postála nó físeáin ar dtús.","error.timeout":"Imithe thar am. Thóg an fhoinse rófhada freagairt; bain triail eile as.","error.offline":"Níl aon nasc idirlín ann. Seiceáil do líonra agus bain triail eile as.","error.busy":"Tá an freastalaí gnóthach. Bain triail eile as i gceann nóiméid.","error.invalid_url":"Nasc neamhbhailí. Greamaigh an nasc iomlán ón aip meán sóisialta.","error.unsupported":"Ní thacaítear leis an nasc seo fós. Cinntigh go dtéann sé díreach chuig post nó físeán.","error.blocked":"Tá an t-ardán seo ag cur bac ar ár bhfreastalaí faoi láthair, mar sin ní féidir an nasc seo a íoslódáil anois.","error.rate_limited":"Tá an t-ardán ag teorannú iarratas ónár bhfreastalaí. Bain triail eile as i gceann nóiméid.","error.login_required":"Tá an t-ábhar seo príobháideach, nó éilíonn an t-ardán logáil isteach chun é a fheiceáil, mar sin ní féidir é a íoslódáil.","error.not_found":"Níor aimsíodh an t-ábhar, nó baineadh é.","error.geo_blocked":"Tá an t-ábhar seo srianta de réir réigiúin agus ní féidir lenár bhfreastalaí é a bhaint amach.","error.failed":"Níorbh fhéidir meáin a fháil ón nasc seo. Bain triail as nasc eile nó bain triail eile as i gceann nóiméid.","error.no_media":"Níl aon mheáin is féidir a íoslódáil ag an nasc seo.","error.server_config":"Níl an freastalaí cumraithe i gceart fós.","error.server_error":"Chuaigh rud éigin mícheart ar an bhfreastalaí. Bain triail eile as."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

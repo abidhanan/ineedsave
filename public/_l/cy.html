@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="cy" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Llwythwch fideos, lluniau a sain i lawr o TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn a channoedd o wefannau eraill.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Llwythwch fideos, lluniau a sain i lawr o TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn a channoedd o wefannau eraill.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Neidio i'r cynnwys</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Prif lywio">
+        <a href="#cara" data-i18n="nav.how">Sut i'w ddefnyddio</a>
+        <a href="#platform" data-i18n="nav.platforms">Platfformau</a>
+        <a href="#faq" data-i18n="nav.faq">Cwestiynau cyffredin</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Newid iaith: Cymraeg">
+        <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+        <span class="lang-code">CY</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Llwythwch fideos, lluniau a sain i lawr o unrhyw gyfryngau cymdeithasol</h1>
+        <p class="lead" data-i18n="hero.lead">Gludwch ddolen o TikTok, Instagram, Facebook, X, Pinterest a mwy. Dewiswch yr ansawdd, yna cadwch hi'n syth ar eich dyfais.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Dolen postiad neu fideo</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Gludwch ddolen yma…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Gludo</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Clirio'r ddolen">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Llwytho i lawr</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Enghreifftiau o blatfformau a gefnogir">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Sut i lwytho i lawr</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Copïwch y ddolen</h3>
+            <p data-i18n-html="how.step1.text">Agorwch y postiad yn yr ap, tapiwch <strong>Rhannu</strong>, yna dewiswch <strong>Copïo dolen</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Gludwch hi yma</h3>
+            <p data-i18n-html="how.step2.text">Gludwch y ddolen yn y blwch uchod, yna pwyswch <strong>Llwytho i lawr</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Dewis a chadw</h3>
+            <p data-i18n="how.step3.text">Dewiswch fideo, sain MP3 neu lun yn yr ansawdd rydych chi eisiau.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Platfformau a gefnogir</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Fideos, lluniau a sain o gannoedd o wefannau. Dyma rai o'r rhai mwyaf poblogaidd:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Cwestiynau cyffredin</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Ydy I Need Save am ddim?</summary>
+            <p data-i18n-html="faq.a1">Ydy, yn hollol am ddim. Does dim angen cofrestru, mewngofnodi na gosod ap.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Ble mae fy ffeiliau'n cael eu cadw?</summary>
+            <p data-i18n-html="faq.a2">Ar Android a chyfrifiaduron, mae ffeiliau'n mynd i'r ffolder <strong>Llwythi i Lawr</strong>. Ar iPhone ac iPad (Safari), maen nhw'n cael eu cadw yn yr ap <strong>Ffeiliau</strong> → <strong>Llwythi i Lawr</strong>. Oddi yno, gallwch eu cadw yn Lluniau gyda'r botwm Rhannu.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Pam nad oes modd llwytho rhai fideos i lawr?</summary>
+            <p data-i18n-html="faq.a3">Does dim modd i'n gweinydd gyrraedd cynnwys preifat, cynnwys sydd angen mewngofnodi, na chynnwys sydd wedi'i gyfyngu yn ôl rhanbarth. Gwnewch yn siŵr bod y postiad yn gyhoeddus, yna rhowch gynnig arall arni.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Sut ydw i'n llwytho MP3 i lawr?</summary>
+            <p data-i18n-html="faq.a4">Ar ôl i'r ddolen gael ei phrosesu, dewiswch yr opsiwn <strong>MP3</strong> o dan Sain. Mae'r sain yn cael ei thynnu o'r fideo a'i throsi i MP3 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Oes dyfrnod ar fideos TikTok?</summary>
+            <p data-i18n-html="faq.a5">Rydyn ni bob amser yn ffafrio'r fersiwn heb ddyfrnod pan fydd ar gael. Mae opsiynau sy'n cynnwys dyfrnod wedi'u labelu <strong>Dyfrnod</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Ydy fy ffeiliau'n cael eu storio ar eich gweinydd?</summary>
+            <p data-i18n-html="faq.a6">Nac ydyn. Mae ffeiliau'n cael eu hanfon o'r platfform gwreiddiol yn syth i'ch dyfais, a dydyn nhw ddim yn cael eu cadw ar ein gweinydd.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Crëwyd gan</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Dewis iaith</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Cau">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Chwilio am iaith…" aria-label="Chwilio am iaith…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Heb ddod o hyd i iaith.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Wrthi'n nôl cyfryngau… gall hyn gymryd ychydig eiliadau.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"cy","strings":{"meta.title":"I Need Save — Llwythwch fideos, lluniau a sain i lawr o unrhyw gyfryngau cymdeithasol","meta.description":"Llwythwch fideos, lluniau a sain i lawr o TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn a channoedd o wefannau eraill.","skip":"Neidio i'r cynnwys","nav.label":"Prif lywio","nav.how":"Sut i'w ddefnyddio","nav.platforms":"Platfformau","nav.faq":"Cwestiynau cyffredin","lang.button":"Newid iaith","lang.title":"Dewis iaith","lang.search":"Chwilio am iaith…","lang.empty":"Heb ddod o hyd i iaith.","lang.close":"Cau","hero.title":"Llwythwch fideos, lluniau a sain i lawr o unrhyw gyfryngau cymdeithasol","hero.lead":"Gludwch ddolen o TikTok, Instagram, Facebook, X, Pinterest a mwy. Dewiswch yr ansawdd, yna cadwch hi'n syth ar eich dyfais.","form.label":"Dolen postiad neu fideo","form.placeholder":"Gludwch ddolen yma…","form.paste":"Gludo","form.clear":"Clirio'r ddolen","form.submit":"Llwytho i lawr","form.processing":"Wrthi'n prosesu","chips.label":"Enghreifftiau o blatfformau a gefnogir","how.title":"Sut i lwytho i lawr","how.step1.title":"Copïwch y ddolen","how.step1.text":"Agorwch y postiad yn yr ap, tapiwch \u003cstrong>Rhannu\u003c/strong>, yna dewiswch \u003cstrong>Copïo dolen\u003c/strong>.","how.step2.title":"Gludwch hi yma","how.step2.text":"Gludwch y ddolen yn y blwch uchod, yna pwyswch \u003cstrong>Llwytho i lawr\u003c/strong>.","how.step3.title":"Dewis a chadw","how.step3.text":"Dewiswch fideo, sain MP3 neu lun yn yr ansawdd rydych chi eisiau.","platforms.title":"Platfformau a gefnogir","platforms.lead":"Fideos, lluniau a sain o gannoedd o wefannau. Dyma rai o'r rhai mwyaf poblogaidd:","faq.title":"Cwestiynau cyffredin","faq.q1":"Ydy I Need Save am ddim?","faq.a1":"Ydy, yn hollol am ddim. Does dim angen cofrestru, mewngofnodi na gosod ap.","faq.q2":"Ble mae fy ffeiliau'n cael eu cadw?","faq.a2":"Ar Android a chyfrifiaduron, mae ffeiliau'n mynd i'r ffolder \u003cstrong>Llwythi i Lawr\u003c/strong>. Ar iPhone ac iPad (Safari), maen nhw'n cael eu cadw yn yr ap \u003cstrong>Ffeiliau\u003c/strong> → \u003cstrong>Llwythi i Lawr\u003c/strong>. Oddi yno, gallwch eu cadw yn Lluniau gyda'r botwm Rhannu.","faq.q3":"Pam nad oes modd llwytho rhai fideos i lawr?","faq.a3":"Does dim modd i'n gweinydd gyrraedd cynnwys preifat, cynnwys sydd angen mewngofnodi, na chynnwys sydd wedi'i gyfyngu yn ôl rhanbarth. Gwnewch yn siŵr bod y postiad yn gyhoeddus, yna rhowch gynnig arall arni.","faq.q4":"Sut ydw i'n llwytho MP3 i lawr?","faq.a4":"Ar ôl i'r ddolen gael ei phrosesu, dewiswch yr opsiwn \u003cstrong>MP3\u003c/strong> o dan Sain. Mae'r sain yn cael ei thynnu o'r fideo a'i throsi i MP3 192 kbps.","faq.q5":"Oes dyfrnod ar fideos TikTok?","faq.a5":"Rydyn ni bob amser yn ffafrio'r fersiwn heb ddyfrnod pan fydd ar gael. Mae opsiynau sy'n cynnwys dyfrnod wedi'u labelu \u003cstrong>Dyfrnod\u003c/strong>.","faq.q6":"Ydy fy ffeiliau'n cael eu storio ar eich gweinydd?","faq.a6":"Nac ydyn. Mae ffeiliau'n cael eu hanfon o'r platfform gwreiddiol yn syth i'ch dyfais, a dydyn nhw ddim yn cael eu cadw ar ein gweinydd.","footer.madeBy":"Crëwyd gan","results.loading":"Wrthi'n nôl cyfryngau… gall hyn gymryd ychydig eiliadau.","results.found":"Wedi dod o hyd i {n} eitem","results.more":"Dangos {n} opsiwn arall","group.video":"Fideo","group.audio":"Sain","group.image":"Lluniau","label.thumbnail":"Mân-lun","label.photo":"Llun","label.photoN":"Llun {n}","label.video":"Fideo","label.videoN":"Fideo {n}","label.audioN":"Sain {n}","label.original_audio":"Sain wreiddiol","note.original_quality":"Ansawdd gwreiddiol","note.no_audio":"Dim sain","note.watermark":"Dyfrnod","download.button":"Llwytho i lawr","download.preparing":"Wrthi'n paratoi…","toast.preparing":"Wrthi'n paratoi eich ffeil… bydd y llwytho i lawr yn dechrau'n awtomatig.","toast.started":"Wedi dechrau llwytho i lawr.","toast.failed":"Methodd y llwytho i lawr. Rhowch gynnig ar ansawdd arall neu proseswch y ddolen eto.","toast.clipboardEmpty":"Mae eich clipfwrdd yn wag. Copïwch ddolen yn gyntaf.","toast.clipboardDenied":"Gwrthodwyd mynediad i'r clipfwrdd. Gludwch y ddolen â llaw.","error.empty":"Gludwch ddolen postiad neu fideo yn gyntaf.","error.timeout":"Daeth yr amser i ben. Cymerodd y ffynhonnell ormod o amser i ymateb, rhowch gynnig arall arni.","error.offline":"Dim cysylltiad â'r rhyngrwyd. Gwiriwch eich rhwydwaith a rhowch gynnig arall arni.","error.busy":"Mae'r gweinydd yn brysur. Rhowch gynnig arall arni mewn munud.","error.invalid_url":"Dolen annilys. Gludwch y ddolen lawn o ap y cyfryngau cymdeithasol.","error.unsupported":"Does dim cefnogaeth i'r ddolen hon eto. Gwnewch yn siŵr ei bod yn mynd yn syth i bostiad neu fideo.","error.blocked":"Mae'r platfform hwn yn rhwystro ein gweinydd ar hyn o bryd, felly does dim modd llwytho'r ddolen hon i lawr nawr.","error.rate_limited":"Mae'r platfform yn cyfyngu ar geisiadau o'n gweinydd. Rhowch gynnig arall arni mewn munud.","error.login_required":"Mae'r cynnwys hwn yn breifat, neu mae'r platfform yn gofyn i chi fewngofnodi i'w weld, felly does dim modd ei lwytho i lawr.","error.not_found":"Heb ddod o hyd i'r cynnwys, neu mae wedi'i dynnu.","error.geo_blocked":"Mae'r cynnwys hwn wedi'i gyfyngu yn ôl rhanbarth a does dim modd i'n gweinydd ei gyrraedd.","error.failed":"Methu cael cyfryngau o'r ddolen hon. Rhowch gynnig ar ddolen arall neu rhowch gynnig arall arni mewn munud.","error.no_media":"Does dim cyfryngau i'w llwytho i lawr yn y ddolen hon.","error.server_config":"Dydy'r gweinydd ddim wedi'i ffurfweddu'n gywir eto.","error.server_error":"Aeth rhywbeth o'i le ar y gweinydd. Rhowch gynnig arall arni."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

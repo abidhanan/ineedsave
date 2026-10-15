@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="th" dir="ltr" style="--font-script: &quot;Noto Sans Thai&quot;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="ดาวน์โหลดวิดีโอ รูปภาพ และเสียงจาก TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn และเว็บไซต์อื่นๆ อีกหลายร้อยแห่ง">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="ดาวน์โหลดวิดีโอ รูปภาพ และเสียงจาก TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn และเว็บไซต์อื่นๆ อีกหลายร้อยแห่ง">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap"></noscript>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">ข้ามไปยังเนื้อหา</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="การนำทางหลัก">
+        <a href="#cara" data-i18n="nav.how">วิธีใช้</a>
+        <a href="#platform" data-i18n="nav.platforms">แพลตฟอร์ม</a>
+        <a href="#faq" data-i18n="nav.faq">คำถามที่พบบ่อย</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="เปลี่ยนภาษา: ไทย">
+        <span class="lang-flag" aria-hidden="true">🇹🇭</span>
+        <span class="lang-code">TH</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">ดาวน์โหลดวิดีโอ รูปภาพ และเสียงจากโซเชียลมีเดียทุกแพลตฟอร์ม</h1>
+        <p class="lead" data-i18n="hero.lead">วางลิงก์จาก TikTok, Instagram, Facebook, X, Pinterest และอื่นๆ เลือกคุณภาพ แล้วบันทึกลงอุปกรณ์ของคุณได้ทันที</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">ลิงก์โพสต์หรือวิดีโอ</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="วางลิงก์ที่นี่…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">วาง</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="ล้างลิงก์">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">ดาวน์โหลด</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="ตัวอย่างแพลตฟอร์มที่รองรับ">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">วิธีดาวน์โหลด</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">คัดลอกลิงก์</h3>
+            <p data-i18n-html="how.step1.text">เปิดโพสต์ในแอป แตะ <strong>แชร์</strong> แล้วเลือก <strong>คัดลอกลิงก์</strong></p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">วางที่นี่</h3>
+            <p data-i18n-html="how.step2.text">วางลิงก์ลงในช่องด้านบน แล้วกด <strong>ดาวน์โหลด</strong></p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">เลือกและบันทึก</h3>
+            <p data-i18n="how.step3.text">เลือกวิดีโอ เสียง MP3 หรือรูปภาพในคุณภาพที่ต้องการ</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">แพลตฟอร์มที่รองรับ</h2>
+        <p class="section-lead" data-i18n="platforms.lead">วิดีโอ รูปภาพ และเสียงจากเว็บไซต์หลายร้อยแห่ง ตัวอย่างที่ได้รับความนิยมมากที่สุด:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">คำถามที่พบบ่อย</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save ใช้ฟรีหรือไม่</summary>
+            <p data-i18n-html="faq.a1">ใช่ ฟรีทั้งหมด ไม่ต้องสมัคร ไม่ต้องเข้าสู่ระบบ และไม่ต้องติดตั้งแอป</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">ไฟล์ของฉันถูกบันทึกไว้ที่ไหน</summary>
+            <p data-i18n-html="faq.a2">บน Android และคอมพิวเตอร์ ไฟล์จะอยู่ในโฟลเดอร์ <strong>ดาวน์โหลด</strong> บน iPhone และ iPad (Safari) ไฟล์จะถูกบันทึกไว้ในแอป <strong>ไฟล์</strong> → <strong>ดาวน์โหลด</strong> จากนั้นคุณสามารถบันทึกลงในแอปรูปภาพได้ด้วยปุ่มแชร์</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">ทำไมบางวิดีโอจึงดาวน์โหลดไม่ได้</summary>
+            <p data-i18n-html="faq.a3">เซิร์ฟเวอร์ของเราไม่สามารถเข้าถึงเนื้อหาส่วนตัว เนื้อหาที่ต้องเข้าสู่ระบบ หรือเนื้อหาที่จำกัดตามภูมิภาคได้ โปรดตรวจสอบว่าโพสต์เป็นสาธารณะ แล้วลองอีกครั้ง</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">ดาวน์โหลด MP3 อย่างไร</summary>
+            <p data-i18n-html="faq.a4">หลังจากประมวลผลลิงก์แล้ว ให้เลือกตัวเลือก <strong>MP3</strong> ในหมวดเสียง ระบบจะดึงเสียงจากวิดีโอและแปลงเป็น MP3 192 kbps</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">วิดีโอ TikTok มีลายน้ำหรือไม่</summary>
+            <p data-i18n-html="faq.a5">เราเลือกเวอร์ชันที่ไม่มีลายน้ำเสมอเมื่อมีให้ ตัวเลือกที่มีลายน้ำจะมีป้ายกำกับว่า <strong>ลายน้ำ</strong></p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">ไฟล์ของฉันถูกเก็บไว้บนเซิร์ฟเวอร์ของคุณหรือไม่</summary>
+            <p data-i18n-html="faq.a6">ไม่ ไฟล์จะถูกส่งจากแพลตฟอร์มต้นทางตรงไปยังอุปกรณ์ของคุณ และไม่ถูกเก็บไว้บนเซิร์ฟเวอร์ของเรา</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">สร้างโดย</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">เลือกภาษา</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="ปิด">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="ค้นหาภาษา…" aria-label="ค้นหาภาษา…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>ไม่พบภาษา</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">กำลังดึงสื่อ… อาจใช้เวลาสักครู่</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"th","strings":{"meta.title":"I Need Save — ดาวน์โหลดวิดีโอ รูปภาพ และเสียงจากโซเชียลมีเดียทุกแพลตฟอร์ม","meta.description":"ดาวน์โหลดวิดีโอ รูปภาพ และเสียงจาก TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn และเว็บไซต์อื่นๆ อีกหลายร้อยแห่ง","skip":"ข้ามไปยังเนื้อหา","nav.label":"การนำทางหลัก","nav.how":"วิธีใช้","nav.platforms":"แพลตฟอร์ม","nav.faq":"คำถามที่พบบ่อย","lang.button":"เปลี่ยนภาษา","lang.title":"เลือกภาษา","lang.search":"ค้นหาภาษา…","lang.empty":"ไม่พบภาษา","lang.close":"ปิด","hero.title":"ดาวน์โหลดวิดีโอ รูปภาพ และเสียงจากโซเชียลมีเดียทุกแพลตฟอร์ม","hero.lead":"วางลิงก์จาก TikTok, Instagram, Facebook, X, Pinterest และอื่นๆ เลือกคุณภาพ แล้วบันทึกลงอุปกรณ์ของคุณได้ทันที","form.label":"ลิงก์โพสต์หรือวิดีโอ","form.placeholder":"วางลิงก์ที่นี่…","form.paste":"วาง","form.clear":"ล้างลิงก์","form.submit":"ดาวน์โหลด","form.processing":"กำลังประมวลผล","chips.label":"ตัวอย่างแพลตฟอร์มที่รองรับ","how.title":"วิธีดาวน์โหลด","how.step1.title":"คัดลอกลิงก์","how.step1.text":"เปิดโพสต์ในแอป แตะ \u003cstrong>แชร์\u003c/strong> แล้วเลือก \u003cstrong>คัดลอกลิงก์\u003c/strong>","how.step2.title":"วางที่นี่","how.step2.text":"วางลิงก์ลงในช่องด้านบน แล้วกด \u003cstrong>ดาวน์โหลด\u003c/strong>","how.step3.title":"เลือกและบันทึก","how.step3.text":"เลือกวิดีโอ เสียง MP3 หรือรูปภาพในคุณภาพที่ต้องการ","platforms.title":"แพลตฟอร์มที่รองรับ","platforms.lead":"วิดีโอ รูปภาพ และเสียงจากเว็บไซต์หลายร้อยแห่ง ตัวอย่างที่ได้รับความนิยมมากที่สุด:","faq.title":"คำถามที่พบบ่อย","faq.q1":"I Need Save ใช้ฟรีหรือไม่","faq.a1":"ใช่ ฟรีทั้งหมด ไม่ต้องสมัคร ไม่ต้องเข้าสู่ระบบ และไม่ต้องติดตั้งแอป","faq.q2":"ไฟล์ของฉันถูกบันทึกไว้ที่ไหน","faq.a2":"บน Android และคอมพิวเตอร์ ไฟล์จะอยู่ในโฟลเดอร์ \u003cstrong>ดาวน์โหลด\u003c/strong> บน iPhone และ iPad (Safari) ไฟล์จะถูกบันทึกไว้ในแอป \u003cstrong>ไฟล์\u003c/strong> → \u003cstrong>ดาวน์โหลด\u003c/strong> จากนั้นคุณสามารถบันทึกลงในแอปรูปภาพได้ด้วยปุ่มแชร์","faq.q3":"ทำไมบางวิดีโอจึงดาวน์โหลดไม่ได้","faq.a3":"เซิร์ฟเวอร์ของเราไม่สามารถเข้าถึงเนื้อหาส่วนตัว เนื้อหาที่ต้องเข้าสู่ระบบ หรือเนื้อหาที่จำกัดตามภูมิภาคได้ โปรดตรวจสอบว่าโพสต์เป็นสาธารณะ แล้วลองอีกครั้ง","faq.q4":"ดาวน์โหลด MP3 อย่างไร","faq.a4":"หลังจากประมวลผลลิงก์แล้ว ให้เลือกตัวเลือก \u003cstrong>MP3\u003c/strong> ในหมวดเสียง ระบบจะดึงเสียงจากวิดีโอและแปลงเป็น MP3 192 kbps","faq.q5":"วิดีโอ TikTok มีลายน้ำหรือไม่","faq.a5":"เราเลือกเวอร์ชันที่ไม่มีลายน้ำเสมอเมื่อมีให้ ตัวเลือกที่มีลายน้ำจะมีป้ายกำกับว่า \u003cstrong>ลายน้ำ\u003c/strong>","faq.q6":"ไฟล์ของฉันถูกเก็บไว้บนเซิร์ฟเวอร์ของคุณหรือไม่","faq.a6":"ไม่ ไฟล์จะถูกส่งจากแพลตฟอร์มต้นทางตรงไปยังอุปกรณ์ของคุณ และไม่ถูกเก็บไว้บนเซิร์ฟเวอร์ของเรา","footer.madeBy":"สร้างโดย","results.loading":"กำลังดึงสื่อ… อาจใช้เวลาสักครู่","results.found":"พบสื่อ {n} รายการ","results.more":"แสดงตัวเลือกเพิ่มเติมอีก {n} รายการ","group.video":"วิดีโอ","group.audio":"เสียง","group.image":"รูปภาพ","label.thumbnail":"ภาพขนาดย่อ","label.photo":"รูปภาพ","label.photoN":"รูปภาพ {n}","label.video":"วิดีโอ","label.videoN":"วิดีโอ {n}","label.audioN":"เสียง {n}","label.original_audio":"เสียงต้นฉบับ","note.original_quality":"คุณภาพต้นฉบับ","note.no_audio":"ไม่มีเสียง","note.watermark":"ลายน้ำ","download.button":"ดาวน์โหลด","download.preparing":"กำลังเตรียม…","toast.preparing":"กำลังเตรียมไฟล์… การดาวน์โหลดจะเริ่มโดยอัตโนมัติ","toast.started":"เริ่มดาวน์โหลดแล้ว","toast.failed":"ดาวน์โหลดไม่สำเร็จ ลองเลือกคุณภาพอื่นหรือประมวลผลลิงก์อีกครั้ง","toast.clipboardEmpty":"คลิปบอร์ดว่างเปล่า โปรดคัดลอกลิงก์ก่อน","toast.clipboardDenied":"ไม่ได้รับอนุญาตให้เข้าถึงคลิปบอร์ด โปรดวางลิงก์ด้วยตนเอง","error.empty":"โปรดวางลิงก์โพสต์หรือวิดีโอก่อน","error.timeout":"หมดเวลา แหล่งที่มาตอบสนองนานเกินไป โปรดลองอีกครั้ง","error.offline":"ไม่มีการเชื่อมต่ออินเทอร์เน็ต โปรดตรวจสอบเครือข่ายแล้วลองอีกครั้ง","error.busy":"เซิร์ฟเวอร์ไม่ว่าง โปรดลองอีกครั้งในอีกสักครู่","error.invalid_url":"ลิงก์ไม่ถูกต้อง โปรดวางลิงก์แบบเต็มจากแอปโซเชียลมีเดีย","error.unsupported":"ยังไม่รองรับลิงก์นี้ โปรดตรวจสอบว่าลิงก์ชี้ไปยังโพสต์หรือวิดีโอโดยตรง","error.blocked":"แพลตฟอร์มนี้กำลังบล็อกเซิร์ฟเวอร์ของเรา จึงยังดาวน์โหลดลิงก์นี้ไม่ได้ในขณะนี้","error.rate_limited":"แพลตฟอร์มกำลังจำกัดคำขอจากเซิร์ฟเวอร์ของเรา โปรดลองอีกครั้งในอีกสักครู่","error.login_required":"เนื้อหานี้เป็นแบบส่วนตัว หรือแพลตฟอร์มกำหนดให้เข้าสู่ระบบเพื่อดู จึงไม่สามารถดาวน์โหลดได้","error.not_found":"ไม่พบเนื้อหา หรือเนื้อหาถูกลบไปแล้ว","error.geo_blocked":"เนื้อหานี้ถูกจำกัดตามภูมิภาค และเซิร์ฟเวอร์ของเราไม่สามารถเข้าถึงได้","error.failed":"ไม่สามารถดึงสื่อจากลิงก์นี้ได้ ลองใช้ลิงก์อื่นหรือลองอีกครั้งในอีกสักครู่","error.no_media":"ไม่มีสื่อที่ดาวน์โหลดได้ในลิงก์นี้","error.server_config":"เซิร์ฟเวอร์ยังไม่ได้ตั้งค่าอย่างถูกต้อง","error.server_error":"เกิดข้อผิดพลาดที่เซิร์ฟเวอร์ โปรดลองอีกครั้ง"}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

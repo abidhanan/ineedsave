@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="sq" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Shkarko video, foto dhe audio nga TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn dhe qindra faqe të tjera.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Shkarko video, foto dhe audio nga TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn dhe qindra faqe të tjera.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Kalo te përmbajtja</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Navigimi kryesor">
+        <a href="#cara" data-i18n="nav.how">Si përdoret</a>
+        <a href="#platform" data-i18n="nav.platforms">Platformat</a>
+        <a href="#faq" data-i18n="nav.faq">Pyetje të shpeshta</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Ndrysho gjuhën: Shqip">
+        <span class="lang-flag" aria-hidden="true">🇦🇱</span>
+        <span class="lang-code">SQ</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Shkarko video, foto dhe audio nga çdo rrjet social</h1>
+        <p class="lead" data-i18n="hero.lead">Ngjit një lidhje nga TikTok, Instagram, Facebook, X, Pinterest e të tjera. Zgjidh cilësinë dhe ruaje direkt në pajisjen tënde.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Lidhja e postimit ose e videos</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Ngjit një lidhje këtu…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Ngjit</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Pastro lidhjen">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Shkarko</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Shembuj platformash të mbështetura">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Si të shkarkosh</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Kopjo lidhjen</h3>
+            <p data-i18n-html="how.step1.text">Hap postimin në aplikacion, prek <strong>Ndaj</strong> dhe zgjidh <strong>Kopjo lidhjen</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Ngjite këtu</h3>
+            <p data-i18n-html="how.step2.text">Ngjite lidhjen në kutinë më lart dhe shtyp <strong>Shkarko</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Zgjidh dhe ruaj</h3>
+            <p data-i18n="how.step3.text">Zgjidh videon, audion MP3 ose foton në cilësinë që dëshiron.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Platformat e mbështetura</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Video, foto dhe audio nga qindra faqe. Disa nga më të njohurat:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Pyetje të shpeshta</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">A është I Need Save falas?</summary>
+            <p data-i18n-html="faq.a1">Po, plotësisht falas. Nuk nevojitet regjistrim, hyrje në llogari apo aplikacion.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Ku ruhen skedarët e mi?</summary>
+            <p data-i18n-html="faq.a2">Në Android dhe kompjuter, skedarët shkojnë te dosja <strong>Shkarkimet</strong>. Në iPhone dhe iPad (Safari), ruhen te aplikacioni <strong>Skedarët</strong> → <strong>Shkarkimet</strong>. Prej andej mund t'i ruash te Fotot me butonin Ndaj.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Pse disa video nuk mund të shkarkohen?</summary>
+            <p data-i18n-html="faq.a3">Serveri ynë nuk mund të arrijë përmbajtje private, përmbajtje që kërkon hyrje në llogari ose përmbajtje të kufizuar sipas rajonit. Sigurohu që postimi të jetë publik dhe provo sërish.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Si të shkarkoj MP3?</summary>
+            <p data-i18n-html="faq.a4">Pasi të përpunohet lidhja, zgjidh opsionin <strong>MP3</strong> te Audio. Zëri merret nga videoja dhe konvertohet në MP3 me 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">A kanë filigran videot e TikTok?</summary>
+            <p data-i18n-html="faq.a5">Gjithmonë preferojmë versionin pa filigran kur është i disponueshëm. Opsionet me filigran shënohen me <strong>Filigran</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">A ruhen skedarët e mi në serverin tuaj?</summary>
+            <p data-i18n-html="faq.a6">Jo. Skedarët dërgohen direkt nga platforma origjinale te pajisja jote dhe nuk mbahen në serverin tonë.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Krijuar nga</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Zgjidh gjuhën</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Mbyll">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Kërko gjuhën…" aria-label="Kërko gjuhën…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Nuk u gjet asnjë gjuhë.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Po merren mediat… kjo mund të zgjasë disa sekonda.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"sq","strings":{"meta.title":"I Need Save — Shkarko video, foto dhe audio nga çdo rrjet social","meta.description":"Shkarko video, foto dhe audio nga TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn dhe qindra faqe të tjera.","skip":"Kalo te përmbajtja","nav.label":"Navigimi kryesor","nav.how":"Si përdoret","nav.platforms":"Platformat","nav.faq":"Pyetje të shpeshta","lang.button":"Ndrysho gjuhën","lang.title":"Zgjidh gjuhën","lang.search":"Kërko gjuhën…","lang.empty":"Nuk u gjet asnjë gjuhë.","lang.close":"Mbyll","hero.title":"Shkarko video, foto dhe audio nga çdo rrjet social","hero.lead":"Ngjit një lidhje nga TikTok, Instagram, Facebook, X, Pinterest e të tjera. Zgjidh cilësinë dhe ruaje direkt në pajisjen tënde.","form.label":"Lidhja e postimit ose e videos","form.placeholder":"Ngjit një lidhje këtu…","form.paste":"Ngjit","form.clear":"Pastro lidhjen","form.submit":"Shkarko","form.processing":"Po përpunohet","chips.label":"Shembuj platformash të mbështetura","how.title":"Si të shkarkosh","how.step1.title":"Kopjo lidhjen","how.step1.text":"Hap postimin në aplikacion, prek \u003cstrong>Ndaj\u003c/strong> dhe zgjidh \u003cstrong>Kopjo lidhjen\u003c/strong>.","how.step2.title":"Ngjite këtu","how.step2.text":"Ngjite lidhjen në kutinë më lart dhe shtyp \u003cstrong>Shkarko\u003c/strong>.","how.step3.title":"Zgjidh dhe ruaj","how.step3.text":"Zgjidh videon, audion MP3 ose foton në cilësinë që dëshiron.","platforms.title":"Platformat e mbështetura","platforms.lead":"Video, foto dhe audio nga qindra faqe. Disa nga më të njohurat:","faq.title":"Pyetje të shpeshta","faq.q1":"A është I Need Save falas?","faq.a1":"Po, plotësisht falas. Nuk nevojitet regjistrim, hyrje në llogari apo aplikacion.","faq.q2":"Ku ruhen skedarët e mi?","faq.a2":"Në Android dhe kompjuter, skedarët shkojnë te dosja \u003cstrong>Shkarkimet\u003c/strong>. Në iPhone dhe iPad (Safari), ruhen te aplikacioni \u003cstrong>Skedarët\u003c/strong> → \u003cstrong>Shkarkimet\u003c/strong>. Prej andej mund t'i ruash te Fotot me butonin Ndaj.","faq.q3":"Pse disa video nuk mund të shkarkohen?","faq.a3":"Serveri ynë nuk mund të arrijë përmbajtje private, përmbajtje që kërkon hyrje në llogari ose përmbajtje të kufizuar sipas rajonit. Sigurohu që postimi të jetë publik dhe provo sërish.","faq.q4":"Si të shkarkoj MP3?","faq.a4":"Pasi të përpunohet lidhja, zgjidh opsionin \u003cstrong>MP3\u003c/strong> te Audio. Zëri merret nga videoja dhe konvertohet në MP3 me 192 kbps.","faq.q5":"A kanë filigran videot e TikTok?","faq.a5":"Gjithmonë preferojmë versionin pa filigran kur është i disponueshëm. Opsionet me filigran shënohen me \u003cstrong>Filigran\u003c/strong>.","faq.q6":"A ruhen skedarët e mi në serverin tuaj?","faq.a6":"Jo. Skedarët dërgohen direkt nga platforma origjinale te pajisja jote dhe nuk mbahen në serverin tonë.","footer.madeBy":"Krijuar nga","results.loading":"Po merren mediat… kjo mund të zgjasë disa sekonda.","results.found":"U gjetën {n} media","results.more":"Shfaq edhe {n} opsione","group.video":"Video","group.audio":"Audio","group.image":"Foto","label.thumbnail":"Miniaturë","label.photo":"Foto","label.photoN":"Foto {n}","label.video":"Video","label.videoN":"Video {n}","label.audioN":"Audio {n}","label.original_audio":"Zëri origjinal","note.original_quality":"Cilësia origjinale","note.no_audio":"Pa zë","note.watermark":"Filigran","download.button":"Shkarko","download.preparing":"Po përgatitet…","toast.preparing":"Po përgatitet skedari yt… shkarkimi do të nisë automatikisht.","toast.started":"Shkarkimi nisi.","toast.failed":"Shkarkimi dështoi. Provo një cilësi tjetër ose përpuno sërish lidhjen.","toast.clipboardEmpty":"Kujtesa e fragmenteve është bosh. Kopjo fillimisht një lidhje.","toast.clipboardDenied":"Qasja te kujtesa e fragmenteve u refuzua. Ngjite lidhjen manualisht.","error.empty":"Ngjit fillimisht lidhjen e një postimi ose videoje.","error.timeout":"Koha mbaroi. Burimi vonoi shumë të përgjigjej, provo sërish.","error.offline":"Nuk ka lidhje interneti. Kontrollo rrjetin dhe provo sërish.","error.busy":"Serveri është i zënë. Provo sërish pas pak.","error.invalid_url":"Lidhje e pavlefshme. Ngjit lidhjen e plotë nga aplikacioni i rrjetit social.","error.unsupported":"Kjo lidhje nuk mbështetet ende. Sigurohu që të çojë direkt te një postim ose video.","error.blocked":"Kjo platformë po e bllokon aktualisht serverin tonë, ndaj kjo lidhje nuk mund të shkarkohet tani.","error.rate_limited":"Platforma po kufizon kërkesat nga serveri ynë. Provo sërish pas pak.","error.login_required":"Kjo përmbajtje është private ose platforma kërkon hyrje në llogari për ta parë, ndaj nuk mund të shkarkohet.","error.not_found":"Përmbajtja nuk u gjet ose është hequr.","error.geo_blocked":"Kjo përmbajtje është e kufizuar sipas rajonit dhe serveri ynë nuk mund ta arrijë.","error.failed":"Nuk u morën media nga kjo lidhje. Provo një lidhje tjetër ose provo sërish pas pak.","error.no_media":"Nuk ka media për t'u shkarkuar në këtë lidhje.","error.server_config":"Serveri nuk është konfiguruar ende siç duhet.","error.server_error":"Diçka shkoi keq në server. Provo sërish."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

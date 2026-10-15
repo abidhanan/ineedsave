@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zu" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Landa amavidiyo, izithombe nomsindo ku-TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn namakhulu amanye amasayithi.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Landa amavidiyo, izithombe nomsindo ku-TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn namakhulu amanye amasayithi.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Yeqela kokuqukethwe</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Ukuzulazula okuyinhloko">
+        <a href="#cara" data-i18n="nav.how">Indlela yokusebenzisa</a>
+        <a href="#platform" data-i18n="nav.platforms">Izinkundla</a>
+        <a href="#faq" data-i18n="nav.faq">Imibuzo</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Shintsha ulimi: isiZulu">
+        <span class="lang-flag" aria-hidden="true">🇿🇦</span>
+        <span class="lang-code">ZU</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Landa amavidiyo, izithombe nomsindo kunoma iyiphi inkundla yezokuxhumana</h1>
+        <p class="lead" data-i18n="hero.lead">Namathisela ilinki evela ku-TikTok, Instagram, Facebook, X, Pinterest nokunye. Khetha ikhwalithi, bese uyilondoloza ngqo kudivayisi yakho.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Ilinki yokuthunyelwe noma yevidiyo</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Namathisela ilinki lapha…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Namathisela</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Sula ilinki">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Landa</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Izibonelo zezinkundla ezisekelwayo">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Indlela yokulanda</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Kopisha ilinki</h3>
+            <p data-i18n-html="how.step1.text">Vula okuthunyelwe ku-app, thepha <strong>Yabelana</strong>, bese ukhetha <strong>Kopisha ilinki</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Yinamathisele lapha</h3>
+            <p data-i18n-html="how.step2.text">Namathisela ilinki ebhokisini elingenhla, bese ucindezela <strong>Landa</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Khetha futhi ulondoloze</h3>
+            <p data-i18n="how.step3.text">Khetha ividiyo, umsindo we-MP3, noma isithombe ngekhwalithi oyifunayo.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Izinkundla ezisekelwayo</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Amavidiyo, izithombe nomsindo kusuka emakhulwini amasayithi. Amanye adume kakhulu:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Imibuzo evame ukubuzwa</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Ingabe I Need Save imahhala?</summary>
+            <p data-i18n-html="faq.a1">Yebo, imahhala ngokuphelele. Akudingeki ukubhalisa, ukungena ngemvume, noma i-app.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Amafayela ami alondolozwa kuphi?</summary>
+            <p data-i18n-html="faq.a2">Ku-Android nakumakhompyutha, amafayela aya kufolda ethi <strong>Okulandiwe</strong>. Ku-iPhone naku-iPad (Safari), alondolozwa ku-app ethi <strong>Amafayela</strong> → <strong>Okulandiwe</strong>. Ukusuka lapho ungawalondoloza ku-Izithombe ngenkinobho ethi Yabelana.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Kungani amanye amavidiyo engakwazi ukulandwa?</summary>
+            <p data-i18n-html="faq.a3">Iseva yethu ayikwazi ukufinyelela okuqukethwe okuyimfihlo, okudinga ukungena ngemvume, noma okukhawulelwe ngokwesifunda. Qiniseka ukuthi okuthunyelwe kusesidlangalaleni, bese uzama futhi.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Ngiyilanda kanjani i-MP3?</summary>
+            <p data-i18n-html="faq.a4">Ngemuva kokuthi ilinki icutshunguliwe, khetha inketho ethi <strong>MP3</strong> ngaphansi kokuthi Umsindo. Umsindo uthathwa evidiyweni bese uguqulelwa ku-MP3 ye-192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Ingabe amavidiyo e-TikTok anophawu lwamanzi?</summary>
+            <p data-i18n-html="faq.a5">Sihlala sincamela inguqulo engenalo uphawu lwamanzi uma itholakala. Izinketho ezinophawu lwamanzi zibhalwe ukuthi <strong>Uphawu lwamanzi</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Ingabe amafayela ami agcinwa kuseva yenu?</summary>
+            <p data-i18n-html="faq.a6">Cha. Amafayela athunyelwa ngqo esuka enkundleni yokuqala aye kudivayisi yakho, futhi awagcinwa kuseva yethu.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Yenziwe ngu</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Khetha ulimi</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Vala">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Sesha ulimi…" aria-label="Sesha ulimi…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Alukho ulimi olutholakele.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Ithola imidiya… lokhu kungathatha imizuzwana embalwa.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"zu","strings":{"meta.title":"I Need Save — Landa amavidiyo, izithombe nomsindo kunoma iyiphi inkundla yezokuxhumana","meta.description":"Landa amavidiyo, izithombe nomsindo ku-TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn namakhulu amanye amasayithi.","skip":"Yeqela kokuqukethwe","nav.label":"Ukuzulazula okuyinhloko","nav.how":"Indlela yokusebenzisa","nav.platforms":"Izinkundla","nav.faq":"Imibuzo","lang.button":"Shintsha ulimi","lang.title":"Khetha ulimi","lang.search":"Sesha ulimi…","lang.empty":"Alukho ulimi olutholakele.","lang.close":"Vala","hero.title":"Landa amavidiyo, izithombe nomsindo kunoma iyiphi inkundla yezokuxhumana","hero.lead":"Namathisela ilinki evela ku-TikTok, Instagram, Facebook, X, Pinterest nokunye. Khetha ikhwalithi, bese uyilondoloza ngqo kudivayisi yakho.","form.label":"Ilinki yokuthunyelwe noma yevidiyo","form.placeholder":"Namathisela ilinki lapha…","form.paste":"Namathisela","form.clear":"Sula ilinki","form.submit":"Landa","form.processing":"Iyacubungula","chips.label":"Izibonelo zezinkundla ezisekelwayo","how.title":"Indlela yokulanda","how.step1.title":"Kopisha ilinki","how.step1.text":"Vula okuthunyelwe ku-app, thepha \u003cstrong>Yabelana\u003c/strong>, bese ukhetha \u003cstrong>Kopisha ilinki\u003c/strong>.","how.step2.title":"Yinamathisele lapha","how.step2.text":"Namathisela ilinki ebhokisini elingenhla, bese ucindezela \u003cstrong>Landa\u003c/strong>.","how.step3.title":"Khetha futhi ulondoloze","how.step3.text":"Khetha ividiyo, umsindo we-MP3, noma isithombe ngekhwalithi oyifunayo.","platforms.title":"Izinkundla ezisekelwayo","platforms.lead":"Amavidiyo, izithombe nomsindo kusuka emakhulwini amasayithi. Amanye adume kakhulu:","faq.title":"Imibuzo evame ukubuzwa","faq.q1":"Ingabe I Need Save imahhala?","faq.a1":"Yebo, imahhala ngokuphelele. Akudingeki ukubhalisa, ukungena ngemvume, noma i-app.","faq.q2":"Amafayela ami alondolozwa kuphi?","faq.a2":"Ku-Android nakumakhompyutha, amafayela aya kufolda ethi \u003cstrong>Okulandiwe\u003c/strong>. Ku-iPhone naku-iPad (Safari), alondolozwa ku-app ethi \u003cstrong>Amafayela\u003c/strong> → \u003cstrong>Okulandiwe\u003c/strong>. Ukusuka lapho ungawalondoloza ku-Izithombe ngenkinobho ethi Yabelana.","faq.q3":"Kungani amanye amavidiyo engakwazi ukulandwa?","faq.a3":"Iseva yethu ayikwazi ukufinyelela okuqukethwe okuyimfihlo, okudinga ukungena ngemvume, noma okukhawulelwe ngokwesifunda. Qiniseka ukuthi okuthunyelwe kusesidlangalaleni, bese uzama futhi.","faq.q4":"Ngiyilanda kanjani i-MP3?","faq.a4":"Ngemuva kokuthi ilinki icutshunguliwe, khetha inketho ethi \u003cstrong>MP3\u003c/strong> ngaphansi kokuthi Umsindo. Umsindo uthathwa evidiyweni bese uguqulelwa ku-MP3 ye-192 kbps.","faq.q5":"Ingabe amavidiyo e-TikTok anophawu lwamanzi?","faq.a5":"Sihlala sincamela inguqulo engenalo uphawu lwamanzi uma itholakala. Izinketho ezinophawu lwamanzi zibhalwe ukuthi \u003cstrong>Uphawu lwamanzi\u003c/strong>.","faq.q6":"Ingabe amafayela ami agcinwa kuseva yenu?","faq.a6":"Cha. Amafayela athunyelwa ngqo esuka enkundleni yokuqala aye kudivayisi yakho, futhi awagcinwa kuseva yethu.","footer.madeBy":"Yenziwe ngu","results.loading":"Ithola imidiya… lokhu kungathatha imizuzwana embalwa.","results.found":"Kutholwe imidiya engu-{n}","results.more":"Bonisa ezinye izinketho ezingu-{n}","group.video":"Ividiyo","group.audio":"Umsindo","group.image":"Izithombe","label.thumbnail":"Isithonjana","label.photo":"Isithombe","label.photoN":"Isithombe {n}","label.video":"Ividiyo","label.videoN":"Ividiyo {n}","label.audioN":"Umsindo {n}","label.original_audio":"Umsindo wangempela","note.original_quality":"Ikhwalithi yangempela","note.no_audio":"Awukho umsindo","note.watermark":"Uphawu lwamanzi","download.button":"Landa","download.preparing":"Iyalungisa…","toast.preparing":"Silungisa ifayela lakho… ukulanda kuzoqala ngokuzenzakalelayo.","toast.started":"Ukulanda kuqalile.","toast.failed":"Ukulanda kuhlulekile. Zama enye ikhwalithi noma ucubungule ilinki futhi.","toast.clipboardEmpty":"Ibhodi lakho lokunamathisela alinalutho. Qala ngokukopisha ilinki.","toast.clipboardDenied":"Ukufinyelela ebhodini lokunamathisela kwenqatshiwe. Namathisela ilinki ngesandla.","error.empty":"Qala ngokunamathisela ilinki yokuthunyelwe noma yevidiyo.","error.timeout":"Isikhathi siphelile. Umthombo uthathe isikhathi eside ukuphendula, sicela uzame futhi.","error.offline":"Akukho ukuxhumana kwe-inthanethi. Hlola inethiwekhi yakho bese uzama futhi.","error.busy":"Iseva imatasa. Sicela uzame futhi emzuzwini.","error.invalid_url":"Ilinki engavumelekile. Namathisela ilinki ephelele evela ku-app yezokuxhumana.","error.unsupported":"Le linki ayisekelwa okwamanje. Qiniseka ukuthi ikhomba ngqo kokuthunyelwe noma kuvidiyo.","error.blocked":"Le nkundla okwamanje ivimba iseva yethu, ngakho le linki ayikwazi ukulandwa manje.","error.rate_limited":"Inkundla ikhawulela izicelo ezivela kuseva yethu. Sicela uzame futhi emzuzwini.","error.login_required":"Lokhu okuqukethwe kuyimfihlo, noma inkundla idinga ukungena ngemvume ukuze ukubone, ngakho akukwazi ukulandwa.","error.not_found":"Okuqukethwe akutholakalanga noma kususiwe.","error.geo_blocked":"Lokhu okuqukethwe kukhawulelwe ngokwesifunda futhi iseva yethu ayikwazi ukukufinyelela.","error.failed":"Ayikwazanga ukuthola imidiya kule linki. Zama enye ilinki noma uzame futhi emzuzwini.","error.no_media":"Ayikho imidiya engalandwa kule linki.","error.server_config":"Iseva ayikalungiselelwa kahle okwamanje.","error.server_error":"Kukhona okungahambanga kahle kuseva. Sicela uzame futhi."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

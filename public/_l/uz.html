@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="uz" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn va yuzlab boshqa saytlardan video, rasm va audio yuklab oling.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn va yuzlab boshqa saytlardan video, rasm va audio yuklab oling.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Asosiy qismga oʻtish</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Asosiy navigatsiya">
+        <a href="#cara" data-i18n="nav.how">Qanday foydalaniladi</a>
+        <a href="#platform" data-i18n="nav.platforms">Platformalar</a>
+        <a href="#faq" data-i18n="nav.faq">Savol-javob</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Tilni oʻzgartirish: Oʻzbekcha">
+        <span class="lang-flag" aria-hidden="true">🇺🇿</span>
+        <span class="lang-code">UZ</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Istalgan ijtimoiy tarmoqdan video, rasm va audio yuklab oling</h1>
+        <p class="lead" data-i18n="hero.lead">TikTok, Instagram, Facebook, X, Pinterest va boshqalardan havolani joylang. Sifatni tanlang va toʻgʻridan-toʻgʻri qurilmangizga saqlang.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Post yoki video havolasi</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Havolani shu yerga joylang…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Joylash</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Havolani tozalash">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Yuklab olish</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Qoʻllab-quvvatlanadigan platformalar namunalari">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Qanday yuklab olinadi</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Havolani nusxalang</h3>
+            <p data-i18n-html="how.step1.text">Postni ilovada oching, <strong>Ulashish</strong> tugmasini bosing, soʻng <strong>Havolani nusxalash</strong> bandini tanlang.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Shu yerga joylang</h3>
+            <p data-i18n-html="how.step2.text">Havolani yuqoridagi maydonga joylang, soʻng <strong>Yuklab olish</strong> tugmasini bosing.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Tanlang va saqlang</h3>
+            <p data-i18n="how.step3.text">Kerakli sifatda video, MP3 audio yoki rasmni tanlang.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Qoʻllab-quvvatlanadigan platformalar</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Yuzlab saytlardan video, rasm va audio. Eng mashhurlaridan baʼzilari:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Koʻp beriladigan savollar</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save bepulmi?</summary>
+            <p data-i18n-html="faq.a1">Ha, butunlay bepul. Roʻyxatdan oʻtish, hisobga kirish yoki ilova oʻrnatish shart emas.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Fayllarim qayerga saqlanadi?</summary>
+            <p data-i18n-html="faq.a2">Android va kompyuterlarda fayllar <strong>Yuklanmalar</strong> jildiga tushadi. iPhone va iPad (Safari) qurilmalarida ular <strong>Fayllar</strong> ilovasi → <strong>Yuklanmalar</strong> jildiga saqlanadi. U yerdan Ulashish tugmasi orqali ularni Rasmlar ilovasiga saqlashingiz mumkin.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Nega baʼzi videolarni yuklab boʻlmaydi?</summary>
+            <p data-i18n-html="faq.a3">Shaxsiy kontent, hisobga kirishni talab qiladigan kontent yoki hudud boʻyicha cheklangan kontentga serverimiz kira olmaydi. Post ochiq ekanligiga ishonch hosil qiling va qayta urinib koʻring.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">MP3 qanday yuklab olinadi?</summary>
+            <p data-i18n-html="faq.a4">Havola ishlangandan soʻng Audio boʻlimida <strong>MP3</strong> variantini tanlang. Ovoz videodan olinadi va 192 kbps MP3 formatiga oʻgiriladi.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">TikTok videolarida suv belgisi boʻladimi?</summary>
+            <p data-i18n-html="faq.a5">Mavjud boʻlsa, biz doim suv belgisiz versiyani afzal koʻramiz. Suv belgisi bor variantlar <strong>Suv belgisi</strong> deb belgilanadi.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Fayllarim serveringizda saqlanadimi?</summary>
+            <p data-i18n-html="faq.a6">Yoʻq. Fayllar asl platformadan toʻgʻridan-toʻgʻri qurilmangizga yuboriladi va serverimizda saqlanmaydi.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Muallif</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Tilni tanlang</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Yopish">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Til qidirish…" aria-label="Til qidirish…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Til topilmadi.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Media olinmoqda… bu bir necha soniya vaqt olishi mumkin.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"uz","strings":{"meta.title":"I Need Save — Istalgan ijtimoiy tarmoqdan video, rasm va audio yuklab oling","meta.description":"TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn va yuzlab boshqa saytlardan video, rasm va audio yuklab oling.","skip":"Asosiy qismga oʻtish","nav.label":"Asosiy navigatsiya","nav.how":"Qanday foydalaniladi","nav.platforms":"Platformalar","nav.faq":"Savol-javob","lang.button":"Tilni oʻzgartirish","lang.title":"Tilni tanlang","lang.search":"Til qidirish…","lang.empty":"Til topilmadi.","lang.close":"Yopish","hero.title":"Istalgan ijtimoiy tarmoqdan video, rasm va audio yuklab oling","hero.lead":"TikTok, Instagram, Facebook, X, Pinterest va boshqalardan havolani joylang. Sifatni tanlang va toʻgʻridan-toʻgʻri qurilmangizga saqlang.","form.label":"Post yoki video havolasi","form.placeholder":"Havolani shu yerga joylang…","form.paste":"Joylash","form.clear":"Havolani tozalash","form.submit":"Yuklab olish","form.processing":"Ishlanmoqda","chips.label":"Qoʻllab-quvvatlanadigan platformalar namunalari","how.title":"Qanday yuklab olinadi","how.step1.title":"Havolani nusxalang","how.step1.text":"Postni ilovada oching, \u003cstrong>Ulashish\u003c/strong> tugmasini bosing, soʻng \u003cstrong>Havolani nusxalash\u003c/strong> bandini tanlang.","how.step2.title":"Shu yerga joylang","how.step2.text":"Havolani yuqoridagi maydonga joylang, soʻng \u003cstrong>Yuklab olish\u003c/strong> tugmasini bosing.","how.step3.title":"Tanlang va saqlang","how.step3.text":"Kerakli sifatda video, MP3 audio yoki rasmni tanlang.","platforms.title":"Qoʻllab-quvvatlanadigan platformalar","platforms.lead":"Yuzlab saytlardan video, rasm va audio. Eng mashhurlaridan baʼzilari:","faq.title":"Koʻp beriladigan savollar","faq.q1":"I Need Save bepulmi?","faq.a1":"Ha, butunlay bepul. Roʻyxatdan oʻtish, hisobga kirish yoki ilova oʻrnatish shart emas.","faq.q2":"Fayllarim qayerga saqlanadi?","faq.a2":"Android va kompyuterlarda fayllar \u003cstrong>Yuklanmalar\u003c/strong> jildiga tushadi. iPhone va iPad (Safari) qurilmalarida ular \u003cstrong>Fayllar\u003c/strong> ilovasi → \u003cstrong>Yuklanmalar\u003c/strong> jildiga saqlanadi. U yerdan Ulashish tugmasi orqali ularni Rasmlar ilovasiga saqlashingiz mumkin.","faq.q3":"Nega baʼzi videolarni yuklab boʻlmaydi?","faq.a3":"Shaxsiy kontent, hisobga kirishni talab qiladigan kontent yoki hudud boʻyicha cheklangan kontentga serverimiz kira olmaydi. Post ochiq ekanligiga ishonch hosil qiling va qayta urinib koʻring.","faq.q4":"MP3 qanday yuklab olinadi?","faq.a4":"Havola ishlangandan soʻng Audio boʻlimida \u003cstrong>MP3\u003c/strong> variantini tanlang. Ovoz videodan olinadi va 192 kbps MP3 formatiga oʻgiriladi.","faq.q5":"TikTok videolarida suv belgisi boʻladimi?","faq.a5":"Mavjud boʻlsa, biz doim suv belgisiz versiyani afzal koʻramiz. Suv belgisi bor variantlar \u003cstrong>Suv belgisi\u003c/strong> deb belgilanadi.","faq.q6":"Fayllarim serveringizda saqlanadimi?","faq.a6":"Yoʻq. Fayllar asl platformadan toʻgʻridan-toʻgʻri qurilmangizga yuboriladi va serverimizda saqlanmaydi.","footer.madeBy":"Muallif","results.loading":"Media olinmoqda… bu bir necha soniya vaqt olishi mumkin.","results.found":"{n} ta media topildi","results.more":"Yana {n} ta variantni koʻrsatish","group.video":"Video","group.audio":"Audio","group.image":"Rasmlar","label.thumbnail":"Miniatyura","label.photo":"Rasm","label.photoN":"Rasm {n}","label.video":"Video","label.videoN":"Video {n}","label.audioN":"Audio {n}","label.original_audio":"Asl ovoz","note.original_quality":"Asl sifat","note.no_audio":"Ovozsiz","note.watermark":"Suv belgisi","download.button":"Yuklab olish","download.preparing":"Tayyorlanmoqda…","toast.preparing":"Faylingiz tayyorlanmoqda… yuklab olish avtomatik boshlanadi.","toast.started":"Yuklab olish boshlandi.","toast.failed":"Yuklab boʻlmadi. Boshqa sifatni tanlang yoki havolani qaytadan yuboring.","toast.clipboardEmpty":"Almashuv buferi boʻsh. Avval havolani nusxalang.","toast.clipboardDenied":"Almashuv buferiga ruxsat berilmadi. Havolani qoʻlda joylang.","error.empty":"Avval post yoki video havolasini joylang.","error.timeout":"Vaqt tugadi. Manba juda uzoq javob bermadi, qayta urinib koʻring.","error.offline":"Internet aloqasi yoʻq. Tarmoqni tekshiring va qayta urinib koʻring.","error.busy":"Server band. Birozdan soʻng qayta urinib koʻring.","error.invalid_url":"Havola notoʻgʻri. Ijtimoiy tarmoq ilovasidan toʻliq havolani joylang.","error.unsupported":"Bu havola hozircha qoʻllab-quvvatlanmaydi. U toʻgʻridan-toʻgʻri post yoki videoga olib borishiga ishonch hosil qiling.","error.blocked":"Bu platforma hozir serverimizni bloklamoqda, shuning uchun bu havolani hozircha yuklab boʻlmaydi.","error.rate_limited":"Platforma serverimizdan keladigan soʻrovlarni cheklamoqda. Birozdan soʻng qayta urinib koʻring.","error.login_required":"Bu kontent shaxsiy yoki uni koʻrish uchun platforma hisobga kirishni talab qiladi, shuning uchun uni yuklab boʻlmaydi.","error.not_found":"Kontent topilmadi yoki oʻchirib tashlangan.","error.geo_blocked":"Bu kontent hudud boʻyicha cheklangan va serverimiz unga kira olmaydi.","error.failed":"Bu havoladan media olib boʻlmadi. Boshqa havolani sinab koʻring yoki birozdan soʻng qayta urining.","error.no_media":"Bu havolada yuklab olinadigan media yoʻq.","error.server_config":"Server hali toʻgʻri sozlanmagan.","error.server_error":"Serverda xatolik yuz berdi. Qayta urinib koʻring."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

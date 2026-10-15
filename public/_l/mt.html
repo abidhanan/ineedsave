@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="mt" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Niżżel vidjows, ritratti u awdjo minn TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn u mijiet ta' siti oħra.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Niżżel vidjows, ritratti u awdjo minn TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn u mijiet ta' siti oħra.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Aqbeż għall-kontenut</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Navigazzjoni ewlenija">
+        <a href="#cara" data-i18n="nav.how">Kif tużah</a>
+        <a href="#platform" data-i18n="nav.platforms">Pjattaformi</a>
+        <a href="#faq" data-i18n="nav.faq">Mistoqsijiet frekwenti</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Ibdel il-lingwa: Malti">
+        <span class="lang-flag" aria-hidden="true">🇲🇹</span>
+        <span class="lang-code">MT</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Niżżel vidjows, ritratti u awdjo minn kwalunkwe midja soċjali</h1>
+        <p class="lead" data-i18n="hero.lead">Waħħal link minn TikTok, Instagram, Facebook, X, Pinterest u oħrajn. Agħżel il-kwalità, imbagħad aħżnu dritt fuq l-apparat tiegħek.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Link tal-post jew tal-vidjo</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Waħħal link hawn…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Waħħal</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Neħħi l-link">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Niżżel</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Eżempji ta' pjattaformi appoġġjati">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Kif tniżżel</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Ikkopja l-link</h3>
+            <p data-i18n-html="how.step1.text">Iftaħ il-post fl-app, agħfas <strong>Share</strong>, imbagħad agħżel <strong>Copy link</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Waħħlu hawn</h3>
+            <p data-i18n-html="how.step2.text">Waħħal il-link fil-kaxxa ta' fuq, imbagħad agħfas <strong>Niżżel</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Agħżel u aħżen</h3>
+            <p data-i18n="how.step3.text">Agħżel vidjo, awdjo MP3 jew ritratt bil-kwalità li trid.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Pjattaformi appoġġjati</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Vidjows, ritratti u awdjo minn mijiet ta' siti. Uħud mill-aktar popolari:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Mistoqsijiet frekwenti</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save huwa b'xejn?</summary>
+            <p data-i18n-html="faq.a1">Iva, kompletament b'xejn. M'għandekx bżonn tirreġistra, tidħol f'kont jew tniżżel app.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Fejn jinħażnu l-fajls tiegħi?</summary>
+            <p data-i18n-html="faq.a2">Fuq Android u fuq il-kompjuter, il-fajls imorru fil-folder <strong>Downloads</strong>. Fuq iPhone u iPad (Safari), jinħażnu fl-app <strong>Files</strong> → <strong>Downloads</strong>. Minn hemm tista' taħżinhom f'Photos bil-buttuna Share.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Għaliex xi vidjows ma jistgħux jitniżżlu?</summary>
+            <p data-i18n-html="faq.a3">Is-server tagħna ma jistax jilħaq kontenut privat, kontenut li jeħtieġ login, jew kontenut ristrett skont ir-reġjun. Kun żgur li l-post huwa pubbliku, imbagħad erġa' pprova.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Kif inniżżel MP3?</summary>
+            <p data-i18n-html="faq.a4">Wara li l-link jiġi pproċessat, agħżel l-għażla <strong>MP3</strong> taħt Awdjo. Il-ħoss jittieħed mill-vidjo u jiġi kkonvertit f'MP3 ta' 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Il-vidjows ta' TikTok għandhom marka tal-ilma?</summary>
+            <p data-i18n-html="faq.a5">Dejjem nippreferu l-verżjoni mingħajr marka tal-ilma meta tkun disponibbli. L-għażliet li jinkludu marka tal-ilma huma mmarkati <strong>Marka tal-ilma</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Il-fajls tiegħi jinħażnu fuq is-server tagħkom?</summary>
+            <p data-i18n-html="faq.a6">Le. Il-fajls jintbagħtu mill-pjattaforma oriġinali dritt fuq l-apparat tiegħek u ma jinżammux fuq is-server tagħna.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Magħmul minn</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Agħżel il-lingwa</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Agħlaq">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Fittex lingwa…" aria-label="Fittex lingwa…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Ma nstabet l-ebda lingwa.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Qed inġibu l-midja… dan jista' jieħu ftit sekondi.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"mt","strings":{"meta.title":"I Need Save — Niżżel vidjows, ritratti u awdjo minn kwalunkwe midja soċjali","meta.description":"Niżżel vidjows, ritratti u awdjo minn TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn u mijiet ta' siti oħra.","skip":"Aqbeż għall-kontenut","nav.label":"Navigazzjoni ewlenija","nav.how":"Kif tużah","nav.platforms":"Pjattaformi","nav.faq":"Mistoqsijiet frekwenti","lang.button":"Ibdel il-lingwa","lang.title":"Agħżel il-lingwa","lang.search":"Fittex lingwa…","lang.empty":"Ma nstabet l-ebda lingwa.","lang.close":"Agħlaq","hero.title":"Niżżel vidjows, ritratti u awdjo minn kwalunkwe midja soċjali","hero.lead":"Waħħal link minn TikTok, Instagram, Facebook, X, Pinterest u oħrajn. Agħżel il-kwalità, imbagħad aħżnu dritt fuq l-apparat tiegħek.","form.label":"Link tal-post jew tal-vidjo","form.placeholder":"Waħħal link hawn…","form.paste":"Waħħal","form.clear":"Neħħi l-link","form.submit":"Niżżel","form.processing":"Qed nipproċessaw","chips.label":"Eżempji ta' pjattaformi appoġġjati","how.title":"Kif tniżżel","how.step1.title":"Ikkopja l-link","how.step1.text":"Iftaħ il-post fl-app, agħfas \u003cstrong>Share\u003c/strong>, imbagħad agħżel \u003cstrong>Copy link\u003c/strong>.","how.step2.title":"Waħħlu hawn","how.step2.text":"Waħħal il-link fil-kaxxa ta' fuq, imbagħad agħfas \u003cstrong>Niżżel\u003c/strong>.","how.step3.title":"Agħżel u aħżen","how.step3.text":"Agħżel vidjo, awdjo MP3 jew ritratt bil-kwalità li trid.","platforms.title":"Pjattaformi appoġġjati","platforms.lead":"Vidjows, ritratti u awdjo minn mijiet ta' siti. Uħud mill-aktar popolari:","faq.title":"Mistoqsijiet frekwenti","faq.q1":"I Need Save huwa b'xejn?","faq.a1":"Iva, kompletament b'xejn. M'għandekx bżonn tirreġistra, tidħol f'kont jew tniżżel app.","faq.q2":"Fejn jinħażnu l-fajls tiegħi?","faq.a2":"Fuq Android u fuq il-kompjuter, il-fajls imorru fil-folder \u003cstrong>Downloads\u003c/strong>. Fuq iPhone u iPad (Safari), jinħażnu fl-app \u003cstrong>Files\u003c/strong> → \u003cstrong>Downloads\u003c/strong>. Minn hemm tista' taħżinhom f'Photos bil-buttuna Share.","faq.q3":"Għaliex xi vidjows ma jistgħux jitniżżlu?","faq.a3":"Is-server tagħna ma jistax jilħaq kontenut privat, kontenut li jeħtieġ login, jew kontenut ristrett skont ir-reġjun. Kun żgur li l-post huwa pubbliku, imbagħad erġa' pprova.","faq.q4":"Kif inniżżel MP3?","faq.a4":"Wara li l-link jiġi pproċessat, agħżel l-għażla \u003cstrong>MP3\u003c/strong> taħt Awdjo. Il-ħoss jittieħed mill-vidjo u jiġi kkonvertit f'MP3 ta' 192 kbps.","faq.q5":"Il-vidjows ta' TikTok għandhom marka tal-ilma?","faq.a5":"Dejjem nippreferu l-verżjoni mingħajr marka tal-ilma meta tkun disponibbli. L-għażliet li jinkludu marka tal-ilma huma mmarkati \u003cstrong>Marka tal-ilma\u003c/strong>.","faq.q6":"Il-fajls tiegħi jinħażnu fuq is-server tagħkom?","faq.a6":"Le. Il-fajls jintbagħtu mill-pjattaforma oriġinali dritt fuq l-apparat tiegħek u ma jinżammux fuq is-server tagħna.","footer.madeBy":"Magħmul minn","results.loading":"Qed inġibu l-midja… dan jista' jieħu ftit sekondi.","results.found":"Instabu {n} midja","results.more":"Uri {n} għażliet oħra","group.video":"Vidjo","group.audio":"Awdjo","group.image":"Ritratti","label.thumbnail":"Stampa żgħira","label.photo":"Ritratt","label.photoN":"Ritratt {n}","label.video":"Vidjo","label.videoN":"Vidjo {n}","label.audioN":"Awdjo {n}","label.original_audio":"Ħoss oriġinali","note.original_quality":"Kwalità oriġinali","note.no_audio":"Bla ħoss","note.watermark":"Marka tal-ilma","download.button":"Niżżel","download.preparing":"Qed nippreparaw…","toast.preparing":"Qed nippreparaw il-fajl tiegħek… id-download se jibda awtomatikament.","toast.started":"Id-download beda.","toast.failed":"Id-download ma rnexxiex. Ipprova kwalità oħra jew erġa' pproċessa l-link.","toast.clipboardEmpty":"Il-clipboard tiegħek huwa vojt. L-ewwel ikkopja link.","toast.clipboardDenied":"L-aċċess għall-clipboard ġie miċħud. Waħħal il-link manwalment.","error.empty":"L-ewwel waħħal link ta' post jew vidjo.","error.timeout":"Skada l-ħin. Is-sors dam wisq biex iwieġeb, jekk jogħġbok erġa' pprova.","error.offline":"M'hemmx konnessjoni mal-internet. Iċċekkja n-netwerk tiegħek u erġa' pprova.","error.busy":"Is-server huwa okkupat. Jekk jogħġbok erġa' pprova ftit tal-ħin oħra.","error.invalid_url":"Link mhux validu. Waħħal il-link sħiħ mill-app tal-midja soċjali.","error.unsupported":"Dan il-link għadu mhux appoġġjat. Kun żgur li jwassal dritt għal post jew vidjo.","error.blocked":"Din il-pjattaforma bħalissa qed timblokka s-server tagħna, għalhekk dan il-link ma jistax jitniżżel issa.","error.rate_limited":"Il-pjattaforma qed tillimita t-talbiet mis-server tagħna. Jekk jogħġbok erġa' pprova ftit tal-ħin oħra.","error.login_required":"Dan il-kontenut huwa privat, jew il-pjattaforma teħtieġ login biex tarah, għalhekk ma jistax jitniżżel.","error.not_found":"Il-kontenut ma nstabx jew tneħħa.","error.geo_blocked":"Dan il-kontenut huwa ristrett skont ir-reġjun u s-server tagħna ma jistax jilħqu.","error.failed":"Ma stajniex niksbu midja minn dan il-link. Ipprova link ieħor jew erġa' pprova ftit tal-ħin oħra.","error.no_media":"M'hemmx midja li tista' titniżżel f'dan il-link.","error.server_config":"Is-server għadu mhux ikkonfigurat sew.","error.server_error":"Inqala' xi żball fis-server. Jekk jogħġbok erġa' pprova."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

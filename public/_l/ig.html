@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ig" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Budata vidiyo, foto na ụda site na TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn na ọtụtụ narị saịtị ndị ọzọ.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Budata vidiyo, foto na ụda site na TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn na ọtụtụ narị saịtị ndị ọzọ.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Mafee gaa na ọdịnaya</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Nduzi bụ isi">
+        <a href="#cara" data-i18n="nav.how">Otu esi eji ya</a>
+        <a href="#platform" data-i18n="nav.platforms">Nyiwe</a>
+        <a href="#faq" data-i18n="nav.faq">Ajụjụ</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Gbanwee asụsụ: Igbo">
+        <span class="lang-flag" aria-hidden="true">🇳🇬</span>
+        <span class="lang-code">IG</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Budata vidiyo, foto na ụda site na soshal midia ọ bụla</h1>
+        <p class="lead" data-i18n="hero.lead">Mado link site na TikTok, Instagram, Facebook, X, Pinterest na ndị ọzọ. Họrọ ịdị mma, wee chekwaa ya ozugbo na ngwaọrụ gị.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Link nke post ma ọ bụ vidiyo</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Mado link ebe a…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Mado</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Hichapụ link">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Budata</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Ọmụmaatụ nyiwe ndị a na-akwado">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Otu esi ebudata</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Detuo link ahụ</h3>
+            <p data-i18n-html="how.step1.text">Mepee post ahụ n'ime ngwa, pịa <strong>Kesaa</strong>, wee họrọ <strong>Detuo link</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Mado ya ebe a</h3>
+            <p data-i18n-html="how.step2.text">Mado link ahụ n'igbe dị n'elu, wee pịa <strong>Budata</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Họrọ ma chekwaa</h3>
+            <p data-i18n="how.step3.text">Họrọ vidiyo, ụda MP3, ma ọ bụ foto n'ịdị mma ị chọrọ.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Nyiwe ndị a na-akwado</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Vidiyo, foto na ụda site na ọtụtụ narị saịtị. Ụfọdụ n'ime ndị kacha ewu ewu:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Ajụjụ a na-ajụkarị</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Ọ bụ n'efu ka I Need Save dị?</summary>
+            <p data-i18n-html="faq.a1">Ee, ọ bụ n'efu kpamkpam. Ọ dịghị mkpa ịdebanye aha, ịbanye, ma ọ bụ ngwa.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Ebee ka a na-echekwa faịlụ m?</summary>
+            <p data-i18n-html="faq.a2">Na Android na kọmputa, faịlụ na-aga na folda <strong>Nbudata</strong>. Na iPhone na iPad (Safari), a na-echekwa ha na ngwa <strong>Faịlụ</strong> → <strong>Nbudata</strong>. Site n'ebe ahụ, ị nwere ike ichekwa ha na Foto site na bọtịnụ Kesaa.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Gịnị kpatara na enweghị ike ibudata ụfọdụ vidiyo?</summary>
+            <p data-i18n-html="faq.a3">Sava anyị enweghị ike iru ọdịnaya nzuzo, ọdịnaya chọrọ ịbanye, ma ọ bụ ọdịnaya e machibidoro na mpaghara ụfọdụ. Jide n'aka na post ahụ dị maka ọha, wee nwaa ọzọ.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Kedu otu m ga-esi budata MP3?</summary>
+            <p data-i18n-html="faq.a4">Mgbe a rụchara ọrụ na link ahụ, họrọ nhọrọ <strong>MP3</strong> n'okpuru Ụda. A na-ewepụta ụda ahụ site na vidiyo wee gbanwee ya ka ọ bụrụ MP3 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Vidiyo TikTok ọ nwere akara mmiri?</summary>
+            <p data-i18n-html="faq.a5">Anyị na-ahọrọ mgbe niile ụdị na-enweghị akara mmiri ma ọ dịrị. Nhọrọ ndị nwere akara mmiri ka e dere <strong>Akara mmiri</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">A na-echekwa faịlụ m na sava unu?</summary>
+            <p data-i18n-html="faq.a6">Mba. A na-ezipu faịlụ site na nyiwe mbụ ozugbo gaa na ngwaọrụ gị, a naghịkwa edobe ha na sava anyị.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Site n'aka</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Họrọ asụsụ</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Mechie">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Chọọ asụsụ…" aria-label="Chọọ asụsụ…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Ahụghị asụsụ ọ bụla.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Ana-ewepụta midia… nke a nwere ike were sekọnd ole na ole.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"ig","strings":{"meta.title":"I Need Save — Budata vidiyo, foto na ụda site na soshal midia ọ bụla","meta.description":"Budata vidiyo, foto na ụda site na TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn na ọtụtụ narị saịtị ndị ọzọ.","skip":"Mafee gaa na ọdịnaya","nav.label":"Nduzi bụ isi","nav.how":"Otu esi eji ya","nav.platforms":"Nyiwe","nav.faq":"Ajụjụ","lang.button":"Gbanwee asụsụ","lang.title":"Họrọ asụsụ","lang.search":"Chọọ asụsụ…","lang.empty":"Ahụghị asụsụ ọ bụla.","lang.close":"Mechie","hero.title":"Budata vidiyo, foto na ụda site na soshal midia ọ bụla","hero.lead":"Mado link site na TikTok, Instagram, Facebook, X, Pinterest na ndị ọzọ. Họrọ ịdị mma, wee chekwaa ya ozugbo na ngwaọrụ gị.","form.label":"Link nke post ma ọ bụ vidiyo","form.placeholder":"Mado link ebe a…","form.paste":"Mado","form.clear":"Hichapụ link","form.submit":"Budata","form.processing":"Ọ na-arụ ọrụ","chips.label":"Ọmụmaatụ nyiwe ndị a na-akwado","how.title":"Otu esi ebudata","how.step1.title":"Detuo link ahụ","how.step1.text":"Mepee post ahụ n'ime ngwa, pịa \u003cstrong>Kesaa\u003c/strong>, wee họrọ \u003cstrong>Detuo link\u003c/strong>.","how.step2.title":"Mado ya ebe a","how.step2.text":"Mado link ahụ n'igbe dị n'elu, wee pịa \u003cstrong>Budata\u003c/strong>.","how.step3.title":"Họrọ ma chekwaa","how.step3.text":"Họrọ vidiyo, ụda MP3, ma ọ bụ foto n'ịdị mma ị chọrọ.","platforms.title":"Nyiwe ndị a na-akwado","platforms.lead":"Vidiyo, foto na ụda site na ọtụtụ narị saịtị. Ụfọdụ n'ime ndị kacha ewu ewu:","faq.title":"Ajụjụ a na-ajụkarị","faq.q1":"Ọ bụ n'efu ka I Need Save dị?","faq.a1":"Ee, ọ bụ n'efu kpamkpam. Ọ dịghị mkpa ịdebanye aha, ịbanye, ma ọ bụ ngwa.","faq.q2":"Ebee ka a na-echekwa faịlụ m?","faq.a2":"Na Android na kọmputa, faịlụ na-aga na folda \u003cstrong>Nbudata\u003c/strong>. Na iPhone na iPad (Safari), a na-echekwa ha na ngwa \u003cstrong>Faịlụ\u003c/strong> → \u003cstrong>Nbudata\u003c/strong>. Site n'ebe ahụ, ị nwere ike ichekwa ha na Foto site na bọtịnụ Kesaa.","faq.q3":"Gịnị kpatara na enweghị ike ibudata ụfọdụ vidiyo?","faq.a3":"Sava anyị enweghị ike iru ọdịnaya nzuzo, ọdịnaya chọrọ ịbanye, ma ọ bụ ọdịnaya e machibidoro na mpaghara ụfọdụ. Jide n'aka na post ahụ dị maka ọha, wee nwaa ọzọ.","faq.q4":"Kedu otu m ga-esi budata MP3?","faq.a4":"Mgbe a rụchara ọrụ na link ahụ, họrọ nhọrọ \u003cstrong>MP3\u003c/strong> n'okpuru Ụda. A na-ewepụta ụda ahụ site na vidiyo wee gbanwee ya ka ọ bụrụ MP3 192 kbps.","faq.q5":"Vidiyo TikTok ọ nwere akara mmiri?","faq.a5":"Anyị na-ahọrọ mgbe niile ụdị na-enweghị akara mmiri ma ọ dịrị. Nhọrọ ndị nwere akara mmiri ka e dere \u003cstrong>Akara mmiri\u003c/strong>.","faq.q6":"A na-echekwa faịlụ m na sava unu?","faq.a6":"Mba. A na-ezipu faịlụ site na nyiwe mbụ ozugbo gaa na ngwaọrụ gị, a naghịkwa edobe ha na sava anyị.","footer.madeBy":"Site n'aka","results.loading":"Ana-ewepụta midia… nke a nwere ike were sekọnd ole na ole.","results.found":"Achọtara midia {n}","results.more":"Gosi nhọrọ {n} ọzọ","group.video":"Vidiyo","group.audio":"Ụda","group.image":"Foto","label.thumbnail":"Obere foto","label.photo":"Foto","label.photoN":"Foto {n}","label.video":"Vidiyo","label.videoN":"Vidiyo {n}","label.audioN":"Ụda {n}","label.original_audio":"Ụda mbụ","note.original_quality":"Ịdị mma mbụ","note.no_audio":"Enweghị ụda","note.watermark":"Akara mmiri","download.button":"Budata","download.preparing":"Na-akwado…","toast.preparing":"Anyị na-akwado faịlụ gị… nbudata ga-amalite n'onwe ya.","toast.started":"Nbudata amalitela.","toast.failed":"Nbudata ahụ agaghị nke ọma. Nwaa ịdị mma ọzọ ma ọ bụ rụọ ọrụ na link ahụ ọzọ.","toast.clipboardEmpty":"Klipbọọdụ gị tọgbọ chakoo. Buru ụzọ detuo link.","toast.clipboardDenied":"Ajụrụ ohere ịbanye na klipbọọdụ. Mado link ahụ n'aka.","error.empty":"Buru ụzọ mado link nke post ma ọ bụ vidiyo.","error.timeout":"Oge agwụla. Isi mmalite ahụ were ogologo oge ịzaghachi, biko nwaa ọzọ.","error.offline":"Enweghị njikọ ịntanetị. Lelee netwọk gị wee nwaa ọzọ.","error.busy":"Sava ahụ nwere ọrụ juru eju. Biko nwaa ọzọ n'oge na-adịghị anya.","error.invalid_url":"Link ezighi ezi. Mado link zuru ezu site na ngwa soshal midia.","error.unsupported":"A naghị akwado link a ugbu a. Jide n'aka na ọ na-eduga ozugbo na post ma ọ bụ vidiyo.","error.blocked":"Nyiwe a na-egbochi sava anyị ugbu a, ya mere enweghị ike ibudata link a ugbu a.","error.rate_limited":"Nyiwe ahụ na-ebelata arịrịọ si na sava anyị. Biko nwaa ọzọ n'oge na-adịghị anya.","error.login_required":"Ọdịnaya a bụ nzuzo, ma ọ bụ nyiwe ahụ chọrọ ka ị banye tupu ịhụ ya, ya mere enweghị ike ibudata ya.","error.not_found":"Ahụghị ọdịnaya ahụ ma ọ bụ e wepụla ya.","error.geo_blocked":"E machibidoro ọdịnaya a na mpaghara ụfọdụ, sava anyị enweghịkwa ike iru ya.","error.failed":"Enweghị ike inweta midia site na link a. Nwaa link ọzọ ma ọ bụ nwaa ọzọ n'oge na-adịghị anya.","error.no_media":"Enweghị midia a ga-ebudata na link a.","error.server_config":"Edozibeghị sava ahụ nke ọma.","error.server_error":"Ihe ezighi ezi mere na sava. Biko nwaa ọzọ."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

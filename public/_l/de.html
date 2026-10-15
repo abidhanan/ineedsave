@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Lade Videos, Fotos und Audio von TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn und hunderten anderen Seiten herunter.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Lade Videos, Fotos und Audio von TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn und hunderten anderen Seiten herunter.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Zum Inhalt springen</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Hauptnavigation">
+        <a href="#cara" data-i18n="nav.how">Anleitung</a>
+        <a href="#platform" data-i18n="nav.platforms">Plattformen</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Sprache ändern: Deutsch">
+        <span class="lang-flag" aria-hidden="true">🇩🇪</span>
+        <span class="lang-code">DE</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Lade Videos, Fotos und Audio von allen sozialen Medien herunter</h1>
+        <p class="lead" data-i18n="hero.lead">Füge einen Link von TikTok, Instagram, Facebook, X, Pinterest und mehr ein. Wähle eine Qualität und speichere die Datei direkt auf deinem Gerät.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Link zum Beitrag oder Video</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Link hier einfügen…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Einfügen</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Link löschen">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Herunterladen</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Beispiele für unterstützte Plattformen">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">So lädst du herunter</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Link kopieren</h3>
+            <p data-i18n-html="how.step1.text">Öffne den Beitrag in der App, tippe auf <strong>Teilen</strong> und wähle dann <strong>Link kopieren</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Hier einfügen</h3>
+            <p data-i18n-html="how.step2.text">Füge den Link oben in das Feld ein und tippe auf <strong>Herunterladen</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Auswählen &amp; speichern</h3>
+            <p data-i18n="how.step3.text">Wähle Video, MP3-Audio oder Foto in der gewünschten Qualität.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Unterstützte Plattformen</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Videos, Fotos und Audio von hunderten Seiten. Einige der beliebtesten:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Häufig gestellte Fragen</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Ist I Need Save kostenlos?</summary>
+            <p data-i18n-html="faq.a1">Ja, komplett kostenlos. Keine Registrierung, keine Anmeldung und keine App nötig.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Wo werden meine Dateien gespeichert?</summary>
+            <p data-i18n-html="faq.a2">Auf Android und Computern landen die Dateien im Ordner <strong>Downloads</strong>. Auf iPhone und iPad (Safari) werden sie in der App <strong>Dateien</strong> → <strong>Downloads</strong> gespeichert. Von dort kannst du sie über die Teilen-Taste in Fotos sichern.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Warum lassen sich manche Videos nicht herunterladen?</summary>
+            <p data-i18n-html="faq.a3">Private Inhalte, Inhalte, die eine Anmeldung erfordern, oder regional gesperrte Inhalte kann unser Server nicht abrufen. Stelle sicher, dass der Beitrag öffentlich ist, und versuche es erneut.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Wie lade ich MP3 herunter?</summary>
+            <p data-i18n-html="faq.a4">Wähle nach der Verarbeitung des Links unter Audio die Option <strong>MP3</strong>. Der Ton wird aus dem Video extrahiert und in MP3 mit 192 kbps umgewandelt.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Haben TikTok-Videos ein Wasserzeichen?</summary>
+            <p data-i18n-html="faq.a5">Wir bevorzugen immer die Version ohne Wasserzeichen, wenn sie verfügbar ist. Optionen mit Wasserzeichen sind mit <strong>Wasserzeichen</strong> gekennzeichnet.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Werden meine Dateien auf eurem Server gespeichert?</summary>
+            <p data-i18n-html="faq.a6">Nein. Die Dateien werden direkt von der ursprünglichen Plattform an dein Gerät gesendet und nicht auf unserem Server gespeichert.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Erstellt von</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Sprache auswählen</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Schließen">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Sprache suchen…" aria-label="Sprache suchen…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Keine Sprache gefunden.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Medien werden abgerufen… das kann ein paar Sekunden dauern.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"de","strings":{"meta.title":"I Need Save — Videos, Fotos & Audio von allen sozialen Medien herunterladen","meta.description":"Lade Videos, Fotos und Audio von TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn und hunderten anderen Seiten herunter.","skip":"Zum Inhalt springen","nav.label":"Hauptnavigation","nav.how":"Anleitung","nav.platforms":"Plattformen","nav.faq":"FAQ","lang.button":"Sprache ändern","lang.title":"Sprache auswählen","lang.search":"Sprache suchen…","lang.empty":"Keine Sprache gefunden.","lang.close":"Schließen","hero.title":"Lade Videos, Fotos und Audio von allen sozialen Medien herunter","hero.lead":"Füge einen Link von TikTok, Instagram, Facebook, X, Pinterest und mehr ein. Wähle eine Qualität und speichere die Datei direkt auf deinem Gerät.","form.label":"Link zum Beitrag oder Video","form.placeholder":"Link hier einfügen…","form.paste":"Einfügen","form.clear":"Link löschen","form.submit":"Herunterladen","form.processing":"Wird verarbeitet","chips.label":"Beispiele für unterstützte Plattformen","how.title":"So lädst du herunter","how.step1.title":"Link kopieren","how.step1.text":"Öffne den Beitrag in der App, tippe auf \u003cstrong>Teilen\u003c/strong> und wähle dann \u003cstrong>Link kopieren\u003c/strong>.","how.step2.title":"Hier einfügen","how.step2.text":"Füge den Link oben in das Feld ein und tippe auf \u003cstrong>Herunterladen\u003c/strong>.","how.step3.title":"Auswählen & speichern","how.step3.text":"Wähle Video, MP3-Audio oder Foto in der gewünschten Qualität.","platforms.title":"Unterstützte Plattformen","platforms.lead":"Videos, Fotos und Audio von hunderten Seiten. Einige der beliebtesten:","faq.title":"Häufig gestellte Fragen","faq.q1":"Ist I Need Save kostenlos?","faq.a1":"Ja, komplett kostenlos. Keine Registrierung, keine Anmeldung und keine App nötig.","faq.q2":"Wo werden meine Dateien gespeichert?","faq.a2":"Auf Android und Computern landen die Dateien im Ordner \u003cstrong>Downloads\u003c/strong>. Auf iPhone und iPad (Safari) werden sie in der App \u003cstrong>Dateien\u003c/strong> → \u003cstrong>Downloads\u003c/strong> gespeichert. Von dort kannst du sie über die Teilen-Taste in Fotos sichern.","faq.q3":"Warum lassen sich manche Videos nicht herunterladen?","faq.a3":"Private Inhalte, Inhalte, die eine Anmeldung erfordern, oder regional gesperrte Inhalte kann unser Server nicht abrufen. Stelle sicher, dass der Beitrag öffentlich ist, und versuche es erneut.","faq.q4":"Wie lade ich MP3 herunter?","faq.a4":"Wähle nach der Verarbeitung des Links unter Audio die Option \u003cstrong>MP3\u003c/strong>. Der Ton wird aus dem Video extrahiert und in MP3 mit 192 kbps umgewandelt.","faq.q5":"Haben TikTok-Videos ein Wasserzeichen?","faq.a5":"Wir bevorzugen immer die Version ohne Wasserzeichen, wenn sie verfügbar ist. Optionen mit Wasserzeichen sind mit \u003cstrong>Wasserzeichen\u003c/strong> gekennzeichnet.","faq.q6":"Werden meine Dateien auf eurem Server gespeichert?","faq.a6":"Nein. Die Dateien werden direkt von der ursprünglichen Plattform an dein Gerät gesendet und nicht auf unserem Server gespeichert.","footer.madeBy":"Erstellt von","results.loading":"Medien werden abgerufen… das kann ein paar Sekunden dauern.","results.found":"{n} Medien gefunden","results.more":"{n} weitere Optionen anzeigen","group.video":"Video","group.audio":"Audio","group.image":"Fotos","label.thumbnail":"Vorschaubild","label.photo":"Foto","label.photoN":"Foto {n}","label.video":"Video","label.videoN":"Video {n}","label.audioN":"Audio {n}","label.original_audio":"Originalton","note.original_quality":"Originalqualität","note.no_audio":"Kein Ton","note.watermark":"Wasserzeichen","download.button":"Herunterladen","download.preparing":"Wird vorbereitet…","toast.preparing":"Deine Datei wird vorbereitet… der Download startet automatisch.","toast.started":"Download gestartet.","toast.failed":"Der Download ist fehlgeschlagen. Probiere eine andere Qualität oder verarbeite den Link erneut.","toast.clipboardEmpty":"Deine Zwischenablage ist leer. Kopiere zuerst einen Link.","toast.clipboardDenied":"Der Zugriff auf die Zwischenablage wurde verweigert. Füge den Link manuell ein.","error.empty":"Füge zuerst einen Link zu einem Beitrag oder Video ein.","error.timeout":"Zeitüberschreitung. Die Quelle hat zu lange gebraucht, bitte versuche es erneut.","error.offline":"Keine Internetverbindung. Überprüfe dein Netzwerk und versuche es erneut.","error.busy":"Der Server ist ausgelastet. Bitte versuche es gleich noch einmal.","error.invalid_url":"Ungültiger Link. Füge den vollständigen Link aus der Social-Media-App ein.","error.unsupported":"Dieser Link wird noch nicht unterstützt. Stelle sicher, dass er direkt auf einen Beitrag oder ein Video verweist.","error.blocked":"Diese Plattform blockiert derzeit unseren Server, daher kann dieser Link gerade nicht heruntergeladen werden.","error.rate_limited":"Die Plattform begrenzt Anfragen von unserem Server. Bitte versuche es gleich noch einmal.","error.login_required":"Dieser Inhalt ist privat oder die Plattform verlangt eine Anmeldung, daher kann er nicht heruntergeladen werden.","error.not_found":"Inhalt nicht gefunden oder er wurde entfernt.","error.geo_blocked":"Dieser Inhalt ist regional eingeschränkt und für unseren Server nicht erreichbar.","error.failed":"Aus diesem Link konnten keine Medien abgerufen werden. Probiere einen anderen Link oder versuche es gleich noch einmal.","error.no_media":"Unter diesem Link gibt es keine herunterladbaren Medien.","error.server_config":"Der Server ist noch nicht richtig konfiguriert.","error.server_error":"Auf dem Server ist etwas schiefgelaufen. Bitte versuche es erneut."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

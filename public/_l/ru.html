@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Скачивайте видео, фото и аудио из TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn и сотен других сайтов.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Скачивайте видео, фото и аудио из TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn и сотен других сайтов.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Перейти к содержимому</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Главное меню">
+        <a href="#cara" data-i18n="nav.how">Как пользоваться</a>
+        <a href="#platform" data-i18n="nav.platforms">Платформы</a>
+        <a href="#faq" data-i18n="nav.faq">Вопросы</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Сменить язык: Русский">
+        <span class="lang-flag" aria-hidden="true">🇷🇺</span>
+        <span class="lang-code">RU</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Скачивайте видео, фото и аудио из любых соцсетей</h1>
+        <p class="lead" data-i18n="hero.lead">Вставьте ссылку из TikTok, Instagram, Facebook, X, Pinterest и других сервисов. Выберите качество и сохраните файл прямо на устройство.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Ссылка на пост или видео</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Вставьте ссылку сюда…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Вставить</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Очистить ссылку">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Скачать</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Примеры поддерживаемых платформ">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Как скачать</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Скопируйте ссылку</h3>
+            <p data-i18n-html="how.step1.text">Откройте пост в приложении, нажмите <strong>Поделиться</strong> и выберите <strong>Копировать ссылку</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Вставьте её сюда</h3>
+            <p data-i18n-html="how.step2.text">Вставьте ссылку в поле выше и нажмите <strong>Скачать</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Выберите и сохраните</h3>
+            <p data-i18n="how.step3.text">Выберите видео, аудио MP3 или фото в нужном качестве.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Поддерживаемые платформы</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Видео, фото и аудио с сотен сайтов. Самые популярные из них:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Часто задаваемые вопросы</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save — это бесплатно?</summary>
+            <p data-i18n-html="faq.a1">Да, совершенно бесплатно. Не нужны ни регистрация, ни вход, ни приложение.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Куда сохраняются файлы?</summary>
+            <p data-i18n-html="faq.a2">На Android и компьютерах файлы попадают в папку <strong>Загрузки</strong>. На iPhone и iPad (Safari) они сохраняются в приложении <strong>Файлы</strong> → <strong>Загрузки</strong>. Оттуда их можно сохранить в «Фото» с помощью кнопки «Поделиться».</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Почему некоторые видео не скачиваются?</summary>
+            <p data-i18n-html="faq.a3">Наш сервер не может получить закрытый контент, контент, для которого нужен вход, или контент с региональными ограничениями. Убедитесь, что пост общедоступный, и попробуйте ещё раз.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Как скачать MP3?</summary>
+            <p data-i18n-html="faq.a4">После обработки ссылки выберите вариант <strong>MP3</strong> в разделе «Аудио». Звук извлекается из видео и конвертируется в MP3 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Есть ли на видео из TikTok водяной знак?</summary>
+            <p data-i18n-html="faq.a5">Мы всегда выбираем версию без водяного знака, если она доступна. Варианты с водяным знаком помечены как <strong>Водяной знак</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Хранятся ли мои файлы на вашем сервере?</summary>
+            <p data-i18n-html="faq.a6">Нет. Файлы передаются с исходной платформы прямо на ваше устройство и не хранятся на нашем сервере.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Автор:</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Выберите язык</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Поиск языка…" aria-label="Поиск языка…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Язык не найден.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Получаем медиафайлы… это может занять несколько секунд.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"ru","strings":{"meta.title":"I Need Save — скачивайте видео, фото и аудио из любых соцсетей","meta.description":"Скачивайте видео, фото и аудио из TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn и сотен других сайтов.","skip":"Перейти к содержимому","nav.label":"Главное меню","nav.how":"Как пользоваться","nav.platforms":"Платформы","nav.faq":"Вопросы","lang.button":"Сменить язык","lang.title":"Выберите язык","lang.search":"Поиск языка…","lang.empty":"Язык не найден.","lang.close":"Закрыть","hero.title":"Скачивайте видео, фото и аудио из любых соцсетей","hero.lead":"Вставьте ссылку из TikTok, Instagram, Facebook, X, Pinterest и других сервисов. Выберите качество и сохраните файл прямо на устройство.","form.label":"Ссылка на пост или видео","form.placeholder":"Вставьте ссылку сюда…","form.paste":"Вставить","form.clear":"Очистить ссылку","form.submit":"Скачать","form.processing":"Обработка","chips.label":"Примеры поддерживаемых платформ","how.title":"Как скачать","how.step1.title":"Скопируйте ссылку","how.step1.text":"Откройте пост в приложении, нажмите \u003cstrong>Поделиться\u003c/strong> и выберите \u003cstrong>Копировать ссылку\u003c/strong>.","how.step2.title":"Вставьте её сюда","how.step2.text":"Вставьте ссылку в поле выше и нажмите \u003cstrong>Скачать\u003c/strong>.","how.step3.title":"Выберите и сохраните","how.step3.text":"Выберите видео, аудио MP3 или фото в нужном качестве.","platforms.title":"Поддерживаемые платформы","platforms.lead":"Видео, фото и аудио с сотен сайтов. Самые популярные из них:","faq.title":"Часто задаваемые вопросы","faq.q1":"I Need Save — это бесплатно?","faq.a1":"Да, совершенно бесплатно. Не нужны ни регистрация, ни вход, ни приложение.","faq.q2":"Куда сохраняются файлы?","faq.a2":"На Android и компьютерах файлы попадают в папку \u003cstrong>Загрузки\u003c/strong>. На iPhone и iPad (Safari) они сохраняются в приложении \u003cstrong>Файлы\u003c/strong> → \u003cstrong>Загрузки\u003c/strong>. Оттуда их можно сохранить в «Фото» с помощью кнопки «Поделиться».","faq.q3":"Почему некоторые видео не скачиваются?","faq.a3":"Наш сервер не может получить закрытый контент, контент, для которого нужен вход, или контент с региональными ограничениями. Убедитесь, что пост общедоступный, и попробуйте ещё раз.","faq.q4":"Как скачать MP3?","faq.a4":"После обработки ссылки выберите вариант \u003cstrong>MP3\u003c/strong> в разделе «Аудио». Звук извлекается из видео и конвертируется в MP3 192 kbps.","faq.q5":"Есть ли на видео из TikTok водяной знак?","faq.a5":"Мы всегда выбираем версию без водяного знака, если она доступна. Варианты с водяным знаком помечены как \u003cstrong>Водяной знак\u003c/strong>.","faq.q6":"Хранятся ли мои файлы на вашем сервере?","faq.a6":"Нет. Файлы передаются с исходной платформы прямо на ваше устройство и не хранятся на нашем сервере.","footer.madeBy":"Автор:","results.loading":"Получаем медиафайлы… это может занять несколько секунд.","results.found":"Найдено файлов: {n}","results.more":"Показать ещё варианты ({n})","group.video":"Видео","group.audio":"Аудио","group.image":"Фото","label.thumbnail":"Обложка","label.photo":"Фото","label.photoN":"Фото {n}","label.video":"Видео","label.videoN":"Видео {n}","label.audioN":"Аудио {n}","label.original_audio":"Оригинальный звук","note.original_quality":"Исходное качество","note.no_audio":"Без звука","note.watermark":"Водяной знак","download.button":"Скачать","download.preparing":"Подготовка…","toast.preparing":"Готовим файл… скачивание начнётся автоматически.","toast.started":"Скачивание началось.","toast.failed":"Не удалось скачать файл. Выберите другое качество или обработайте ссылку ещё раз.","toast.clipboardEmpty":"Буфер обмена пуст. Сначала скопируйте ссылку.","toast.clipboardDenied":"Нет доступа к буферу обмена. Вставьте ссылку вручную.","error.empty":"Сначала вставьте ссылку на пост или видео.","error.timeout":"Время ожидания истекло. Источник слишком долго не отвечал, попробуйте ещё раз.","error.offline":"Нет подключения к интернету. Проверьте сеть и попробуйте ещё раз.","error.busy":"Сервер перегружен. Попробуйте ещё раз чуть позже.","error.invalid_url":"Неверная ссылка. Вставьте полную ссылку из приложения соцсети.","error.unsupported":"Эта ссылка пока не поддерживается. Убедитесь, что она ведёт прямо на пост или видео.","error.blocked":"Эта платформа сейчас блокирует наш сервер, поэтому скачать по этой ссылке пока нельзя.","error.rate_limited":"Платформа ограничивает запросы с нашего сервера. Попробуйте ещё раз чуть позже.","error.login_required":"Этот контент закрыт или для его просмотра нужен вход, поэтому скачать его нельзя.","error.not_found":"Контент не найден или был удалён.","error.geo_blocked":"Этот контент ограничен по региону, и наш сервер не может его получить.","error.failed":"Не удалось получить медиафайлы по этой ссылке. Попробуйте другую ссылку или повторите чуть позже.","error.no_media":"По этой ссылке нет файлов для скачивания.","error.server_config":"Сервер пока настроен неправильно.","error.server_error":"На сервере что-то пошло не так. Попробуйте ещё раз."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="lv" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Lejupielādējiet video, fotoattēlus un audio no TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn un simtiem citu vietņu.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Lejupielādējiet video, fotoattēlus un audio no TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn un simtiem citu vietņu.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Pāriet uz saturu</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Galvenā navigācija">
+        <a href="#cara" data-i18n="nav.how">Kā lietot</a>
+        <a href="#platform" data-i18n="nav.platforms">Platformas</a>
+        <a href="#faq" data-i18n="nav.faq">BUJ</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Mainīt valodu: Latviešu">
+        <span class="lang-flag" aria-hidden="true">🇱🇻</span>
+        <span class="lang-code">LV</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Lejupielādējiet video, fotoattēlus un audio no jebkura sociālā tīkla</h1>
+        <p class="lead" data-i18n="hero.lead">Ielīmējiet saiti no TikTok, Instagram, Facebook, X, Pinterest un citām vietnēm. Izvēlieties kvalitāti un saglabājiet uzreiz savā ierīcē.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Ieraksta vai video saite</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Ielīmējiet saiti šeit…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Ielīmēt</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Notīrīt saiti">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Lejupielādēt</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Atbalstīto platformu piemēri">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Kā lejupielādēt</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Nokopējiet saiti</h3>
+            <p data-i18n-html="how.step1.text">Atveriet ierakstu lietotnē, pieskarieties <strong>Kopīgot</strong> un izvēlieties <strong>Kopēt saiti</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Ielīmējiet to šeit</h3>
+            <p data-i18n-html="how.step2.text">Ielīmējiet saiti laukā augstāk un nospiediet <strong>Lejupielādēt</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Izvēlieties un saglabājiet</h3>
+            <p data-i18n="how.step3.text">Izvēlieties video, MP3 audio vai fotoattēlu vēlamajā kvalitātē.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Atbalstītās platformas</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Video, fotoattēli un audio no simtiem vietņu. Dažas no populārākajām:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Bieži uzdotie jautājumi</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Vai I Need Save ir bez maksas?</summary>
+            <p data-i18n-html="faq.a1">Jā, pilnīgi bez maksas. Nav nepieciešama reģistrācija, pieteikšanās vai lietotne.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Kur tiek saglabāti mani faili?</summary>
+            <p data-i18n-html="faq.a2">Android ierīcēs un datoros faili nonāk mapē <strong>Lejupielādes</strong>. iPhone un iPad (Safari) tie tiek saglabāti lietotnē <strong>Faili</strong> → <strong>Lejupielādes</strong>. No turienes tos var saglabāt lietotnē Fotoattēli ar pogu Kopīgot.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Kāpēc dažus video nevar lejupielādēt?</summary>
+            <p data-i18n-html="faq.a3">Mūsu serveris nevar piekļūt privātam saturam, saturam, kam nepieciešama pieteikšanās, vai reģionāli ierobežotam saturam. Pārliecinieties, ka ieraksts ir publisks, un mēģiniet vēlreiz.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Kā lejupielādēt MP3?</summary>
+            <p data-i18n-html="faq.a4">Kad saite ir apstrādāta, sadaļā Audio izvēlieties opciju <strong>MP3</strong>. Skaņa tiek iegūta no video un pārveidota 192 kbps MP3 formātā.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Vai TikTok video ir ūdenszīme?</summary>
+            <p data-i18n-html="faq.a5">Mēs vienmēr dodam priekšroku versijai bez ūdenszīmes, ja tā ir pieejama. Opcijas ar ūdenszīmi ir apzīmētas ar <strong>Ūdenszīme</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Vai mani faili tiek glabāti jūsu serverī?</summary>
+            <p data-i18n-html="faq.a6">Nē. Faili tiek nosūtīti no sākotnējās platformas tieši uz jūsu ierīci un netiek glabāti mūsu serverī.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Izveidoja</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Izvēlieties valodu</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Aizvērt">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Meklēt valodu…" aria-label="Meklēt valodu…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Valoda netika atrasta.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Iegūst multividi… tas var aizņemt dažas sekundes.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"lv","strings":{"meta.title":"I Need Save — Lejupielādējiet video, fotoattēlus un audio no jebkura sociālā tīkla","meta.description":"Lejupielādējiet video, fotoattēlus un audio no TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn un simtiem citu vietņu.","skip":"Pāriet uz saturu","nav.label":"Galvenā navigācija","nav.how":"Kā lietot","nav.platforms":"Platformas","nav.faq":"BUJ","lang.button":"Mainīt valodu","lang.title":"Izvēlieties valodu","lang.search":"Meklēt valodu…","lang.empty":"Valoda netika atrasta.","lang.close":"Aizvērt","hero.title":"Lejupielādējiet video, fotoattēlus un audio no jebkura sociālā tīkla","hero.lead":"Ielīmējiet saiti no TikTok, Instagram, Facebook, X, Pinterest un citām vietnēm. Izvēlieties kvalitāti un saglabājiet uzreiz savā ierīcē.","form.label":"Ieraksta vai video saite","form.placeholder":"Ielīmējiet saiti šeit…","form.paste":"Ielīmēt","form.clear":"Notīrīt saiti","form.submit":"Lejupielādēt","form.processing":"Apstrādā","chips.label":"Atbalstīto platformu piemēri","how.title":"Kā lejupielādēt","how.step1.title":"Nokopējiet saiti","how.step1.text":"Atveriet ierakstu lietotnē, pieskarieties \u003cstrong>Kopīgot\u003c/strong> un izvēlieties \u003cstrong>Kopēt saiti\u003c/strong>.","how.step2.title":"Ielīmējiet to šeit","how.step2.text":"Ielīmējiet saiti laukā augstāk un nospiediet \u003cstrong>Lejupielādēt\u003c/strong>.","how.step3.title":"Izvēlieties un saglabājiet","how.step3.text":"Izvēlieties video, MP3 audio vai fotoattēlu vēlamajā kvalitātē.","platforms.title":"Atbalstītās platformas","platforms.lead":"Video, fotoattēli un audio no simtiem vietņu. Dažas no populārākajām:","faq.title":"Bieži uzdotie jautājumi","faq.q1":"Vai I Need Save ir bez maksas?","faq.a1":"Jā, pilnīgi bez maksas. Nav nepieciešama reģistrācija, pieteikšanās vai lietotne.","faq.q2":"Kur tiek saglabāti mani faili?","faq.a2":"Android ierīcēs un datoros faili nonāk mapē \u003cstrong>Lejupielādes\u003c/strong>. iPhone un iPad (Safari) tie tiek saglabāti lietotnē \u003cstrong>Faili\u003c/strong> → \u003cstrong>Lejupielādes\u003c/strong>. No turienes tos var saglabāt lietotnē Fotoattēli ar pogu Kopīgot.","faq.q3":"Kāpēc dažus video nevar lejupielādēt?","faq.a3":"Mūsu serveris nevar piekļūt privātam saturam, saturam, kam nepieciešama pieteikšanās, vai reģionāli ierobežotam saturam. Pārliecinieties, ka ieraksts ir publisks, un mēģiniet vēlreiz.","faq.q4":"Kā lejupielādēt MP3?","faq.a4":"Kad saite ir apstrādāta, sadaļā Audio izvēlieties opciju \u003cstrong>MP3\u003c/strong>. Skaņa tiek iegūta no video un pārveidota 192 kbps MP3 formātā.","faq.q5":"Vai TikTok video ir ūdenszīme?","faq.a5":"Mēs vienmēr dodam priekšroku versijai bez ūdenszīmes, ja tā ir pieejama. Opcijas ar ūdenszīmi ir apzīmētas ar \u003cstrong>Ūdenszīme\u003c/strong>.","faq.q6":"Vai mani faili tiek glabāti jūsu serverī?","faq.a6":"Nē. Faili tiek nosūtīti no sākotnējās platformas tieši uz jūsu ierīci un netiek glabāti mūsu serverī.","footer.madeBy":"Izveidoja","results.loading":"Iegūst multividi… tas var aizņemt dažas sekundes.","results.found":"Atrasti multivides faili: {n}","results.more":"Rādīt vairāk opciju: {n}","group.video":"Video","group.audio":"Audio","group.image":"Fotoattēli","label.thumbnail":"Sīktēls","label.photo":"Fotoattēls","label.photoN":"Fotoattēls {n}","label.video":"Video","label.videoN":"Video {n}","label.audioN":"Audio {n}","label.original_audio":"Oriģinālā skaņa","note.original_quality":"Oriģinālā kvalitāte","note.no_audio":"Bez skaņas","note.watermark":"Ūdenszīme","download.button":"Lejupielādēt","download.preparing":"Sagatavo…","toast.preparing":"Sagatavo jūsu failu… lejupielāde sāksies automātiski.","toast.started":"Lejupielāde sākta.","toast.failed":"Lejupielāde neizdevās. Izmēģiniet citu kvalitāti vai apstrādājiet saiti vēlreiz.","toast.clipboardEmpty":"Starpliktuve ir tukša. Vispirms nokopējiet saiti.","toast.clipboardDenied":"Piekļuve starpliktuvei tika liegta. Ielīmējiet saiti manuāli.","error.empty":"Vispirms ielīmējiet ieraksta vai video saiti.","error.timeout":"Pārsniegts gaidīšanas laiks. Avots atbildēja pārāk ilgi, lūdzu, mēģiniet vēlreiz.","error.offline":"Nav interneta savienojuma. Pārbaudiet tīklu un mēģiniet vēlreiz.","error.busy":"Serveris ir aizņemts. Lūdzu, mēģiniet vēlreiz pēc brīža.","error.invalid_url":"Nederīga saite. Ielīmējiet pilnu saiti no sociālā tīkla lietotnes.","error.unsupported":"Šī saite vēl netiek atbalstīta. Pārliecinieties, ka tā ved tieši uz ierakstu vai video.","error.blocked":"Šī platforma pašlaik bloķē mūsu serveri, tāpēc šo saiti šobrīd nevar lejupielādēt.","error.rate_limited":"Platforma ierobežo pieprasījumus no mūsu servera. Lūdzu, mēģiniet vēlreiz pēc brīža.","error.login_required":"Šis saturs ir privāts vai platforma pieprasa pieteikšanos, lai to skatītu, tāpēc to nevar lejupielādēt.","error.not_found":"Saturs nav atrasts vai ir noņemts.","error.geo_blocked":"Šis saturs ir reģionāli ierobežots, un mūsu serveris tam nevar piekļūt.","error.failed":"Neizdevās iegūt multividi no šīs saites. Izmēģiniet citu saiti vai mēģiniet vēlreiz pēc brīža.","error.no_media":"Šajā saitē nav lejupielādējamas multivides.","error.server_config":"Serveris vēl nav pareizi konfigurēts.","error.server_error":"Serverī radās kļūda. Lūdzu, mēģiniet vēlreiz."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

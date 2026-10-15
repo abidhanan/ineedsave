@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ms" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Muat turun video, foto dan audio daripada TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn dan ratusan laman lain.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Muat turun video, foto dan audio daripada TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn dan ratusan laman lain.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Langkau ke kandungan</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Navigasi utama">
+        <a href="#cara" data-i18n="nav.how">Cara guna</a>
+        <a href="#platform" data-i18n="nav.platforms">Platform</a>
+        <a href="#faq" data-i18n="nav.faq">Soalan Lazim</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Tukar bahasa: Bahasa Melayu">
+        <span class="lang-flag" aria-hidden="true">🇲🇾</span>
+        <span class="lang-code">MS</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Muat turun video, foto dan audio daripada mana-mana media sosial</h1>
+        <p class="lead" data-i18n="hero.lead">Tampal pautan daripada TikTok, Instagram, Facebook, X, Pinterest dan banyak lagi. Pilih kualiti, kemudian simpan terus ke peranti anda.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Pautan siaran atau video</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Tampal pautan di sini…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Tampal</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Kosongkan pautan">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Muat turun</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Contoh platform yang disokong">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Cara memuat turun</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Salin pautan</h3>
+            <p data-i18n-html="how.step1.text">Buka siaran dalam aplikasi, ketik <strong>Kongsi</strong>, kemudian pilih <strong>Salin pautan</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Tampal di sini</h3>
+            <p data-i18n-html="how.step2.text">Tampal pautan ke dalam kotak di atas, kemudian tekan <strong>Muat turun</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Pilih &amp; simpan</h3>
+            <p data-i18n="how.step3.text">Pilih video, audio MP3 atau foto dalam kualiti yang anda mahu.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Platform yang disokong</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Video, foto dan audio daripada ratusan laman. Antara yang paling popular:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Soalan lazim</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Adakah I Need Save percuma?</summary>
+            <p data-i18n-html="faq.a1">Ya, percuma sepenuhnya. Tiada pendaftaran, log masuk atau aplikasi diperlukan.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Di manakah fail saya disimpan?</summary>
+            <p data-i18n-html="faq.a2">Pada Android dan komputer, fail akan masuk ke folder <strong>Muat Turun</strong>. Pada iPhone dan iPad (Safari), fail disimpan dalam app <strong>Fail</strong> → <strong>Muat Turun</strong>. Dari situ, anda boleh menyimpannya ke Foto menggunakan butang Kongsi.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Kenapa sesetengah video tidak boleh dimuat turun?</summary>
+            <p data-i18n-html="faq.a3">Kandungan peribadi, kandungan yang memerlukan log masuk atau kandungan yang disekat mengikut wilayah tidak dapat dicapai oleh pelayan kami. Pastikan siaran itu awam, kemudian cuba lagi.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Bagaimana untuk memuat turun MP3?</summary>
+            <p data-i18n-html="faq.a4">Selepas pautan diproses, pilih pilihan <strong>MP3</strong> di bawah Audio. Bunyi diambil daripada video dan ditukar kepada MP3 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Adakah video TikTok mempunyai tera air?</summary>
+            <p data-i18n-html="faq.a5">Kami sentiasa mengutamakan versi tanpa tera air jika tersedia. Pilihan yang mempunyai tera air dilabel <strong>Tera air</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Adakah fail saya disimpan di pelayan anda?</summary>
+            <p data-i18n-html="faq.a6">Tidak. Fail dihantar dari platform asal terus ke peranti anda dan tidak disimpan di pelayan kami.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Dihasilkan oleh</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Pilih bahasa</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Tutup">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Cari bahasa…" aria-label="Cari bahasa…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Bahasa tidak ditemui.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Mendapatkan media… ini mungkin mengambil masa beberapa saat.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"ms","strings":{"meta.title":"I Need Save — Muat turun video, foto & audio daripada mana-mana media sosial","meta.description":"Muat turun video, foto dan audio daripada TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn dan ratusan laman lain.","skip":"Langkau ke kandungan","nav.label":"Navigasi utama","nav.how":"Cara guna","nav.platforms":"Platform","nav.faq":"Soalan Lazim","lang.button":"Tukar bahasa","lang.title":"Pilih bahasa","lang.search":"Cari bahasa…","lang.empty":"Bahasa tidak ditemui.","lang.close":"Tutup","hero.title":"Muat turun video, foto dan audio daripada mana-mana media sosial","hero.lead":"Tampal pautan daripada TikTok, Instagram, Facebook, X, Pinterest dan banyak lagi. Pilih kualiti, kemudian simpan terus ke peranti anda.","form.label":"Pautan siaran atau video","form.placeholder":"Tampal pautan di sini…","form.paste":"Tampal","form.clear":"Kosongkan pautan","form.submit":"Muat turun","form.processing":"Memproses","chips.label":"Contoh platform yang disokong","how.title":"Cara memuat turun","how.step1.title":"Salin pautan","how.step1.text":"Buka siaran dalam aplikasi, ketik \u003cstrong>Kongsi\u003c/strong>, kemudian pilih \u003cstrong>Salin pautan\u003c/strong>.","how.step2.title":"Tampal di sini","how.step2.text":"Tampal pautan ke dalam kotak di atas, kemudian tekan \u003cstrong>Muat turun\u003c/strong>.","how.step3.title":"Pilih & simpan","how.step3.text":"Pilih video, audio MP3 atau foto dalam kualiti yang anda mahu.","platforms.title":"Platform yang disokong","platforms.lead":"Video, foto dan audio daripada ratusan laman. Antara yang paling popular:","faq.title":"Soalan lazim","faq.q1":"Adakah I Need Save percuma?","faq.a1":"Ya, percuma sepenuhnya. Tiada pendaftaran, log masuk atau aplikasi diperlukan.","faq.q2":"Di manakah fail saya disimpan?","faq.a2":"Pada Android dan komputer, fail akan masuk ke folder \u003cstrong>Muat Turun\u003c/strong>. Pada iPhone dan iPad (Safari), fail disimpan dalam app \u003cstrong>Fail\u003c/strong> → \u003cstrong>Muat Turun\u003c/strong>. Dari situ, anda boleh menyimpannya ke Foto menggunakan butang Kongsi.","faq.q3":"Kenapa sesetengah video tidak boleh dimuat turun?","faq.a3":"Kandungan peribadi, kandungan yang memerlukan log masuk atau kandungan yang disekat mengikut wilayah tidak dapat dicapai oleh pelayan kami. Pastikan siaran itu awam, kemudian cuba lagi.","faq.q4":"Bagaimana untuk memuat turun MP3?","faq.a4":"Selepas pautan diproses, pilih pilihan \u003cstrong>MP3\u003c/strong> di bawah Audio. Bunyi diambil daripada video dan ditukar kepada MP3 192 kbps.","faq.q5":"Adakah video TikTok mempunyai tera air?","faq.a5":"Kami sentiasa mengutamakan versi tanpa tera air jika tersedia. Pilihan yang mempunyai tera air dilabel \u003cstrong>Tera air\u003c/strong>.","faq.q6":"Adakah fail saya disimpan di pelayan anda?","faq.a6":"Tidak. Fail dihantar dari platform asal terus ke peranti anda dan tidak disimpan di pelayan kami.","footer.madeBy":"Dihasilkan oleh","results.loading":"Mendapatkan media… ini mungkin mengambil masa beberapa saat.","results.found":"{n} media ditemui","results.more":"Tunjukkan {n} lagi pilihan","group.video":"Video","group.audio":"Audio","group.image":"Foto","label.thumbnail":"Lakaran kecil","label.photo":"Foto","label.photoN":"Foto {n}","label.video":"Video","label.videoN":"Video {n}","label.audioN":"Audio {n}","label.original_audio":"Bunyi asal","note.original_quality":"Kualiti asal","note.no_audio":"Tiada bunyi","note.watermark":"Tera air","download.button":"Muat turun","download.preparing":"Menyediakan…","toast.preparing":"Menyediakan fail anda… muat turun akan bermula secara automatik.","toast.started":"Muat turun dimulakan.","toast.failed":"Muat turun gagal. Cuba kualiti lain atau proses semula pautan.","toast.clipboardEmpty":"Papan keratan anda kosong. Salin pautan dahulu.","toast.clipboardDenied":"Akses papan keratan ditolak. Tampal pautan secara manual.","error.empty":"Tampal pautan siaran atau video dahulu.","error.timeout":"Tamat masa. Sumber mengambil masa terlalu lama untuk bertindak balas, sila cuba lagi.","error.offline":"Tiada sambungan internet. Semak rangkaian anda dan cuba lagi.","error.busy":"Pelayan sedang sibuk. Sila cuba lagi sebentar nanti.","error.invalid_url":"Pautan tidak sah. Tampal pautan penuh daripada aplikasi media sosial.","error.unsupported":"Pautan ini belum disokong. Pastikan ia menghala terus ke siaran atau video.","error.blocked":"Platform ini sedang menyekat pelayan kami, jadi pautan ini tidak boleh dimuat turun buat masa ini.","error.rate_limited":"Platform sedang mengehadkan permintaan daripada pelayan kami. Sila cuba lagi sebentar nanti.","error.login_required":"Kandungan ini peribadi, atau platform memerlukan log masuk untuk melihatnya, jadi ia tidak boleh dimuat turun.","error.not_found":"Kandungan tidak ditemui atau telah dialih keluar.","error.geo_blocked":"Kandungan ini disekat mengikut wilayah dan tidak dapat dicapai oleh pelayan kami.","error.failed":"Tidak dapat mendapatkan media daripada pautan ini. Cuba pautan lain atau cuba lagi sebentar nanti.","error.no_media":"Tiada media yang boleh dimuat turun pada pautan ini.","error.server_config":"Pelayan belum dikonfigurasikan dengan betul.","error.server_error":"Berlaku masalah pada pelayan. Sila cuba lagi."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="vi" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Tải video, ảnh và âm thanh từ TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn và hàng trăm trang khác.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Tải video, ảnh và âm thanh từ TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn và hàng trăm trang khác.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Chuyển đến nội dung</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Điều hướng chính">
+        <a href="#cara" data-i18n="nav.how">Cách dùng</a>
+        <a href="#platform" data-i18n="nav.platforms">Nền tảng</a>
+        <a href="#faq" data-i18n="nav.faq">Hỏi đáp</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Đổi ngôn ngữ: Tiếng Việt">
+        <span class="lang-flag" aria-hidden="true">🇻🇳</span>
+        <span class="lang-code">VI</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Tải video, ảnh và âm thanh từ mọi mạng xã hội</h1>
+        <p class="lead" data-i18n="hero.lead">Dán liên kết từ TikTok, Instagram, Facebook, X, Pinterest và nhiều nền tảng khác. Chọn chất lượng rồi lưu thẳng về thiết bị của bạn.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Liên kết bài đăng hoặc video</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Dán liên kết vào đây…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Dán</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Xóa liên kết">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Tải xuống</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Ví dụ về các nền tảng được hỗ trợ">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Cách tải xuống</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Sao chép liên kết</h3>
+            <p data-i18n-html="how.step1.text">Mở bài đăng trong ứng dụng, nhấn <strong>Chia sẻ</strong>, rồi chọn <strong>Sao chép liên kết</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Dán vào đây</h3>
+            <p data-i18n-html="how.step2.text">Dán liên kết vào ô phía trên, rồi nhấn <strong>Tải xuống</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Chọn &amp; lưu</h3>
+            <p data-i18n="how.step3.text">Chọn video, âm thanh MP3 hoặc ảnh với chất lượng bạn muốn.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Nền tảng được hỗ trợ</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Video, ảnh và âm thanh từ hàng trăm trang web. Một số nền tảng phổ biến nhất:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Câu hỏi thường gặp</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save có miễn phí không?</summary>
+            <p data-i18n-html="faq.a1">Có, hoàn toàn miễn phí. Không cần đăng ký, đăng nhập hay cài ứng dụng.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Tệp của tôi được lưu ở đâu?</summary>
+            <p data-i18n-html="faq.a2">Trên Android và máy tính, tệp sẽ nằm trong thư mục <strong>Tải xuống</strong>. Trên iPhone và iPad (Safari), tệp được lưu trong ứng dụng <strong>Tệp</strong> → <strong>Tải về</strong>. Từ đó, bạn có thể lưu vào Ảnh bằng nút Chia sẻ.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Tại sao một số video không tải được?</summary>
+            <p data-i18n-html="faq.a3">Máy chủ của chúng tôi không thể truy cập nội dung riêng tư, nội dung yêu cầu đăng nhập hoặc nội dung bị giới hạn theo khu vực. Hãy đảm bảo bài đăng ở chế độ công khai rồi thử lại.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Làm sao để tải MP3?</summary>
+            <p data-i18n-html="faq.a4">Sau khi liên kết được xử lý, hãy chọn tùy chọn <strong>MP3</strong> trong mục Âm thanh. Âm thanh được tách từ video và chuyển đổi sang MP3 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Video TikTok có dính logo không?</summary>
+            <p data-i18n-html="faq.a5">Chúng tôi luôn ưu tiên bản không logo nếu có. Các tùy chọn có logo được gắn nhãn <strong>Có logo</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Tệp của tôi có được lưu trên máy chủ của bạn không?</summary>
+            <p data-i18n-html="faq.a6">Không. Tệp được gửi thẳng từ nền tảng gốc đến thiết bị của bạn và không được lưu trên máy chủ của chúng tôi.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Thực hiện bởi</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Chọn ngôn ngữ</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Đóng">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Tìm ngôn ngữ…" aria-label="Tìm ngôn ngữ…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Không tìm thấy ngôn ngữ.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Đang lấy nội dung… việc này có thể mất vài giây.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"vi","strings":{"meta.title":"I Need Save — Tải video, ảnh & âm thanh từ mọi mạng xã hội","meta.description":"Tải video, ảnh và âm thanh từ TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn và hàng trăm trang khác.","skip":"Chuyển đến nội dung","nav.label":"Điều hướng chính","nav.how":"Cách dùng","nav.platforms":"Nền tảng","nav.faq":"Hỏi đáp","lang.button":"Đổi ngôn ngữ","lang.title":"Chọn ngôn ngữ","lang.search":"Tìm ngôn ngữ…","lang.empty":"Không tìm thấy ngôn ngữ.","lang.close":"Đóng","hero.title":"Tải video, ảnh và âm thanh từ mọi mạng xã hội","hero.lead":"Dán liên kết từ TikTok, Instagram, Facebook, X, Pinterest và nhiều nền tảng khác. Chọn chất lượng rồi lưu thẳng về thiết bị của bạn.","form.label":"Liên kết bài đăng hoặc video","form.placeholder":"Dán liên kết vào đây…","form.paste":"Dán","form.clear":"Xóa liên kết","form.submit":"Tải xuống","form.processing":"Đang xử lý","chips.label":"Ví dụ về các nền tảng được hỗ trợ","how.title":"Cách tải xuống","how.step1.title":"Sao chép liên kết","how.step1.text":"Mở bài đăng trong ứng dụng, nhấn \u003cstrong>Chia sẻ\u003c/strong>, rồi chọn \u003cstrong>Sao chép liên kết\u003c/strong>.","how.step2.title":"Dán vào đây","how.step2.text":"Dán liên kết vào ô phía trên, rồi nhấn \u003cstrong>Tải xuống\u003c/strong>.","how.step3.title":"Chọn & lưu","how.step3.text":"Chọn video, âm thanh MP3 hoặc ảnh với chất lượng bạn muốn.","platforms.title":"Nền tảng được hỗ trợ","platforms.lead":"Video, ảnh và âm thanh từ hàng trăm trang web. Một số nền tảng phổ biến nhất:","faq.title":"Câu hỏi thường gặp","faq.q1":"I Need Save có miễn phí không?","faq.a1":"Có, hoàn toàn miễn phí. Không cần đăng ký, đăng nhập hay cài ứng dụng.","faq.q2":"Tệp của tôi được lưu ở đâu?","faq.a2":"Trên Android và máy tính, tệp sẽ nằm trong thư mục \u003cstrong>Tải xuống\u003c/strong>. Trên iPhone và iPad (Safari), tệp được lưu trong ứng dụng \u003cstrong>Tệp\u003c/strong> → \u003cstrong>Tải về\u003c/strong>. Từ đó, bạn có thể lưu vào Ảnh bằng nút Chia sẻ.","faq.q3":"Tại sao một số video không tải được?","faq.a3":"Máy chủ của chúng tôi không thể truy cập nội dung riêng tư, nội dung yêu cầu đăng nhập hoặc nội dung bị giới hạn theo khu vực. Hãy đảm bảo bài đăng ở chế độ công khai rồi thử lại.","faq.q4":"Làm sao để tải MP3?","faq.a4":"Sau khi liên kết được xử lý, hãy chọn tùy chọn \u003cstrong>MP3\u003c/strong> trong mục Âm thanh. Âm thanh được tách từ video và chuyển đổi sang MP3 192 kbps.","faq.q5":"Video TikTok có dính logo không?","faq.a5":"Chúng tôi luôn ưu tiên bản không logo nếu có. Các tùy chọn có logo được gắn nhãn \u003cstrong>Có logo\u003c/strong>.","faq.q6":"Tệp của tôi có được lưu trên máy chủ của bạn không?","faq.a6":"Không. Tệp được gửi thẳng từ nền tảng gốc đến thiết bị của bạn và không được lưu trên máy chủ của chúng tôi.","footer.madeBy":"Thực hiện bởi","results.loading":"Đang lấy nội dung… việc này có thể mất vài giây.","results.found":"Tìm thấy {n} nội dung","results.more":"Hiện thêm {n} tùy chọn","group.video":"Video","group.audio":"Âm thanh","group.image":"Ảnh","label.thumbnail":"Ảnh thu nhỏ","label.photo":"Ảnh","label.photoN":"Ảnh {n}","label.video":"Video","label.videoN":"Video {n}","label.audioN":"Âm thanh {n}","label.original_audio":"Âm thanh gốc","note.original_quality":"Chất lượng gốc","note.no_audio":"Không có tiếng","note.watermark":"Có logo","download.button":"Tải xuống","download.preparing":"Đang chuẩn bị…","toast.preparing":"Đang chuẩn bị tệp… quá trình tải xuống sẽ tự động bắt đầu.","toast.started":"Đã bắt đầu tải xuống.","toast.failed":"Tải xuống không thành công. Hãy thử chất lượng khác hoặc xử lý lại liên kết.","toast.clipboardEmpty":"Bộ nhớ tạm đang trống. Hãy sao chép một liên kết trước.","toast.clipboardDenied":"Quyền truy cập bộ nhớ tạm bị từ chối. Hãy dán liên kết thủ công.","error.empty":"Hãy dán liên kết bài đăng hoặc video trước.","error.timeout":"Hết thời gian chờ. Nguồn phản hồi quá lâu, vui lòng thử lại.","error.offline":"Không có kết nối Internet. Hãy kiểm tra mạng rồi thử lại.","error.busy":"Máy chủ đang bận. Vui lòng thử lại sau giây lát.","error.invalid_url":"Liên kết không hợp lệ. Hãy dán liên kết đầy đủ từ ứng dụng mạng xã hội.","error.unsupported":"Liên kết này chưa được hỗ trợ. Hãy đảm bảo liên kết dẫn trực tiếp đến một bài đăng hoặc video.","error.blocked":"Nền tảng này hiện đang chặn máy chủ của chúng tôi, nên chưa thể tải liên kết này lúc này.","error.rate_limited":"Nền tảng đang giới hạn yêu cầu từ máy chủ của chúng tôi. Vui lòng thử lại sau giây lát.","error.login_required":"Nội dung này ở chế độ riêng tư hoặc nền tảng yêu cầu đăng nhập để xem, nên không thể tải xuống.","error.not_found":"Không tìm thấy nội dung hoặc nội dung đã bị xóa.","error.geo_blocked":"Nội dung này bị giới hạn theo khu vực nên máy chủ của chúng tôi không thể truy cập.","error.failed":"Không lấy được nội dung từ liên kết này. Hãy thử liên kết khác hoặc thử lại sau giây lát.","error.no_media":"Liên kết này không có nội dung nào có thể tải xuống.","error.server_config":"Máy chủ chưa được cấu hình đúng.","error.server_error":"Đã xảy ra lỗi trên máy chủ. Vui lòng thử lại."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

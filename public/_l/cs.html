@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="cs" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Stahujte videa, fotky a zvuk ze sítí TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn a ze stovek dalších webů.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Stahujte videa, fotky a zvuk ze sítí TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn a ze stovek dalších webů.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Přeskočit na obsah</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Hlavní navigace">
+        <a href="#cara" data-i18n="nav.how">Jak na to</a>
+        <a href="#platform" data-i18n="nav.platforms">Platformy</a>
+        <a href="#faq" data-i18n="nav.faq">Časté dotazy</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Změnit jazyk: Čeština">
+        <span class="lang-flag" aria-hidden="true">🇨🇿</span>
+        <span class="lang-code">CS</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Stahujte videa, fotky a zvuk z jakékoli sociální sítě</h1>
+        <p class="lead" data-i18n="hero.lead">Vložte odkaz ze sítě TikTok, Instagram, Facebook, X, Pinterest a dalších. Vyberte kvalitu a uložte soubor přímo do zařízení.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Odkaz na příspěvek nebo video</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Sem vložte odkaz…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Vložit</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Vymazat odkaz">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Stáhnout</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Příklady podporovaných platforem">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Jak stahovat</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Zkopírujte odkaz</h3>
+            <p data-i18n-html="how.step1.text">Otevřete příspěvek v aplikaci, klepněte na <strong>Sdílet</strong> a zvolte <strong>Kopírovat odkaz</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Vložte ho sem</h3>
+            <p data-i18n-html="how.step2.text">Vložte odkaz do pole výše a stiskněte <strong>Stáhnout</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Vyberte a uložte</h3>
+            <p data-i18n="how.step3.text">Vyberte video, zvuk MP3 nebo fotku v požadované kvalitě.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Podporované platformy</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Videa, fotky a zvuk ze stovek webů. Ty nejoblíbenější:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Časté dotazy</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Je I Need Save zdarma?</summary>
+            <p data-i18n-html="faq.a1">Ano, úplně zdarma. Žádná registrace, přihlášení ani aplikace.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Kam se soubory ukládají?</summary>
+            <p data-i18n-html="faq.a2">V systému Android a na počítačích se soubory ukládají do složky <strong>Stažené soubory</strong>. V zařízeních iPhone a iPad (Safari) se ukládají do aplikace <strong>Soubory</strong> → <strong>Stažené soubory</strong>. Odtud je můžete tlačítkem Sdílet uložit do Fotek.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Proč nejdou některá videa stáhnout?</summary>
+            <p data-i18n-html="faq.a3">Náš server se nedostane k soukromému obsahu, obsahu vyžadujícímu přihlášení ani k regionálně omezenému obsahu. Ověřte, že je příspěvek veřejný, a zkuste to znovu.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Jak stáhnout MP3?</summary>
+            <p data-i18n-html="faq.a4">Po zpracování odkazu zvolte v části Zvuk možnost <strong>MP3</strong>. Zvuk se získá z videa a převede do MP3 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Mají videa ze sítě TikTok vodoznak?</summary>
+            <p data-i18n-html="faq.a5">Pokud je k dispozici verze bez vodoznaku, vždy dáváme přednost jí. Možnosti s vodoznakem jsou označené jako <strong>Vodoznak</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Ukládají se moje soubory na vašem serveru?</summary>
+            <p data-i18n-html="faq.a6">Ne. Soubory putují z původní platformy přímo do vašeho zařízení a na našem serveru se neuchovávají.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Autor:</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Vyberte jazyk</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Zavřít">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Hledat jazyk…" aria-label="Hledat jazyk…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Žádný jazyk nebyl nalezen.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Načítáme média… může to trvat pár sekund.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"cs","strings":{"meta.title":"I Need Save — stahujte videa, fotky a zvuk z jakékoli sociální sítě","meta.description":"Stahujte videa, fotky a zvuk ze sítí TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn a ze stovek dalších webů.","skip":"Přeskočit na obsah","nav.label":"Hlavní navigace","nav.how":"Jak na to","nav.platforms":"Platformy","nav.faq":"Časté dotazy","lang.button":"Změnit jazyk","lang.title":"Vyberte jazyk","lang.search":"Hledat jazyk…","lang.empty":"Žádný jazyk nebyl nalezen.","lang.close":"Zavřít","hero.title":"Stahujte videa, fotky a zvuk z jakékoli sociální sítě","hero.lead":"Vložte odkaz ze sítě TikTok, Instagram, Facebook, X, Pinterest a dalších. Vyberte kvalitu a uložte soubor přímo do zařízení.","form.label":"Odkaz na příspěvek nebo video","form.placeholder":"Sem vložte odkaz…","form.paste":"Vložit","form.clear":"Vymazat odkaz","form.submit":"Stáhnout","form.processing":"Zpracování","chips.label":"Příklady podporovaných platforem","how.title":"Jak stahovat","how.step1.title":"Zkopírujte odkaz","how.step1.text":"Otevřete příspěvek v aplikaci, klepněte na \u003cstrong>Sdílet\u003c/strong> a zvolte \u003cstrong>Kopírovat odkaz\u003c/strong>.","how.step2.title":"Vložte ho sem","how.step2.text":"Vložte odkaz do pole výše a stiskněte \u003cstrong>Stáhnout\u003c/strong>.","how.step3.title":"Vyberte a uložte","how.step3.text":"Vyberte video, zvuk MP3 nebo fotku v požadované kvalitě.","platforms.title":"Podporované platformy","platforms.lead":"Videa, fotky a zvuk ze stovek webů. Ty nejoblíbenější:","faq.title":"Časté dotazy","faq.q1":"Je I Need Save zdarma?","faq.a1":"Ano, úplně zdarma. Žádná registrace, přihlášení ani aplikace.","faq.q2":"Kam se soubory ukládají?","faq.a2":"V systému Android a na počítačích se soubory ukládají do složky \u003cstrong>Stažené soubory\u003c/strong>. V zařízeních iPhone a iPad (Safari) se ukládají do aplikace \u003cstrong>Soubory\u003c/strong> → \u003cstrong>Stažené soubory\u003c/strong>. Odtud je můžete tlačítkem Sdílet uložit do Fotek.","faq.q3":"Proč nejdou některá videa stáhnout?","faq.a3":"Náš server se nedostane k soukromému obsahu, obsahu vyžadujícímu přihlášení ani k regionálně omezenému obsahu. Ověřte, že je příspěvek veřejný, a zkuste to znovu.","faq.q4":"Jak stáhnout MP3?","faq.a4":"Po zpracování odkazu zvolte v části Zvuk možnost \u003cstrong>MP3\u003c/strong>. Zvuk se získá z videa a převede do MP3 192 kbps.","faq.q5":"Mají videa ze sítě TikTok vodoznak?","faq.a5":"Pokud je k dispozici verze bez vodoznaku, vždy dáváme přednost jí. Možnosti s vodoznakem jsou označené jako \u003cstrong>Vodoznak\u003c/strong>.","faq.q6":"Ukládají se moje soubory na vašem serveru?","faq.a6":"Ne. Soubory putují z původní platformy přímo do vašeho zařízení a na našem serveru se neuchovávají.","footer.madeBy":"Autor:","results.loading":"Načítáme média… může to trvat pár sekund.","results.found":"Nalezená média: {n}","results.more":"Zobrazit další možnosti ({n})","group.video":"Video","group.audio":"Zvuk","group.image":"Fotky","label.thumbnail":"Náhled","label.photo":"Fotka","label.photoN":"Fotka {n}","label.video":"Video","label.videoN":"Video {n}","label.audioN":"Zvuk {n}","label.original_audio":"Původní zvuk","note.original_quality":"Původní kvalita","note.no_audio":"Bez zvuku","note.watermark":"Vodoznak","download.button":"Stáhnout","download.preparing":"Připravujeme…","toast.preparing":"Připravujeme soubor… stahování začne automaticky.","toast.started":"Stahování bylo zahájeno.","toast.failed":"Stažení se nezdařilo. Zkuste jinou kvalitu nebo odkaz zpracujte znovu.","toast.clipboardEmpty":"Schránka je prázdná. Nejdřív zkopírujte odkaz.","toast.clipboardDenied":"Přístup ke schránce byl odepřen. Vložte odkaz ručně.","error.empty":"Nejdřív vložte odkaz na příspěvek nebo video.","error.timeout":"Vypršel časový limit. Zdroj odpovídal příliš dlouho, zkuste to prosím znovu.","error.offline":"Nejste připojeni k internetu. Zkontrolujte síť a zkuste to znovu.","error.busy":"Server je přetížený. Zkuste to prosím za chvíli.","error.invalid_url":"Neplatný odkaz. Vložte celý odkaz z aplikace sociální sítě.","error.unsupported":"Tento odkaz zatím není podporován. Ověřte, že vede přímo na příspěvek nebo video.","error.blocked":"Tato platforma momentálně blokuje náš server, takže z tohoto odkazu teď nelze stahovat.","error.rate_limited":"Platforma omezuje požadavky z našeho serveru. Zkuste to prosím za chvíli.","error.login_required":"Tento obsah je soukromý nebo platforma k jeho zobrazení vyžaduje přihlášení, takže ho nelze stáhnout.","error.not_found":"Obsah nebyl nalezen nebo byl odstraněn.","error.geo_blocked":"Tento obsah je regionálně omezený a náš server se k němu nedostane.","error.failed":"Z tohoto odkazu se nepodařilo získat média. Zkuste jiný odkaz nebo to zkuste za chvíli.","error.no_media":"Na tomto odkazu nejsou žádná média ke stažení.","error.server_config":"Server zatím není správně nastavený.","error.server_error":"Na serveru se něco pokazilo. Zkuste to prosím znovu."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

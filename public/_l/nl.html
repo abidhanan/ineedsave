@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="nl" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Download video's, foto's en audio van TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn en honderden andere sites.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Download video's, foto's en audio van TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn en honderden andere sites.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Naar inhoud</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Hoofdnavigatie">
+        <a href="#cara" data-i18n="nav.how">Hoe werkt het</a>
+        <a href="#platform" data-i18n="nav.platforms">Platforms</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Taal wijzigen: Nederlands">
+        <span class="lang-flag" aria-hidden="true">🇳🇱</span>
+        <span class="lang-code">NL</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Download video's, foto's en audio van elke social media</h1>
+        <p class="lead" data-i18n="hero.lead">Plak een link van TikTok, Instagram, Facebook, X, Pinterest en meer. Kies een kwaliteit en sla het direct op je apparaat op.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Link naar post of video</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Plak hier een link…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Plakken</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Link wissen">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Downloaden</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Voorbeelden van ondersteunde platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Zo download je</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Kopieer de link</h3>
+            <p data-i18n-html="how.step1.text">Open de post in de app, tik op <strong>Deel</strong> en kies <strong>Kopieer link</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Plak hem hier</h3>
+            <p data-i18n-html="how.step2.text">Plak de link in het vak hierboven en druk op <strong>Downloaden</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Kies en bewaar</h3>
+            <p data-i18n="how.step3.text">Kies video, MP3-audio of foto in de kwaliteit die je wilt.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Ondersteunde platforms</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Video's, foto's en audio van honderden sites. Een paar van de populairste:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Veelgestelde vragen</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Is I Need Save gratis?</summary>
+            <p data-i18n-html="faq.a1">Ja, helemaal gratis. Geen registratie, login of app nodig.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Waar worden mijn bestanden opgeslagen?</summary>
+            <p data-i18n-html="faq.a2">Op Android en computers komen bestanden in de map <strong>Downloads</strong>. Op iPhone en iPad (Safari) worden ze bewaard in de app <strong>Bestanden</strong> → <strong>Downloads</strong>. Van daaruit kun je ze met de deelknop in Foto's bewaren.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Waarom kunnen sommige video's niet worden gedownload?</summary>
+            <p data-i18n-html="faq.a3">Privécontent, content waarvoor je moet inloggen of content met regiobeperkingen is niet bereikbaar voor onze server. Zorg dat de post openbaar is en probeer het opnieuw.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Hoe download ik MP3?</summary>
+            <p data-i18n-html="faq.a4">Kies na het verwerken van de link de optie <strong>MP3</strong> onder Audio. Het geluid wordt uit de video gehaald en omgezet naar MP3 van 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Hebben TikTok-video's een watermerk?</summary>
+            <p data-i18n-html="faq.a5">We kiezen altijd de versie zonder watermerk als die beschikbaar is. Opties met watermerk zijn gemarkeerd met <strong>Watermerk</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Worden mijn bestanden op jullie server opgeslagen?</summary>
+            <p data-i18n-html="faq.a6">Nee. Bestanden gaan rechtstreeks van het oorspronkelijke platform naar je apparaat en worden niet op onze server bewaard.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Gemaakt door</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Kies een taal</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Sluiten">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Zoek taal…" aria-label="Zoek taal…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Geen taal gevonden.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Media ophalen… dit kan een paar seconden duren.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"nl","strings":{"meta.title":"I Need Save — Download video's, foto's en audio van elke social media","meta.description":"Download video's, foto's en audio van TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn en honderden andere sites.","skip":"Naar inhoud","nav.label":"Hoofdnavigatie","nav.how":"Hoe werkt het","nav.platforms":"Platforms","nav.faq":"FAQ","lang.button":"Taal wijzigen","lang.title":"Kies een taal","lang.search":"Zoek taal…","lang.empty":"Geen taal gevonden.","lang.close":"Sluiten","hero.title":"Download video's, foto's en audio van elke social media","hero.lead":"Plak een link van TikTok, Instagram, Facebook, X, Pinterest en meer. Kies een kwaliteit en sla het direct op je apparaat op.","form.label":"Link naar post of video","form.placeholder":"Plak hier een link…","form.paste":"Plakken","form.clear":"Link wissen","form.submit":"Downloaden","form.processing":"Bezig","chips.label":"Voorbeelden van ondersteunde platforms","how.title":"Zo download je","how.step1.title":"Kopieer de link","how.step1.text":"Open de post in de app, tik op \u003cstrong>Deel\u003c/strong> en kies \u003cstrong>Kopieer link\u003c/strong>.","how.step2.title":"Plak hem hier","how.step2.text":"Plak de link in het vak hierboven en druk op \u003cstrong>Downloaden\u003c/strong>.","how.step3.title":"Kies en bewaar","how.step3.text":"Kies video, MP3-audio of foto in de kwaliteit die je wilt.","platforms.title":"Ondersteunde platforms","platforms.lead":"Video's, foto's en audio van honderden sites. Een paar van de populairste:","faq.title":"Veelgestelde vragen","faq.q1":"Is I Need Save gratis?","faq.a1":"Ja, helemaal gratis. Geen registratie, login of app nodig.","faq.q2":"Waar worden mijn bestanden opgeslagen?","faq.a2":"Op Android en computers komen bestanden in de map \u003cstrong>Downloads\u003c/strong>. Op iPhone en iPad (Safari) worden ze bewaard in de app \u003cstrong>Bestanden\u003c/strong> → \u003cstrong>Downloads\u003c/strong>. Van daaruit kun je ze met de deelknop in Foto's bewaren.","faq.q3":"Waarom kunnen sommige video's niet worden gedownload?","faq.a3":"Privécontent, content waarvoor je moet inloggen of content met regiobeperkingen is niet bereikbaar voor onze server. Zorg dat de post openbaar is en probeer het opnieuw.","faq.q4":"Hoe download ik MP3?","faq.a4":"Kies na het verwerken van de link de optie \u003cstrong>MP3\u003c/strong> onder Audio. Het geluid wordt uit de video gehaald en omgezet naar MP3 van 192 kbps.","faq.q5":"Hebben TikTok-video's een watermerk?","faq.a5":"We kiezen altijd de versie zonder watermerk als die beschikbaar is. Opties met watermerk zijn gemarkeerd met \u003cstrong>Watermerk\u003c/strong>.","faq.q6":"Worden mijn bestanden op jullie server opgeslagen?","faq.a6":"Nee. Bestanden gaan rechtstreeks van het oorspronkelijke platform naar je apparaat en worden niet op onze server bewaard.","footer.madeBy":"Gemaakt door","results.loading":"Media ophalen… dit kan een paar seconden duren.","results.found":"{n} media gevonden","results.more":"Nog {n} opties tonen","group.video":"Video","group.audio":"Audio","group.image":"Foto's","label.thumbnail":"Miniatuur","label.photo":"Foto","label.photoN":"Foto {n}","label.video":"Video","label.videoN":"Video {n}","label.audioN":"Audio {n}","label.original_audio":"Origineel geluid","note.original_quality":"Originele kwaliteit","note.no_audio":"Geen geluid","note.watermark":"Watermerk","download.button":"Downloaden","download.preparing":"Voorbereiden…","toast.preparing":"Je bestand wordt voorbereid… de download start automatisch.","toast.started":"Download gestart.","toast.failed":"Downloaden mislukt. Probeer een andere kwaliteit of verwerk de link opnieuw.","toast.clipboardEmpty":"Je klembord is leeg. Kopieer eerst een link.","toast.clipboardDenied":"Toegang tot het klembord geweigerd. Plak de link handmatig.","error.empty":"Plak eerst een link naar een post of video.","error.timeout":"Time-out. De bron reageerde te traag, probeer het opnieuw.","error.offline":"Geen internetverbinding. Controleer je netwerk en probeer het opnieuw.","error.busy":"De server is druk. Probeer het zo meteen opnieuw.","error.invalid_url":"Ongeldige link. Plak de volledige link uit de socialmedia-app.","error.unsupported":"Deze link wordt nog niet ondersteund. Zorg dat hij direct naar een post of video verwijst.","error.blocked":"Dit platform blokkeert momenteel onze server, dus deze link kan nu niet worden gedownload.","error.rate_limited":"Het platform beperkt verzoeken van onze server. Probeer het zo meteen opnieuw.","error.login_required":"Deze content is privé of het platform vereist een login om hem te bekijken, dus hij kan niet worden gedownload.","error.not_found":"Content niet gevonden of verwijderd.","error.geo_blocked":"Deze content heeft regiobeperkingen en is niet bereikbaar voor onze server.","error.failed":"Kon geen media ophalen van deze link. Probeer een andere link of probeer het zo meteen opnieuw.","error.no_media":"Er is geen downloadbare media op deze link.","error.server_config":"De server is nog niet goed geconfigureerd.","error.server_error":"Er ging iets mis op de server. Probeer het opnieuw."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

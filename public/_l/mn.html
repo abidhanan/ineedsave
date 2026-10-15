@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="mn" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn болон өөр олон зуун сайтаас видео, зураг, аудио татаж аваарай.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn болон өөр олон зуун сайтаас видео, зураг, аудио татаж аваарай.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Агуулга руу шилжих</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Үндсэн цэс">
+        <a href="#cara" data-i18n="nav.how">Хэрхэн ашиглах</a>
+        <a href="#platform" data-i18n="nav.platforms">Платформууд</a>
+        <a href="#faq" data-i18n="nav.faq">Түгээмэл асуулт</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Хэл солих: Монгол">
+        <span class="lang-flag" aria-hidden="true">🇲🇳</span>
+        <span class="lang-code">MN</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Аливаа сошиал медиагаас видео, зураг, аудио татаж аваарай</h1>
+        <p class="lead" data-i18n="hero.lead">TikTok, Instagram, Facebook, X, Pinterest болон бусад платформын холбоосыг буулгана уу. Чанараа сонгоод төхөөрөмждөө шууд хадгалаарай.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Пост эсвэл видеоны холбоос</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Холбоосоо энд буулгана уу…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Буулгах</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Холбоос арилгах">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Татах</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Дэмжигдсэн платформын жишээ">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Хэрхэн татах вэ</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Холбоосоо хуулах</h3>
+            <p data-i18n-html="how.step1.text">Апп дээр постоо нээж, <strong>Хуваалцах</strong> дээр дараад <strong>Холбоос хуулах</strong>-ыг сонгоно уу.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Энд буулгах</h3>
+            <p data-i18n-html="how.step2.text">Холбоосоо дээрх талбарт буулгаад <strong>Татах</strong> товчийг дарна уу.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Сонгоод хадгалах</h3>
+            <p data-i18n="how.step3.text">Хүссэн чанараараа видео, MP3 аудио эсвэл зургаа сонгоно уу.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Дэмжигдсэн платформууд</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Олон зуун сайтын видео, зураг, аудио. Хамгийн түгээмэл нь:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Түгээмэл асуултууд</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save үнэгүй юу?</summary>
+            <p data-i18n-html="faq.a1">Тийм, бүрэн үнэгүй. Бүртгүүлэх, нэвтрэх, апп суулгах шаардлагагүй.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Миний файлууд хаана хадгалагдах вэ?</summary>
+            <p data-i18n-html="faq.a2">Android болон компьютер дээр файлууд <strong>Татсан файлууд</strong> хавтас руу орно. iPhone болон iPad (Safari) дээр <strong>Файлууд</strong> апп → <strong>Татсан файлууд</strong> хэсэгт хадгалагдана. Тэндээс Хуваалцах товчоор Зургууд руу хадгалж болно.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Яагаад зарим видеог татаж болохгүй байна вэ?</summary>
+            <p data-i18n-html="faq.a3">Хувийн контент, нэвтрэх шаардлагатай контент эсвэл бүс нутгаар хязгаарлагдсан контентод манай сервер хандах боломжгүй. Пост нийтэд нээлттэй эсэхийг шалгаад дахин оролдоно уу.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">MP3 хэрхэн татах вэ?</summary>
+            <p data-i18n-html="faq.a4">Холбоос боловсруулагдсаны дараа Аудио хэсгээс <strong>MP3</strong> сонголтыг сонгоно уу. Дууг видеоноос салгаж 192 kbps MP3 болгон хөрвүүлнэ.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">TikTok видеонд усан тэмдэг байдаг уу?</summary>
+            <p data-i18n-html="faq.a5">Боломжтой үед бид үргэлж усан тэмдэггүй хувилбарыг сонгодог. Усан тэмдэгтэй сонголтууд <strong>Усан тэмдэг</strong> гэсэн шошготой байна.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Миний файлууд танай серверт хадгалагддаг уу?</summary>
+            <p data-i18n-html="faq.a6">Үгүй. Файлууд эх платформоос таны төхөөрөмж рүү шууд илгээгдэх бөгөөд манай серверт хадгалагдахгүй.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Бүтээсэн</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Хэл сонгох</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Хаах">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Хэл хайх…" aria-label="Хэл хайх…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Хэл олдсонгүй.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Медиа татаж байна… хэдэн секунд болж магадгүй.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"mn","strings":{"meta.title":"I Need Save — Аливаа сошиал медиагаас видео, зураг, аудио татах","meta.description":"TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn болон өөр олон зуун сайтаас видео, зураг, аудио татаж аваарай.","skip":"Агуулга руу шилжих","nav.label":"Үндсэн цэс","nav.how":"Хэрхэн ашиглах","nav.platforms":"Платформууд","nav.faq":"Түгээмэл асуулт","lang.button":"Хэл солих","lang.title":"Хэл сонгох","lang.search":"Хэл хайх…","lang.empty":"Хэл олдсонгүй.","lang.close":"Хаах","hero.title":"Аливаа сошиал медиагаас видео, зураг, аудио татаж аваарай","hero.lead":"TikTok, Instagram, Facebook, X, Pinterest болон бусад платформын холбоосыг буулгана уу. Чанараа сонгоод төхөөрөмждөө шууд хадгалаарай.","form.label":"Пост эсвэл видеоны холбоос","form.placeholder":"Холбоосоо энд буулгана уу…","form.paste":"Буулгах","form.clear":"Холбоос арилгах","form.submit":"Татах","form.processing":"Боловсруулж байна","chips.label":"Дэмжигдсэн платформын жишээ","how.title":"Хэрхэн татах вэ","how.step1.title":"Холбоосоо хуулах","how.step1.text":"Апп дээр постоо нээж, \u003cstrong>Хуваалцах\u003c/strong> дээр дараад \u003cstrong>Холбоос хуулах\u003c/strong>-ыг сонгоно уу.","how.step2.title":"Энд буулгах","how.step2.text":"Холбоосоо дээрх талбарт буулгаад \u003cstrong>Татах\u003c/strong> товчийг дарна уу.","how.step3.title":"Сонгоод хадгалах","how.step3.text":"Хүссэн чанараараа видео, MP3 аудио эсвэл зургаа сонгоно уу.","platforms.title":"Дэмжигдсэн платформууд","platforms.lead":"Олон зуун сайтын видео, зураг, аудио. Хамгийн түгээмэл нь:","faq.title":"Түгээмэл асуултууд","faq.q1":"I Need Save үнэгүй юу?","faq.a1":"Тийм, бүрэн үнэгүй. Бүртгүүлэх, нэвтрэх, апп суулгах шаардлагагүй.","faq.q2":"Миний файлууд хаана хадгалагдах вэ?","faq.a2":"Android болон компьютер дээр файлууд \u003cstrong>Татсан файлууд\u003c/strong> хавтас руу орно. iPhone болон iPad (Safari) дээр \u003cstrong>Файлууд\u003c/strong> апп → \u003cstrong>Татсан файлууд\u003c/strong> хэсэгт хадгалагдана. Тэндээс Хуваалцах товчоор Зургууд руу хадгалж болно.","faq.q3":"Яагаад зарим видеог татаж болохгүй байна вэ?","faq.a3":"Хувийн контент, нэвтрэх шаардлагатай контент эсвэл бүс нутгаар хязгаарлагдсан контентод манай сервер хандах боломжгүй. Пост нийтэд нээлттэй эсэхийг шалгаад дахин оролдоно уу.","faq.q4":"MP3 хэрхэн татах вэ?","faq.a4":"Холбоос боловсруулагдсаны дараа Аудио хэсгээс \u003cstrong>MP3\u003c/strong> сонголтыг сонгоно уу. Дууг видеоноос салгаж 192 kbps MP3 болгон хөрвүүлнэ.","faq.q5":"TikTok видеонд усан тэмдэг байдаг уу?","faq.a5":"Боломжтой үед бид үргэлж усан тэмдэггүй хувилбарыг сонгодог. Усан тэмдэгтэй сонголтууд \u003cstrong>Усан тэмдэг\u003c/strong> гэсэн шошготой байна.","faq.q6":"Миний файлууд танай серверт хадгалагддаг уу?","faq.a6":"Үгүй. Файлууд эх платформоос таны төхөөрөмж рүү шууд илгээгдэх бөгөөд манай серверт хадгалагдахгүй.","footer.madeBy":"Бүтээсэн","results.loading":"Медиа татаж байна… хэдэн секунд болж магадгүй.","results.found":"{n} медиа олдлоо","results.more":"Өөр {n} сонголт харуулах","group.video":"Видео","group.audio":"Аудио","group.image":"Зургууд","label.thumbnail":"Өнгөц зураг","label.photo":"Зураг","label.photoN":"Зураг {n}","label.video":"Видео","label.videoN":"Видео {n}","label.audioN":"Аудио {n}","label.original_audio":"Эх дуу","note.original_quality":"Эх чанар","note.no_audio":"Дуугүй","note.watermark":"Усан тэмдэг","download.button":"Татах","download.preparing":"Бэлтгэж байна…","toast.preparing":"Таны файлыг бэлтгэж байна… татаж авалт автоматаар эхэлнэ.","toast.started":"Татаж эхэллээ.","toast.failed":"Татаж чадсангүй. Өөр чанар сонгох эсвэл холбоосоо дахин боловсруулна уу.","toast.clipboardEmpty":"Санах самбар хоосон байна. Эхлээд холбоос хуулна уу.","toast.clipboardDenied":"Санах самбарт хандахыг зөвшөөрсөнгүй. Холбоосоо гараар буулгана уу.","error.empty":"Эхлээд пост эсвэл видеоны холбоос буулгана уу.","error.timeout":"Хугацаа дууссан. Эх сурвалж хэт удаан хариулсан тул дахин оролдоно уу.","error.offline":"Интернэт холболт алга. Сүлжээгээ шалгаад дахин оролдоно уу.","error.busy":"Сервер завгүй байна. Түр хүлээгээд дахин оролдоно уу.","error.invalid_url":"Холбоос буруу байна. Сошиал медиа аппаас бүтэн холбоосыг буулгана уу.","error.unsupported":"Энэ холбоос одоогоор дэмжигдээгүй байна. Холбоос пост эсвэл видео руу шууд заасан эсэхийг шалгана уу.","error.blocked":"Энэ платформ одоогоор манай серверийг хаасан тул энэ холбоосыг одоо татах боломжгүй.","error.rate_limited":"Платформ манай серверээс ирэх хүсэлтийг хязгаарлаж байна. Түр хүлээгээд дахин оролдоно уу.","error.login_required":"Энэ контент хувийн, эсвэл платформ үзэхийн тулд нэвтрэхийг шаарддаг тул татах боломжгүй.","error.not_found":"Контент олдсонгүй эсвэл устгагдсан байна.","error.geo_blocked":"Энэ контент бүс нутгаар хязгаарлагдсан тул манай сервер хандах боломжгүй.","error.failed":"Энэ холбоосоос медиа авч чадсангүй. Өөр холбоос оролдох эсвэл түр хүлээгээд дахин оролдоно уу.","error.no_media":"Энэ холбоост татаж болох медиа алга.","error.server_config":"Сервер хараахан зөв тохируулагдаагүй байна.","error.server_error":"Серверт алдаа гарлаа. Дахин оролдоно уу."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

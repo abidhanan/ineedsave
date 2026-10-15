@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="tg" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Аз TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ва садҳо сайти дигар видео, акс ва аудио боргирӣ кунед.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Аз TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ва садҳо сайти дигар видео, акс ва аудио боргирӣ кунед.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Гузариш ба мундариҷа</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Навигатсияи асосӣ">
+        <a href="#cara" data-i18n="nav.how">Тарзи истифода</a>
+        <a href="#platform" data-i18n="nav.platforms">Платформаҳо</a>
+        <a href="#faq" data-i18n="nav.faq">Саволҳо</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Иваз кардани забон: Тоҷикӣ">
+        <span class="lang-flag" aria-hidden="true">🇹🇯</span>
+        <span class="lang-code">TG</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Аз ҳар гуна шабакаи иҷтимоӣ видео, акс ва аудио боргирӣ кунед</h1>
+        <p class="lead" data-i18n="hero.lead">Пайвандро аз TikTok, Instagram, Facebook, X, Pinterest ва дигар платформаҳо гузоред. Сифатро интихоб кунед ва онро бевосита дар дастгоҳатон захира кунед.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Пайванди пост ё видео</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Пайвандро ин ҷо гузоред…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Гузоштан</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Тоза кардани пайванд">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Боргирӣ</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Намунаҳои платформаҳои дастгиришаванда">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Чӣ тавр боргирӣ кардан</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Пайвандро нусха бардоред</h3>
+            <p data-i18n-html="how.step1.text">Постро дар барнома кушоед, ба <strong>Мубодила</strong> зер кунед ва баъд <strong>Нусха бардоштани пайванд</strong>-ро интихоб кунед.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Ин ҷо гузоред</h3>
+            <p data-i18n-html="how.step2.text">Пайвандро ба майдони боло гузоред ва баъд <strong>Боргирӣ</strong>-ро пахш кунед.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Интихоб ва захира кунед</h3>
+            <p data-i18n="how.step3.text">Видео, аудиои MP3 ё аксро бо сифати дилхоҳ интихоб кунед.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Платформаҳои дастгиришаванда</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Видео, акс ва аудио аз садҳо сайт. Баъзе аз машҳуртаринҳо:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Саволҳои маъмул</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Оё I Need Save ройгон аст?</summary>
+            <p data-i18n-html="faq.a1">Бале, комилан ройгон. Бақайдгирӣ, воридшавӣ ё барнома лозим нест.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Файлҳоям дар куҷо захира мешаванд?</summary>
+            <p data-i18n-html="faq.a2">Дар Android ва компютерҳо файлҳо ба ҷузвдони <strong>Боргириҳо</strong> мераванд. Дар iPhone ва iPad (Safari) онҳо дар барномаи <strong>Файлҳо</strong> → <strong>Боргириҳо</strong> захира мешаванд. Аз он ҷо метавонед бо тугмаи Мубодила онҳоро ба Аксҳо захира кунед.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Чаро баъзе видеоҳоро боргирӣ кардан намешавад?</summary>
+            <p data-i18n-html="faq.a3">Сервери мо ба мундариҷаи хусусӣ, мундариҷае, ки воридшавиро талаб мекунад, ё мундариҷаи аз рӯи минтақа маҳдудшуда дастрасӣ надорад. Боварӣ ҳосил кунед, ки пост оммавӣ аст ва дубора кӯшиш кунед.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">MP3-ро чӣ тавр боргирӣ кунам?</summary>
+            <p data-i18n-html="faq.a4">Пас аз коркарди пайванд, дар қисми Аудио имкони <strong>MP3</strong>-ро интихоб кунед. Садо аз видео гирифта шуда, ба MP3 бо сифати 192 kbps табдил дода мешавад.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Оё видеоҳои TikTok аломати обӣ доранд?</summary>
+            <p data-i18n-html="faq.a5">Агар дастрас бошад, мо ҳамеша версияи бе аломати обиро афзал медонем. Имконҳое, ки аломати обӣ доранд, бо нишони <strong>Аломати обӣ</strong> ишора шудаанд.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Оё файлҳоям дар сервери шумо нигоҳ дошта мешаванд?</summary>
+            <p data-i18n-html="faq.a6">Не. Файлҳо аз платформаи аслӣ бевосита ба дастгоҳи шумо фиристода мешаванд ва дар сервери мо нигоҳ дошта намешаванд.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Таҳиягар</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Забонро интихоб кунед</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Пӯшидан">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Ҷустуҷӯи забон…" aria-label="Ҷустуҷӯи забон…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Ягон забон ёфт нашуд.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Медиа гирифта мешавад… ин метавонад якчанд сония вақт гирад.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"tg","strings":{"meta.title":"I Need Save — Аз ҳар гуна шабакаи иҷтимоӣ видео, акс ва аудио боргирӣ кунед","meta.description":"Аз TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ва садҳо сайти дигар видео, акс ва аудио боргирӣ кунед.","skip":"Гузариш ба мундариҷа","nav.label":"Навигатсияи асосӣ","nav.how":"Тарзи истифода","nav.platforms":"Платформаҳо","nav.faq":"Саволҳо","lang.button":"Иваз кардани забон","lang.title":"Забонро интихоб кунед","lang.search":"Ҷустуҷӯи забон…","lang.empty":"Ягон забон ёфт нашуд.","lang.close":"Пӯшидан","hero.title":"Аз ҳар гуна шабакаи иҷтимоӣ видео, акс ва аудио боргирӣ кунед","hero.lead":"Пайвандро аз TikTok, Instagram, Facebook, X, Pinterest ва дигар платформаҳо гузоред. Сифатро интихоб кунед ва онро бевосита дар дастгоҳатон захира кунед.","form.label":"Пайванди пост ё видео","form.placeholder":"Пайвандро ин ҷо гузоред…","form.paste":"Гузоштан","form.clear":"Тоза кардани пайванд","form.submit":"Боргирӣ","form.processing":"Коркард шуда истодааст","chips.label":"Намунаҳои платформаҳои дастгиришаванда","how.title":"Чӣ тавр боргирӣ кардан","how.step1.title":"Пайвандро нусха бардоред","how.step1.text":"Постро дар барнома кушоед, ба \u003cstrong>Мубодила\u003c/strong> зер кунед ва баъд \u003cstrong>Нусха бардоштани пайванд\u003c/strong>-ро интихоб кунед.","how.step2.title":"Ин ҷо гузоред","how.step2.text":"Пайвандро ба майдони боло гузоред ва баъд \u003cstrong>Боргирӣ\u003c/strong>-ро пахш кунед.","how.step3.title":"Интихоб ва захира кунед","how.step3.text":"Видео, аудиои MP3 ё аксро бо сифати дилхоҳ интихоб кунед.","platforms.title":"Платформаҳои дастгиришаванда","platforms.lead":"Видео, акс ва аудио аз садҳо сайт. Баъзе аз машҳуртаринҳо:","faq.title":"Саволҳои маъмул","faq.q1":"Оё I Need Save ройгон аст?","faq.a1":"Бале, комилан ройгон. Бақайдгирӣ, воридшавӣ ё барнома лозим нест.","faq.q2":"Файлҳоям дар куҷо захира мешаванд?","faq.a2":"Дар Android ва компютерҳо файлҳо ба ҷузвдони \u003cstrong>Боргириҳо\u003c/strong> мераванд. Дар iPhone ва iPad (Safari) онҳо дар барномаи \u003cstrong>Файлҳо\u003c/strong> → \u003cstrong>Боргириҳо\u003c/strong> захира мешаванд. Аз он ҷо метавонед бо тугмаи Мубодила онҳоро ба Аксҳо захира кунед.","faq.q3":"Чаро баъзе видеоҳоро боргирӣ кардан намешавад?","faq.a3":"Сервери мо ба мундариҷаи хусусӣ, мундариҷае, ки воридшавиро талаб мекунад, ё мундариҷаи аз рӯи минтақа маҳдудшуда дастрасӣ надорад. Боварӣ ҳосил кунед, ки пост оммавӣ аст ва дубора кӯшиш кунед.","faq.q4":"MP3-ро чӣ тавр боргирӣ кунам?","faq.a4":"Пас аз коркарди пайванд, дар қисми Аудио имкони \u003cstrong>MP3\u003c/strong>-ро интихоб кунед. Садо аз видео гирифта шуда, ба MP3 бо сифати 192 kbps табдил дода мешавад.","faq.q5":"Оё видеоҳои TikTok аломати обӣ доранд?","faq.a5":"Агар дастрас бошад, мо ҳамеша версияи бе аломати обиро афзал медонем. Имконҳое, ки аломати обӣ доранд, бо нишони \u003cstrong>Аломати обӣ\u003c/strong> ишора шудаанд.","faq.q6":"Оё файлҳоям дар сервери шумо нигоҳ дошта мешаванд?","faq.a6":"Не. Файлҳо аз платформаи аслӣ бевосита ба дастгоҳи шумо фиристода мешаванд ва дар сервери мо нигоҳ дошта намешаванд.","footer.madeBy":"Таҳиягар","results.loading":"Медиа гирифта мешавад… ин метавонад якчанд сония вақт гирад.","results.found":"{n} медиа ёфт шуд","results.more":"Нишон додани боз {n} имкон","group.video":"Видео","group.audio":"Аудио","group.image":"Аксҳо","label.thumbnail":"Тасвири хурд","label.photo":"Акс","label.photoN":"Акс {n}","label.video":"Видео","label.videoN":"Видео {n}","label.audioN":"Аудио {n}","label.original_audio":"Садои аслӣ","note.original_quality":"Сифати аслӣ","note.no_audio":"Бе садо","note.watermark":"Аломати обӣ","download.button":"Боргирӣ","download.preparing":"Омода шуда истодааст…","toast.preparing":"Файли шумо омода мешавад… боргирӣ худкор оғоз мешавад.","toast.started":"Боргирӣ оғоз шуд.","toast.failed":"Боргирӣ анҷом наёфт. Сифати дигарро интихоб кунед ё пайвандро аз нав коркард кунед.","toast.clipboardEmpty":"Буфер холӣ аст. Аввал пайвандро нусха бардоред.","toast.clipboardDenied":"Дастрасӣ ба буфер рад карда шуд. Пайвандро дастӣ гузоред.","error.empty":"Аввал пайванди пост ё видеоро гузоред.","error.timeout":"Вақт тамом шуд. Манбаъ хеле дер ҷавоб дод, лутфан дубора кӯшиш кунед.","error.offline":"Пайвасти интернет нест. Шабакаро санҷед ва дубора кӯшиш кунед.","error.busy":"Сервер банд аст. Лутфан баъд аз лаҳзае дубора кӯшиш кунед.","error.invalid_url":"Пайванди нодуруст. Пайванди пурраро аз барномаи шабакаи иҷтимоӣ гузоред.","error.unsupported":"Ин пайванд ҳоло дастгирӣ намешавад. Боварӣ ҳосил кунед, ки он бевосита ба пост ё видео ишора мекунад.","error.blocked":"Ин платформа ҳоло сервери моро манъ кардааст, бинобар ин ин пайвандро ҳозир боргирӣ кардан ғайриимкон аст.","error.rate_limited":"Платформа дархостҳои сервери моро маҳдуд мекунад. Лутфан баъд аз лаҳзае дубора кӯшиш кунед.","error.login_required":"Ин мундариҷа хусусӣ аст ё платформа барои дидани он воридшавиро талаб мекунад, бинобар ин онро боргирӣ кардан ғайриимкон аст.","error.not_found":"Мундариҷа ёфт нашуд ё нест карда шудааст.","error.geo_blocked":"Ин мундариҷа аз рӯи минтақа маҳдуд аст ва сервери мо ба он дастрасӣ надорад.","error.failed":"Аз ин пайванд медиа гирифта нашуд. Пайванди дигарро санҷед ё баъд аз лаҳзае дубора кӯшиш кунед.","error.no_media":"Дар ин пайванд медиаи боргиришаванда нест.","error.server_config":"Сервер ҳанӯз дуруст танзим нашудааст.","error.server_error":"Дар сервер хатое рух дод. Лутфан дубора кӯшиш кунед."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

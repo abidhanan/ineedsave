@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="mg" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Alaivo ny horonantsary, sary ary feo avy amin'ny TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ary tranonkala an-jatony hafa.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Alaivo ny horonantsary, sary ary feo avy amin'ny TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ary tranonkala an-jatony hafa.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Mankany amin'ny votoaty</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Fitetezana lehibe">
+        <a href="#cara" data-i18n="nav.how">Fomba fampiasana</a>
+        <a href="#platform" data-i18n="nav.platforms">Sehatra</a>
+        <a href="#faq" data-i18n="nav.faq">Fanontaniana</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Hanova fiteny: Malagasy">
+        <span class="lang-flag" aria-hidden="true">🇲🇬</span>
+        <span class="lang-code">MG</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Alaivo ny horonantsary, sary ary feo avy amin'ny tambajotra sosialy rehetra</h1>
+        <p class="lead" data-i18n="hero.lead">Apetaho ny rohy avy amin'ny TikTok, Instagram, Facebook, X, Pinterest sy ny maro hafa. Fidio ny kalitao, dia tehirizo mivantana ao amin'ny fitaovanao.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Rohin'ny lahatsoratra na horonantsary</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Apetaho eto ny rohy…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Apetaho</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Fafao ny rohy">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Alaivo</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Ohatra amin'ireo sehatra tohanana">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Ahoana no fomba maka azy</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Adikao ny rohy</h3>
+            <p data-i18n-html="how.step1.text">Sokafy ao amin'ny app ilay lahatsoratra, tsindrio ny <strong>Zarao</strong>, dia safidio ny <strong>Adikao ny rohy</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Apetaho eto</h3>
+            <p data-i18n-html="how.step2.text">Apetaho ao anaty boaty etsy ambony ny rohy, dia tsindrio ny <strong>Alaivo</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Misafidiana ary tehirizo</h3>
+            <p data-i18n="how.step3.text">Fidio ny horonantsary, ny feo MP3, na ny sary amin'ny kalitao tianao.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Sehatra tohanana</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Horonantsary, sary ary feo avy amin'ny tranonkala an-jatony. Ireto misy amin'ireo malaza indrindra:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Fanontaniana matetika apetraka</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Maimaim-poana ve I Need Save?</summary>
+            <p data-i18n-html="faq.a1">Eny, maimaim-poana tanteraka. Tsy mila misoratra anarana, miditra, na app.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Aiza no itehirizana ny rakitro?</summary>
+            <p data-i18n-html="faq.a2">Amin'ny Android sy ny solosaina, mankany amin'ny lahatahiry <strong>Fampidinana</strong> ny rakitra. Amin'ny iPhone sy iPad (Safari), voatahiry ao amin'ny app <strong>Rakitra</strong> → <strong>Fampidinana</strong> izy ireo. Avy eo dia azonao tehirizina ao amin'ny Sary amin'ny alalan'ny bokotra Zarao.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Nahoana no tsy azo alaina ny horonantsary sasany?</summary>
+            <p data-i18n-html="faq.a3">Tsy tratran'ny mpizara anay ny votoaty manokana, ny votoaty mila fidirana, na ny votoaty voafetra araka ny faritra. Ataovy azo antoka fa ampahibemaso ilay lahatsoratra, dia andramo indray.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Ahoana no fomba maka MP3?</summary>
+            <p data-i18n-html="faq.a4">Rehefa voakarakara ny rohy, safidio ny <strong>MP3</strong> eo ambanin'ny Feo. Alaina avy amin'ny horonantsary ny feo ary avadika ho MP3 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Misy marika rano ve ny horonantsary TikTok?</summary>
+            <p data-i18n-html="faq.a5">Ny kinova tsy misy marika rano foana no ankafizinay raha misy izany. Ireo safidy misy marika rano dia voamarika hoe <strong>Marika rano</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Voatahiry ao amin'ny mpizara anareo ve ny rakitro?</summary>
+            <p data-i18n-html="faq.a6">Tsia. Alefa mivantana avy amin'ny sehatra niaviany mankany amin'ny fitaovanao ny rakitra, ary tsy tehirizina ao amin'ny mpizara anay.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Nataon'i</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Misafidiana fiteny</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Hidio">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Hitady fiteny…" aria-label="Hitady fiteny…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Tsy nisy fiteny hita.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Maka ny media… mety haharitra segondra vitsivitsy izany.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"mg","strings":{"meta.title":"I Need Save — Alaivo ny horonantsary, sary ary feo avy amin'ny tambajotra sosialy rehetra","meta.description":"Alaivo ny horonantsary, sary ary feo avy amin'ny TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ary tranonkala an-jatony hafa.","skip":"Mankany amin'ny votoaty","nav.label":"Fitetezana lehibe","nav.how":"Fomba fampiasana","nav.platforms":"Sehatra","nav.faq":"Fanontaniana","lang.button":"Hanova fiteny","lang.title":"Misafidiana fiteny","lang.search":"Hitady fiteny…","lang.empty":"Tsy nisy fiteny hita.","lang.close":"Hidio","hero.title":"Alaivo ny horonantsary, sary ary feo avy amin'ny tambajotra sosialy rehetra","hero.lead":"Apetaho ny rohy avy amin'ny TikTok, Instagram, Facebook, X, Pinterest sy ny maro hafa. Fidio ny kalitao, dia tehirizo mivantana ao amin'ny fitaovanao.","form.label":"Rohin'ny lahatsoratra na horonantsary","form.placeholder":"Apetaho eto ny rohy…","form.paste":"Apetaho","form.clear":"Fafao ny rohy","form.submit":"Alaivo","form.processing":"Eo am-pikarakarana","chips.label":"Ohatra amin'ireo sehatra tohanana","how.title":"Ahoana no fomba maka azy","how.step1.title":"Adikao ny rohy","how.step1.text":"Sokafy ao amin'ny app ilay lahatsoratra, tsindrio ny \u003cstrong>Zarao\u003c/strong>, dia safidio ny \u003cstrong>Adikao ny rohy\u003c/strong>.","how.step2.title":"Apetaho eto","how.step2.text":"Apetaho ao anaty boaty etsy ambony ny rohy, dia tsindrio ny \u003cstrong>Alaivo\u003c/strong>.","how.step3.title":"Misafidiana ary tehirizo","how.step3.text":"Fidio ny horonantsary, ny feo MP3, na ny sary amin'ny kalitao tianao.","platforms.title":"Sehatra tohanana","platforms.lead":"Horonantsary, sary ary feo avy amin'ny tranonkala an-jatony. Ireto misy amin'ireo malaza indrindra:","faq.title":"Fanontaniana matetika apetraka","faq.q1":"Maimaim-poana ve I Need Save?","faq.a1":"Eny, maimaim-poana tanteraka. Tsy mila misoratra anarana, miditra, na app.","faq.q2":"Aiza no itehirizana ny rakitro?","faq.a2":"Amin'ny Android sy ny solosaina, mankany amin'ny lahatahiry \u003cstrong>Fampidinana\u003c/strong> ny rakitra. Amin'ny iPhone sy iPad (Safari), voatahiry ao amin'ny app \u003cstrong>Rakitra\u003c/strong> → \u003cstrong>Fampidinana\u003c/strong> izy ireo. Avy eo dia azonao tehirizina ao amin'ny Sary amin'ny alalan'ny bokotra Zarao.","faq.q3":"Nahoana no tsy azo alaina ny horonantsary sasany?","faq.a3":"Tsy tratran'ny mpizara anay ny votoaty manokana, ny votoaty mila fidirana, na ny votoaty voafetra araka ny faritra. Ataovy azo antoka fa ampahibemaso ilay lahatsoratra, dia andramo indray.","faq.q4":"Ahoana no fomba maka MP3?","faq.a4":"Rehefa voakarakara ny rohy, safidio ny \u003cstrong>MP3\u003c/strong> eo ambanin'ny Feo. Alaina avy amin'ny horonantsary ny feo ary avadika ho MP3 192 kbps.","faq.q5":"Misy marika rano ve ny horonantsary TikTok?","faq.a5":"Ny kinova tsy misy marika rano foana no ankafizinay raha misy izany. Ireo safidy misy marika rano dia voamarika hoe \u003cstrong>Marika rano\u003c/strong>.","faq.q6":"Voatahiry ao amin'ny mpizara anareo ve ny rakitro?","faq.a6":"Tsia. Alefa mivantana avy amin'ny sehatra niaviany mankany amin'ny fitaovanao ny rakitra, ary tsy tehirizina ao amin'ny mpizara anay.","footer.madeBy":"Nataon'i","results.loading":"Maka ny media… mety haharitra segondra vitsivitsy izany.","results.found":"Media {n} no hita","results.more":"Asehoy ny safidy {n} hafa","group.video":"Horonantsary","group.audio":"Feo","group.image":"Sary","label.thumbnail":"Sary kely","label.photo":"Sary","label.photoN":"Sary {n}","label.video":"Horonantsary","label.videoN":"Horonantsary {n}","label.audioN":"Feo {n}","label.original_audio":"Feo tany am-boalohany","note.original_quality":"Kalitao tany am-boalohany","note.no_audio":"Tsy misy feo","note.watermark":"Marika rano","download.button":"Alaivo","download.preparing":"Manomana…","toast.preparing":"Manomana ny rakitrao… hanomboka ho azy ny fakana.","toast.started":"Nanomboka ny fakana.","toast.failed":"Tsy nahomby ny fakana. Andramo kalitao hafa na karakarao indray ny rohy.","toast.clipboardEmpty":"Foana ny takelaka fandikanao. Adikao aloha ny rohy.","toast.clipboardDenied":"Nolavina ny fidirana amin'ny takelaka fandikana. Apetaho amin'ny tanana ny rohy.","error.empty":"Apetaho aloha ny rohin'ny lahatsoratra na horonantsary.","error.timeout":"Lany ny fotoana. Naharitra loatra vao namaly ny loharano, andramo indray azafady.","error.offline":"Tsy misy fifandraisana Internet. Jereo ny tambajotranao ary andramo indray.","error.busy":"Be asa ny mpizara. Andramo indray afaka kelikely azafady.","error.invalid_url":"Rohy tsy mety. Apetaho ny rohy feno avy amin'ny app tambajotra sosialy.","error.unsupported":"Mbola tsy tohanana ity rohy ity. Ataovy azo antoka fa mitondra mivantana any amin'ny lahatsoratra na horonantsary izy.","error.blocked":"Manakana ny mpizara anay amin'izao fotoana izao ity sehatra ity, ka tsy azo alaina izao ity rohy ity.","error.rate_limited":"Mametra ny fangatahana avy amin'ny mpizara anay ilay sehatra. Andramo indray afaka kelikely azafady.","error.login_required":"Manokana ity votoaty ity, na mila miditra ianao vao afaka mijery azy ao amin'ilay sehatra, ka tsy azo alaina izy.","error.not_found":"Tsy hita ny votoaty na efa nesorina.","error.geo_blocked":"Voafetra araka ny faritra ity votoaty ity ary tsy tratran'ny mpizara anay.","error.failed":"Tsy afaka naka media tamin'ity rohy ity. Andramo rohy hafa na andramo indray afaka kelikely.","error.no_media":"Tsy misy media azo alaina amin'ity rohy ity.","error.server_config":"Mbola tsy voaomana tsara ny mpizara.","error.server_error":"Nisy olana teo amin'ny mpizara. Andramo indray azafady."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

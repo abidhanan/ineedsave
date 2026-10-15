@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ve yüzlerce başka siteden video, fotoğraf ve ses indirin.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ve yüzlerce başka siteden video, fotoğraf ve ses indirin.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">İçeriğe geç</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Ana gezinme">
+        <a href="#cara" data-i18n="nav.how">Nasıl kullanılır</a>
+        <a href="#platform" data-i18n="nav.platforms">Platformlar</a>
+        <a href="#faq" data-i18n="nav.faq">SSS</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Dili değiştir: Türkçe">
+        <span class="lang-flag" aria-hidden="true">🇹🇷</span>
+        <span class="lang-code">TR</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Tüm sosyal medyadan video, fotoğraf ve ses indirin</h1>
+        <p class="lead" data-i18n="hero.lead">TikTok, Instagram, Facebook, X, Pinterest ve diğerlerinden bir bağlantı yapıştırın. Kaliteyi seçin, ardından doğrudan cihazınıza kaydedin.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Gönderi veya video bağlantısı</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Bağlantıyı buraya yapıştırın…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Yapıştır</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Bağlantıyı temizle">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">İndir</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Desteklenen platform örnekleri">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Nasıl indirilir</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Bağlantıyı kopyalayın</h3>
+            <p data-i18n-html="how.step1.text">Gönderiyi uygulamada açın, <strong>Paylaş</strong>'a dokunun ve ardından <strong>Bağlantıyı Kopyala</strong>'yı seçin.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Buraya yapıştırın</h3>
+            <p data-i18n-html="how.step2.text">Bağlantıyı yukarıdaki kutuya yapıştırın, ardından <strong>İndir</strong>'e basın.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Seçin ve kaydedin</h3>
+            <p data-i18n="how.step3.text">İstediğiniz kalitede video, MP3 ses veya fotoğraf seçin.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Desteklenen platformlar</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Yüzlerce siteden video, fotoğraf ve ses. En popülerlerinden bazıları:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Sıkça sorulan sorular</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save ücretsiz mi?</summary>
+            <p data-i18n-html="faq.a1">Evet, tamamen ücretsiz. Kayıt, giriş veya uygulama gerekmez.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Dosyalarım nereye kaydediliyor?</summary>
+            <p data-i18n-html="faq.a2">Android'de ve bilgisayarlarda dosyalar <strong>İndirilenler</strong> klasörüne gider. iPhone ve iPad'de (Safari) <strong>Dosyalar</strong> uygulaması → <strong>İndirilenler</strong> konumuna kaydedilir. Oradan Paylaş düğmesiyle Fotoğraflar'a kaydedebilirsiniz.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Neden bazı videolar indirilemiyor?</summary>
+            <p data-i18n-html="faq.a3">Gizli içeriklere, giriş gerektiren içeriklere veya bölge kısıtlamalı içeriklere sunucumuz erişemez. Gönderinin herkese açık olduğundan emin olun ve tekrar deneyin.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">MP3 nasıl indirilir?</summary>
+            <p data-i18n-html="faq.a4">Bağlantı işlendikten sonra Ses bölümündeki <strong>MP3</strong> seçeneğini seçin. Ses videodan alınır ve 192 kbps MP3'e dönüştürülür.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">TikTok videolarında filigran var mı?</summary>
+            <p data-i18n-html="faq.a5">Mevcut olduğunda her zaman filigransız sürümü tercih ederiz. Filigran içeren seçenekler <strong>Filigran</strong> olarak etiketlenir.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Dosyalarım sunucunuzda saklanıyor mu?</summary>
+            <p data-i18n-html="faq.a6">Hayır. Dosyalar orijinal platformdan doğrudan cihazınıza gönderilir ve sunucumuzda saklanmaz.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Geliştiren</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Dil seçin</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Kapat">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Dil ara…" aria-label="Dil ara…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Dil bulunamadı.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Medya alınıyor… bu birkaç saniye sürebilir.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"tr","strings":{"meta.title":"I Need Save — Tüm sosyal medyadan video, fotoğraf ve ses indirin","meta.description":"TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ve yüzlerce başka siteden video, fotoğraf ve ses indirin.","skip":"İçeriğe geç","nav.label":"Ana gezinme","nav.how":"Nasıl kullanılır","nav.platforms":"Platformlar","nav.faq":"SSS","lang.button":"Dili değiştir","lang.title":"Dil seçin","lang.search":"Dil ara…","lang.empty":"Dil bulunamadı.","lang.close":"Kapat","hero.title":"Tüm sosyal medyadan video, fotoğraf ve ses indirin","hero.lead":"TikTok, Instagram, Facebook, X, Pinterest ve diğerlerinden bir bağlantı yapıştırın. Kaliteyi seçin, ardından doğrudan cihazınıza kaydedin.","form.label":"Gönderi veya video bağlantısı","form.placeholder":"Bağlantıyı buraya yapıştırın…","form.paste":"Yapıştır","form.clear":"Bağlantıyı temizle","form.submit":"İndir","form.processing":"İşleniyor","chips.label":"Desteklenen platform örnekleri","how.title":"Nasıl indirilir","how.step1.title":"Bağlantıyı kopyalayın","how.step1.text":"Gönderiyi uygulamada açın, \u003cstrong>Paylaş\u003c/strong>'a dokunun ve ardından \u003cstrong>Bağlantıyı Kopyala\u003c/strong>'yı seçin.","how.step2.title":"Buraya yapıştırın","how.step2.text":"Bağlantıyı yukarıdaki kutuya yapıştırın, ardından \u003cstrong>İndir\u003c/strong>'e basın.","how.step3.title":"Seçin ve kaydedin","how.step3.text":"İstediğiniz kalitede video, MP3 ses veya fotoğraf seçin.","platforms.title":"Desteklenen platformlar","platforms.lead":"Yüzlerce siteden video, fotoğraf ve ses. En popülerlerinden bazıları:","faq.title":"Sıkça sorulan sorular","faq.q1":"I Need Save ücretsiz mi?","faq.a1":"Evet, tamamen ücretsiz. Kayıt, giriş veya uygulama gerekmez.","faq.q2":"Dosyalarım nereye kaydediliyor?","faq.a2":"Android'de ve bilgisayarlarda dosyalar \u003cstrong>İndirilenler\u003c/strong> klasörüne gider. iPhone ve iPad'de (Safari) \u003cstrong>Dosyalar\u003c/strong> uygulaması → \u003cstrong>İndirilenler\u003c/strong> konumuna kaydedilir. Oradan Paylaş düğmesiyle Fotoğraflar'a kaydedebilirsiniz.","faq.q3":"Neden bazı videolar indirilemiyor?","faq.a3":"Gizli içeriklere, giriş gerektiren içeriklere veya bölge kısıtlamalı içeriklere sunucumuz erişemez. Gönderinin herkese açık olduğundan emin olun ve tekrar deneyin.","faq.q4":"MP3 nasıl indirilir?","faq.a4":"Bağlantı işlendikten sonra Ses bölümündeki \u003cstrong>MP3\u003c/strong> seçeneğini seçin. Ses videodan alınır ve 192 kbps MP3'e dönüştürülür.","faq.q5":"TikTok videolarında filigran var mı?","faq.a5":"Mevcut olduğunda her zaman filigransız sürümü tercih ederiz. Filigran içeren seçenekler \u003cstrong>Filigran\u003c/strong> olarak etiketlenir.","faq.q6":"Dosyalarım sunucunuzda saklanıyor mu?","faq.a6":"Hayır. Dosyalar orijinal platformdan doğrudan cihazınıza gönderilir ve sunucumuzda saklanmaz.","footer.madeBy":"Geliştiren","results.loading":"Medya alınıyor… bu birkaç saniye sürebilir.","results.found":"{n} medya bulundu","results.more":"{n} seçenek daha göster","group.video":"Video","group.audio":"Ses","group.image":"Fotoğraflar","label.thumbnail":"Küçük resim","label.photo":"Fotoğraf","label.photoN":"Fotoğraf {n}","label.video":"Video","label.videoN":"Video {n}","label.audioN":"Ses {n}","label.original_audio":"Orijinal ses","note.original_quality":"Orijinal kalite","note.no_audio":"Ses yok","note.watermark":"Filigran","download.button":"İndir","download.preparing":"Hazırlanıyor…","toast.preparing":"Dosyanız hazırlanıyor… indirme otomatik olarak başlayacak.","toast.started":"İndirme başladı.","toast.failed":"İndirme başarısız oldu. Başka bir kalite deneyin veya bağlantıyı yeniden işleyin.","toast.clipboardEmpty":"Panonuz boş. Önce bir bağlantı kopyalayın.","toast.clipboardDenied":"Panoya erişim reddedildi. Bağlantıyı elle yapıştırın.","error.empty":"Önce bir gönderi veya video bağlantısı yapıştırın.","error.timeout":"Zaman aşımı. Kaynağın yanıt vermesi çok uzun sürdü, lütfen tekrar deneyin.","error.offline":"İnternet bağlantısı yok. Ağınızı kontrol edip tekrar deneyin.","error.busy":"Sunucu meşgul. Lütfen biraz sonra tekrar deneyin.","error.invalid_url":"Geçersiz bağlantı. Sosyal medya uygulamasındaki bağlantının tamamını yapıştırın.","error.unsupported":"Bu bağlantı henüz desteklenmiyor. Doğrudan bir gönderiye veya videoya yönlendirdiğinden emin olun.","error.blocked":"Bu platform şu anda sunucumuzu engelliyor, bu yüzden bu bağlantı şu an indirilemiyor.","error.rate_limited":"Platform, sunucumuzdan gelen istekleri sınırlıyor. Lütfen biraz sonra tekrar deneyin.","error.login_required":"Bu içerik gizli veya platform görüntülemek için giriş yapılmasını gerektiriyor, bu yüzden indirilemiyor.","error.not_found":"İçerik bulunamadı veya kaldırılmış.","error.geo_blocked":"Bu içerik bölge kısıtlamalı ve sunucumuz bu içeriğe erişemiyor.","error.failed":"Bu bağlantıdan medya alınamadı. Başka bir bağlantı deneyin veya biraz sonra tekrar deneyin.","error.no_media":"Bu bağlantıda indirilebilir medya yok.","error.server_config":"Sunucu henüz doğru yapılandırılmamış.","error.server_error":"Sunucuda bir sorun oluştu. Lütfen tekrar deneyin."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

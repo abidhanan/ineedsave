@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-TW" dir="ltr" style="--font-script: &quot;Noto Sans TC&quot;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="從 TikTok、Instagram、Facebook、X (Twitter)、Pinterest、LinkedIn 及數百個其他網站下載影片、相片和音訊。">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="從 TikTok、Instagram、Facebook、X (Twitter)、Pinterest、LinkedIn 及數百個其他網站下載影片、相片和音訊。">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap"></noscript>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">跳至主要內容</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="主要導覽">
+        <a href="#cara" data-i18n="nav.how">使用方式</a>
+        <a href="#platform" data-i18n="nav.platforms">支援平台</a>
+        <a href="#faq" data-i18n="nav.faq">常見問題</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="變更語言: 繁體中文">
+        <span class="lang-flag" aria-hidden="true">🇹🇼</span>
+        <span class="lang-code">ZH</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">從任何社群媒體下載影片、相片和音訊</h1>
+        <p class="lead" data-i18n="hero.lead">貼上 TikTok、Instagram、Facebook、X、Pinterest 等平台的連結。選擇畫質後，即可直接儲存到你的裝置。</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">貼文或影片連結</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="在這裡貼上連結…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">貼上</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="清除連結">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">下載</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="支援平台範例">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">如何下載</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">複製連結</h3>
+            <p data-i18n-html="how.step1.text">在 App 中開啟貼文，點一下<strong>分享</strong>，然後選擇<strong>複製連結</strong>。</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">貼到這裡</h3>
+            <p data-i18n-html="how.step2.text">將連結貼到上方的欄位，然後按<strong>下載</strong>。</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">選擇並儲存</h3>
+            <p data-i18n="how.step3.text">依你想要的畫質，選擇影片、MP3 音訊或相片。</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">支援的平台</h2>
+        <p class="section-lead" data-i18n="platforms.lead">支援數百個網站的影片、相片和音訊。以下是部分熱門平台：</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">常見問題</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save 是免費的嗎？</summary>
+            <p data-i18n-html="faq.a1">是的，完全免費。不需註冊、登入或安裝 App。</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">下載的檔案會存在哪裡？</summary>
+            <p data-i18n-html="faq.a2">在 Android 和電腦上，檔案會存到<strong>下載</strong>資料夾。在 iPhone 和 iPad（Safari）上，檔案會儲存在<strong>檔案</strong> App →<strong>下載項目</strong>中。你可以在那裡透過「分享」按鈕將檔案儲存到「照片」。</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">為什麼有些影片無法下載？</summary>
+            <p data-i18n-html="faq.a3">私人內容、需要登入才能查看的內容，或有地區限制的內容，我們的伺服器都無法存取。請確認貼文已公開，然後再試一次。</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">如何下載 MP3？</summary>
+            <p data-i18n-html="faq.a4">連結處理完成後，在「音訊」下選擇 <strong>MP3</strong> 選項。系統會從影片中擷取聲音，並轉換成 192 kbps 的 MP3。</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">TikTok 影片會有浮水印嗎？</summary>
+            <p data-i18n-html="faq.a5">如有無浮水印的版本，我們一律優先提供。含浮水印的選項會標示<strong>浮水印</strong>。</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">我的檔案會儲存在你們的伺服器上嗎？</summary>
+            <p data-i18n-html="faq.a6">不會。檔案會直接從原始平台傳送到你的裝置，不會保留在我們的伺服器上。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">製作者</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">選擇語言</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="關閉">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="搜尋語言…" aria-label="搜尋語言…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>找不到語言。</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">正在擷取媒體…可能需要幾秒鐘。</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"zh-TW","strings":{"meta.title":"I Need Save — 從任何社群媒體下載影片、相片和音訊","meta.description":"從 TikTok、Instagram、Facebook、X (Twitter)、Pinterest、LinkedIn 及數百個其他網站下載影片、相片和音訊。","skip":"跳至主要內容","nav.label":"主要導覽","nav.how":"使用方式","nav.platforms":"支援平台","nav.faq":"常見問題","lang.button":"變更語言","lang.title":"選擇語言","lang.search":"搜尋語言…","lang.empty":"找不到語言。","lang.close":"關閉","hero.title":"從任何社群媒體下載影片、相片和音訊","hero.lead":"貼上 TikTok、Instagram、Facebook、X、Pinterest 等平台的連結。選擇畫質後，即可直接儲存到你的裝置。","form.label":"貼文或影片連結","form.placeholder":"在這裡貼上連結…","form.paste":"貼上","form.clear":"清除連結","form.submit":"下載","form.processing":"處理中","chips.label":"支援平台範例","how.title":"如何下載","how.step1.title":"複製連結","how.step1.text":"在 App 中開啟貼文，點一下\u003cstrong>分享\u003c/strong>，然後選擇\u003cstrong>複製連結\u003c/strong>。","how.step2.title":"貼到這裡","how.step2.text":"將連結貼到上方的欄位，然後按\u003cstrong>下載\u003c/strong>。","how.step3.title":"選擇並儲存","how.step3.text":"依你想要的畫質，選擇影片、MP3 音訊或相片。","platforms.title":"支援的平台","platforms.lead":"支援數百個網站的影片、相片和音訊。以下是部分熱門平台：","faq.title":"常見問題","faq.q1":"I Need Save 是免費的嗎？","faq.a1":"是的，完全免費。不需註冊、登入或安裝 App。","faq.q2":"下載的檔案會存在哪裡？","faq.a2":"在 Android 和電腦上，檔案會存到\u003cstrong>下載\u003c/strong>資料夾。在 iPhone 和 iPad（Safari）上，檔案會儲存在\u003cstrong>檔案\u003c/strong> App →\u003cstrong>下載項目\u003c/strong>中。你可以在那裡透過「分享」按鈕將檔案儲存到「照片」。","faq.q3":"為什麼有些影片無法下載？","faq.a3":"私人內容、需要登入才能查看的內容，或有地區限制的內容，我們的伺服器都無法存取。請確認貼文已公開，然後再試一次。","faq.q4":"如何下載 MP3？","faq.a4":"連結處理完成後，在「音訊」下選擇 \u003cstrong>MP3\u003c/strong> 選項。系統會從影片中擷取聲音，並轉換成 192 kbps 的 MP3。","faq.q5":"TikTok 影片會有浮水印嗎？","faq.a5":"如有無浮水印的版本，我們一律優先提供。含浮水印的選項會標示\u003cstrong>浮水印\u003c/strong>。","faq.q6":"我的檔案會儲存在你們的伺服器上嗎？","faq.a6":"不會。檔案會直接從原始平台傳送到你的裝置，不會保留在我們的伺服器上。","footer.madeBy":"製作者","results.loading":"正在擷取媒體…可能需要幾秒鐘。","results.found":"找到 {n} 個媒體","results.more":"顯示其他 {n} 個選項","group.video":"影片","group.audio":"音訊","group.image":"相片","label.thumbnail":"縮圖","label.photo":"相片","label.photoN":"相片 {n}","label.video":"影片","label.videoN":"影片 {n}","label.audioN":"音訊 {n}","label.original_audio":"原聲","note.original_quality":"原始畫質","note.no_audio":"無聲音","note.watermark":"浮水印","download.button":"下載","download.preparing":"準備中…","toast.preparing":"正在準備檔案…下載將自動開始。","toast.started":"已開始下載。","toast.failed":"下載失敗。請試試其他畫質，或重新處理連結。","toast.clipboardEmpty":"剪貼簿是空的。請先複製連結。","toast.clipboardDenied":"剪貼簿存取遭拒。請手動貼上連結。","error.empty":"請先貼上貼文或影片連結。","error.timeout":"要求逾時。來源回應時間過長，請再試一次。","error.offline":"沒有網際網路連線。請檢查網路後再試一次。","error.busy":"伺服器忙碌中，請稍後再試。","error.invalid_url":"連結無效。請貼上社群媒體 App 中的完整連結。","error.unsupported":"目前尚不支援此連結。請確認連結直接指向貼文或影片。","error.blocked":"此平台目前封鎖了我們的伺服器，因此暫時無法下載此連結。","error.rate_limited":"此平台正在限制來自我們伺服器的要求。請稍後再試。","error.login_required":"此內容為私人內容，或平台要求登入才能查看，因此無法下載。","error.not_found":"找不到內容，或內容已被移除。","error.geo_blocked":"此內容有地區限制，我們的伺服器無法存取。","error.failed":"無法從此連結取得媒體。請試試其他連結，或稍後再試。","error.no_media":"此連結中沒有可下載的媒體。","error.server_config":"伺服器尚未正確設定。","error.server_error":"伺服器發生錯誤，請再試一次。"}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

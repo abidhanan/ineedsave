@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ineedsave-dev",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["C:/Users/ASUS/AppData/Local/Temp/ineedsave-dev/server.mjs"],
+      "port": 3210
+    }
+  ]
+}

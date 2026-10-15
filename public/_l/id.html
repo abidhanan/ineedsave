@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="id" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Unduh video, foto dan audio dari TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn, dan ratusan situs lainnya.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Unduh video, foto dan audio dari TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn, dan ratusan situs lainnya.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Langsung ke konten</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Navigasi utama">
+        <a href="#cara" data-i18n="nav.how">Cara pakai</a>
+        <a href="#platform" data-i18n="nav.platforms">Platform</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Ganti bahasa: Bahasa Indonesia">
+        <span class="lang-flag" aria-hidden="true">🇮🇩</span>
+        <span class="lang-code">ID</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Unduh video, foto, dan audio dari media sosial apa pun</h1>
+        <p class="lead" data-i18n="hero.lead">Tempel link dari TikTok, Instagram, Facebook, X, Pinterest, dan lainnya. Pilih kualitasnya, lalu simpan langsung ke perangkatmu.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Link postingan atau video</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Tempel link di sini…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Tempel</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Hapus link">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Unduh</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Contoh platform yang didukung">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Cara mengunduh</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Salin link-nya</h3>
+            <p data-i18n-html="how.step1.text">Buka postingan di aplikasinya, ketuk <strong>Bagikan</strong>, lalu pilih <strong>Salin tautan</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Tempel di sini</h3>
+            <p data-i18n-html="how.step2.text">Tempel link ke kotak di atas, lalu tekan <strong>Unduh</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Pilih &amp; simpan</h3>
+            <p data-i18n="how.step3.text">Pilih video, audio MP3, atau foto dengan kualitas yang kamu mau.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Platform yang didukung</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Video, foto, dan audio dari ratusan situs. Beberapa yang paling populer:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Pertanyaan yang sering diajukan</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Apakah I Need Save gratis?</summary>
+            <p data-i18n-html="faq.a1">Ya, sepenuhnya gratis. Tanpa daftar, login, atau aplikasi.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">File yang diunduh disimpan di mana?</summary>
+            <p data-i18n-html="faq.a2">Di Android dan komputer, file masuk ke folder <strong>Unduhan</strong>. Di iPhone dan iPad (Safari), file disimpan di app <strong>File</strong> → <strong>Unduhan</strong>. Dari situ, kamu bisa menyimpannya ke Foto lewat tombol Bagikan.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Kenapa beberapa video tidak bisa diunduh?</summary>
+            <p data-i18n-html="faq.a3">Konten privat, konten yang butuh login, atau konten yang dibatasi wilayah tidak bisa dijangkau server kami. Pastikan postingannya publik, lalu coba lagi.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Bagaimana cara mengunduh MP3?</summary>
+            <p data-i18n-html="faq.a4">Setelah link diproses, pilih opsi <strong>MP3</strong> di bagian Audio. Suaranya diambil dari video dan dikonversi ke MP3 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Apakah video TikTok ada watermark-nya?</summary>
+            <p data-i18n-html="faq.a5">Kami selalu mengutamakan versi tanpa watermark jika tersedia. Opsi yang ada watermark-nya diberi label <strong>Watermark</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Apakah file-nya disimpan di server kalian?</summary>
+            <p data-i18n-html="faq.a6">Tidak. File dikirim dari platform aslinya langsung ke perangkatmu dan tidak disimpan di server kami.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Dibuat oleh</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Pilih bahasa</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Tutup">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Cari bahasa…" aria-label="Cari bahasa…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Bahasa tidak ditemukan.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Mengambil media… ini bisa memakan waktu beberapa detik.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"id","strings":{"meta.title":"I Need Save — Unduh video, foto & audio dari media sosial apa pun","meta.description":"Unduh video, foto dan audio dari TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn, dan ratusan situs lainnya.","skip":"Langsung ke konten","nav.label":"Navigasi utama","nav.how":"Cara pakai","nav.platforms":"Platform","nav.faq":"FAQ","lang.button":"Ganti bahasa","lang.title":"Pilih bahasa","lang.search":"Cari bahasa…","lang.empty":"Bahasa tidak ditemukan.","lang.close":"Tutup","hero.title":"Unduh video, foto, dan audio dari media sosial apa pun","hero.lead":"Tempel link dari TikTok, Instagram, Facebook, X, Pinterest, dan lainnya. Pilih kualitasnya, lalu simpan langsung ke perangkatmu.","form.label":"Link postingan atau video","form.placeholder":"Tempel link di sini…","form.paste":"Tempel","form.clear":"Hapus link","form.submit":"Unduh","form.processing":"Memproses","chips.label":"Contoh platform yang didukung","how.title":"Cara mengunduh","how.step1.title":"Salin link-nya","how.step1.text":"Buka postingan di aplikasinya, ketuk \u003cstrong>Bagikan\u003c/strong>, lalu pilih \u003cstrong>Salin tautan\u003c/strong>.","how.step2.title":"Tempel di sini","how.step2.text":"Tempel link ke kotak di atas, lalu tekan \u003cstrong>Unduh\u003c/strong>.","how.step3.title":"Pilih & simpan","how.step3.text":"Pilih video, audio MP3, atau foto dengan kualitas yang kamu mau.","platforms.title":"Platform yang didukung","platforms.lead":"Video, foto, dan audio dari ratusan situs. Beberapa yang paling populer:","faq.title":"Pertanyaan yang sering diajukan","faq.q1":"Apakah I Need Save gratis?","faq.a1":"Ya, sepenuhnya gratis. Tanpa daftar, login, atau aplikasi.","faq.q2":"File yang diunduh disimpan di mana?","faq.a2":"Di Android dan komputer, file masuk ke folder \u003cstrong>Unduhan\u003c/strong>. Di iPhone dan iPad (Safari), file disimpan di app \u003cstrong>File\u003c/strong> → \u003cstrong>Unduhan\u003c/strong>. Dari situ, kamu bisa menyimpannya ke Foto lewat tombol Bagikan.","faq.q3":"Kenapa beberapa video tidak bisa diunduh?","faq.a3":"Konten privat, konten yang butuh login, atau konten yang dibatasi wilayah tidak bisa dijangkau server kami. Pastikan postingannya publik, lalu coba lagi.","faq.q4":"Bagaimana cara mengunduh MP3?","faq.a4":"Setelah link diproses, pilih opsi \u003cstrong>MP3\u003c/strong> di bagian Audio. Suaranya diambil dari video dan dikonversi ke MP3 192 kbps.","faq.q5":"Apakah video TikTok ada watermark-nya?","faq.a5":"Kami selalu mengutamakan versi tanpa watermark jika tersedia. Opsi yang ada watermark-nya diberi label \u003cstrong>Watermark\u003c/strong>.","faq.q6":"Apakah file-nya disimpan di server kalian?","faq.a6":"Tidak. File dikirim dari platform aslinya langsung ke perangkatmu dan tidak disimpan di server kami.","footer.madeBy":"Dibuat oleh","results.loading":"Mengambil media… ini bisa memakan waktu beberapa detik.","results.found":"{n} media ditemukan","results.more":"Tampilkan {n} opsi lainnya","group.video":"Video","group.audio":"Audio","group.image":"Foto","label.thumbnail":"Thumbnail","label.photo":"Foto","label.photoN":"Foto {n}","label.video":"Video","label.videoN":"Video {n}","label.audioN":"Audio {n}","label.original_audio":"Suara asli","note.original_quality":"Kualitas asli","note.no_audio":"Tanpa suara","note.watermark":"Watermark","download.button":"Unduh","download.preparing":"Menyiapkan…","toast.preparing":"Menyiapkan file kamu… unduhan akan dimulai otomatis.","toast.started":"Unduhan dimulai.","toast.failed":"Unduhan gagal. Coba kualitas lain atau proses ulang link-nya.","toast.clipboardEmpty":"Clipboard kamu kosong. Salin link dulu, ya.","toast.clipboardDenied":"Akses clipboard ditolak. Tempel link secara manual.","error.empty":"Tempel link postingan atau video dulu.","error.timeout":"Waktu habis. Sumbernya terlalu lama merespons, silakan coba lagi.","error.offline":"Tidak ada koneksi internet. Cek jaringanmu lalu coba lagi.","error.busy":"Server sedang sibuk. Coba lagi sebentar lagi, ya.","error.invalid_url":"Link tidak valid. Tempel link lengkap dari aplikasi media sosialnya.","error.unsupported":"Link ini belum didukung. Pastikan link-nya mengarah langsung ke postingan atau video.","error.blocked":"Platform ini sedang memblokir server kami, jadi link ini belum bisa diunduh sekarang.","error.rate_limited":"Platform sedang membatasi permintaan dari server kami. Coba lagi sebentar lagi, ya.","error.login_required":"Konten ini privat, atau platform mewajibkan login untuk melihatnya, jadi tidak bisa diunduh.","error.not_found":"Konten tidak ditemukan atau sudah dihapus.","error.geo_blocked":"Konten ini dibatasi wilayah dan tidak bisa dijangkau server kami.","error.failed":"Gagal mengambil media dari link ini. Coba link lain atau coba lagi sebentar lagi.","error.no_media":"Tidak ada media yang bisa diunduh di link ini.","error.server_config":"Server belum dikonfigurasi dengan benar.","error.server_error":"Terjadi kesalahan di server. Silakan coba lagi."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="az" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn və yüzlərlə digər saytdan video, foto və səs endirin.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn və yüzlərlə digər saytdan video, foto və səs endirin.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Məzmuna keç</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Əsas naviqasiya">
+        <a href="#cara" data-i18n="nav.how">Necə istifadə etməli</a>
+        <a href="#platform" data-i18n="nav.platforms">Platformalar</a>
+        <a href="#faq" data-i18n="nav.faq">Suallar</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Dili dəyiş: Azərbaycanca">
+        <span class="lang-flag" aria-hidden="true">🇦🇿</span>
+        <span class="lang-code">AZ</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">İstənilən sosial şəbəkədən video, foto və səs endirin</h1>
+        <p class="lead" data-i18n="hero.lead">TikTok, Instagram, Facebook, X, Pinterest və digər platformalardan linki yapışdırın. Keyfiyyəti seçin və birbaşa cihazınızda yadda saxlayın.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Paylaşım və ya video linki</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Linki bura yapışdırın…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Yapışdır</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Linki təmizlə">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Endir</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Dəstəklənən platformalardan nümunələr">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Necə endirməli</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Linki kopyalayın</h3>
+            <p data-i18n-html="how.step1.text">Paylaşımı tətbiqdə açın, <strong>Paylaş</strong> düyməsinə toxunun, sonra <strong>Linki kopyala</strong> seçin.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Bura yapışdırın</h3>
+            <p data-i18n-html="how.step2.text">Linki yuxarıdakı xanaya yapışdırın, sonra <strong>Endir</strong> düyməsini basın.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Seçin və saxlayın</h3>
+            <p data-i18n="how.step3.text">İstədiyiniz keyfiyyətdə video, MP3 səs və ya foto seçin.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Dəstəklənən platformalar</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Yüzlərlə saytdan video, foto və səs. Ən populyarlarından bəziləri:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Tez-tez verilən suallar</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save pulsuzdur?</summary>
+            <p data-i18n-html="faq.a1">Bəli, tamamilə pulsuzdur. Qeydiyyat, giriş və ya tətbiq tələb olunmur.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Fayllarım harada saxlanılır?</summary>
+            <p data-i18n-html="faq.a2">Android və kompüterlərdə fayllar <strong>Endirmələr</strong> qovluğuna düşür. iPhone və iPad-də (Safari) onlar <strong>Fayllar</strong> tətbiqində → <strong>Endirmələr</strong> bölməsində saxlanılır. Oradan Paylaş düyməsi ilə onları Şəkillər tətbiqində yadda saxlaya bilərsiniz.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Niyə bəzi videoları endirmək olmur?</summary>
+            <p data-i18n-html="faq.a3">Şəxsi məzmuna, giriş tələb edən məzmuna və ya regiona görə məhdudlaşdırılmış məzmuna serverimiz çata bilmir. Paylaşımın hamıya açıq olduğundan əmin olun və yenidən cəhd edin.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">MP3 necə endirilir?</summary>
+            <p data-i18n-html="faq.a4">Link emal edildikdən sonra Səs bölməsində <strong>MP3</strong> seçimini edin. Səs videodan götürülür və 192 kbps MP3 formatına çevrilir.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">TikTok videolarında su nişanı olur?</summary>
+            <p data-i18n-html="faq.a5">Mümkün olduqda həmişə su nişanı olmayan versiyaya üstünlük veririk. Su nişanı olan seçimlər <strong>Su nişanı</strong> kimi işarələnir.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Fayllarım serverinizdə saxlanılır?</summary>
+            <p data-i18n-html="faq.a6">Xeyr. Fayllar orijinal platformadan birbaşa cihazınıza göndərilir və serverimizdə saxlanılmır.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Hazırladı</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Dil seçin</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Bağla">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Dil axtar…" aria-label="Dil axtar…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Dil tapılmadı.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Media alınır… bu bir neçə saniyə çəkə bilər.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"az","strings":{"meta.title":"I Need Save — İstənilən sosial şəbəkədən video, foto və səs endirin","meta.description":"TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn və yüzlərlə digər saytdan video, foto və səs endirin.","skip":"Məzmuna keç","nav.label":"Əsas naviqasiya","nav.how":"Necə istifadə etməli","nav.platforms":"Platformalar","nav.faq":"Suallar","lang.button":"Dili dəyiş","lang.title":"Dil seçin","lang.search":"Dil axtar…","lang.empty":"Dil tapılmadı.","lang.close":"Bağla","hero.title":"İstənilən sosial şəbəkədən video, foto və səs endirin","hero.lead":"TikTok, Instagram, Facebook, X, Pinterest və digər platformalardan linki yapışdırın. Keyfiyyəti seçin və birbaşa cihazınızda yadda saxlayın.","form.label":"Paylaşım və ya video linki","form.placeholder":"Linki bura yapışdırın…","form.paste":"Yapışdır","form.clear":"Linki təmizlə","form.submit":"Endir","form.processing":"Emal edilir","chips.label":"Dəstəklənən platformalardan nümunələr","how.title":"Necə endirməli","how.step1.title":"Linki kopyalayın","how.step1.text":"Paylaşımı tətbiqdə açın, \u003cstrong>Paylaş\u003c/strong> düyməsinə toxunun, sonra \u003cstrong>Linki kopyala\u003c/strong> seçin.","how.step2.title":"Bura yapışdırın","how.step2.text":"Linki yuxarıdakı xanaya yapışdırın, sonra \u003cstrong>Endir\u003c/strong> düyməsini basın.","how.step3.title":"Seçin və saxlayın","how.step3.text":"İstədiyiniz keyfiyyətdə video, MP3 səs və ya foto seçin.","platforms.title":"Dəstəklənən platformalar","platforms.lead":"Yüzlərlə saytdan video, foto və səs. Ən populyarlarından bəziləri:","faq.title":"Tez-tez verilən suallar","faq.q1":"I Need Save pulsuzdur?","faq.a1":"Bəli, tamamilə pulsuzdur. Qeydiyyat, giriş və ya tətbiq tələb olunmur.","faq.q2":"Fayllarım harada saxlanılır?","faq.a2":"Android və kompüterlərdə fayllar \u003cstrong>Endirmələr\u003c/strong> qovluğuna düşür. iPhone və iPad-də (Safari) onlar \u003cstrong>Fayllar\u003c/strong> tətbiqində → \u003cstrong>Endirmələr\u003c/strong> bölməsində saxlanılır. Oradan Paylaş düyməsi ilə onları Şəkillər tətbiqində yadda saxlaya bilərsiniz.","faq.q3":"Niyə bəzi videoları endirmək olmur?","faq.a3":"Şəxsi məzmuna, giriş tələb edən məzmuna və ya regiona görə məhdudlaşdırılmış məzmuna serverimiz çata bilmir. Paylaşımın hamıya açıq olduğundan əmin olun və yenidən cəhd edin.","faq.q4":"MP3 necə endirilir?","faq.a4":"Link emal edildikdən sonra Səs bölməsində \u003cstrong>MP3\u003c/strong> seçimini edin. Səs videodan götürülür və 192 kbps MP3 formatına çevrilir.","faq.q5":"TikTok videolarında su nişanı olur?","faq.a5":"Mümkün olduqda həmişə su nişanı olmayan versiyaya üstünlük veririk. Su nişanı olan seçimlər \u003cstrong>Su nişanı\u003c/strong> kimi işarələnir.","faq.q6":"Fayllarım serverinizdə saxlanılır?","faq.a6":"Xeyr. Fayllar orijinal platformadan birbaşa cihazınıza göndərilir və serverimizdə saxlanılmır.","footer.madeBy":"Hazırladı","results.loading":"Media alınır… bu bir neçə saniyə çəkə bilər.","results.found":"{n} media tapıldı","results.more":"Daha {n} seçim göstər","group.video":"Video","group.audio":"Səs","group.image":"Fotolar","label.thumbnail":"Miniatür","label.photo":"Foto","label.photoN":"Foto {n}","label.video":"Video","label.videoN":"Video {n}","label.audioN":"Səs {n}","label.original_audio":"Orijinal səs","note.original_quality":"Orijinal keyfiyyət","note.no_audio":"Səssiz","note.watermark":"Su nişanı","download.button":"Endir","download.preparing":"Hazırlanır…","toast.preparing":"Faylınız hazırlanır… endirmə avtomatik başlayacaq.","toast.started":"Endirmə başladı.","toast.failed":"Endirmə alınmadı. Başqa keyfiyyət seçin və ya linki yenidən emal edin.","toast.clipboardEmpty":"Mübadilə buferi boşdur. Əvvəlcə link kopyalayın.","toast.clipboardDenied":"Mübadilə buferinə giriş rədd edildi. Linki əl ilə yapışdırın.","error.empty":"Əvvəlcə paylaşım və ya video linkini yapışdırın.","error.timeout":"Vaxt bitdi. Mənbə çox gec cavab verdi, yenidən cəhd edin.","error.offline":"İnternet bağlantısı yoxdur. Şəbəkənizi yoxlayın və yenidən cəhd edin.","error.busy":"Server məşğuldur. Bir az sonra yenidən cəhd edin.","error.invalid_url":"Yanlış link. Sosial şəbəkə tətbiqindən tam linki yapışdırın.","error.unsupported":"Bu link hələ dəstəklənmir. Onun birbaşa paylaşıma və ya videoya apardığından əmin olun.","error.blocked":"Bu platforma hazırda serverimizi bloklayır, ona görə də bu linki indi endirmək mümkün deyil.","error.rate_limited":"Platforma serverimizdən gələn sorğuları məhdudlaşdırır. Bir az sonra yenidən cəhd edin.","error.login_required":"Bu məzmun şəxsidir və ya platforma ona baxmaq üçün giriş tələb edir, ona görə də endirilə bilməz.","error.not_found":"Məzmun tapılmadı və ya silinib.","error.geo_blocked":"Bu məzmun regiona görə məhdudlaşdırılıb və serverimiz ona çata bilmir.","error.failed":"Bu linkdən media almaq mümkün olmadı. Başqa link yoxlayın və ya bir az sonra yenidən cəhd edin.","error.no_media":"Bu linkdə endirilə bilən media yoxdur.","error.server_config":"Server hələ düzgün konfiqurasiya edilməyib.","error.server_error":"Serverdə xəta baş verdi. Yenidən cəhd edin."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="hu" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Töltsön le videókat, fotókat és hangot a TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn és több száz más oldalról.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Töltsön le videókat, fotókat és hangot a TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn és több száz más oldalról.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Ugrás a tartalomra</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Fő navigáció">
+        <a href="#cara" data-i18n="nav.how">Használat</a>
+        <a href="#platform" data-i18n="nav.platforms">Platformok</a>
+        <a href="#faq" data-i18n="nav.faq">GYIK</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Nyelv módosítása: Magyar">
+        <span class="lang-flag" aria-hidden="true">🇭🇺</span>
+        <span class="lang-code">HU</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Töltsön le videókat, fotókat és hangot bármely közösségi oldalról</h1>
+        <p class="lead" data-i18n="hero.lead">Illesszen be egy linket a TikTok, Instagram, Facebook, X, Pinterest vagy más oldalakról. Válassza ki a minőséget, és mentse közvetlenül az eszközére.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Bejegyzés vagy videó linkje</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Illessze be ide a linket…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Beillesztés</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Link törlése">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Letöltés</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Példák a támogatott platformokra">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">A letöltés lépései</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Másolja ki a linket</h3>
+            <p data-i18n-html="how.step1.text">Nyissa meg a bejegyzést az alkalmazásban, koppintson a <strong>Megosztás</strong> gombra, majd válassza a <strong>Link másolása</strong> lehetőséget.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Illessze be ide</h3>
+            <p data-i18n-html="how.step2.text">Illessze be a linket a fenti mezőbe, majd nyomja meg a <strong>Letöltés</strong> gombot.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Válasszon és mentsen</h3>
+            <p data-i18n="how.step3.text">Válasszon videót, MP3 hangot vagy fotót a kívánt minőségben.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Támogatott platformok</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Videók, fotók és hangok több száz oldalról. Néhány a legnépszerűbbek közül:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Gyakori kérdések</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Ingyenes az I Need Save?</summary>
+            <p data-i18n-html="faq.a1">Igen, teljesen ingyenes. Nincs szükség regisztrációra, bejelentkezésre vagy alkalmazásra.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Hová kerülnek a fájlok?</summary>
+            <p data-i18n-html="faq.a2">Android rendszeren és számítógépen a fájlok a <strong>Letöltések</strong> mappába kerülnek. iPhone és iPad eszközön (Safari) a <strong>Fájlok</strong> app → <strong>Letöltések</strong> mappájába mentődnek. Innen a Megosztás gombbal mentheti őket a Fotók appba.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Miért nem tölthető le néhány videó?</summary>
+            <p data-i18n-html="faq.a3">Szerverünk nem fér hozzá a privát, bejelentkezéshez kötött vagy régiókorlátozott tartalmakhoz. Győződjön meg róla, hogy a bejegyzés nyilvános, majd próbálja újra.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Hogyan tölthetek le MP3 formátumban?</summary>
+            <p data-i18n-html="faq.a4">A link feldolgozása után válassza a Hang részben az <strong>MP3</strong> lehetőséget. A hangot kinyerjük a videóból, és 192 kbps bitrátájú MP3 formátumra alakítjuk.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Vízjelesek a TikTok-videók?</summary>
+            <p data-i18n-html="faq.a5">Ha elérhető, mindig a vízjel nélküli változatot részesítjük előnyben. A vízjelet tartalmazó lehetőségek mellett a <strong>Vízjel</strong> címke látható.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Tárolják a fájljaimat a szerverükön?</summary>
+            <p data-i18n-html="faq.a6">Nem. A fájlok az eredeti platformról közvetlenül az Ön eszközére kerülnek, és nem tároljuk őket a szerverünkön.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Készítette:</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Válasszon nyelvet</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Bezárás">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Nyelv keresése…" aria-label="Nyelv keresése…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Nem található nyelv.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Médiafájlok lekérése… ez eltarthat néhány másodpercig.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"hu","strings":{"meta.title":"I Need Save — Töltsön le videókat, fotókat és hangot bármely közösségi oldalról","meta.description":"Töltsön le videókat, fotókat és hangot a TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn és több száz más oldalról.","skip":"Ugrás a tartalomra","nav.label":"Fő navigáció","nav.how":"Használat","nav.platforms":"Platformok","nav.faq":"GYIK","lang.button":"Nyelv módosítása","lang.title":"Válasszon nyelvet","lang.search":"Nyelv keresése…","lang.empty":"Nem található nyelv.","lang.close":"Bezárás","hero.title":"Töltsön le videókat, fotókat és hangot bármely közösségi oldalról","hero.lead":"Illesszen be egy linket a TikTok, Instagram, Facebook, X, Pinterest vagy más oldalakról. Válassza ki a minőséget, és mentse közvetlenül az eszközére.","form.label":"Bejegyzés vagy videó linkje","form.placeholder":"Illessze be ide a linket…","form.paste":"Beillesztés","form.clear":"Link törlése","form.submit":"Letöltés","form.processing":"Feldolgozás","chips.label":"Példák a támogatott platformokra","how.title":"A letöltés lépései","how.step1.title":"Másolja ki a linket","how.step1.text":"Nyissa meg a bejegyzést az alkalmazásban, koppintson a \u003cstrong>Megosztás\u003c/strong> gombra, majd válassza a \u003cstrong>Link másolása\u003c/strong> lehetőséget.","how.step2.title":"Illessze be ide","how.step2.text":"Illessze be a linket a fenti mezőbe, majd nyomja meg a \u003cstrong>Letöltés\u003c/strong> gombot.","how.step3.title":"Válasszon és mentsen","how.step3.text":"Válasszon videót, MP3 hangot vagy fotót a kívánt minőségben.","platforms.title":"Támogatott platformok","platforms.lead":"Videók, fotók és hangok több száz oldalról. Néhány a legnépszerűbbek közül:","faq.title":"Gyakori kérdések","faq.q1":"Ingyenes az I Need Save?","faq.a1":"Igen, teljesen ingyenes. Nincs szükség regisztrációra, bejelentkezésre vagy alkalmazásra.","faq.q2":"Hová kerülnek a fájlok?","faq.a2":"Android rendszeren és számítógépen a fájlok a \u003cstrong>Letöltések\u003c/strong> mappába kerülnek. iPhone és iPad eszközön (Safari) a \u003cstrong>Fájlok\u003c/strong> app → \u003cstrong>Letöltések\u003c/strong> mappájába mentődnek. Innen a Megosztás gombbal mentheti őket a Fotók appba.","faq.q3":"Miért nem tölthető le néhány videó?","faq.a3":"Szerverünk nem fér hozzá a privát, bejelentkezéshez kötött vagy régiókorlátozott tartalmakhoz. Győződjön meg róla, hogy a bejegyzés nyilvános, majd próbálja újra.","faq.q4":"Hogyan tölthetek le MP3 formátumban?","faq.a4":"A link feldolgozása után válassza a Hang részben az \u003cstrong>MP3\u003c/strong> lehetőséget. A hangot kinyerjük a videóból, és 192 kbps bitrátájú MP3 formátumra alakítjuk.","faq.q5":"Vízjelesek a TikTok-videók?","faq.a5":"Ha elérhető, mindig a vízjel nélküli változatot részesítjük előnyben. A vízjelet tartalmazó lehetőségek mellett a \u003cstrong>Vízjel\u003c/strong> címke látható.","faq.q6":"Tárolják a fájljaimat a szerverükön?","faq.a6":"Nem. A fájlok az eredeti platformról közvetlenül az Ön eszközére kerülnek, és nem tároljuk őket a szerverünkön.","footer.madeBy":"Készítette:","results.loading":"Médiafájlok lekérése… ez eltarthat néhány másodpercig.","results.found":"Talált médiafájlok: {n}","results.more":"További lehetőségek ({n})","group.video":"Videó","group.audio":"Hang","group.image":"Fotók","label.thumbnail":"Bélyegkép","label.photo":"Fotó","label.photoN":"Fotó {n}","label.video":"Videó","label.videoN":"Videó {n}","label.audioN":"Hang {n}","label.original_audio":"Eredeti hang","note.original_quality":"Eredeti minőség","note.no_audio":"Hang nélkül","note.watermark":"Vízjel","download.button":"Letöltés","download.preparing":"Előkészítés…","toast.preparing":"A fájl előkészítése folyamatban… a letöltés automatikusan elindul.","toast.started":"A letöltés elindult.","toast.failed":"A letöltés nem sikerült. Válasszon másik minőséget, vagy dolgozza fel újra a linket.","toast.clipboardEmpty":"A vágólap üres. Előbb másoljon ki egy linket.","toast.clipboardDenied":"A vágólaphoz való hozzáférés megtagadva. Illessze be a linket kézzel.","error.empty":"Előbb illesszen be egy bejegyzés- vagy videólinket.","error.timeout":"Időtúllépés. A forrás túl lassan válaszolt, kérjük, próbálja újra.","error.offline":"Nincs internetkapcsolat. Ellenőrizze a hálózatot, majd próbálja újra.","error.busy":"A szerver túlterhelt. Kérjük, próbálja újra egy kis idő múlva.","error.invalid_url":"Érvénytelen link. Illessze be a teljes linket a közösségi alkalmazásból.","error.unsupported":"Ez a link még nem támogatott. Ellenőrizze, hogy közvetlenül egy bejegyzésre vagy videóra mutat-e.","error.blocked":"Ez a platform jelenleg blokkolja a szerverünket, ezért ez a link most nem tölthető le.","error.rate_limited":"A platform korlátozza a szerverünkről érkező kéréseket. Kérjük, próbálja újra egy kis idő múlva.","error.login_required":"Ez a tartalom privát, vagy a megtekintéséhez bejelentkezés szükséges, ezért nem tölthető le.","error.not_found":"A tartalom nem található, vagy eltávolították.","error.geo_blocked":"Ez a tartalom régiókorlátozott, ezért a szerverünk nem fér hozzá.","error.failed":"Nem sikerült médiát lekérni ebből a linkből. Próbáljon másik linket, vagy próbálja újra kicsit később.","error.no_media":"Ezen a linken nincs letölthető média.","error.server_config":"A szerver még nincs megfelelően beállítva.","error.server_error":"Hiba történt a szerveren. Kérjük, próbálja újra."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

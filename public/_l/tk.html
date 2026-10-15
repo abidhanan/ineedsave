@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="tk" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn we ýüzlerçe beýleki saýtlardan wideo, surat we ses ýükläň.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn we ýüzlerçe beýleki saýtlardan wideo, surat we ses ýükläň.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Mazmuna geç</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Esasy nawigasiýa">
+        <a href="#cara" data-i18n="nav.how">Nähili ulanmaly</a>
+        <a href="#platform" data-i18n="nav.platforms">Platformalar</a>
+        <a href="#faq" data-i18n="nav.faq">Soraglar</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Dili üýtget: Türkmençe">
+        <span class="lang-flag" aria-hidden="true">🇹🇲</span>
+        <span class="lang-code">TK</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Islendik sosial ulgamdan wideo, surat we ses ýükläň</h1>
+        <p class="lead" data-i18n="hero.lead">TikTok, Instagram, Facebook, X, Pinterest we beýlekilerden baglanyşygy goýuň. Hilini saýlaň we göni enjamyňyza ýatda saklaň.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Ýazgynyň ýa-da wideonyň baglanyşygy</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Baglanyşygy şu ýere goýuň…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Goý</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Baglanyşygy arassala">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Ýükle</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Goldanylýan platformalaryň mysallary">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Nähili ýüklemeli</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Baglanyşygy göçüriň</h3>
+            <p data-i18n-html="how.step1.text">Ýazgyny programmada açyň, <strong>Paýlaş</strong> düwmesine basyň, soňra <strong>Baglanyşygy göçür</strong> saýlaň.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Şu ýere goýuň</h3>
+            <p data-i18n-html="how.step2.text">Baglanyşygy ýokardaky meýdança goýuň, soňra <strong>Ýükle</strong> düwmesine basyň.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Saýlaň we ýatda saklaň</h3>
+            <p data-i18n="how.step3.text">Isleýän hiliňizde wideo, MP3 ses ýa-da surat saýlaň.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Goldanylýan platformalar</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Ýüzlerçe saýtdan wideo, surat we ses. Iň meşhurlarynyň käbirleri:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Köp soralýan soraglar</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save mugtmy?</summary>
+            <p data-i18n-html="faq.a1">Hawa, düýbünden mugt. Hasaba durmak, hasaba girmek ýa-da programma gurnamak gerek däl.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Faýllarym nirede saklanýar?</summary>
+            <p data-i18n-html="faq.a2">Android-de we kompýuterlerde faýllar <strong>Ýüklenenler</strong> bukjasyna düşýär. iPhone we iPad-de (Safari) olar <strong>Faýllar</strong> programmasy → <strong>Ýüklenenler</strong> bukjasynda saklanýar. Ol ýerden Paýlaş düwmesi arkaly olary Suratlar programmasynda ýatda saklap bilersiňiz.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Näme üçin käbir wideolary ýükläp bolmaýar?</summary>
+            <p data-i18n-html="faq.a3">Hususy mazmuna, hasaba girmegi talap edýän mazmuna ýa-da sebit boýunça çäklendirilen mazmuna biziň serwerimiz baryp bilmeýär. Ýazgynyň hemmä açykdygyna göz ýetiriň we täzeden synanyşyň.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">MP3 nädip ýüklemeli?</summary>
+            <p data-i18n-html="faq.a4">Baglanyşyk işlenenden soň, Ses bölüminde <strong>MP3</strong> görnüşini saýlaň. Ses wideodan alynýar we 192 kbps MP3 formatyna öwrülýär.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">TikTok wideolarynda suw belgisi barmy?</summary>
+            <p data-i18n-html="faq.a5">Elýeterli bolsa, biz hemişe suw belgisiz wersiýany saýlaýarys. Suw belgili görnüşler <strong>Suw belgisi</strong> diýip bellenýär.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Faýllarym serweriňizde saklanýarmy?</summary>
+            <p data-i18n-html="faq.a6">Ýok. Faýllar asyl platformadan göni enjamyňyza iberilýär we serwerimizde saklanmaýar.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Döreden</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Dili saýlaň</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Ýap">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Dil gözle…" aria-label="Dil gözle…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Dil tapylmady.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Media alynýar… bu birnäçe sekunt alyp biler.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"tk","strings":{"meta.title":"I Need Save — Islendik sosial ulgamdan wideo, surat we ses ýükläň","meta.description":"TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn we ýüzlerçe beýleki saýtlardan wideo, surat we ses ýükläň.","skip":"Mazmuna geç","nav.label":"Esasy nawigasiýa","nav.how":"Nähili ulanmaly","nav.platforms":"Platformalar","nav.faq":"Soraglar","lang.button":"Dili üýtget","lang.title":"Dili saýlaň","lang.search":"Dil gözle…","lang.empty":"Dil tapylmady.","lang.close":"Ýap","hero.title":"Islendik sosial ulgamdan wideo, surat we ses ýükläň","hero.lead":"TikTok, Instagram, Facebook, X, Pinterest we beýlekilerden baglanyşygy goýuň. Hilini saýlaň we göni enjamyňyza ýatda saklaň.","form.label":"Ýazgynyň ýa-da wideonyň baglanyşygy","form.placeholder":"Baglanyşygy şu ýere goýuň…","form.paste":"Goý","form.clear":"Baglanyşygy arassala","form.submit":"Ýükle","form.processing":"Işlenýär","chips.label":"Goldanylýan platformalaryň mysallary","how.title":"Nähili ýüklemeli","how.step1.title":"Baglanyşygy göçüriň","how.step1.text":"Ýazgyny programmada açyň, \u003cstrong>Paýlaş\u003c/strong> düwmesine basyň, soňra \u003cstrong>Baglanyşygy göçür\u003c/strong> saýlaň.","how.step2.title":"Şu ýere goýuň","how.step2.text":"Baglanyşygy ýokardaky meýdança goýuň, soňra \u003cstrong>Ýükle\u003c/strong> düwmesine basyň.","how.step3.title":"Saýlaň we ýatda saklaň","how.step3.text":"Isleýän hiliňizde wideo, MP3 ses ýa-da surat saýlaň.","platforms.title":"Goldanylýan platformalar","platforms.lead":"Ýüzlerçe saýtdan wideo, surat we ses. Iň meşhurlarynyň käbirleri:","faq.title":"Köp soralýan soraglar","faq.q1":"I Need Save mugtmy?","faq.a1":"Hawa, düýbünden mugt. Hasaba durmak, hasaba girmek ýa-da programma gurnamak gerek däl.","faq.q2":"Faýllarym nirede saklanýar?","faq.a2":"Android-de we kompýuterlerde faýllar \u003cstrong>Ýüklenenler\u003c/strong> bukjasyna düşýär. iPhone we iPad-de (Safari) olar \u003cstrong>Faýllar\u003c/strong> programmasy → \u003cstrong>Ýüklenenler\u003c/strong> bukjasynda saklanýar. Ol ýerden Paýlaş düwmesi arkaly olary Suratlar programmasynda ýatda saklap bilersiňiz.","faq.q3":"Näme üçin käbir wideolary ýükläp bolmaýar?","faq.a3":"Hususy mazmuna, hasaba girmegi talap edýän mazmuna ýa-da sebit boýunça çäklendirilen mazmuna biziň serwerimiz baryp bilmeýär. Ýazgynyň hemmä açykdygyna göz ýetiriň we täzeden synanyşyň.","faq.q4":"MP3 nädip ýüklemeli?","faq.a4":"Baglanyşyk işlenenden soň, Ses bölüminde \u003cstrong>MP3\u003c/strong> görnüşini saýlaň. Ses wideodan alynýar we 192 kbps MP3 formatyna öwrülýär.","faq.q5":"TikTok wideolarynda suw belgisi barmy?","faq.a5":"Elýeterli bolsa, biz hemişe suw belgisiz wersiýany saýlaýarys. Suw belgili görnüşler \u003cstrong>Suw belgisi\u003c/strong> diýip bellenýär.","faq.q6":"Faýllarym serweriňizde saklanýarmy?","faq.a6":"Ýok. Faýllar asyl platformadan göni enjamyňyza iberilýär we serwerimizde saklanmaýar.","footer.madeBy":"Döreden","results.loading":"Media alynýar… bu birnäçe sekunt alyp biler.","results.found":"{n} media tapyldy","results.more":"Ýene {n} görnüşi görkez","group.video":"Wideo","group.audio":"Ses","group.image":"Suratlar","label.thumbnail":"Kiçi surat","label.photo":"Surat","label.photoN":"Surat {n}","label.video":"Wideo","label.videoN":"Wideo {n}","label.audioN":"Ses {n}","label.original_audio":"Asyl ses","note.original_quality":"Asyl hil","note.no_audio":"Sessiz","note.watermark":"Suw belgisi","download.button":"Ýükle","download.preparing":"Taýýarlanýar…","toast.preparing":"Faýlyňyz taýýarlanýar… ýükleme awtomatik başlar.","toast.started":"Ýükleme başlady.","toast.failed":"Ýükläp bolmady. Başga hili synap görüň ýa-da baglanyşygy täzeden işlediň.","toast.clipboardEmpty":"Alyş-çalyş buferi boş. Ilki bilen baglanyşyk göçüriň.","toast.clipboardDenied":"Alyş-çalyş buferine rugsat berilmedi. Baglanyşygy el bilen goýuň.","error.empty":"Ilki bilen ýazgynyň ýa-da wideonyň baglanyşygyny goýuň.","error.timeout":"Wagt gutardy. Çeşme gaty giç jogap berdi, täzeden synanyşyň.","error.offline":"Internet baglanyşygy ýok. Ulgamyňyzy barlaň we täzeden synanyşyň.","error.busy":"Serwer meşgul. Biraz soňra täzeden synanyşyň.","error.invalid_url":"Nädogry baglanyşyk. Sosial ulgam programmasyndan doly baglanyşygy goýuň.","error.unsupported":"Bu baglanyşyk entek goldanylmaýar. Onuň göni ýazga ýa-da wideo alyp barýandygyna göz ýetiriň.","error.blocked":"Bu platforma häzir serwerimizi petikleýär, şonuň üçin bu baglanyşygy häzir ýükläp bolmaýar.","error.rate_limited":"Platforma serwerimizden gelýän haýyşlary çäklendirýär. Biraz soňra täzeden synanyşyň.","error.login_required":"Bu mazmun hususy ýa-da platforma ony görmek üçin hasaba girmegi talap edýär, şonuň üçin ony ýükläp bolmaýar.","error.not_found":"Mazmun tapylmady ýa-da aýryldy.","error.geo_blocked":"Bu mazmun sebit boýunça çäklendirilen we serwerimiz oňa baryp bilmeýär.","error.failed":"Bu baglanyşykdan media alyp bolmady. Başga baglanyşygy synap görüň ýa-da biraz soňra täzeden synanyşyň.","error.no_media":"Bu baglanyşykda ýüklenip bilinjek media ýok.","error.server_config":"Serwer entek dogry sazlanmady.","error.server_error":"Serwerde näsazlyk ýüze çykdy. Täzeden synanyşyň."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

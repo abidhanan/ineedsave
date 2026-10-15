@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="am" dir="ltr" style="--font-script: &quot;Noto Sans Ethiopic&quot;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="ከTikTok፣ Instagram፣ Facebook፣ X (Twitter)፣ Pinterest፣ LinkedIn እና ከመቶዎች በሚቆጠሩ ሌሎች ድረ-ገጾች ቪዲዮዎችን፣ ፎቶዎችን እና ድምጾችን ያውርዱ።">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="ከTikTok፣ Instagram፣ Facebook፣ X (Twitter)፣ Pinterest፣ LinkedIn እና ከመቶዎች በሚቆጠሩ ሌሎች ድረ-ገጾች ቪዲዮዎችን፣ ፎቶዎችን እና ድምጾችን ያውርዱ።">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;700&display=swap"></noscript>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">ወደ ይዘቱ ዝለል</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="ዋና ማውጫ">
+        <a href="#cara" data-i18n="nav.how">አጠቃቀም</a>
+        <a href="#platform" data-i18n="nav.platforms">መድረኮች</a>
+        <a href="#faq" data-i18n="nav.faq">ጥያቄዎች</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="ቋንቋ ቀይር: አማርኛ">
+        <span class="lang-flag" aria-hidden="true">🇪🇹</span>
+        <span class="lang-code">AM</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">ቪዲዮዎችን፣ ፎቶዎችን እና ድምጾችን ከማንኛውም ማኅበራዊ ሚዲያ ያውርዱ</h1>
+        <p class="lead" data-i18n="hero.lead">ከTikTok፣ Instagram፣ Facebook፣ X፣ Pinterest እና ከሌሎችም ሊንክ ይለጥፉ። ጥራት ይምረጡ፣ ከዚያ በቀጥታ ወደ መሣሪያዎ ያስቀምጡ።</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">የልጥፍ ወይም የቪዲዮ ሊንክ</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="ሊንኩን እዚህ ይለጥፉ…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">ለጥፍ</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="ሊንኩን አጽዳ">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">አውርድ</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="የሚደገፉ መድረኮች ምሳሌዎች">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">እንዴት ማውረድ ይቻላል</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">ሊንኩን ይቅዱ</h3>
+            <p data-i18n-html="how.step1.text">ልጥፉን በመተግበሪያው ውስጥ ይክፈቱ፣ <strong>አጋራ</strong> የሚለውን ይንኩ፣ ከዚያ <strong>ሊንክ ቅዳ</strong> የሚለውን ይምረጡ።</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">እዚህ ይለጥፉት</h3>
+            <p data-i18n-html="how.step2.text">ሊንኩን ከላይ ባለው ሳጥን ውስጥ ይለጥፉ፣ ከዚያ <strong>አውርድ</strong> የሚለውን ይጫኑ።</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">ይምረጡ እና ያስቀምጡ</h3>
+            <p data-i18n="how.step3.text">ቪዲዮ፣ MP3 ድምጽ ወይም ፎቶ በሚፈልጉት ጥራት ይምረጡ።</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">የሚደገፉ መድረኮች</h2>
+        <p class="section-lead" data-i18n="platforms.lead">ከመቶዎች ከሚቆጠሩ ድረ-ገጾች ቪዲዮዎች፣ ፎቶዎች እና ድምጾች። ከታዋቂዎቹ መካከል ጥቂቶቹ፦</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">በተደጋጋሚ የሚጠየቁ ጥያቄዎች</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save ነፃ ነው?</summary>
+            <p data-i18n-html="faq.a1">አዎ፣ ሙሉ በሙሉ ነፃ ነው። መመዝገብ፣ መግባት ወይም መተግበሪያ አያስፈልግም።</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">ፋይሎቼ የት ይቀመጣሉ?</summary>
+            <p data-i18n-html="faq.a2">በAndroid እና በኮምፒውተሮች ላይ ፋይሎች ወደ <strong>ውርዶች</strong> አቃፊ ይሄዳሉ። በiPhone እና iPad (Safari) ላይ በ<strong>ፋይሎች</strong> መተግበሪያ → <strong>ውርዶች</strong> ውስጥ ይቀመጣሉ። ከዚያ በአጋራ አዝራሩ ወደ ፎቶዎች ማስቀመጥ ይችላሉ።</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">አንዳንድ ቪዲዮዎች ለምን ሊወርዱ አይችሉም?</summary>
+            <p data-i18n-html="faq.a3">የግል ይዘት፣ መግባት የሚጠይቅ ይዘት ወይም በክልል የተገደበ ይዘት በአገልጋያችን ሊደረስበት አይችልም። ልጥፉ ይፋዊ መሆኑን ያረጋግጡ፣ ከዚያ እንደገና ይሞክሩ።</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">MP3 እንዴት አወርዳለሁ?</summary>
+            <p data-i18n-html="faq.a4">ሊንኩ ከተሰራ በኋላ በድምጽ ስር ያለውን የ<strong>MP3</strong> አማራጭ ይምረጡ። ድምጹ ከቪዲዮው ተወስዶ ወደ 192 kbps MP3 ይቀየራል።</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">የTikTok ቪዲዮዎች የውሃ ምልክት አላቸው?</summary>
+            <p data-i18n-html="faq.a5">የውሃ ምልክት የሌለው ስሪት ሲገኝ ሁልጊዜ እሱን እንመርጣለን። የውሃ ምልክት ያላቸው አማራጮች <strong>የውሃ ምልክት</strong> ተብለው ተለይተዋል።</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">ፋይሎቼ በአገልጋያችሁ ላይ ይቀመጣሉ?</summary>
+            <p data-i18n-html="faq.a6">አይ። ፋይሎች ከመጀመሪያው መድረክ በቀጥታ ወደ መሣሪያዎ ይላካሉ፤ በአገልጋያችን ላይ አይቀመጡም።</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">የተሰራው በ</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">ቋንቋ ይምረጡ</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="ዝጋ">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="ቋንቋ ይፈልጉ…" aria-label="ቋንቋ ይፈልጉ…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>ምንም ቋንቋ አልተገኘም።</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">ሚዲያ በማምጣት ላይ… ይህ ጥቂት ሰከንዶች ሊወስድ ይችላል።</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"am","strings":{"meta.title":"I Need Save — ቪዲዮዎችን፣ ፎቶዎችን እና ድምጾችን ከማንኛውም ማኅበራዊ ሚዲያ ያውርዱ","meta.description":"ከTikTok፣ Instagram፣ Facebook፣ X (Twitter)፣ Pinterest፣ LinkedIn እና ከመቶዎች በሚቆጠሩ ሌሎች ድረ-ገጾች ቪዲዮዎችን፣ ፎቶዎችን እና ድምጾችን ያውርዱ።","skip":"ወደ ይዘቱ ዝለል","nav.label":"ዋና ማውጫ","nav.how":"አጠቃቀም","nav.platforms":"መድረኮች","nav.faq":"ጥያቄዎች","lang.button":"ቋንቋ ቀይር","lang.title":"ቋንቋ ይምረጡ","lang.search":"ቋንቋ ይፈልጉ…","lang.empty":"ምንም ቋንቋ አልተገኘም።","lang.close":"ዝጋ","hero.title":"ቪዲዮዎችን፣ ፎቶዎችን እና ድምጾችን ከማንኛውም ማኅበራዊ ሚዲያ ያውርዱ","hero.lead":"ከTikTok፣ Instagram፣ Facebook፣ X፣ Pinterest እና ከሌሎችም ሊንክ ይለጥፉ። ጥራት ይምረጡ፣ ከዚያ በቀጥታ ወደ መሣሪያዎ ያስቀምጡ።","form.label":"የልጥፍ ወይም የቪዲዮ ሊንክ","form.placeholder":"ሊንኩን እዚህ ይለጥፉ…","form.paste":"ለጥፍ","form.clear":"ሊንኩን አጽዳ","form.submit":"አውርድ","form.processing":"በማስኬድ ላይ","chips.label":"የሚደገፉ መድረኮች ምሳሌዎች","how.title":"እንዴት ማውረድ ይቻላል","how.step1.title":"ሊንኩን ይቅዱ","how.step1.text":"ልጥፉን በመተግበሪያው ውስጥ ይክፈቱ፣ \u003cstrong>አጋራ\u003c/strong> የሚለውን ይንኩ፣ ከዚያ \u003cstrong>ሊንክ ቅዳ\u003c/strong> የሚለውን ይምረጡ።","how.step2.title":"እዚህ ይለጥፉት","how.step2.text":"ሊንኩን ከላይ ባለው ሳጥን ውስጥ ይለጥፉ፣ ከዚያ \u003cstrong>አውርድ\u003c/strong> የሚለውን ይጫኑ።","how.step3.title":"ይምረጡ እና ያስቀምጡ","how.step3.text":"ቪዲዮ፣ MP3 ድምጽ ወይም ፎቶ በሚፈልጉት ጥራት ይምረጡ።","platforms.title":"የሚደገፉ መድረኮች","platforms.lead":"ከመቶዎች ከሚቆጠሩ ድረ-ገጾች ቪዲዮዎች፣ ፎቶዎች እና ድምጾች። ከታዋቂዎቹ መካከል ጥቂቶቹ፦","faq.title":"በተደጋጋሚ የሚጠየቁ ጥያቄዎች","faq.q1":"I Need Save ነፃ ነው?","faq.a1":"አዎ፣ ሙሉ በሙሉ ነፃ ነው። መመዝገብ፣ መግባት ወይም መተግበሪያ አያስፈልግም።","faq.q2":"ፋይሎቼ የት ይቀመጣሉ?","faq.a2":"በAndroid እና በኮምፒውተሮች ላይ ፋይሎች ወደ \u003cstrong>ውርዶች\u003c/strong> አቃፊ ይሄዳሉ። በiPhone እና iPad (Safari) ላይ በ\u003cstrong>ፋይሎች\u003c/strong> መተግበሪያ → \u003cstrong>ውርዶች\u003c/strong> ውስጥ ይቀመጣሉ። ከዚያ በአጋራ አዝራሩ ወደ ፎቶዎች ማስቀመጥ ይችላሉ።","faq.q3":"አንዳንድ ቪዲዮዎች ለምን ሊወርዱ አይችሉም?","faq.a3":"የግል ይዘት፣ መግባት የሚጠይቅ ይዘት ወይም በክልል የተገደበ ይዘት በአገልጋያችን ሊደረስበት አይችልም። ልጥፉ ይፋዊ መሆኑን ያረጋግጡ፣ ከዚያ እንደገና ይሞክሩ።","faq.q4":"MP3 እንዴት አወርዳለሁ?","faq.a4":"ሊንኩ ከተሰራ በኋላ በድምጽ ስር ያለውን የ\u003cstrong>MP3\u003c/strong> አማራጭ ይምረጡ። ድምጹ ከቪዲዮው ተወስዶ ወደ 192 kbps MP3 ይቀየራል።","faq.q5":"የTikTok ቪዲዮዎች የውሃ ምልክት አላቸው?","faq.a5":"የውሃ ምልክት የሌለው ስሪት ሲገኝ ሁልጊዜ እሱን እንመርጣለን። የውሃ ምልክት ያላቸው አማራጮች \u003cstrong>የውሃ ምልክት\u003c/strong> ተብለው ተለይተዋል።","faq.q6":"ፋይሎቼ በአገልጋያችሁ ላይ ይቀመጣሉ?","faq.a6":"አይ። ፋይሎች ከመጀመሪያው መድረክ በቀጥታ ወደ መሣሪያዎ ይላካሉ፤ በአገልጋያችን ላይ አይቀመጡም።","footer.madeBy":"የተሰራው በ","results.loading":"ሚዲያ በማምጣት ላይ… ይህ ጥቂት ሰከንዶች ሊወስድ ይችላል።","results.found":"{n} ሚዲያ ተገኝቷል","results.more":"ተጨማሪ {n} አማራጮችን አሳይ","group.video":"ቪዲዮ","group.audio":"ድምጽ","group.image":"ፎቶዎች","label.thumbnail":"ድንክዬ ምስል","label.photo":"ፎቶ","label.photoN":"ፎቶ {n}","label.video":"ቪዲዮ","label.videoN":"ቪዲዮ {n}","label.audioN":"ድምጽ {n}","label.original_audio":"የመጀመሪያው ድምጽ","note.original_quality":"የመጀመሪያው ጥራት","note.no_audio":"ድምጽ የለውም","note.watermark":"የውሃ ምልክት","download.button":"አውርድ","download.preparing":"በማዘጋጀት ላይ…","toast.preparing":"ፋይልዎን በማዘጋጀት ላይ… ማውረዱ በራስ-ሰር ይጀምራል።","toast.started":"ማውረድ ተጀምሯል።","toast.failed":"ማውረዱ አልተሳካም። ሌላ ጥራት ይሞክሩ ወይም ሊንኩን እንደገና ያስኪዱ።","toast.clipboardEmpty":"ቅንጥብ ሰሌዳዎ ባዶ ነው። መጀመሪያ ሊንክ ይቅዱ።","toast.clipboardDenied":"የቅንጥብ ሰሌዳ መዳረሻ ተከልክሏል። ሊንኩን በእጅ ይለጥፉ።","error.empty":"መጀመሪያ የልጥፍ ወይም የቪዲዮ ሊንክ ይለጥፉ።","error.timeout":"ጊዜው አልፏል። ምንጩ ምላሽ ለመስጠት ብዙ ጊዜ ወስዷል፤ እባክዎ እንደገና ይሞክሩ።","error.offline":"የበይነመረብ ግንኙነት የለም። አውታረ መረብዎን ያረጋግጡ እና እንደገና ይሞክሩ።","error.busy":"አገልጋዩ ተጨናንቋል። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ።","error.invalid_url":"ልክ ያልሆነ ሊንክ። ሙሉውን ሊንክ ከማኅበራዊ ሚዲያ መተግበሪያው ይለጥፉ።","error.unsupported":"ይህ ሊንክ ገና አይደገፍም። በቀጥታ ወደ ልጥፍ ወይም ቪዲዮ የሚያመለክት መሆኑን ያረጋግጡ።","error.blocked":"ይህ መድረክ በአሁኑ ጊዜ አገልጋያችንን እያገደ ነው፤ ስለዚህ ይህን ሊንክ አሁን ማውረድ አይቻልም።","error.rate_limited":"መድረኩ ከአገልጋያችን የሚመጡ ጥያቄዎችን እየገደበ ነው። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ።","error.login_required":"ይህ ይዘት የግል ነው፣ ወይም መድረኩ ለማየት መግባትን ይጠይቃል፤ ስለዚህ ሊወርድ አይችልም።","error.not_found":"ይዘቱ አልተገኘም ወይም ተወግዷል።","error.geo_blocked":"ይህ ይዘት በክልል የተገደበ ስለሆነ በአገልጋያችን ሊደረስበት አይችልም።","error.failed":"ከዚህ ሊንክ ሚዲያ ማግኘት አልተቻለም። ሌላ ሊንክ ይሞክሩ ወይም ትንሽ ቆይተው እንደገና ይሞክሩ።","error.no_media":"በዚህ ሊንክ ላይ ሊወርድ የሚችል ሚዲያ የለም።","error.server_config":"አገልጋዩ ገና በትክክል አልተዋቀረም።","error.server_error":"በአገልጋዩ ላይ የሆነ ችግር ተፈጥሯል። እባክዎ እንደገና ይሞክሩ።"}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ca" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Baixa vídeos, fotos i àudio de TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn i centenars de llocs més.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Baixa vídeos, fotos i àudio de TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn i centenars de llocs més.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Salta al contingut</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Navegació principal">
+        <a href="#cara" data-i18n="nav.how">Com s'utilitza</a>
+        <a href="#platform" data-i18n="nav.platforms">Plataformes</a>
+        <a href="#faq" data-i18n="nav.faq">Preguntes freqüents</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Canvia la llengua: Català">
+        <span class="lang-flag" aria-hidden="true">🇦🇩</span>
+        <span class="lang-code">CA</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Baixa vídeos, fotos i àudio de qualsevol xarxa social</h1>
+        <p class="lead" data-i18n="hero.lead">Enganxa un enllaç de TikTok, Instagram, Facebook, X, Pinterest i molts més. Tria la qualitat i desa-ho directament al teu dispositiu.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Enllaç de la publicació o del vídeo</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Enganxa un enllaç aquí…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Enganxa</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Esborra l'enllaç">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Baixa</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Exemples de plataformes compatibles">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Com baixar</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Copia l'enllaç</h3>
+            <p data-i18n-html="how.step1.text">Obre la publicació a l'app, toca <strong>Comparteix</strong> i tria <strong>Copia l'enllaç</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Enganxa'l aquí</h3>
+            <p data-i18n-html="how.step2.text">Enganxa l'enllaç al quadre de dalt i toca <strong>Baixa</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Tria i desa</h3>
+            <p data-i18n="how.step3.text">Tria vídeo, àudio MP3 o foto amb la qualitat que vulguis.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Plataformes compatibles</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Vídeos, fotos i àudio de centenars de llocs. Alguns dels més populars:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Preguntes freqüents</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save és gratuït?</summary>
+            <p data-i18n-html="faq.a1">Sí, totalment gratuït. No cal registrar-se, iniciar sessió ni instal·lar cap app.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">On es desen els meus fitxers?</summary>
+            <p data-i18n-html="faq.a2">A l'Android i a l'ordinador, els fitxers van a la carpeta <strong>Baixades</strong>. A l'iPhone i a l'iPad (Safari), es desen a l'app <strong>Fitxers</strong> → <strong>Descàrregues</strong>. Des d'allà els pots desar a Fotos amb el botó Comparteix.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Per què no es poden baixar alguns vídeos?</summary>
+            <p data-i18n-html="faq.a3">El nostre servidor no pot accedir al contingut privat, al que requereix iniciar sessió ni al que està restringit per regió. Comprova que la publicació sigui pública i torna-ho a provar.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Com puc baixar MP3?</summary>
+            <p data-i18n-html="faq.a4">Un cop processat l'enllaç, tria l'opció <strong>MP3</strong> a Àudio. El so s'extreu del vídeo i es converteix a MP3 de 192 kbps.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Els vídeos de TikTok tenen marca d'aigua?</summary>
+            <p data-i18n-html="faq.a5">Sempre prioritzem la versió sense marca d'aigua quan està disponible. Les opcions que inclouen marca d'aigua s'indiquen amb <strong>Marca d'aigua</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Els meus fitxers es guarden al vostre servidor?</summary>
+            <p data-i18n-html="faq.a6">No. Els fitxers s'envien directament des de la plataforma original al teu dispositiu i no es guarden al nostre servidor.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Fet per</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Tria la llengua</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Tanca">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Cerca una llengua…" aria-label="Cerca una llengua…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>No s'ha trobat cap llengua.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">S'està obtenint el contingut… pot trigar uns segons.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"ca","strings":{"meta.title":"I Need Save — Baixa vídeos, fotos i àudio de qualsevol xarxa social","meta.description":"Baixa vídeos, fotos i àudio de TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn i centenars de llocs més.","skip":"Salta al contingut","nav.label":"Navegació principal","nav.how":"Com s'utilitza","nav.platforms":"Plataformes","nav.faq":"Preguntes freqüents","lang.button":"Canvia la llengua","lang.title":"Tria la llengua","lang.search":"Cerca una llengua…","lang.empty":"No s'ha trobat cap llengua.","lang.close":"Tanca","hero.title":"Baixa vídeos, fotos i àudio de qualsevol xarxa social","hero.lead":"Enganxa un enllaç de TikTok, Instagram, Facebook, X, Pinterest i molts més. Tria la qualitat i desa-ho directament al teu dispositiu.","form.label":"Enllaç de la publicació o del vídeo","form.placeholder":"Enganxa un enllaç aquí…","form.paste":"Enganxa","form.clear":"Esborra l'enllaç","form.submit":"Baixa","form.processing":"S'està processant","chips.label":"Exemples de plataformes compatibles","how.title":"Com baixar","how.step1.title":"Copia l'enllaç","how.step1.text":"Obre la publicació a l'app, toca \u003cstrong>Comparteix\u003c/strong> i tria \u003cstrong>Copia l'enllaç\u003c/strong>.","how.step2.title":"Enganxa'l aquí","how.step2.text":"Enganxa l'enllaç al quadre de dalt i toca \u003cstrong>Baixa\u003c/strong>.","how.step3.title":"Tria i desa","how.step3.text":"Tria vídeo, àudio MP3 o foto amb la qualitat que vulguis.","platforms.title":"Plataformes compatibles","platforms.lead":"Vídeos, fotos i àudio de centenars de llocs. Alguns dels més populars:","faq.title":"Preguntes freqüents","faq.q1":"I Need Save és gratuït?","faq.a1":"Sí, totalment gratuït. No cal registrar-se, iniciar sessió ni instal·lar cap app.","faq.q2":"On es desen els meus fitxers?","faq.a2":"A l'Android i a l'ordinador, els fitxers van a la carpeta \u003cstrong>Baixades\u003c/strong>. A l'iPhone i a l'iPad (Safari), es desen a l'app \u003cstrong>Fitxers\u003c/strong> → \u003cstrong>Descàrregues\u003c/strong>. Des d'allà els pots desar a Fotos amb el botó Comparteix.","faq.q3":"Per què no es poden baixar alguns vídeos?","faq.a3":"El nostre servidor no pot accedir al contingut privat, al que requereix iniciar sessió ni al que està restringit per regió. Comprova que la publicació sigui pública i torna-ho a provar.","faq.q4":"Com puc baixar MP3?","faq.a4":"Un cop processat l'enllaç, tria l'opció \u003cstrong>MP3\u003c/strong> a Àudio. El so s'extreu del vídeo i es converteix a MP3 de 192 kbps.","faq.q5":"Els vídeos de TikTok tenen marca d'aigua?","faq.a5":"Sempre prioritzem la versió sense marca d'aigua quan està disponible. Les opcions que inclouen marca d'aigua s'indiquen amb \u003cstrong>Marca d'aigua\u003c/strong>.","faq.q6":"Els meus fitxers es guarden al vostre servidor?","faq.a6":"No. Els fitxers s'envien directament des de la plataforma original al teu dispositiu i no es guarden al nostre servidor.","footer.madeBy":"Fet per","results.loading":"S'està obtenint el contingut… pot trigar uns segons.","results.found":"{n} elements trobats","results.more":"Mostra {n} opcions més","group.video":"Vídeo","group.audio":"Àudio","group.image":"Fotos","label.thumbnail":"Miniatura","label.photo":"Foto","label.photoN":"Foto {n}","label.video":"Vídeo","label.videoN":"Vídeo {n}","label.audioN":"Àudio {n}","label.original_audio":"So original","note.original_quality":"Qualitat original","note.no_audio":"Sense so","note.watermark":"Marca d'aigua","download.button":"Baixa","download.preparing":"S'està preparant…","toast.preparing":"S'està preparant el fitxer… la baixada començarà automàticament.","toast.started":"S'ha iniciat la baixada.","toast.failed":"La baixada ha fallat. Prova una altra qualitat o torna a processar l'enllaç.","toast.clipboardEmpty":"El porta-retalls és buit. Primer copia un enllaç.","toast.clipboardDenied":"S'ha denegat l'accés al porta-retalls. Enganxa l'enllaç manualment.","error.empty":"Primer enganxa l'enllaç d'una publicació o d'un vídeo.","error.timeout":"S'ha esgotat el temps d'espera. L'origen ha trigat massa a respondre; torna-ho a provar.","error.offline":"No hi ha connexió a Internet. Comprova la xarxa i torna-ho a provar.","error.busy":"El servidor està ocupat. Torna-ho a provar d'aquí a una estona.","error.invalid_url":"L'enllaç no és vàlid. Enganxa l'enllaç complet des de l'app de la xarxa social.","error.unsupported":"Aquest enllaç encara no és compatible. Comprova que porti directament a una publicació o a un vídeo.","error.blocked":"Ara mateix aquesta plataforma bloqueja el nostre servidor, així que no es pot baixar aquest enllaç.","error.rate_limited":"La plataforma limita les sol·licituds del nostre servidor. Torna-ho a provar d'aquí a una estona.","error.login_required":"Aquest contingut és privat o la plataforma demana iniciar sessió per veure'l, així que no es pot baixar.","error.not_found":"No s'ha trobat el contingut o s'ha suprimit.","error.geo_blocked":"Aquest contingut està restringit per regió i el nostre servidor no hi pot accedir.","error.failed":"No s'ha pogut obtenir contingut d'aquest enllaç. Prova un altre enllaç o torna-ho a provar d'aquí a una estona.","error.no_media":"En aquest enllaç no hi ha contingut que es pugui baixar.","error.server_config":"El servidor encara no està configurat correctament.","error.server_error":"Alguna cosa ha fallat al servidor. Torna-ho a provar."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

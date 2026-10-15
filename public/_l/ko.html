@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ko" dir="ltr" style="--font-script: &quot;Noto Sans KR&quot;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn 등 수백 개 사이트에서 동영상, 사진, 오디오를 다운로드하세요.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn 등 수백 개 사이트에서 동영상, 사진, 오디오를 다운로드하세요.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"></noscript>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="기본 탐색">
+        <a href="#cara" data-i18n="nav.how">사용 방법</a>
+        <a href="#platform" data-i18n="nav.platforms">지원 플랫폼</a>
+        <a href="#faq" data-i18n="nav.faq">자주 묻는 질문</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="언어 변경: 한국어">
+        <span class="lang-flag" aria-hidden="true">🇰🇷</span>
+        <span class="lang-code">KO</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">모든 SNS에서 동영상, 사진, 오디오를 다운로드하세요</h1>
+        <p class="lead" data-i18n="hero.lead">TikTok, Instagram, Facebook, X, Pinterest 등의 링크를 붙여넣으세요. 화질을 고르면 기기에 바로 저장됩니다.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">게시물 또는 동영상 링크</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="여기에 링크를 붙여넣으세요…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">붙여넣기</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="링크 지우기">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">다운로드</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="지원 플랫폼 예시">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">다운로드 방법</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">링크 복사</h3>
+            <p data-i18n-html="how.step1.text">앱에서 게시물을 열고 <strong>공유</strong>를 탭한 다음 <strong>링크 복사</strong>를 선택하세요.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">여기에 붙여넣기</h3>
+            <p data-i18n-html="how.step2.text">위 입력란에 링크를 붙여넣고 <strong>다운로드</strong>를 누르세요.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">선택 후 저장</h3>
+            <p data-i18n="how.step3.text">원하는 화질의 동영상, MP3 오디오 또는 사진을 선택하세요.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">지원 플랫폼</h2>
+        <p class="section-lead" data-i18n="platforms.lead">수백 개 사이트의 동영상, 사진, 오디오를 지원합니다. 대표적인 인기 플랫폼:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">자주 묻는 질문</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save는 무료인가요?</summary>
+            <p data-i18n-html="faq.a1">네, 완전히 무료입니다. 회원가입, 로그인, 앱 설치가 필요 없습니다.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">파일은 어디에 저장되나요?</summary>
+            <p data-i18n-html="faq.a2">Android와 컴퓨터에서는 <strong>다운로드</strong> 폴더에 저장됩니다. iPhone과 iPad(Safari)에서는 <strong>파일</strong> 앱 → <strong>다운로드</strong>에 저장됩니다. 그곳에서 공유 버튼을 눌러 사진 앱에 저장할 수 있습니다.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">일부 동영상이 다운로드되지 않는 이유는 무엇인가요?</summary>
+            <p data-i18n-html="faq.a3">비공개 콘텐츠, 로그인이 필요한 콘텐츠, 지역 제한이 있는 콘텐츠는 서버에서 접근할 수 없습니다. 게시물이 공개 상태인지 확인한 후 다시 시도하세요.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">MP3는 어떻게 다운로드하나요?</summary>
+            <p data-i18n-html="faq.a4">링크 처리가 끝나면 오디오 항목에서 <strong>MP3</strong> 옵션을 선택하세요. 동영상에서 소리를 추출해 192 kbps MP3로 변환합니다.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">TikTok 동영상에 워터마크가 있나요?</summary>
+            <p data-i18n-html="faq.a5">워터마크 없는 버전이 있으면 항상 그 버전을 우선 제공합니다. 워터마크가 포함된 옵션에는 <strong>워터마크</strong> 표시가 붙습니다.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">파일이 서버에 저장되나요?</summary>
+            <p data-i18n-html="faq.a6">아니요. 파일은 원래 플랫폼에서 기기로 바로 전송되며 서버에 보관되지 않습니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">제작</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">언어 선택</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="닫기">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="언어 검색…" aria-label="언어 검색…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>언어를 찾을 수 없습니다.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">미디어를 가져오는 중… 몇 초 정도 걸릴 수 있습니다.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"ko","strings":{"meta.title":"I Need Save — 모든 SNS에서 동영상, 사진, 오디오 다운로드","meta.description":"TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn 등 수백 개 사이트에서 동영상, 사진, 오디오를 다운로드하세요.","skip":"본문으로 건너뛰기","nav.label":"기본 탐색","nav.how":"사용 방법","nav.platforms":"지원 플랫폼","nav.faq":"자주 묻는 질문","lang.button":"언어 변경","lang.title":"언어 선택","lang.search":"언어 검색…","lang.empty":"언어를 찾을 수 없습니다.","lang.close":"닫기","hero.title":"모든 SNS에서 동영상, 사진, 오디오를 다운로드하세요","hero.lead":"TikTok, Instagram, Facebook, X, Pinterest 등의 링크를 붙여넣으세요. 화질을 고르면 기기에 바로 저장됩니다.","form.label":"게시물 또는 동영상 링크","form.placeholder":"여기에 링크를 붙여넣으세요…","form.paste":"붙여넣기","form.clear":"링크 지우기","form.submit":"다운로드","form.processing":"처리 중","chips.label":"지원 플랫폼 예시","how.title":"다운로드 방법","how.step1.title":"링크 복사","how.step1.text":"앱에서 게시물을 열고 \u003cstrong>공유\u003c/strong>를 탭한 다음 \u003cstrong>링크 복사\u003c/strong>를 선택하세요.","how.step2.title":"여기에 붙여넣기","how.step2.text":"위 입력란에 링크를 붙여넣고 \u003cstrong>다운로드\u003c/strong>를 누르세요.","how.step3.title":"선택 후 저장","how.step3.text":"원하는 화질의 동영상, MP3 오디오 또는 사진을 선택하세요.","platforms.title":"지원 플랫폼","platforms.lead":"수백 개 사이트의 동영상, 사진, 오디오를 지원합니다. 대표적인 인기 플랫폼:","faq.title":"자주 묻는 질문","faq.q1":"I Need Save는 무료인가요?","faq.a1":"네, 완전히 무료입니다. 회원가입, 로그인, 앱 설치가 필요 없습니다.","faq.q2":"파일은 어디에 저장되나요?","faq.a2":"Android와 컴퓨터에서는 \u003cstrong>다운로드\u003c/strong> 폴더에 저장됩니다. iPhone과 iPad(Safari)에서는 \u003cstrong>파일\u003c/strong> 앱 → \u003cstrong>다운로드\u003c/strong>에 저장됩니다. 그곳에서 공유 버튼을 눌러 사진 앱에 저장할 수 있습니다.","faq.q3":"일부 동영상이 다운로드되지 않는 이유는 무엇인가요?","faq.a3":"비공개 콘텐츠, 로그인이 필요한 콘텐츠, 지역 제한이 있는 콘텐츠는 서버에서 접근할 수 없습니다. 게시물이 공개 상태인지 확인한 후 다시 시도하세요.","faq.q4":"MP3는 어떻게 다운로드하나요?","faq.a4":"링크 처리가 끝나면 오디오 항목에서 \u003cstrong>MP3\u003c/strong> 옵션을 선택하세요. 동영상에서 소리를 추출해 192 kbps MP3로 변환합니다.","faq.q5":"TikTok 동영상에 워터마크가 있나요?","faq.a5":"워터마크 없는 버전이 있으면 항상 그 버전을 우선 제공합니다. 워터마크가 포함된 옵션에는 \u003cstrong>워터마크\u003c/strong> 표시가 붙습니다.","faq.q6":"파일이 서버에 저장되나요?","faq.a6":"아니요. 파일은 원래 플랫폼에서 기기로 바로 전송되며 서버에 보관되지 않습니다.","footer.madeBy":"제작","results.loading":"미디어를 가져오는 중… 몇 초 정도 걸릴 수 있습니다.","results.found":"미디어 {n}개를 찾았습니다","results.more":"옵션 {n}개 더 보기","group.video":"동영상","group.audio":"오디오","group.image":"사진","label.thumbnail":"썸네일","label.photo":"사진","label.photoN":"사진 {n}","label.video":"동영상","label.videoN":"동영상 {n}","label.audioN":"오디오 {n}","label.original_audio":"오리지널 사운드","note.original_quality":"원본 화질","note.no_audio":"소리 없음","note.watermark":"워터마크","download.button":"다운로드","download.preparing":"준비 중…","toast.preparing":"파일을 준비하는 중입니다… 다운로드가 자동으로 시작됩니다.","toast.started":"다운로드를 시작했습니다.","toast.failed":"다운로드에 실패했습니다. 다른 화질을 선택하거나 링크를 다시 처리해 보세요.","toast.clipboardEmpty":"클립보드가 비어 있습니다. 먼저 링크를 복사하세요.","toast.clipboardDenied":"클립보드 접근이 거부되었습니다. 링크를 직접 붙여넣으세요.","error.empty":"먼저 게시물 또는 동영상 링크를 붙여넣으세요.","error.timeout":"시간이 초과되었습니다. 원본 사이트의 응답이 너무 늦습니다. 다시 시도해 주세요.","error.offline":"인터넷에 연결되어 있지 않습니다. 네트워크를 확인한 후 다시 시도하세요.","error.busy":"서버가 혼잡합니다. 잠시 후 다시 시도해 주세요.","error.invalid_url":"잘못된 링크입니다. SNS 앱에서 복사한 전체 링크를 붙여넣으세요.","error.unsupported":"아직 지원하지 않는 링크입니다. 게시물이나 동영상을 직접 가리키는 링크인지 확인하세요.","error.blocked":"현재 이 플랫폼이 서버를 차단하고 있어 지금은 이 링크를 다운로드할 수 없습니다.","error.rate_limited":"플랫폼에서 서버의 요청을 제한하고 있습니다. 잠시 후 다시 시도해 주세요.","error.login_required":"비공개 콘텐츠이거나 플랫폼에서 로그인해야 볼 수 있는 콘텐츠라서 다운로드할 수 없습니다.","error.not_found":"콘텐츠를 찾을 수 없거나 삭제되었습니다.","error.geo_blocked":"지역 제한이 있는 콘텐츠라서 서버에서 접근할 수 없습니다.","error.failed":"이 링크에서 미디어를 가져오지 못했습니다. 다른 링크를 사용하거나 잠시 후 다시 시도하세요.","error.no_media":"이 링크에는 다운로드할 수 있는 미디어가 없습니다.","error.server_config":"서버가 아직 올바르게 설정되지 않았습니다.","error.server_error":"서버에 문제가 발생했습니다. 다시 시도해 주세요."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>

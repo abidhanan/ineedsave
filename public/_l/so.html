@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="so" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Need Save</title>
+  <meta name="description" content="Ka soo deji fiidiyowyo, sawirro iyo cod TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn iyo boqolaal websaydh oo kale.">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="I Need Save">
+  <meta name="apple-mobile-web-app-title" content="I Need Save">
+  <link rel="canonical" href="https://ineedsave.site/">
+  <meta property="og:title" content="I Need Save">
+  <meta property="og:url" content="https://ineedsave.site/">
+  <meta property="og:description" content="Ka soo deji fiidiyowyo, sawirro iyo cod TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn iyo boqolaal websaydh oo kale.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">U bood nuxurka</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="I Need Save">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        </span>
+        <span class="brand-name">ineedsave</span>
+      </a>
+      <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="Liiska ugu weyn">
+        <a href="#cara" data-i18n="nav.how">Sida loo isticmaalo</a>
+        <a href="#platform" data-i18n="nav.platforms">Barxadaha</a>
+        <a href="#faq" data-i18n="nav.faq">Su'aalaha</a>
+      </nav>
+      <button class="lang-button" id="lang-button" type="button" aria-haspopup="dialog" aria-label="Beddel luqadda: Soomaali">
+        <span class="lang-flag" aria-hidden="true">🇸🇴</span>
+        <span class="lang-code">SO</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero screen pattern-dots">
+      <div class="container narrow">
+        <h1 data-i18n="hero.title">Ka soo deji fiidiyowyo, sawirro iyo cod bar kasta oo bulshada ah</h1>
+        <p class="lead" data-i18n="hero.lead">Ku dheji link ka yimid TikTok, Instagram, Facebook, X, Pinterest iyo kuwo kale. Dooro tayada, kadibna si toos ah ugu kaydi qalabkaaga.</p>
+
+        <form class="search" id="form" novalidate>
+          <label class="sr-only" for="url" data-i18n="form.label">Link-ga qoraalka ama fiidiyowga</label>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            <input id="url" name="url" type="url" inputmode="url" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" data-i18n-attr="placeholder:form.placeholder" placeholder="Halkan ku dheji link-ga…" required>
+            <button class="field-action" id="paste" type="button" data-i18n="form.paste">Dheji</button>
+            <button class="field-action" id="clear" type="button" hidden data-i18n-attr="aria-label:form.clear" aria-label="Tirtir link-ga">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <button class="btn btn-primary" id="submit" type="submit">
+            <span class="btn-label" data-i18n="form.submit">Soo deji</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Tusaalooyin barxadaha la taageero">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>SoundCloud</li><li>Bluesky</li><li>Twitch</li>
+        </ul>
+
+        <div class="results" id="results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="cara">
+      <div class="container">
+        <h2 data-i18n="how.title">Sida loo soo dejiyo</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Koobiyee link-ga</h3>
+            <p data-i18n-html="how.step1.text">Ka fur qoraalka app-ka, taabo <strong>La wadaag</strong>, kadibna dooro <strong>Koobiyee link-ga</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Halkan ku dheji</h3>
+            <p data-i18n-html="how.step2.text">Ku dheji link-ga sanduuqa sare, kadibna riix <strong>Soo deji</strong>.</p>
+          </li>
+          <li class="card step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Dooro oo kaydi</h3>
+            <p data-i18n="how.step3.text">Dooro fiidiyow, cod MP3 ah, ama sawir tayada aad rabto.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="platform">
+      <div class="container">
+        <h2 data-i18n="platforms.title">Barxadaha la taageero</h2>
+        <p class="section-lead" data-i18n="platforms.lead">Fiidiyowyo, sawirro iyo cod ka yimid boqolaal websaydh. Qaar ka mid ah kuwa ugu caansan:</p>
+        <ul class="platforms">
+          <li>TikTok</li><li>Instagram</li><li>Facebook</li><li>X / Twitter</li><li>Pinterest</li><li>Snapchat</li>
+          <li>Tumblr</li><li>LinkedIn</li><li>Bluesky</li><li>Twitch</li><li>SoundCloud</li><li>Dailymotion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section screen pattern-dots" id="faq">
+      <div class="container narrow">
+        <h2 data-i18n="faq.title">Su'aalaha inta badan la is weydiiyo</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">I Need Save ma bilaash baa?</summary>
+            <p data-i18n-html="faq.a1">Haa, gebi ahaanba waa bilaash. Looma baahna is-diiwaangelin, gelitaan ama app.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Xaggee lagu kaydiyaa faylashayda?</summary>
+            <p data-i18n-html="faq.a2">Android iyo kombiyuutarrada, faylashu waxay galaan galka <strong>Soo dejisyada</strong>. iPhone iyo iPad (Safari), waxaa lagu kaydiyaa app-ka <strong>Faylasha</strong> → <strong>Soo dejisyada</strong>. Halkaas ayaad uga kaydin kartaa Sawirrada adigoo isticmaalaya badhanka La wadaag.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Maxay qaar ka mid ah fiidiyowyada u soo degi waayaan?</summary>
+            <p data-i18n-html="faq.a3">Server-keennu ma gaari karo nuxurka gaarka ah, nuxurka u baahan gelitaan, ama nuxurka gobol ahaan loo xaddiday. Hubi in qoraalku yahay mid dadweyne, kadibna isku day mar kale.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Sideen u soo dejiyaa MP3?</summary>
+            <p data-i18n-html="faq.a4">Marka link-ga la habeeyo kadib, dooro <strong>MP3</strong> oo ku hoos jira Cod. Codka waxaa laga soo saaraa fiidiyowga, waxaana loo beddelaa MP3 192 kbps ah.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Fiidiyowyada TikTok ma leeyihiin calaamadda biyaha?</summary>
+            <p data-i18n-html="faq.a5">Had iyo jeer waxaan doorbidnaa nuqulka aan lahayn calaamadda biyaha marka uu jiro. Doorashooyinka leh calaamadda biyaha waxaa lagu calaamadeeyay <strong>Calaamadda biyaha</strong>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Faylashayda ma lagu kaydiyaa server-kiinna?</summary>
+            <p data-i18n-html="faq.a6">Maya. Faylasha si toos ah ayaa looga soo diraa barxadda asalka ah ilaa qalabkaaga, laguma kaydiyo server-keenna.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 I Need Save - <span data-i18n="footer.madeBy">Waxaa sameeyay</span> <a href="https://abidhanan.my.id" target="_blank" rel="noopener">Abid Hanan Wicaksono</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lang-dialog" id="lang-dialog" aria-labelledby="lang-title">
+    <div class="lang-head">
+      <h2 id="lang-title" data-i18n="lang.title">Dooro luqadda</h2>
+      <button class="icon-button" id="lang-close" type="button" data-i18n-attr="aria-label:lang.close" aria-label="Xir">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="lang-search-wrap">
+      <input class="lang-search" id="lang-search" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:lang.search;aria-label:lang.search" placeholder="Raadi luqad…" aria-label="Raadi luqad…">
+    </div>
+    <ul class="lang-list" id="lang-list"></ul>
+    <p class="lang-empty" id="lang-empty" data-i18n="lang.empty" hidden>Luqad lama helin.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <template id="tpl-loading">
+    <div class="card result skeleton" aria-busy="true">
+      <div class="result-media"><div class="thumb"></div></div>
+      <div class="result-body">
+        <div class="sk sk-title"></div>
+        <div class="sk sk-line"></div>
+        <div class="sk sk-row"></div>
+        <div class="sk sk-row"></div>
+        <p class="loading-text" data-i18n="results.loading">Faylasha waa la soo helayaa… tani waxay qaadan kartaa dhowr ilbiriqsi.</p>
+      </div>
+    </div>
+  </template>
+
+  <script>window.I18N_BOOT={"lang":"so","strings":{"meta.title":"I Need Save — Ka soo deji fiidiyowyo, sawirro iyo cod bar kasta oo bulshada ah","meta.description":"Ka soo deji fiidiyowyo, sawirro iyo cod TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn iyo boqolaal websaydh oo kale.","skip":"U bood nuxurka","nav.label":"Liiska ugu weyn","nav.how":"Sida loo isticmaalo","nav.platforms":"Barxadaha","nav.faq":"Su'aalaha","lang.button":"Beddel luqadda","lang.title":"Dooro luqadda","lang.search":"Raadi luqad…","lang.empty":"Luqad lama helin.","lang.close":"Xir","hero.title":"Ka soo deji fiidiyowyo, sawirro iyo cod bar kasta oo bulshada ah","hero.lead":"Ku dheji link ka yimid TikTok, Instagram, Facebook, X, Pinterest iyo kuwo kale. Dooro tayada, kadibna si toos ah ugu kaydi qalabkaaga.","form.label":"Link-ga qoraalka ama fiidiyowga","form.placeholder":"Halkan ku dheji link-ga…","form.paste":"Dheji","form.clear":"Tirtir link-ga","form.submit":"Soo deji","form.processing":"Waa la habaynayaa","chips.label":"Tusaalooyin barxadaha la taageero","how.title":"Sida loo soo dejiyo","how.step1.title":"Koobiyee link-ga","how.step1.text":"Ka fur qoraalka app-ka, taabo \u003cstrong>La wadaag\u003c/strong>, kadibna dooro \u003cstrong>Koobiyee link-ga\u003c/strong>.","how.step2.title":"Halkan ku dheji","how.step2.text":"Ku dheji link-ga sanduuqa sare, kadibna riix \u003cstrong>Soo deji\u003c/strong>.","how.step3.title":"Dooro oo kaydi","how.step3.text":"Dooro fiidiyow, cod MP3 ah, ama sawir tayada aad rabto.","platforms.title":"Barxadaha la taageero","platforms.lead":"Fiidiyowyo, sawirro iyo cod ka yimid boqolaal websaydh. Qaar ka mid ah kuwa ugu caansan:","faq.title":"Su'aalaha inta badan la is weydiiyo","faq.q1":"I Need Save ma bilaash baa?","faq.a1":"Haa, gebi ahaanba waa bilaash. Looma baahna is-diiwaangelin, gelitaan ama app.","faq.q2":"Xaggee lagu kaydiyaa faylashayda?","faq.a2":"Android iyo kombiyuutarrada, faylashu waxay galaan galka \u003cstrong>Soo dejisyada\u003c/strong>. iPhone iyo iPad (Safari), waxaa lagu kaydiyaa app-ka \u003cstrong>Faylasha\u003c/strong> → \u003cstrong>Soo dejisyada\u003c/strong>. Halkaas ayaad uga kaydin kartaa Sawirrada adigoo isticmaalaya badhanka La wadaag.","faq.q3":"Maxay qaar ka mid ah fiidiyowyada u soo degi waayaan?","faq.a3":"Server-keennu ma gaari karo nuxurka gaarka ah, nuxurka u baahan gelitaan, ama nuxurka gobol ahaan loo xaddiday. Hubi in qoraalku yahay mid dadweyne, kadibna isku day mar kale.","faq.q4":"Sideen u soo dejiyaa MP3?","faq.a4":"Marka link-ga la habeeyo kadib, dooro \u003cstrong>MP3\u003c/strong> oo ku hoos jira Cod. Codka waxaa laga soo saaraa fiidiyowga, waxaana loo beddelaa MP3 192 kbps ah.","faq.q5":"Fiidiyowyada TikTok ma leeyihiin calaamadda biyaha?","faq.a5":"Had iyo jeer waxaan doorbidnaa nuqulka aan lahayn calaamadda biyaha marka uu jiro. Doorashooyinka leh calaamadda biyaha waxaa lagu calaamadeeyay \u003cstrong>Calaamadda biyaha\u003c/strong>.","faq.q6":"Faylashayda ma lagu kaydiyaa server-kiinna?","faq.a6":"Maya. Faylasha si toos ah ayaa looga soo diraa barxadda asalka ah ilaa qalabkaaga, laguma kaydiyo server-keenna.","footer.madeBy":"Waxaa sameeyay","results.loading":"Faylasha waa la soo helayaa… tani waxay qaadan kartaa dhowr ilbiriqsi.","results.found":"{n} fayl ayaa la helay","results.more":"Muuji {n} doorasho oo kale","group.video":"Fiidiyow","group.audio":"Cod","group.image":"Sawirro","label.thumbnail":"Sawir yar","label.photo":"Sawir","label.photoN":"Sawir {n}","label.video":"Fiidiyow","label.videoN":"Fiidiyow {n}","label.audioN":"Cod {n}","label.original_audio":"Codka asalka ah","note.original_quality":"Tayada asalka ah","note.no_audio":"Cod ma leh","note.watermark":"Calaamadda biyaha","download.button":"Soo deji","download.preparing":"Waa la diyaarinayaa…","toast.preparing":"Faylkaaga waa la diyaarinayaa… soo dejintu si toos ah ayay u bilaabanaysaa.","toast.started":"Soo dejintii way bilaabatay.","toast.failed":"Soo dejintu way guuldareysatay. Isku day tayo kale ama mar kale habee link-ga.","toast.clipboardEmpty":"Clipboard-kaagu waa madhan yahay. Marka hore koobiyee link.","toast.clipboardDenied":"Gelitaanka clipboard-ka waa la diiday. Gacanta ku dheji link-ga.","error.empty":"Marka hore ku dheji link qoraal ama fiidiyow.","error.timeout":"Waqtigii wuu dhammaaday. Ishu way ka daahday jawaabta, fadlan isku day mar kale.","error.offline":"Ma jiro xiriir internet. Hubi shabakaddaada oo isku day mar kale.","error.busy":"Server-ku waa mashquul. Fadlan isku day mar kale wax yar kadib.","error.invalid_url":"Link khaldan. Ku dheji link-ga oo dhammaystiran ee ka yimid app-ka baraha bulshada.","error.unsupported":"Link-gan weli lama taageero. Hubi inuu si toos ah ugu tilmaamayo qoraal ama fiidiyow.","error.blocked":"Barxaddan hadda waxay xannibaysaa server-keenna, sidaa darteed link-gan hadda lama soo dejin karo.","error.rate_limited":"Barxaddu waxay xaddidaysaa codsiyada ka imanaya server-keenna. Fadlan isku day mar kale wax yar kadib.","error.login_required":"Nuxurkani waa gaar, ama barxaddu waxay u baahan tahay gelitaan si loo arko, sidaa darteed lama soo dejin karo.","error.not_found":"Nuxurka lama helin ama waa la tirtiray.","error.geo_blocked":"Nuxurkan gobol ahaan waa la xaddiday, server-keennuna ma gaari karo.","error.failed":"Faylal lagama heli karin link-gan. Isku day link kale ama isku day mar kale wax yar kadib.","error.no_media":"Ma jiraan faylal la soo dejin karo oo ku jira link-gan.","error.server_config":"Server-ka weli si sax ah looma habayn.","error.server_error":"Wax baa ka khaldamay server-ka. Fadlan isku day mar kale."}};</script>
+  <script type="module" src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</body>
+</html>
