@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — ඕනෑම සමාජ මාධ්‍යයකින් වීඩියෝ, ඡායාරූප සහ ශ්‍රව්‍ය බාගන්න",
-  "meta.description": "TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn සහ තවත් වෙබ් අඩවි සිය ගණනකින් වීඩියෝ, ඡායාරූප සහ ශ්‍රව්‍ය බාගන්න.",
+  "meta.description": "TikTok, Instagram, Facebook සහ තවත් වෙබ් අඩවි සිය ගණනකින් වීඩියෝ, ඡායාරූප සහ ශ්‍රව්‍ය නොමිලේ බාගන්න.",
 
   "skip": "අන්තර්ගතයට යන්න",
   "nav.label": "ප්‍රධාන සංචාලනය",
+  "nav.downloader": "බාගැනීම",
   "nav.how": "භාවිත කරන ආකාරය",
   "nav.platforms": "වේදිකා",
   "nav.faq": "ප්‍රශ්න",
@@ -50,6 +51,15 @@
   "faq.a6": "නැත. ගොනු මුල් වේදිකාවෙන් කෙලින්ම ඔබේ උපාංගයට යවනු ලබන අතර අපගේ සේවාදායකයේ තබා නොගනී.",
 
   "footer.madeBy": "නිර්මාණය කළේ",
+  "footer.contact": "සම්බන්ධ වන්න",
+  "footer.description": "TikTok, Instagram, Facebook සහ තවත් වෙබ් අඩවි සිය ගණනකින් වීඩියෝ, ඡායාරූප සහ ශ්‍රව්‍ය නොමිලේ බාගන්න.",
+
+  "articles.title": "ලිපි",
+  "articles.description": "සමාජ මාධ්‍යවලින් වීඩියෝ, ඡායාරූප සහ ශ්‍රව්‍ය බාගැනීම සඳහා ඉඟි සහ මාර්ගෝපදේශ.",
+  "articles.readMore": "තවත් කියවන්න",
+  "articles.all": "සියලු ලිපි බලන්න",
+  "articles.prev": "පෙර ලිපි",
+  "articles.next": "ඊළඟ ලිපි",
 
   "results.loading": "මාධ්‍ය ලබා ගනිමින්… මෙයට තත්පර කිහිපයක් ගත විය හැක.",
   "results.found": "මාධ්‍ය {n}ක් හමු විය",

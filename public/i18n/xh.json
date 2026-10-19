@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Khuphela iividiyo, iifoto nesandi kulo naliphi na iqonga lonxibelelwano",
-  "meta.description": "Khuphela iividiyo, iifoto nesandi kwi-TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn namakhulu ezinye iiwebhusayithi.",
+  "meta.description": "Khuphela simahla iividiyo, iifoto nesandi kwi-TikTok, Instagram, Facebook namakhulu ezinye iiwebhusayithi.",
 
   "skip": "Tsiba uye kumxholo",
   "nav.label": "Ukuhamba okuphambili",
+  "nav.downloader": "Isikhupheli",
   "nav.how": "Indlela yokusebenzisa",
   "nav.platforms": "Amaqonga",
   "nav.faq": "Imibuzo",
@@ -50,6 +51,15 @@
   "faq.a6": "Hayi. Iifayile zithunyelwa ngqo zisuka kwiqonga lokuqala ziye kwisixhobo sakho, kwaye azigcinwa kwiseva yethu.",
 
   "footer.madeBy": "Yenziwe ngu",
+  "footer.contact": "Qhagamshelana",
+  "footer.description": "Khuphela simahla iividiyo, iifoto nesandi kwi-TikTok, Instagram, Facebook namakhulu ezinye iiwebhusayithi.",
+
+  "articles.title": "Amanqaku",
+  "articles.description": "Iingcebiso nezikhokelo zokukhuphela iividiyo, iifoto nesandi kwimidiya yoluntu.",
+  "articles.readMore": "Funda ngakumbi",
+  "articles.all": "Bona onke amanqaku",
+  "articles.prev": "Amanqaku angaphambili",
+  "articles.next": "Amanqaku alandelayo",
 
   "results.loading": "Ifumana imidiya… oku kunokuthatha imizuzwana embalwa.",
   "results.found": "Kufunyenwe imidiya engu-{n}",

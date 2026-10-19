@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Download videoer, billeder og lyd fra alle sociale medier",
-  "meta.description": "Download videoer, billeder og lyd fra TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn og hundredvis af andre websites.",
+  "meta.description": "Download videoer, billeder og lyd gratis fra TikTok, Instagram, Facebook og hundredvis af andre websites.",
 
   "skip": "Gå til indhold",
   "nav.label": "Hovednavigation",
+  "nav.downloader": "Downloader",
   "nav.how": "Sådan bruger du det",
   "nav.platforms": "Platforme",
   "nav.faq": "FAQ",
@@ -50,6 +51,15 @@
   "faq.a6": "Nej. Filerne sendes direkte fra den oprindelige platform til din enhed og gemmes ikke på vores server.",
 
   "footer.madeBy": "Lavet af",
+  "footer.contact": "Kontakt",
+  "footer.description": "Download videoer, billeder og lyd gratis fra TikTok, Instagram, Facebook og hundredvis af andre websites.",
+
+  "articles.title": "Artikler",
+  "articles.description": "Tips og guides til at downloade videoer, billeder og lyd fra sociale medier.",
+  "articles.readMore": "Læs mere",
+  "articles.all": "Se alle artikler",
+  "articles.prev": "Forrige artikler",
+  "articles.next": "Næste artikler",
 
   "results.loading": "Henter medier… det kan tage et par sekunder.",
   "results.found": "{n} medier fundet",

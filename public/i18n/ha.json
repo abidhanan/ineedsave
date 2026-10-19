@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Sauke bidiyo, hotuna da sauti daga kowace kafar sada zumunta",
-  "meta.description": "Sauke bidiyo, hotuna da sauti daga TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn da ɗaruruwan sauran shafuka.",
+  "meta.description": "Sauke bidiyo, hotuna da sauti kyauta daga TikTok, Instagram, Facebook da ɗaruruwan sauran shafuka.",
 
   "skip": "Tsallaka zuwa abun ciki",
   "nav.label": "Babban kewayawa",
+  "nav.downloader": "Mai saukewa",
   "nav.how": "Yadda ake amfani",
   "nav.platforms": "Dandamali",
   "nav.faq": "Tambayoyi",
@@ -50,6 +51,15 @@
   "faq.a6": "A'a. Ana aika fayiloli daga ainihin dandamalin kai tsaye zuwa na'urarka, kuma ba a ajiye su a sabar mu.",
 
   "footer.madeBy": "Daga",
+  "footer.contact": "Tuntuɓe mu",
+  "footer.description": "Sauke bidiyo, hotuna da sauti kyauta daga TikTok, Instagram, Facebook da ɗaruruwan sauran shafuka.",
+
+  "articles.title": "Maƙaloli",
+  "articles.description": "Shawarwari da jagorori don sauke bidiyo, hotuna da sauti daga kafofin sada zumunta.",
+  "articles.readMore": "Karanta ƙari",
+  "articles.all": "Duba duk maƙaloli",
+  "articles.prev": "Maƙalolin baya",
+  "articles.next": "Maƙaloli na gaba",
 
   "results.loading": "Ana ɗauko midiya… wannan na iya ɗaukar 'yan daƙiƙoƙi.",
   "results.found": "An sami midiya {n}",

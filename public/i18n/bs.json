@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Preuzmite videozapise, fotografije i audio s bilo koje društvene mreže",
-  "meta.description": "Preuzmite videozapise, fotografije i audio s mreža TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn i stotina drugih stranica.",
+  "meta.description": "Besplatno preuzmite videozapise, fotografije i audio s mreža TikTok, Instagram, Facebook i stotina drugih stranica.",
 
   "skip": "Preskoči na sadržaj",
   "nav.label": "Glavna navigacija",
+  "nav.downloader": "Preuzimanje",
   "nav.how": "Kako koristiti",
   "nav.platforms": "Platforme",
   "nav.faq": "Pitanja",
@@ -50,6 +51,15 @@
   "faq.a6": "Ne. Fajlovi se šalju s originalne platforme direktno na vaš uređaj i ne čuvaju se na našem serveru.",
 
   "footer.madeBy": "Autor:",
+  "footer.contact": "Kontakt",
+  "footer.description": "Besplatno preuzmite videozapise, fotografije i audio s mreža TikTok, Instagram, Facebook i stotina drugih stranica.",
+
+  "articles.title": "Članci",
+  "articles.description": "Savjeti i vodiči za preuzimanje videozapisa, fotografija i audija s društvenih mreža.",
+  "articles.readMore": "Pročitajte više",
+  "articles.all": "Pogledajte sve članke",
+  "articles.prev": "Prethodni članci",
+  "articles.next": "Sljedeći članci",
 
   "results.loading": "Učitavamo medije… ovo može potrajati nekoliko sekundi.",
   "results.found": "Pronađeno medija: {n}",

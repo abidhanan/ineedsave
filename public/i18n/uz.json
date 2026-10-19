@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Istalgan ijtimoiy tarmoqdan video, rasm va audio yuklab oling",
-  "meta.description": "TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn va yuzlab boshqa saytlardan video, rasm va audio yuklab oling.",
+  "meta.description": "TikTok, Instagram, Facebook va yuzlab boshqa saytlardan video, rasm va audio bepul yuklab oling.",
 
   "skip": "Asosiy qismga oʻtish",
   "nav.label": "Asosiy navigatsiya",
+  "nav.downloader": "Yuklovchi",
   "nav.how": "Qanday foydalaniladi",
   "nav.platforms": "Platformalar",
   "nav.faq": "Savol-javob",
@@ -50,6 +51,15 @@
   "faq.a6": "Yoʻq. Fayllar asl platformadan toʻgʻridan-toʻgʻri qurilmangizga yuboriladi va serverimizda saqlanmaydi.",
 
   "footer.madeBy": "Muallif",
+  "footer.contact": "Aloqa",
+  "footer.description": "TikTok, Instagram, Facebook va yuzlab boshqa saytlardan video, rasm va audio bepul yuklab oling.",
+
+  "articles.title": "Maqolalar",
+  "articles.description": "Ijtimoiy tarmoqlardan video, rasm va audio yuklab olish boʻyicha maslahatlar va qoʻllanmalar.",
+  "articles.readMore": "Batafsil oʻqish",
+  "articles.all": "Barcha maqolalarni koʻrish",
+  "articles.prev": "Oldingi maqolalar",
+  "articles.next": "Keyingi maqolalar",
 
   "results.loading": "Media olinmoqda… bu bir necha soniya vaqt olishi mumkin.",
   "results.found": "{n} ta media topildi",

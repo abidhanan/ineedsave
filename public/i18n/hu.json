@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Töltsön le videókat, fotókat és hangot bármely közösségi oldalról",
-  "meta.description": "Töltsön le videókat, fotókat és hangot a TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn és több száz más oldalról.",
+  "meta.description": "Töltsön le ingyenesen videókat, fotókat és hangot a TikTok, Instagram, Facebook és több száz más oldalról.",
 
   "skip": "Ugrás a tartalomra",
   "nav.label": "Fő navigáció",
+  "nav.downloader": "Letöltő",
   "nav.how": "Használat",
   "nav.platforms": "Platformok",
   "nav.faq": "GYIK",
@@ -50,6 +51,15 @@
   "faq.a6": "Nem. A fájlok az eredeti platformról közvetlenül az Ön eszközére kerülnek, és nem tároljuk őket a szerverünkön.",
 
   "footer.madeBy": "Készítette:",
+  "footer.contact": "Kapcsolat",
+  "footer.description": "Töltsön le ingyenesen videókat, fotókat és hangot a TikTok, Instagram, Facebook és több száz más oldalról.",
+
+  "articles.title": "Cikkek",
+  "articles.description": "Tippek és útmutatók videók, fotók és hangok letöltéséhez a közösségi oldalakról.",
+  "articles.readMore": "Tovább olvasom",
+  "articles.all": "Összes cikk megtekintése",
+  "articles.prev": "Előző cikkek",
+  "articles.next": "Következő cikkek",
 
   "results.loading": "Médiafájlok lekérése… ez eltarthat néhány másodpercig.",
   "results.found": "Talált médiafájlok: {n}",

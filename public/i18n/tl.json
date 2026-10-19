@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Mag-download ng video, larawan at audio mula sa anumang social media",
-  "meta.description": "Mag-download ng video, larawan, at audio mula sa TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn, at daan-daan pang ibang site.",
+  "meta.description": "Mag-download nang libre ng video, larawan, at audio mula sa TikTok, Instagram, Facebook, at daan-daan pang ibang site.",
 
   "skip": "Lumaktaw sa nilalaman",
   "nav.label": "Pangunahing navigation",
+  "nav.downloader": "Downloader",
   "nav.how": "Paano gamitin",
   "nav.platforms": "Mga platform",
   "nav.faq": "FAQ",
@@ -50,6 +51,15 @@
   "faq.a6": "Hindi. Diretsong ipinapadala ang mga file mula sa orihinal na platform papunta sa device mo at hindi itinatago sa server namin.",
 
   "footer.madeBy": "Ginawa ni",
+  "footer.contact": "Makipag-ugnayan",
+  "footer.description": "Mag-download nang libre ng video, larawan, at audio mula sa TikTok, Instagram, Facebook, at daan-daan pang ibang site.",
+
+  "articles.title": "Mga Artikulo",
+  "articles.description": "Mga tip at gabay sa pag-download ng video, larawan, at audio mula sa social media.",
+  "articles.readMore": "Magbasa pa",
+  "articles.all": "Tingnan ang lahat ng artikulo",
+  "articles.prev": "Mga naunang artikulo",
+  "articles.next": "Mga susunod na artikulo",
 
   "results.loading": "Kinukuha ang media… maaaring tumagal ito nang ilang segundo.",
   "results.found": "{n} media ang nahanap",

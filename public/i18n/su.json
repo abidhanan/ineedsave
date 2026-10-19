@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Unduh video, poto & audio tina média sosial mana waé",
-  "meta.description": "Unduh video, poto, jeung audio tina TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn, jeung ratusan situs lianna.",
+  "meta.description": "Unduh video, poto, jeung audio tina TikTok, Instagram, Facebook, jeung ratusan situs lianna sacara gratis.",
 
   "skip": "Langsung ka eusi",
   "nav.label": "Navigasi utama",
+  "nav.downloader": "Pangunduh",
   "nav.how": "Cara makéna",
   "nav.platforms": "Platform",
   "nav.faq": "FAQ",
@@ -50,6 +51,15 @@
   "faq.a6": "Henteu. File dikirim ti platform asalna langsung ka perangkat anjeun sareng henteu disimpen dina server kami.",
 
   "footer.madeBy": "Didamel ku",
+  "footer.contact": "Kontak",
+  "footer.description": "Unduh video, poto, jeung audio tina TikTok, Instagram, Facebook, jeung ratusan situs lianna sacara gratis.",
+
+  "articles.title": "Artikel",
+  "articles.description": "Tips jeung pituduh pikeun ngunduh video, poto, jeung audio tina média sosial.",
+  "articles.readMore": "Baca salengkepna",
+  "articles.all": "Tingali sadaya artikel",
+  "articles.prev": "Artikel saméméhna",
+  "articles.next": "Artikel salajengna",
 
   "results.loading": "Nuju nyandak média… ieu tiasa nyandak sababaraha detik.",
   "results.found": "{n} média kapendak",

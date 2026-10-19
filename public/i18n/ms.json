@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Muat turun video, foto & audio daripada mana-mana media sosial",
-  "meta.description": "Muat turun video, foto dan audio daripada TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn dan ratusan laman lain.",
+  "meta.description": "Muat turun video, foto dan audio daripada TikTok, Instagram, Facebook dan ratusan laman lain secara percuma.",
 
   "skip": "Langkau ke kandungan",
   "nav.label": "Navigasi utama",
+  "nav.downloader": "Pemuat Turun",
   "nav.how": "Cara guna",
   "nav.platforms": "Platform",
   "nav.faq": "Soalan Lazim",
@@ -50,6 +51,15 @@
   "faq.a6": "Tidak. Fail dihantar dari platform asal terus ke peranti anda dan tidak disimpan di pelayan kami.",
 
   "footer.madeBy": "Dihasilkan oleh",
+  "footer.contact": "Hubungi",
+  "footer.description": "Muat turun video, foto dan audio daripada TikTok, Instagram, Facebook dan ratusan laman lain secara percuma.",
+
+  "articles.title": "Artikel",
+  "articles.description": "Tip dan panduan untuk memuat turun video, foto dan audio daripada media sosial.",
+  "articles.readMore": "Baca lagi",
+  "articles.all": "Lihat semua artikel",
+  "articles.prev": "Artikel sebelumnya",
+  "articles.next": "Artikel seterusnya",
 
   "results.loading": "Mendapatkan media… ini mungkin mengambil masa beberapa saat.",
   "results.found": "{n} media ditemui",

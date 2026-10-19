@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Islendik sosial ulgamdan wideo, surat we ses ýükläň",
-  "meta.description": "TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn we ýüzlerçe beýleki saýtlardan wideo, surat we ses ýükläň.",
+  "meta.description": "TikTok, Instagram, Facebook we ýüzlerçe beýleki saýtlardan wideo, surat we ses mugt ýükläň.",
 
   "skip": "Mazmuna geç",
   "nav.label": "Esasy nawigasiýa",
+  "nav.downloader": "Ýükleýji",
   "nav.how": "Nähili ulanmaly",
   "nav.platforms": "Platformalar",
   "nav.faq": "Soraglar",
@@ -50,6 +51,15 @@
   "faq.a6": "Ýok. Faýllar asyl platformadan göni enjamyňyza iberilýär we serwerimizde saklanmaýar.",
 
   "footer.madeBy": "Döreden",
+  "footer.contact": "Habarlaşmak",
+  "footer.description": "TikTok, Instagram, Facebook we ýüzlerçe beýleki saýtlardan wideo, surat we ses mugt ýükläň.",
+
+  "articles.title": "Makalalar",
+  "articles.description": "Sosial ulgamlardan wideo, surat we ses ýüklemek üçin maslahatlar we gollanmalar.",
+  "articles.readMore": "Dowamyny oka",
+  "articles.all": "Ähli makalalary gör",
+  "articles.prev": "Öňki makalalar",
+  "articles.next": "Indiki makalalar",
 
   "results.loading": "Media alynýar… bu birnäçe sekunt alyp biler.",
   "results.found": "{n} media tapyldy",

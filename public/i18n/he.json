@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — הורדת סרטונים, תמונות ואודיו מכל רשת חברתית",
-  "meta.description": "הורידו סרטונים, תמונות ואודיו מ-TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ומאות אתרים נוספים.",
+  "meta.description": "הורידו בחינם סרטונים, תמונות ואודיו מ-TikTok, Instagram, Facebook ומאות אתרים נוספים.",
 
   "skip": "דילוג לתוכן",
   "nav.label": "ניווט ראשי",
+  "nav.downloader": "הורדה",
   "nav.how": "איך משתמשים",
   "nav.platforms": "פלטפורמות",
   "nav.faq": "שאלות נפוצות",
@@ -50,6 +51,15 @@
   "faq.a6": "לא. הקבצים נשלחים מהפלטפורמה המקורית ישירות למכשיר שלכם ולא נשמרים בשרת שלנו.",
 
   "footer.madeBy": "נוצר על ידי",
+  "footer.contact": "יצירת קשר",
+  "footer.description": "הורידו בחינם סרטונים, תמונות ואודיו מ-TikTok, Instagram, Facebook ומאות אתרים נוספים.",
+
+  "articles.title": "מאמרים",
+  "articles.description": "טיפים ומדריכים להורדת סרטונים, תמונות ואודיו מהרשתות החברתיות.",
+  "articles.readMore": "קרא עוד",
+  "articles.all": "לכל המאמרים",
+  "articles.prev": "המאמרים הקודמים",
+  "articles.next": "המאמרים הבאים",
 
   "results.loading": "מאחזרים מדיה… זה עשוי לקחת כמה שניות.",
   "results.found": "נמצאו {n} פריטי מדיה",

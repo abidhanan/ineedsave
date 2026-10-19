@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — کسی بھی سوشل میڈیا سے ویڈیوز، تصاویر اور آڈیو ڈاؤن لوڈ کریں",
-  "meta.description": "TikTok، Instagram، Facebook، X (Twitter)، Pinterest، LinkedIn اور سینکڑوں دوسری سائٹس سے ویڈیوز، تصاویر اور آڈیو ڈاؤن لوڈ کریں۔",
+  "meta.description": "TikTok، Instagram، Facebook اور سینکڑوں دوسری سائٹس سے ویڈیوز، تصاویر اور آڈیو مفت ڈاؤن لوڈ کریں۔",
 
   "skip": "مواد پر جائیں",
   "nav.label": "مرکزی نیویگیشن",
+  "nav.downloader": "ڈاؤن لوڈر",
   "nav.how": "استعمال کا طریقہ",
   "nav.platforms": "پلیٹ فارمز",
   "nav.faq": "عمومی سوالات",
@@ -50,6 +51,15 @@
   "faq.a6": "نہیں۔ فائلیں اصل پلیٹ فارم سے سیدھی آپ کے آلے پر بھیجی جاتی ہیں اور ہمارے سرور پر نہیں رکھی جاتیں۔",
 
   "footer.madeBy": "تیار کردہ از",
+  "footer.contact": "رابطہ",
+  "footer.description": "TikTok، Instagram، Facebook اور سینکڑوں دوسری سائٹس سے ویڈیوز، تصاویر اور آڈیو مفت ڈاؤن لوڈ کریں۔",
+
+  "articles.title": "مضامین",
+  "articles.description": "سوشل میڈیا سے ویڈیوز، تصاویر اور آڈیو ڈاؤن لوڈ کرنے کے لیے تجاویز اور گائیڈز۔",
+  "articles.readMore": "مزید پڑھیں",
+  "articles.all": "تمام مضامین دیکھیں",
+  "articles.prev": "پچھلے مضامین",
+  "articles.next": "اگلے مضامین",
 
   "results.loading": "میڈیا حاصل کیا جا رہا ہے… اس میں چند سیکنڈ لگ سکتے ہیں۔",
   "results.found": "{n} میڈیا ملے",

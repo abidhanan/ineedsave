@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — あらゆるSNSから動画・写真・音声をダウンロード",
-  "meta.description": "TikTok、Instagram、Facebook、X (Twitter)、Pinterest、LinkedIn など数百のサイトから動画・写真・音声をダウンロード。",
+  "meta.description": "TikTok、Instagram、Facebook など数百のサイトから動画・写真・音声を無料でダウンロード。",
 
   "skip": "コンテンツへスキップ",
   "nav.label": "メインナビゲーション",
+  "nav.downloader": "ダウンローダー",
   "nav.how": "使い方",
   "nav.platforms": "対応サービス",
   "nav.faq": "よくある質問",
@@ -50,6 +51,15 @@
   "faq.a6": "いいえ。ファイルは元のサービスからお使いのデバイスへ直接送られ、当サービスのサーバーには保存されません。",
 
   "footer.madeBy": "制作",
+  "footer.contact": "連絡先",
+  "footer.description": "TikTok、Instagram、Facebook など数百のサイトから動画・写真・音声を無料でダウンロード。",
+
+  "articles.title": "記事",
+  "articles.description": "SNSから動画・写真・音声をダウンロードするためのヒントとガイド。",
+  "articles.readMore": "続きを読む",
+  "articles.all": "すべての記事を見る",
+  "articles.prev": "前の記事",
+  "articles.next": "次の記事",
 
   "results.loading": "メディアを取得中…数秒かかる場合があります。",
   "results.found": "{n} 件のメディアが見つかりました",

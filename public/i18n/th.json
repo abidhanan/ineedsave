@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — ดาวน์โหลดวิดีโอ รูปภาพ และเสียงจากโซเชียลมีเดียทุกแพลตฟอร์ม",
-  "meta.description": "ดาวน์โหลดวิดีโอ รูปภาพ และเสียงจาก TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn และเว็บไซต์อื่นๆ อีกหลายร้อยแห่ง",
+  "meta.description": "ดาวน์โหลดวิดีโอ รูปภาพ และเสียงจาก TikTok, Instagram, Facebook และเว็บไซต์อื่นๆ อีกหลายร้อยแห่งได้ฟรี",
 
   "skip": "ข้ามไปยังเนื้อหา",
   "nav.label": "การนำทางหลัก",
+  "nav.downloader": "ตัวดาวน์โหลด",
   "nav.how": "วิธีใช้",
   "nav.platforms": "แพลตฟอร์ม",
   "nav.faq": "คำถามที่พบบ่อย",
@@ -50,6 +51,15 @@
   "faq.a6": "ไม่ ไฟล์จะถูกส่งจากแพลตฟอร์มต้นทางตรงไปยังอุปกรณ์ของคุณ และไม่ถูกเก็บไว้บนเซิร์ฟเวอร์ของเรา",
 
   "footer.madeBy": "สร้างโดย",
+  "footer.contact": "ติดต่อ",
+  "footer.description": "ดาวน์โหลดวิดีโอ รูปภาพ และเสียงจาก TikTok, Instagram, Facebook และเว็บไซต์อื่นๆ อีกหลายร้อยแห่งได้ฟรี",
+
+  "articles.title": "บทความ",
+  "articles.description": "เคล็ดลับและคู่มือการดาวน์โหลดวิดีโอ รูปภาพ และเสียงจากโซเชียลมีเดีย",
+  "articles.readMore": "อ่านเพิ่มเติม",
+  "articles.all": "ดูบทความทั้งหมด",
+  "articles.prev": "บทความก่อนหน้า",
+  "articles.next": "บทความถัดไป",
 
   "results.loading": "กำลังดึงสื่อ… อาจใช้เวลาสักครู่",
   "results.found": "พบสื่อ {n} รายการ",

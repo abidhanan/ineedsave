@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Undhuh video, foto & audio saka media sosial apa wae",
-  "meta.description": "Undhuh video, foto, lan audio saka TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn, lan atusan situs liyane.",
+  "meta.description": "Undhuh video, foto, lan audio saka TikTok, Instagram, Facebook, lan atusan situs liyane kanthi gratis.",
 
   "skip": "Langsung menyang isi",
   "nav.label": "Navigasi utama",
+  "nav.downloader": "Pangundhuh",
   "nav.how": "Cara nganggo",
   "nav.platforms": "Platform",
   "nav.faq": "FAQ",
@@ -50,6 +51,15 @@
   "faq.a6": "Ora. File dikirim saka platform asline langsung menyang piranti panjenengan lan ora disimpen ing server kami.",
 
   "footer.madeBy": "Digawe dening",
+  "footer.contact": "Kontak",
+  "footer.description": "Undhuh video, foto, lan audio saka TikTok, Instagram, Facebook, lan atusan situs liyane kanthi gratis.",
+
+  "articles.title": "Artikel",
+  "articles.description": "Tips lan pandhuan kanggo ngundhuh video, foto, lan audio saka media sosial.",
+  "articles.readMore": "Waca Sakteruse",
+  "articles.all": "Deleng kabeh artikel",
+  "articles.prev": "Artikel sadurunge",
+  "articles.next": "Artikel sabanjure",
 
   "results.loading": "Lagi njupuk media… iki bisa butuh sawetara detik.",
   "results.found": "{n} media ketemu",

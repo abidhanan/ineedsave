@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Ka soo deji fiidiyowyo, sawirro iyo cod bar kasta oo bulshada ah",
-  "meta.description": "Ka soo deji fiidiyowyo, sawirro iyo cod TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn iyo boqolaal websaydh oo kale.",
+  "meta.description": "Ka soo deji fiidiyowyo, sawirro iyo cod TikTok, Instagram, Facebook iyo boqolaal websaydh oo kale si bilaash ah.",
 
   "skip": "U bood nuxurka",
   "nav.label": "Liiska ugu weyn",
+  "nav.downloader": "Soo dejiye",
   "nav.how": "Sida loo isticmaalo",
   "nav.platforms": "Barxadaha",
   "nav.faq": "Su'aalaha",
@@ -50,6 +51,15 @@
   "faq.a6": "Maya. Faylasha si toos ah ayaa looga soo diraa barxadda asalka ah ilaa qalabkaaga, laguma kaydiyo server-keenna.",
 
   "footer.madeBy": "Waxaa sameeyay",
+  "footer.contact": "Nala soo xiriir",
+  "footer.description": "Ka soo deji fiidiyowyo, sawirro iyo cod TikTok, Instagram, Facebook iyo boqolaal websaydh oo kale si bilaash ah.",
+
+  "articles.title": "Maqaallo",
+  "articles.description": "Talooyin iyo hagayaal lagu soo dejiyo fiidiyowyada, sawirrada iyo codka baraha bulshada.",
+  "articles.readMore": "Akhri wax dheeraad ah",
+  "articles.all": "Eeg dhammaan maqaallada",
+  "articles.prev": "Maqaalladii hore",
+  "articles.next": "Maqaallada xiga",
 
   "results.loading": "Faylasha waa la soo helayaa… tani waxay qaadan kartaa dhowr ilbiriqsi.",
   "results.found": "{n} fayl ayaa la helay",

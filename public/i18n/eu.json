@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Deskargatu edozein sare sozialetako bideoak, argazkiak eta audioak",
-  "meta.description": "Deskargatu TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn eta beste ehunka gunetako bideoak, argazkiak eta audioak.",
+  "meta.description": "Deskargatu doan TikTok, Instagram, Facebook eta beste ehunka gunetako bideoak, argazkiak eta audioak.",
 
   "skip": "Joan edukira",
   "nav.label": "Nabigazio nagusia",
+  "nav.downloader": "Deskargatzailea",
   "nav.how": "Nola erabili",
   "nav.platforms": "Plataformak",
   "nav.faq": "Ohiko galderak",
@@ -50,6 +51,15 @@
   "faq.a6": "Ez. Fitxategiak jatorrizko plataformatik zuzenean bidaltzen dira zure gailura, eta ez dira gure zerbitzarian gordetzen.",
 
   "footer.madeBy": "Egilea:",
+  "footer.contact": "Kontaktua",
+  "footer.description": "Deskargatu doan TikTok, Instagram, Facebook eta beste ehunka gunetako bideoak, argazkiak eta audioak.",
+
+  "articles.title": "Artikuluak",
+  "articles.description": "Sare sozialetako bideoak, argazkiak eta audioak deskargatzeko aholkuak eta gidak.",
+  "articles.readMore": "Irakurri gehiago",
+  "articles.all": "Ikusi artikulu guztiak",
+  "articles.prev": "Aurreko artikuluak",
+  "articles.next": "Hurrengo artikuluak",
 
   "results.loading": "Multimedia eskuratzen… segundo batzuk behar izan daitezke.",
   "results.found": "{n} multimedia-elementu aurkitu dira",

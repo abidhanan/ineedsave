@@ -1,10 +1,11 @@
 {
   "meta.title": "I Need Save — Unduh video, foto & audio dari media sosial apa pun",
-  "meta.description": "Unduh video, foto dan audio dari TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn, dan ratusan situs lainnya.",
+  "meta.description": "Unduh video, foto dan audio dari TikTok, Instagram, Facebook, dan ratusan situs lainnya secara gratis.",
 
   "skip": "Langsung ke konten",
   "nav.label": "Navigasi utama",
-  "nav.how": "Cara pakai",
+  "nav.downloader": "Pengunduh",
+  "nav.how": "Cara Pakai",
   "nav.platforms": "Platform",
   "nav.faq": "FAQ",
 
@@ -50,6 +51,15 @@
   "faq.a6": "Tidak. File dikirim dari platform aslinya langsung ke perangkatmu dan tidak disimpan di server kami.",
 
   "footer.madeBy": "Dibuat oleh",
+  "footer.contact": "Kontak",
+  "footer.description": "Unduh video, foto dan audio dari TikTok, Instagram, Facebook, dan ratusan situs lainnya secara gratis.",
+
+  "articles.title": "Artikel",
+  "articles.description": "Tips dan panduan untuk mengunduh video, foto, dan audio dari media sosial.",
+  "articles.readMore": "Baca Selengkapnya",
+  "articles.all": "Lihat Semua Artikel",
+  "articles.prev": "Artikel sebelumnya",
+  "articles.next": "Artikel berikutnya",
 
   "results.loading": "Mengambil media… ini bisa memakan waktu beberapa detik.",
   "results.found": "{n} media ditemukan",

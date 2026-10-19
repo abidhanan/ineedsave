@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Sæktu myndskeið, myndir og hljóð af öllum samfélagsmiðlum",
-  "meta.description": "Sæktu myndskeið, myndir og hljóð af TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn og hundruðum annarra vefsvæða.",
+  "meta.description": "Sæktu ókeypis myndskeið, myndir og hljóð af TikTok, Instagram, Facebook og hundruðum annarra vefsvæða.",
 
   "skip": "Fara í efni",
   "nav.label": "Aðalvalmynd",
+  "nav.downloader": "Niðurhal",
   "nav.how": "Leiðbeiningar",
   "nav.platforms": "Miðlar",
   "nav.faq": "Algengar spurningar",
@@ -50,6 +51,15 @@
   "faq.a6": "Nei. Skrárnar eru sendar beint frá upprunalega miðlinum í tækið þitt og eru ekki geymdar á þjóninum okkar.",
 
   "footer.madeBy": "Gert af",
+  "footer.contact": "Hafa samband",
+  "footer.description": "Sæktu ókeypis myndskeið, myndir og hljóð af TikTok, Instagram, Facebook og hundruðum annarra vefsvæða.",
+
+  "articles.title": "Greinar",
+  "articles.description": "Ráð og leiðbeiningar um að sækja myndskeið, myndir og hljóð af samfélagsmiðlum.",
+  "articles.readMore": "Lesa meira",
+  "articles.all": "Sjá allar greinar",
+  "articles.prev": "Fyrri greinar",
+  "articles.next": "Næstu greinar",
 
   "results.loading": "Sæki efni… þetta getur tekið nokkrar sekúndur.",
   "results.found": "Efni fannst: {n}",

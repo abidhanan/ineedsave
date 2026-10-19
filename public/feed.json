@@ -1,0 +1,140 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "I Need Save Articles",
+  "home_page_url": "https://ineedsave.com/artikel/",
+  "feed_url": "https://ineedsave.com/feed.json",
+  "description": "Panduan mengunduh video, foto, dan audio dari media sosial.",
+  "language": "id",
+  "items": [
+    {
+      "id": "https://ineedsave.com/artikel/cara-download-video-tiktok-tanpa-watermark/",
+      "url": "https://ineedsave.com/artikel/cara-download-video-tiktok-tanpa-watermark/",
+      "title": "Cara Download Video TikTok Tanpa Watermark (Gratis, Tanpa Aplikasi)",
+      "summary": "Panduan lengkap cara download video TikTok tanpa watermark di HP dan laptop. Gratis, tanpa aplikasi, tanpa login. Cukup salin tautan, tempel, dan unduh.",
+      "image": "https://ineedsave.com/artikel/img/cara-download-video-tiktok-tanpa-watermark.jpg",
+      "date_published": "2026-10-18T08:00:00+07:00",
+      "tags": [
+        "Panduan",
+        "TikTok"
+      ],
+      "language": "id"
+    },
+    {
+      "id": "https://ineedsave.com/artikel/cara-download-video-reels-instagram/",
+      "url": "https://ineedsave.com/artikel/cara-download-video-reels-instagram/",
+      "title": "Cara Download Video dan Reels Instagram di HP dan Laptop",
+      "summary": "Cara download video dan Reels Instagram ke HP atau laptop tanpa aplikasi dan tanpa login. Salin tautan, tempel di I Need Save, lalu pilih kualitas video.",
+      "image": "https://ineedsave.com/artikel/img/cara-download-video-reels-instagram.jpg",
+      "date_published": "2026-10-17T08:00:00+07:00",
+      "tags": [
+        "Panduan",
+        "Instagram"
+      ],
+      "language": "id"
+    },
+    {
+      "id": "https://ineedsave.com/artikel/cara-download-video-facebook/",
+      "url": "https://ineedsave.com/artikel/cara-download-video-facebook/",
+      "title": "Cara Download Video Facebook ke Galeri HP",
+      "summary": "Cara download video Facebook ke galeri HP Android dan iPhone tanpa aplikasi. Salin tautan video publik, tempel di I Need Save, pilih kualitas, lalu simpan.",
+      "image": "https://ineedsave.com/artikel/img/cara-download-video-facebook.jpg",
+      "date_published": "2026-10-16T08:00:00+07:00",
+      "tags": [
+        "Panduan",
+        "Facebook"
+      ],
+      "language": "id"
+    },
+    {
+      "id": "https://ineedsave.com/artikel/cara-download-video-twitter-x/",
+      "url": "https://ineedsave.com/artikel/cara-download-video-twitter-x/",
+      "title": "Cara Download Video dari X (Twitter) dengan Mudah",
+      "summary": "Cara download video dari X (Twitter) ke HP atau laptop tanpa aplikasi dan tanpa login. Salin tautan postingan, tempel di I Need Save, lalu pilih kualitas.",
+      "image": "https://ineedsave.com/artikel/img/cara-download-video-twitter-x.jpg",
+      "date_published": "2026-10-15T08:00:00+07:00",
+      "tags": [
+        "Panduan",
+        "X (Twitter)"
+      ],
+      "language": "id"
+    },
+    {
+      "id": "https://ineedsave.com/artikel/cara-ubah-video-jadi-mp3/",
+      "url": "https://ineedsave.com/artikel/cara-ubah-video-jadi-mp3/",
+      "title": "Cara Mengubah Video Media Sosial Jadi MP3 Tanpa Aplikasi",
+      "summary": "Cara mengubah video TikTok, Instagram, Facebook, dan X jadi MP3 tanpa aplikasi. Tempel tautan di I Need Save, pilih audio MP3 192 kbps, lalu simpan.",
+      "image": "https://ineedsave.com/artikel/img/cara-ubah-video-jadi-mp3.jpg",
+      "date_published": "2026-10-14T08:00:00+07:00",
+      "tags": [
+        "Panduan",
+        "Audio"
+      ],
+      "language": "id"
+    },
+    {
+      "id": "https://ineedsave.com/artikel/cara-download-video-pinterest/",
+      "url": "https://ineedsave.com/artikel/cara-download-video-pinterest/",
+      "title": "Cara Download Video dan Foto Pinterest ke Galeri HP",
+      "summary": "Cara download video dan foto Pinterest ke galeri HP atau laptop secara gratis, tanpa aplikasi dan tanpa login. Ikuti langkah mudahnya di sini.",
+      "image": "https://ineedsave.com/artikel/img/cara-download-video-pinterest.jpg",
+      "date_published": "2026-10-13T08:00:00+07:00",
+      "tags": [
+        "Panduan",
+        "Pinterest"
+      ],
+      "language": "id"
+    },
+    {
+      "id": "https://ineedsave.com/artikel/lokasi-file-download-android-iphone/",
+      "url": "https://ineedsave.com/artikel/lokasi-file-download-android-iphone/",
+      "title": "Di Mana File Hasil Download Tersimpan? Panduan Android dan iPhone",
+      "summary": "Bingung mencari file hasil download? Simak lokasi file download di Android, iPhone, iPad, dan komputer, plus cara memindahkan video ke Galeri atau Foto.",
+      "image": "https://ineedsave.com/artikel/img/lokasi-file-download-android-iphone.jpg",
+      "date_published": "2026-10-12T08:00:00+07:00",
+      "tags": [
+        "Panduan",
+        "Tips"
+      ],
+      "language": "id"
+    },
+    {
+      "id": "https://ineedsave.com/artikel/perbedaan-kualitas-video-360p-720p-1080p/",
+      "url": "https://ineedsave.com/artikel/perbedaan-kualitas-video-360p-720p-1080p/",
+      "title": "Perbedaan Kualitas Video 360p, 720p, dan 1080p: Pilih yang Mana?",
+      "summary": "Apa perbedaan kualitas video 360p, 720p, dan 1080p? Pelajari arti resolusi, pengaruhnya ke ukuran file, dan cara memilih kualitas yang pas untuk HP kamu.",
+      "image": "https://ineedsave.com/artikel/img/perbedaan-kualitas-video-360p-720p-1080p.jpg",
+      "date_published": "2026-10-11T08:00:00+07:00",
+      "tags": [
+        "Tips",
+        "Kualitas Video"
+      ],
+      "language": "id"
+    },
+    {
+      "id": "https://ineedsave.com/artikel/video-hasil-download-tidak-bisa-diputar/",
+      "url": "https://ineedsave.com/artikel/video-hasil-download-tidak-bisa-diputar/",
+      "title": "Video Hasil Download Tidak Bisa Diputar? Penyebab dan Solusinya",
+      "summary": "Video hasil download tidak bisa diputar? Kenali penyebabnya, mulai dari unduhan belum selesai hingga codec HEVC, lalu ikuti solusi praktisnya di sini.",
+      "image": "https://ineedsave.com/artikel/img/video-hasil-download-tidak-bisa-diputar.jpg",
+      "date_published": "2026-10-10T08:00:00+07:00",
+      "tags": [
+        "Solusi",
+        "Tips"
+      ],
+      "language": "id"
+    },
+    {
+      "id": "https://ineedsave.com/artikel/etika-dan-hak-cipta-download-konten/",
+      "url": "https://ineedsave.com/artikel/etika-dan-hak-cipta-download-konten/",
+      "title": "Bolehkah Download Konten Media Sosial? Etika dan Hak Cipta",
+      "summary": "Bolehkah download konten media sosial? Pahami beda menyimpan untuk pribadi dan repost, pentingnya izin dan kredit, serta menghormati hak cipta kreator.",
+      "image": "https://ineedsave.com/artikel/img/etika-dan-hak-cipta-download-konten.jpg",
+      "date_published": "2026-10-09T08:00:00+07:00",
+      "tags": [
+        "Etika",
+        "Hak Cipta"
+      ],
+      "language": "id"
+    }
+  ]
+}

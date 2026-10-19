@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — تنزيل الفيديوهات والصور والصوتيات من أي منصة تواصل اجتماعي",
-  "meta.description": "نزّل الفيديوهات والصور والمقاطع الصوتية من TikTok وInstagram وFacebook وX (Twitter) وPinterest وLinkedIn ومئات المواقع الأخرى.",
+  "meta.description": "نزّل الفيديوهات والصور والمقاطع الصوتية من TikTok وInstagram وFacebook ومئات المواقع الأخرى مجانًا.",
 
   "skip": "انتقل إلى المحتوى",
   "nav.label": "التنقل الرئيسي",
+  "nav.downloader": "أداة التنزيل",
   "nav.how": "طريقة الاستخدام",
   "nav.platforms": "المنصات",
   "nav.faq": "الأسئلة الشائعة",
@@ -50,6 +51,15 @@
   "faq.a6": "لا. تُرسل الملفات من المنصة الأصلية مباشرةً إلى جهازك، ولا يتم الاحتفاظ بها على خادمنا.",
 
   "footer.madeBy": "صُنع بواسطة",
+  "footer.contact": "تواصل معنا",
+  "footer.description": "نزّل الفيديوهات والصور والمقاطع الصوتية من TikTok وInstagram وFacebook ومئات المواقع الأخرى مجانًا.",
+
+  "articles.title": "المقالات",
+  "articles.description": "نصائح وأدلة لتنزيل الفيديوهات والصور والمقاطع الصوتية من وسائل التواصل الاجتماعي.",
+  "articles.readMore": "اقرأ المزيد",
+  "articles.all": "عرض كل المقالات",
+  "articles.prev": "المقالات السابقة",
+  "articles.next": "المقالات التالية",
 
   "results.loading": "جارٍ جلب الوسائط… قد يستغرق ذلك بضع ثوانٍ.",
   "results.found": "تم العثور على {n} من الوسائط",

@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Kuramo videwo, amafoto n'amajwi ku mbuga nkoranyambaga zose",
-  "meta.description": "Kuramo videwo, amafoto n'amajwi kuri TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn n'izindi mbuga amagana.",
+  "meta.description": "Kuramo ku buntu videwo, amafoto n'amajwi kuri TikTok, Instagram, Facebook n'izindi mbuga amagana.",
 
   "skip": "Simbukira ku bikubiyemo",
   "nav.label": "Urutonde rw'ingenzi",
+  "nav.downloader": "Downloader",
   "nav.how": "Uko wakoresha",
   "nav.platforms": "Imbuga",
   "nav.faq": "Ibibazo",
@@ -50,6 +51,15 @@
   "faq.a6": "Oya. Amadosiye yoherezwa ako kanya avuye ku rubuga rw'umwimerere ajya ku gikoresho cyawe, kandi ntabikwa kuri seriveri yacu.",
 
   "footer.madeBy": "Byakozwe na",
+  "footer.contact": "Twandikire",
+  "footer.description": "Kuramo ku buntu videwo, amafoto n'amajwi kuri TikTok, Instagram, Facebook n'izindi mbuga amagana.",
+
+  "articles.title": "Inyandiko",
+  "articles.description": "Inama n'amabwiriza yo kuramo videwo, amafoto n'amajwi ku mbuga nkoranyambaga.",
+  "articles.readMore": "Soma byinshi",
+  "articles.all": "Reba inyandiko zose",
+  "articles.prev": "Inyandiko zibanza",
+  "articles.next": "Inyandiko zikurikira",
 
   "results.loading": "Turimo gushaka amadosiye… ibi bishobora gufata amasegonda make.",
   "results.found": "Amadosiye {n} yabonetse",

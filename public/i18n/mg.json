@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Alaivo ny horonantsary, sary ary feo avy amin'ny tambajotra sosialy rehetra",
-  "meta.description": "Alaivo ny horonantsary, sary ary feo avy amin'ny TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ary tranonkala an-jatony hafa.",
+  "meta.description": "Alaivo maimaim-poana ny horonantsary, sary ary feo avy amin'ny TikTok, Instagram, Facebook ary tranonkala an-jatony hafa.",
 
   "skip": "Mankany amin'ny votoaty",
   "nav.label": "Fitetezana lehibe",
+  "nav.downloader": "Downloader",
   "nav.how": "Fomba fampiasana",
   "nav.platforms": "Sehatra",
   "nav.faq": "Fanontaniana",
@@ -50,6 +51,15 @@
   "faq.a6": "Tsia. Alefa mivantana avy amin'ny sehatra niaviany mankany amin'ny fitaovanao ny rakitra, ary tsy tehirizina ao amin'ny mpizara anay.",
 
   "footer.madeBy": "Nataon'i",
+  "footer.contact": "Fifandraisana",
+  "footer.description": "Alaivo maimaim-poana ny horonantsary, sary ary feo avy amin'ny TikTok, Instagram, Facebook ary tranonkala an-jatony hafa.",
+
+  "articles.title": "Lahatsoratra",
+  "articles.description": "Torohevitra sy torolalana amin'ny fakana horonantsary, sary ary feo avy amin'ny tambajotra sosialy.",
+  "articles.readMore": "Hamaky bebe kokoa",
+  "articles.all": "Hijery ny lahatsoratra rehetra",
+  "articles.prev": "Lahatsoratra teo aloha",
+  "articles.next": "Lahatsoratra manaraka",
 
   "results.loading": "Maka ny media… mety haharitra segondra vitsivitsy izany.",
   "results.found": "Media {n} no hita",

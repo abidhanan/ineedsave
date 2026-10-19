@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Аз ҳар гуна шабакаи иҷтимоӣ видео, акс ва аудио боргирӣ кунед",
-  "meta.description": "Аз TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ва садҳо сайти дигар видео, акс ва аудио боргирӣ кунед.",
+  "meta.description": "Аз TikTok, Instagram, Facebook ва садҳо сайти дигар видео, акс ва аудио ройгон боргирӣ кунед.",
 
   "skip": "Гузариш ба мундариҷа",
   "nav.label": "Навигатсияи асосӣ",
+  "nav.downloader": "Боргиранда",
   "nav.how": "Тарзи истифода",
   "nav.platforms": "Платформаҳо",
   "nav.faq": "Саволҳо",
@@ -50,6 +51,15 @@
   "faq.a6": "Не. Файлҳо аз платформаи аслӣ бевосита ба дастгоҳи шумо фиристода мешаванд ва дар сервери мо нигоҳ дошта намешаванд.",
 
   "footer.madeBy": "Таҳиягар",
+  "footer.contact": "Тамос",
+  "footer.description": "Аз TikTok, Instagram, Facebook ва садҳо сайти дигар видео, акс ва аудио ройгон боргирӣ кунед.",
+
+  "articles.title": "Мақолаҳо",
+  "articles.description": "Маслиҳатҳо ва дастурҳо барои боргирии видео, акс ва аудио аз шабакаҳои иҷтимоӣ.",
+  "articles.readMore": "Бештар хонед",
+  "articles.all": "Ҳамаи мақолаҳоро бинед",
+  "articles.prev": "Мақолаҳои қаблӣ",
+  "articles.next": "Мақолаҳои навбатӣ",
 
   "results.loading": "Медиа гирифта мешавад… ин метавонад якчанд сония вақт гирад.",
   "results.found": "{n} медиа ёфт шуд",

@@ -1,10 +1,11 @@
 {
   "meta.title": "I Need Save — Download videos, photos & audio from any social media",
-  "meta.description": "Download videos, photos, and audio from TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn, and hundreds of other sites.",
+  "meta.description": "Download videos, photos, and audio from TikTok, Instagram, Facebook, and hundreds of other sites for free.",
 
   "skip": "Skip to content",
   "nav.label": "Main navigation",
-  "nav.how": "How to use",
+  "nav.downloader": "Downloader",
+  "nav.how": "How to Use",
   "nav.platforms": "Platforms",
   "nav.faq": "FAQ",
 
@@ -50,6 +51,15 @@
   "faq.a6": "No. Files are sent from the original platform straight to your device and are not kept on our server.",
 
   "footer.madeBy": "Made by",
+  "footer.contact": "Contact",
+  "footer.description": "Download videos, photos, and audio from TikTok, Instagram, Facebook, and hundreds of other sites for free.",
+
+  "articles.title": "Articles",
+  "articles.description": "Tips and guides for downloading videos, photos, and audio from social media.",
+  "articles.readMore": "Read more",
+  "articles.all": "See all articles",
+  "articles.prev": "Previous articles",
+  "articles.next": "Next articles",
 
   "results.loading": "Fetching media… this can take a few seconds.",
   "results.found": "{n} media found",

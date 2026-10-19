@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — 從任何社群媒體下載影片、相片和音訊",
-  "meta.description": "從 TikTok、Instagram、Facebook、X (Twitter)、Pinterest、LinkedIn 及數百個其他網站下載影片、相片和音訊。",
+  "meta.description": "從 TikTok、Instagram、Facebook 及數百個其他網站免費下載影片、相片和音訊。",
 
   "skip": "跳至主要內容",
   "nav.label": "主要導覽",
+  "nav.downloader": "下載器",
   "nav.how": "使用方式",
   "nav.platforms": "支援平台",
   "nav.faq": "常見問題",
@@ -50,6 +51,15 @@
   "faq.a6": "不會。檔案會直接從原始平台傳送到你的裝置，不會保留在我們的伺服器上。",
 
   "footer.madeBy": "製作者",
+  "footer.contact": "聯絡方式",
+  "footer.description": "從 TikTok、Instagram、Facebook 及數百個其他網站免費下載影片、相片和音訊。",
+
+  "articles.title": "文章",
+  "articles.description": "從社群媒體下載影片、相片和音訊的技巧與教學。",
+  "articles.readMore": "閱讀更多",
+  "articles.all": "查看所有文章",
+  "articles.prev": "上一篇文章",
+  "articles.next": "下一篇文章",
 
   "results.loading": "正在擷取媒體…可能需要幾秒鐘。",
   "results.found": "找到 {n} 個媒體",

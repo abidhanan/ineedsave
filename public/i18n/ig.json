@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Budata vidiyo, foto na ụda site na soshal midia ọ bụla",
-  "meta.description": "Budata vidiyo, foto na ụda site na TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn na ọtụtụ narị saịtị ndị ọzọ.",
+  "meta.description": "Budata vidiyo, foto na ụda n'efu site na TikTok, Instagram, Facebook na ọtụtụ narị saịtị ndị ọzọ.",
 
   "skip": "Mafee gaa na ọdịnaya",
   "nav.label": "Nduzi bụ isi",
+  "nav.downloader": "Ihe nbudata",
   "nav.how": "Otu esi eji ya",
   "nav.platforms": "Nyiwe",
   "nav.faq": "Ajụjụ",
@@ -50,6 +51,15 @@
   "faq.a6": "Mba. A na-ezipu faịlụ site na nyiwe mbụ ozugbo gaa na ngwaọrụ gị, a naghịkwa edobe ha na sava anyị.",
 
   "footer.madeBy": "Site n'aka",
+  "footer.contact": "Kpọtụrụ anyị",
+  "footer.description": "Budata vidiyo, foto na ụda n'efu site na TikTok, Instagram, Facebook na ọtụtụ narị saịtị ndị ọzọ.",
+
+  "articles.title": "Edemede",
+  "articles.description": "Ndụmọdụ na ntuziaka maka ibudata vidiyo, foto na ụda site na soshal midia.",
+  "articles.readMore": "Gụkwuo",
+  "articles.all": "Hụ edemede niile",
+  "articles.prev": "Edemede gara aga",
+  "articles.next": "Edemede na-esote",
 
   "results.loading": "Ana-ewepụta midia… nke a nwere ike were sekọnd ole na ole.",
   "results.found": "Achọtara midia {n}",

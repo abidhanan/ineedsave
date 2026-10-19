@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Prenesite videe, fotografije in zvok s katerega koli družbenega omrežja",
-  "meta.description": "Prenesite videe, fotografije in zvok iz storitev TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn in več sto drugih spletnih mest.",
+  "meta.description": "Brezplačno prenesite videe, fotografije in zvok iz storitev TikTok, Instagram, Facebook in več sto drugih spletnih mest.",
 
   "skip": "Preskoči na vsebino",
   "nav.label": "Glavna navigacija",
+  "nav.downloader": "Prenašalnik",
   "nav.how": "Navodila",
   "nav.platforms": "Platforme",
   "nav.faq": "Vprašanja",
@@ -50,6 +51,15 @@
   "faq.a6": "Ne. Datoteke se pošljejo z izvirne platforme neposredno v vašo napravo in se ne hranijo na našem strežniku.",
 
   "footer.madeBy": "Avtor:",
+  "footer.contact": "Kontakt",
+  "footer.description": "Brezplačno prenesite videe, fotografije in zvok iz storitev TikTok, Instagram, Facebook in več sto drugih spletnih mest.",
+
+  "articles.title": "Članki",
+  "articles.description": "Nasveti in vodniki za prenos videov, fotografij in zvoka z družbenih omrežij.",
+  "articles.readMore": "Preberite več",
+  "articles.all": "Oglejte si vse članke",
+  "articles.prev": "Prejšnji članki",
+  "articles.next": "Naslednji članki",
 
   "results.loading": "Pridobivanje medijev… to lahko traja nekaj sekund.",
   "results.found": "Najdeni mediji: {n}",

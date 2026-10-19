@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Tikiake i ngā ataata, whakaahua me te oro mai i ngā pāpāho pāpori katoa",
-  "meta.description": "Tikiake i ngā ataata, whakaahua me te oro mai i TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn me ngā rau o ētahi atu pae.",
+  "meta.description": "Tikiake koreutu i ngā ataata, whakaahua me te oro mai i TikTok, Instagram, Facebook me ngā rau o ētahi atu pae.",
 
   "skip": "Peke ki te ihirangi",
   "nav.label": "Whakatere matua",
+  "nav.downloader": "Kaitikiake",
   "nav.how": "Me pēhea te whakamahi",
   "nav.platforms": "Ngā pūhara",
   "nav.faq": "Ngā pātai",
@@ -50,6 +51,15 @@
   "faq.a6": "Kāo. Ka tukuna tika ngā kōnae mai i te pūhara taketake ki tō pūrere, ā, kāore e puritia ki tō mātou tūmau.",
 
   "footer.madeBy": "Nā",
+  "footer.contact": "Whakapā mai",
+  "footer.description": "Tikiake koreutu i ngā ataata, whakaahua me te oro mai i TikTok, Instagram, Facebook me ngā rau o ētahi atu pae.",
+
+  "articles.title": "Ngā Tuhinga",
+  "articles.description": "Ngā tohutohu me ngā aratohu mō te tikiake ataata, whakaahua me te oro mai i ngā pae pāpori.",
+  "articles.readMore": "Pānui atu anō",
+  "articles.all": "Tirohia ngā tuhinga katoa",
+  "articles.prev": "Ngā tuhinga o mua",
+  "articles.next": "Ngā tuhinga e whai ake nei",
 
   "results.loading": "E tiki ana i ngā kōnae… he hēkona torutoru pea te roa.",
   "results.found": "{n} kōnae i kitea",

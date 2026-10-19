@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — ቪዲዮዎችን፣ ፎቶዎችን እና ድምጾችን ከማንኛውም ማኅበራዊ ሚዲያ ያውርዱ",
-  "meta.description": "ከTikTok፣ Instagram፣ Facebook፣ X (Twitter)፣ Pinterest፣ LinkedIn እና ከመቶዎች በሚቆጠሩ ሌሎች ድረ-ገጾች ቪዲዮዎችን፣ ፎቶዎችን እና ድምጾችን ያውርዱ።",
+  "meta.description": "ከTikTok፣ Instagram፣ Facebook እና ከመቶዎች በሚቆጠሩ ሌሎች ድረ-ገጾች ቪዲዮዎችን፣ ፎቶዎችን እና ድምጾችን በነጻ ያውርዱ።",
 
   "skip": "ወደ ይዘቱ ዝለል",
   "nav.label": "ዋና ማውጫ",
+  "nav.downloader": "ማውረጃ",
   "nav.how": "አጠቃቀም",
   "nav.platforms": "መድረኮች",
   "nav.faq": "ጥያቄዎች",
@@ -50,6 +51,15 @@
   "faq.a6": "አይ። ፋይሎች ከመጀመሪያው መድረክ በቀጥታ ወደ መሣሪያዎ ይላካሉ፤ በአገልጋያችን ላይ አይቀመጡም።",
 
   "footer.madeBy": "የተሰራው በ",
+  "footer.contact": "ያግኙን",
+  "footer.description": "ከTikTok፣ Instagram፣ Facebook እና ከመቶዎች በሚቆጠሩ ሌሎች ድረ-ገጾች ቪዲዮዎችን፣ ፎቶዎችን እና ድምጾችን በነጻ ያውርዱ።",
+
+  "articles.title": "ጽሑፎች",
+  "articles.description": "ከማኅበራዊ ሚዲያ ቪዲዮዎችን፣ ፎቶዎችን እና ድምጾችን ለማውረድ ጠቃሚ ምክሮች እና መመሪያዎች።",
+  "articles.readMore": "ተጨማሪ ያንብቡ",
+  "articles.all": "ሁሉንም ጽሑፎች ይመልከቱ",
+  "articles.prev": "ቀዳሚ ጽሑፎች",
+  "articles.next": "ቀጣይ ጽሑፎች",
 
   "results.loading": "ሚዲያ በማምጣት ላይ… ይህ ጥቂት ሰከንዶች ሊወስድ ይችላል።",
   "results.found": "{n} ሚዲያ ተገኝቷል",

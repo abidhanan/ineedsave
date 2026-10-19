@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Íoslódáil físeáin, grianghraif agus fuaim ó aon mheán sóisialta",
-  "meta.description": "Íoslódáil físeáin, grianghraif agus fuaim ó TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn agus na céadta suíomh eile.",
+  "meta.description": "Íoslódáil físeáin, grianghraif agus fuaim saor in aisce ó TikTok, Instagram, Facebook agus na céadta suíomh eile.",
 
   "skip": "Léim go dtí an t-ábhar",
   "nav.label": "Príomh-nascleanúint",
+  "nav.downloader": "Íoslódálaí",
   "nav.how": "Conas é a úsáid",
   "nav.platforms": "Ardáin",
   "nav.faq": "Ceisteanna coitianta",
@@ -50,6 +51,15 @@
   "faq.a6": "Ní stóráiltear. Seoltar comhaid ón ardán bunaidh díreach chuig do ghléas, agus ní choinnítear iad ar ár bhfreastalaí.",
 
   "footer.madeBy": "Déanta ag",
+  "footer.contact": "Teagmháil",
+  "footer.description": "Íoslódáil físeáin, grianghraif agus fuaim saor in aisce ó TikTok, Instagram, Facebook agus na céadta suíomh eile.",
+
+  "articles.title": "Ailt",
+  "articles.description": "Leideanna agus treoracha chun físeáin, grianghraif agus fuaim a íoslódáil ó na meáin shóisialta.",
+  "articles.readMore": "Léigh tuilleadh",
+  "articles.all": "Féach ar gach alt",
+  "articles.prev": "Ailt roimhe seo",
+  "articles.next": "Ailt ina dhiaidh seo",
 
   "results.loading": "Meáin á bhfáil… d'fhéadfadh sé cúpla soicind a thógáil.",
   "results.found": "Meáin aimsithe: {n}",

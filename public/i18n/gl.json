@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Descarga vídeos, fotos e audio de calquera rede social",
-  "meta.description": "Descarga vídeos, fotos e audio de TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn e centos de sitios máis.",
+  "meta.description": "Descarga gratis vídeos, fotos e audio de TikTok, Instagram, Facebook e centos de sitios máis.",
 
   "skip": "Ir ao contido",
   "nav.label": "Navegación principal",
+  "nav.downloader": "Descargador",
   "nav.how": "Como se usa",
   "nav.platforms": "Plataformas",
   "nav.faq": "Preguntas frecuentes",
@@ -50,6 +51,15 @@
   "faq.a6": "Non. Os ficheiros envíanse directamente desde a plataforma orixinal ao teu dispositivo e non se gardan no noso servidor.",
 
   "footer.madeBy": "Feito por",
+  "footer.contact": "Contacto",
+  "footer.description": "Descarga gratis vídeos, fotos e audio de TikTok, Instagram, Facebook e centos de sitios máis.",
+
+  "articles.title": "Artigos",
+  "articles.description": "Consellos e guías para descargar vídeos, fotos e audio das redes sociais.",
+  "articles.readMore": "Ler máis",
+  "articles.all": "Ver todos os artigos",
+  "articles.prev": "Artigos anteriores",
+  "articles.next": "Artigos seguintes",
 
   "results.loading": "Obtendo contido… isto pode levar uns segundos.",
   "results.found": "{n} elementos atopados",

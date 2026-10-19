@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Niżżel vidjows, ritratti u awdjo minn kwalunkwe midja soċjali",
-  "meta.description": "Niżżel vidjows, ritratti u awdjo minn TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn u mijiet ta' siti oħra.",
+  "meta.description": "Niżżel b'xejn vidjows, ritratti u awdjo minn TikTok, Instagram, Facebook u mijiet ta' siti oħra.",
 
   "skip": "Aqbeż għall-kontenut",
   "nav.label": "Navigazzjoni ewlenija",
+  "nav.downloader": "Downloader",
   "nav.how": "Kif tużah",
   "nav.platforms": "Pjattaformi",
   "nav.faq": "Mistoqsijiet frekwenti",
@@ -50,6 +51,15 @@
   "faq.a6": "Le. Il-fajls jintbagħtu mill-pjattaforma oriġinali dritt fuq l-apparat tiegħek u ma jinżammux fuq is-server tagħna.",
 
   "footer.madeBy": "Magħmul minn",
+  "footer.contact": "Kuntatt",
+  "footer.description": "Niżżel b'xejn vidjows, ritratti u awdjo minn TikTok, Instagram, Facebook u mijiet ta' siti oħra.",
+
+  "articles.title": "Artikli",
+  "articles.description": "Pariri u gwidi biex tniżżel vidjows, ritratti u awdjo mill-midja soċjali.",
+  "articles.readMore": "Aqra aktar",
+  "articles.all": "Ara l-artikli kollha",
+  "articles.prev": "Artikli preċedenti",
+  "articles.next": "Artikli li jmiss",
 
   "results.loading": "Qed inġibu l-midja… dan jista' jieħu ftit sekondi.",
   "results.found": "Instabu {n} midja",

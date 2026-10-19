@@ -2,7 +2,7 @@
 // (renders one HTML file per language) and the browser (language picker).
 // [code, native name, English name, flag country, script]
 export const LANGS = [
-  ['en', 'English', 'English', 'US', 'latn'],
+  ['en', 'English', 'English', 'GB', 'latn'],
   ['id', 'Bahasa Indonesia', 'Indonesian', 'ID', 'latn'],
   ['ms', 'Bahasa Melayu', 'Malay', 'MY', 'latn'],
   ['jv', 'Basa Jawa', 'Javanese', 'ID', 'latn'],
@@ -213,6 +213,31 @@ export function pickLanguage({ choice, acceptLanguage, country }) {
   return COUNTRY_LANG[(country || '').toUpperCase()] || 'en';
 }
 
-export function flagEmoji(country) {
-  return String.fromCodePoint(...[...country].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65));
+/** Flag image for a language (see public/flags/, rendered from the MIT-licensed flag-icons set). */
+export function flagSrc(country) {
+  return `/flags/${country.toLowerCase()}.png`;
+}
+
+/** Open Graph locale (ll_CC) of each language, for og:locale / og:locale:alternate. Facebook's crawler
+ *  asks for one of them with ?fb_locale= (or an X-Facebook-Locale header); middleware.js serves it. */
+export const OG_LOCALE = {
+  en: 'en_US', id: 'id_ID', ms: 'ms_MY', jv: 'jv_ID', su: 'su_ID', tl: 'tl_PH', vi: 'vi_VN', th: 'th_TH',
+  lo: 'lo_LA', km: 'km_KH', my: 'my_MM', 'zh-CN': 'zh_CN', 'zh-TW': 'zh_TW', ja: 'ja_JP', ko: 'ko_KR',
+  mn: 'mn_MN', hi: 'hi_IN', bn: 'bn_IN', ur: 'ur_PK', pa: 'pa_IN', gu: 'gu_IN', mr: 'mr_IN', ta: 'ta_IN',
+  te: 'te_IN', kn: 'kn_IN', ml: 'ml_IN', ne: 'ne_NP', si: 'si_LK', ar: 'ar_AR', fa: 'fa_IR', he: 'he_IL',
+  tr: 'tr_TR', az: 'az_AZ', uz: 'uz_UZ', kk: 'kk_KZ', ky: 'ky_KG', tg: 'tg_TJ', tk: 'tk_TM', ps: 'ps_AF',
+  ka: 'ka_GE', hy: 'hy_AM', ku: 'ku_TR', ru: 'ru_RU', uk: 'uk_UA', be: 'be_BY', pl: 'pl_PL', cs: 'cs_CZ',
+  sk: 'sk_SK', hu: 'hu_HU', ro: 'ro_RO', bg: 'bg_BG', sr: 'sr_RS', hr: 'hr_HR', bs: 'bs_BA', sl: 'sl_SI',
+  mk: 'mk_MK', sq: 'sq_AL', el: 'el_GR', lt: 'lt_LT', lv: 'lv_LV', et: 'et_EE', fi: 'fi_FI', sv: 'sv_SE',
+  nb: 'nb_NO', da: 'da_DK', is: 'is_IS', nl: 'nl_NL', de: 'de_DE', fr: 'fr_FR', it: 'it_IT', es: 'es_LA',
+  'pt-BR': 'pt_BR', 'pt-PT': 'pt_PT', ca: 'ca_ES', eu: 'eu_ES', gl: 'gl_ES', ga: 'ga_IE', cy: 'cy_GB',
+  mt: 'mt_MT', lb: 'lb_LU', af: 'af_ZA', sw: 'sw_KE', am: 'am_ET', ha: 'ha_NG', yo: 'yo_NG', ig: 'ig_NG',
+  zu: 'zu_ZA', xh: 'xh_ZA', so: 'so_SO', mg: 'mg_MG', rw: 'rw_RW', ht: 'ht_HT', mi: 'mi_NZ',
+};
+
+/** Open Graph meta tags saying which language a page is in and which other ones exist. */
+export function ogLocaleTags(code) {
+  return [`<meta property="og:locale" content="${OG_LOCALE[code]}">`,
+    ...LANGS.filter((l) => l.code !== code).map((l) => `<meta property="og:locale:alternate" content="${OG_LOCALE[l.code]}">`)]
+    .join('\n  ');
 }

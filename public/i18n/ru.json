@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — скачивайте видео, фото и аудио из любых соцсетей",
-  "meta.description": "Скачивайте видео, фото и аудио из TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn и сотен других сайтов.",
+  "meta.description": "Скачивайте бесплатно видео, фото и аудио из TikTok, Instagram, Facebook и сотен других сайтов.",
 
   "skip": "Перейти к содержимому",
   "nav.label": "Главное меню",
+  "nav.downloader": "Загрузчик",
   "nav.how": "Как пользоваться",
   "nav.platforms": "Платформы",
   "nav.faq": "Вопросы",
@@ -50,6 +51,15 @@
   "faq.a6": "Нет. Файлы передаются с исходной платформы прямо на ваше устройство и не хранятся на нашем сервере.",
 
   "footer.madeBy": "Автор:",
+  "footer.contact": "Контакты",
+  "footer.description": "Скачивайте бесплатно видео, фото и аудио из TikTok, Instagram, Facebook и сотен других сайтов.",
+
+  "articles.title": "Статьи",
+  "articles.description": "Советы и инструкции по скачиванию видео, фото и аудио из соцсетей.",
+  "articles.readMore": "Читать далее",
+  "articles.all": "Все статьи",
+  "articles.prev": "Предыдущие статьи",
+  "articles.next": "Следующие статьи",
 
   "results.loading": "Получаем медиафайлы… это может занять несколько секунд.",
   "results.found": "Найдено файлов: {n}",

@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Videoen, Fotoen an Audio vun all sozialem Netzwierk eroflueden",
-  "meta.description": "Lued Videoen, Fotoen an Audio vu TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn an honnerte vun anere Säiten erof.",
+  "meta.description": "Lued Videoen, Fotoen an Audio vu TikTok, Instagram, Facebook an honnerte vun anere Säite gratis erof.",
 
   "skip": "Zum Inhalt sprangen",
   "nav.label": "Haaptnavigatioun",
+  "nav.downloader": "Downloader",
   "nav.how": "Wéi et funktionéiert",
   "nav.platforms": "Plattformen",
   "nav.faq": "Heefeg Froen",
@@ -50,6 +51,15 @@
   "faq.a6": "Nee. D'Fichiere ginn direkt vun der Original-Plattform op däin Apparat geschéckt a ginn net op eisem Server gespäichert.",
 
   "footer.madeBy": "Gemaach vun",
+  "footer.contact": "Kontakt",
+  "footer.description": "Lued Videoen, Fotoen an Audio vu TikTok, Instagram, Facebook an honnerte vun anere Säite gratis erof.",
+
+  "articles.title": "Artikelen",
+  "articles.description": "Tipps a Guiden fir Videoen, Fotoen an Audio vu sozialen Netzwierker erofzelueden.",
+  "articles.readMore": "Weiderliesen",
+  "articles.all": "All Artikelen ukucken",
+  "articles.prev": "Vireg Artikelen",
+  "articles.next": "Nächst Artikelen",
 
   "results.loading": "Medie gi gelueden… dat ka puer Sekonnen daueren.",
   "results.found": "{n} Medie fonnt",

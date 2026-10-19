@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — pobieraj filmy, zdjęcia i audio z dowolnych mediów społecznościowych",
-  "meta.description": "Pobieraj filmy, zdjęcia i audio z serwisów TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn i setek innych stron.",
+  "meta.description": "Pobieraj za darmo filmy, zdjęcia i audio z serwisów TikTok, Instagram, Facebook i setek innych stron.",
 
   "skip": "Przejdź do treści",
   "nav.label": "Nawigacja główna",
+  "nav.downloader": "Pobieranie",
   "nav.how": "Jak używać",
   "nav.platforms": "Platformy",
   "nav.faq": "FAQ",
@@ -50,6 +51,15 @@
   "faq.a6": "Nie. Pliki trafiają z oryginalnej platformy prosto na Twoje urządzenie i nie są przechowywane na naszym serwerze.",
 
   "footer.madeBy": "Autor:",
+  "footer.contact": "Kontakt",
+  "footer.description": "Pobieraj za darmo filmy, zdjęcia i audio z serwisów TikTok, Instagram, Facebook i setek innych stron.",
+
+  "articles.title": "Artykuły",
+  "articles.description": "Porady i poradniki dotyczące pobierania filmów, zdjęć i audio z mediów społecznościowych.",
+  "articles.readMore": "Czytaj więcej",
+  "articles.all": "Zobacz wszystkie artykuły",
+  "articles.prev": "Poprzednie artykuły",
+  "articles.next": "Następne artykuły",
 
   "results.loading": "Pobieranie multimediów… może to potrwać kilka sekund.",
   "results.found": "Znalezione multimedia: {n}",

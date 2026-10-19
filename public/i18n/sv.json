@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Ladda ner videor, foton och ljud från alla sociala medier",
-  "meta.description": "Ladda ner videor, foton och ljud från TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn och hundratals andra webbplatser.",
+  "meta.description": "Ladda ner videor, foton och ljud gratis från TikTok, Instagram, Facebook och hundratals andra webbplatser.",
 
   "skip": "Hoppa till innehållet",
   "nav.label": "Huvudnavigering",
+  "nav.downloader": "Nedladdare",
   "nav.how": "Så funkar det",
   "nav.platforms": "Plattformar",
   "nav.faq": "Vanliga frågor",
@@ -50,6 +51,15 @@
   "faq.a6": "Nej. Filerna skickas direkt från den ursprungliga plattformen till din enhet och sparas inte på vår server.",
 
   "footer.madeBy": "Skapad av",
+  "footer.contact": "Kontakt",
+  "footer.description": "Ladda ner videor, foton och ljud gratis från TikTok, Instagram, Facebook och hundratals andra webbplatser.",
+
+  "articles.title": "Artiklar",
+  "articles.description": "Tips och guider för att ladda ner videor, foton och ljud från sociala medier.",
+  "articles.readMore": "Läs mer",
+  "articles.all": "Se alla artiklar",
+  "articles.prev": "Föregående artiklar",
+  "articles.next": "Nästa artiklar",
 
   "results.loading": "Hämtar media… det kan ta några sekunder.",
   "results.found": "{n} media hittades",

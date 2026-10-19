@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Atsisiųskite vaizdo įrašus, nuotraukas ir garsą iš bet kurio socialinio tinklo",
-  "meta.description": "Atsisiųskite vaizdo įrašus, nuotraukas ir garsą iš TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ir šimtų kitų svetainių.",
+  "meta.description": "Nemokamai atsisiųskite vaizdo įrašus, nuotraukas ir garsą iš TikTok, Instagram, Facebook ir šimtų kitų svetainių.",
 
   "skip": "Pereiti prie turinio",
   "nav.label": "Pagrindinė navigacija",
+  "nav.downloader": "Atsisiuntimas",
   "nav.how": "Kaip naudotis",
   "nav.platforms": "Platformos",
   "nav.faq": "DUK",
@@ -50,6 +51,15 @@
   "faq.a6": "Ne. Failai siunčiami tiesiai iš originalios platformos į jūsų įrenginį ir nėra saugomi mūsų serveryje.",
 
   "footer.madeBy": "Sukūrė",
+  "footer.contact": "Kontaktai",
+  "footer.description": "Nemokamai atsisiųskite vaizdo įrašus, nuotraukas ir garsą iš TikTok, Instagram, Facebook ir šimtų kitų svetainių.",
+
+  "articles.title": "Straipsniai",
+  "articles.description": "Patarimai ir vadovai, kaip atsisiųsti vaizdo įrašus, nuotraukas ir garsą iš socialinių tinklų.",
+  "articles.readMore": "Skaityti daugiau",
+  "articles.all": "Žiūrėti visus straipsnius",
+  "articles.prev": "Ankstesni straipsniai",
+  "articles.next": "Kiti straipsniai",
 
   "results.loading": "Gaunama medija… tai gali užtrukti kelias sekundes.",
   "results.found": "Rasta medijos failų: {n}",

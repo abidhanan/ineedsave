@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Аливаа сошиал медиагаас видео, зураг, аудио татах",
-  "meta.description": "TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn болон өөр олон зуун сайтаас видео, зураг, аудио татаж аваарай.",
+  "meta.description": "TikTok, Instagram, Facebook болон өөр олон зуун сайтаас видео, зураг, аудио үнэгүй татаж аваарай.",
 
   "skip": "Агуулга руу шилжих",
   "nav.label": "Үндсэн цэс",
+  "nav.downloader": "Татагч",
   "nav.how": "Хэрхэн ашиглах",
   "nav.platforms": "Платформууд",
   "nav.faq": "Түгээмэл асуулт",
@@ -50,6 +51,15 @@
   "faq.a6": "Үгүй. Файлууд эх платформоос таны төхөөрөмж рүү шууд илгээгдэх бөгөөд манай серверт хадгалагдахгүй.",
 
   "footer.madeBy": "Бүтээсэн",
+  "footer.contact": "Холбоо барих",
+  "footer.description": "TikTok, Instagram, Facebook болон өөр олон зуун сайтаас видео, зураг, аудио үнэгүй татаж аваарай.",
+
+  "articles.title": "Нийтлэлүүд",
+  "articles.description": "Нийгмийн сүлжээнээс видео, зураг, аудио татах зөвлөгөө, заавар.",
+  "articles.readMore": "Дэлгэрэнгүй унших",
+  "articles.all": "Бүх нийтлэлийг харах",
+  "articles.prev": "Өмнөх нийтлэлүүд",
+  "articles.next": "Дараагийн нийтлэлүүд",
 
   "results.loading": "Медиа татаж байна… хэдэн секунд болж магадгүй.",
   "results.found": "{n} медиа олдлоо",

@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Pakua video, picha na sauti kutoka mitandao yoyote ya kijamii",
-  "meta.description": "Pakua video, picha na sauti kutoka TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn na mamia ya tovuti nyingine.",
+  "meta.description": "Pakua video, picha na sauti bila malipo kutoka TikTok, Instagram, Facebook na mamia ya tovuti nyingine.",
 
   "skip": "Ruka hadi maudhui",
   "nav.label": "Urambazaji mkuu",
+  "nav.downloader": "Kipakuzi",
   "nav.how": "Jinsi ya kutumia",
   "nav.platforms": "Majukwaa",
   "nav.faq": "Maswali",
@@ -50,6 +51,15 @@
   "faq.a6": "Hapana. Faili hutumwa kutoka jukwaa asili moja kwa moja hadi kwenye kifaa chako na hazihifadhiwi kwenye seva yetu.",
 
   "footer.madeBy": "Imetengenezwa na",
+  "footer.contact": "Mawasiliano",
+  "footer.description": "Pakua video, picha na sauti bila malipo kutoka TikTok, Instagram, Facebook na mamia ya tovuti nyingine.",
+
+  "articles.title": "Makala",
+  "articles.description": "Vidokezo na miongozo ya kupakua video, picha na sauti kutoka mitandao ya kijamii.",
+  "articles.readMore": "Soma zaidi",
+  "articles.all": "Tazama makala zote",
+  "articles.prev": "Makala zilizotangulia",
+  "articles.next": "Makala zinazofuata",
 
   "results.loading": "Inaleta maudhui… hii inaweza kuchukua sekunde chache.",
   "results.found": "Maudhui {n} yamepatikana",

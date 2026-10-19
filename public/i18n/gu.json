@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — કોઈપણ સોશિયલ મીડિયા પરથી વીડિયો, ફોટા અને ઑડિયો ડાઉનલોડ કરો",
-  "meta.description": "TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn અને સેંકડો અન્ય સાઇટ પરથી વીડિયો, ફોટા અને ઑડિયો ડાઉનલોડ કરો.",
+  "meta.description": "TikTok, Instagram, Facebook અને સેંકડો અન્ય સાઇટ પરથી વીડિયો, ફોટા અને ઑડિયો મફતમાં ડાઉનલોડ કરો.",
 
   "skip": "સામગ્રી પર જાઓ",
   "nav.label": "મુખ્ય નેવિગેશન",
+  "nav.downloader": "ડાઉનલોડર",
   "nav.how": "ઉપયોગ કેવી રીતે કરવો",
   "nav.platforms": "પ્લૅટફૉર્મ",
   "nav.faq": "સામાન્ય પ્રશ્નો",
@@ -50,6 +51,15 @@
   "faq.a6": "ના. ફાઇલો મૂળ પ્લૅટફૉર્મ પરથી સીધી તમારા ડિવાઇસ પર મોકલવામાં આવે છે અને અમારા સર્વર પર રાખવામાં આવતી નથી.",
 
   "footer.madeBy": "નિર્માતા",
+  "footer.contact": "સંપર્ક",
+  "footer.description": "TikTok, Instagram, Facebook અને સેંકડો અન્ય સાઇટ પરથી વીડિયો, ફોટા અને ઑડિયો મફતમાં ડાઉનલોડ કરો.",
+
+  "articles.title": "લેખો",
+  "articles.description": "સોશિયલ મીડિયા પરથી વીડિયો, ફોટા અને ઑડિયો ડાઉનલોડ કરવા માટેની ટિપ્સ અને માર્ગદર્શિકાઓ.",
+  "articles.readMore": "વધુ વાંચો",
+  "articles.all": "બધા લેખો જુઓ",
+  "articles.prev": "પહેલાના લેખો",
+  "articles.next": "આગળના લેખો",
 
   "results.loading": "મીડિયા મેળવી રહ્યાં છીએ… આમાં થોડી સેકન્ડ લાગી શકે છે.",
   "results.found": "{n} મીડિયા મળ્યાં",

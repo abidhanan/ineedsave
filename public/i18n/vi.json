@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Tải video, ảnh & âm thanh từ mọi mạng xã hội",
-  "meta.description": "Tải video, ảnh và âm thanh từ TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn và hàng trăm trang khác.",
+  "meta.description": "Tải miễn phí video, ảnh và âm thanh từ TikTok, Instagram, Facebook và hàng trăm trang khác.",
 
   "skip": "Chuyển đến nội dung",
   "nav.label": "Điều hướng chính",
+  "nav.downloader": "Trình tải xuống",
   "nav.how": "Cách dùng",
   "nav.platforms": "Nền tảng",
   "nav.faq": "Hỏi đáp",
@@ -50,6 +51,15 @@
   "faq.a6": "Không. Tệp được gửi thẳng từ nền tảng gốc đến thiết bị của bạn và không được lưu trên máy chủ của chúng tôi.",
 
   "footer.madeBy": "Thực hiện bởi",
+  "footer.contact": "Liên hệ",
+  "footer.description": "Tải miễn phí video, ảnh và âm thanh từ TikTok, Instagram, Facebook và hàng trăm trang khác.",
+
+  "articles.title": "Bài viết",
+  "articles.description": "Mẹo và hướng dẫn tải video, ảnh và âm thanh từ mạng xã hội.",
+  "articles.readMore": "Đọc thêm",
+  "articles.all": "Xem tất cả bài viết",
+  "articles.prev": "Bài viết trước",
+  "articles.next": "Bài viết tiếp theo",
 
   "results.loading": "Đang lấy nội dung… việc này có thể mất vài giây.",
   "results.found": "Tìm thấy {n} nội dung",

@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Shkarko video, foto dhe audio nga çdo rrjet social",
-  "meta.description": "Shkarko video, foto dhe audio nga TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn dhe qindra faqe të tjera.",
+  "meta.description": "Shkarko falas video, foto dhe audio nga TikTok, Instagram, Facebook dhe qindra faqe të tjera.",
 
   "skip": "Kalo te përmbajtja",
   "nav.label": "Navigimi kryesor",
+  "nav.downloader": "Shkarkuesi",
   "nav.how": "Si përdoret",
   "nav.platforms": "Platformat",
   "nav.faq": "Pyetje të shpeshta",
@@ -50,6 +51,15 @@
   "faq.a6": "Jo. Skedarët dërgohen direkt nga platforma origjinale te pajisja jote dhe nuk mbahen në serverin tonë.",
 
   "footer.madeBy": "Krijuar nga",
+  "footer.contact": "Kontakt",
+  "footer.description": "Shkarko falas video, foto dhe audio nga TikTok, Instagram, Facebook dhe qindra faqe të tjera.",
+
+  "articles.title": "Artikuj",
+  "articles.description": "Këshilla dhe udhëzues për shkarkimin e videove, fotove dhe audios nga rrjetet sociale.",
+  "articles.readMore": "Lexo më shumë",
+  "articles.all": "Shiko të gjithë artikujt",
+  "articles.prev": "Artikujt e mëparshëm",
+  "articles.next": "Artikujt e ardhshëm",
 
   "results.loading": "Po merren mediat… kjo mund të zgjasë disa sekonda.",
   "results.found": "U gjetën {n} media",

@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Descarcă videoclipuri, fotografii și audio de pe orice rețea socială",
-  "meta.description": "Descarcă videoclipuri, fotografii și audio de pe TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn și sute de alte site-uri.",
+  "meta.description": "Descarcă gratuit videoclipuri, fotografii și audio de pe TikTok, Instagram, Facebook și sute de alte site-uri.",
 
   "skip": "Salt la conținut",
   "nav.label": "Navigare principală",
+  "nav.downloader": "Descărcare",
   "nav.how": "Cum se folosește",
   "nav.platforms": "Platforme",
   "nav.faq": "Întrebări frecvente",
@@ -50,6 +51,15 @@
   "faq.a6": "Nu. Fișierele sunt trimise de pe platforma originală direct pe dispozitivul tău și nu sunt păstrate pe serverul nostru.",
 
   "footer.madeBy": "Realizat de",
+  "footer.contact": "Contact",
+  "footer.description": "Descarcă gratuit videoclipuri, fotografii și audio de pe TikTok, Instagram, Facebook și sute de alte site-uri.",
+
+  "articles.title": "Articole",
+  "articles.description": "Sfaturi și ghiduri pentru descărcarea de videoclipuri, fotografii și audio de pe rețelele sociale.",
+  "articles.readMore": "Citește mai mult",
+  "articles.all": "Vezi toate articolele",
+  "articles.prev": "Articolele anterioare",
+  "articles.next": "Articolele următoare",
 
   "results.loading": "Se preiau fișierele media… poate dura câteva secunde.",
   "results.found": "Fișiere media găsite: {n}",

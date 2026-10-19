@@ -2,7 +2,7 @@
 // language, scripts/build.mjs renders one HTML file per language) with its strings embedded in
 // window.I18N_BOOT, so nothing is fetched on load. This file only powers t() for app.js and the
 // language picker, which switches the page in place and remembers the choice in a cookie.
-import { BY_CODE, LANGS, RTL, SCRIPT_FONT, flagEmoji } from '/languages.js';
+import { BY_CODE, LANGS, RTL, SCRIPT_FONT, flagSrc } from '/languages.js';
 
 const COOKIE = 'ins-lang';
 const boot = window.I18N_BOOT || { lang: 'en', strings: {} };
@@ -48,14 +48,22 @@ function translateDom() {
       node.setAttribute(attr.trim(), t(key.trim()));
     }
   }
-  document.querySelector('meta[name="description"]')?.setAttribute('content', t('meta.description'));
+  document.title = t('meta.title');
+  const meta = {
+    'meta[name="description"]': t('meta.description'),
+    'meta[property="og:title"]': t('meta.title'),
+    'meta[property="og:description"]': t('meta.description'),
+    'meta[name="twitter:title"]': t('meta.title'),
+    'meta[name="twitter:description"]': t('meta.description'),
+  };
+  for (const [selector, content] of Object.entries(meta)) document.querySelector(selector)?.setAttribute('content', content);
 }
 
 function updateButton() {
   const lang = BY_CODE[current.toLowerCase()];
   const button = document.getElementById('lang-button');
-  button.querySelector('.lang-flag').textContent = flagEmoji(lang.flag);
-  button.querySelector('.lang-code').textContent = lang.code.split('-')[0].toUpperCase();
+  document.getElementById('lang-flag').src = flagSrc(lang.flag);
+  document.getElementById('lang-name').textContent = lang.native;
   button.setAttribute('aria-label', `${t('lang.button')}: ${lang.native}`);
 }
 
@@ -75,7 +83,7 @@ async function switchTo(code) {
   document.dispatchEvent(new CustomEvent('i18n:change', { detail: { lang: current } }));
 }
 
-// ---------- picker ----------
+// ---------- picker (dropdown under the navbar button) ----------
 let menuFontsLoaded = false;
 function loadMenuFonts() {
   // Each language's own name needs its script; fetch just those few glyphs per script.
@@ -88,65 +96,115 @@ function loadMenuFonts() {
   }
 }
 
-function buildList(list, filter) {
-  const q = filter.trim().toLowerCase();
-  const items = LANGS.filter((l) => !q || l.native.toLowerCase().includes(q)
-    || l.english.toLowerCase().includes(q) || l.code.toLowerCase().startsWith(q));
-  list.replaceChildren(...items.map((l) => {
-    const li = document.createElement('li');
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'lang-item';
-    btn.lang = l.code;
-    btn.dataset.code = l.code;
-    if (l.code === current) btn.setAttribute('aria-current', 'true');
-    const flag = document.createElement('span');
-    flag.className = 'lang-flag';
-    flag.setAttribute('aria-hidden', 'true');
-    flag.textContent = flagEmoji(l.flag);
-    const names = document.createElement('span');
-    names.className = 'lang-names';
-    const native = document.createElement('span');
-    native.className = 'lang-native';
-    native.textContent = l.native;
-    if (SCRIPT_FONT[l.script]) native.style.fontFamily = `"Noto Sans", "${SCRIPT_FONT[l.script]}", sans-serif`;
-    const eng = document.createElement('span');
-    eng.className = 'lang-english';
-    eng.lang = 'en';
-    eng.textContent = l.english;
-    names.append(native, eng);
-    btn.append(flag, names);
-    li.append(btn);
-    return li;
-  }));
-  document.getElementById('lang-empty').hidden = items.length > 0;
-}
-
 function setupPicker() {
+  const picker = document.getElementById('lang-picker');
   const button = document.getElementById('lang-button');
-  const dialog = document.getElementById('lang-dialog');
+  const panel = document.getElementById('lang-panel');
   const search = document.getElementById('lang-search');
   const list = document.getElementById('lang-list');
+  const empty = document.getElementById('lang-empty');
+  let options = [];
+  let active = -1;
 
-  button.addEventListener('click', () => {
+  function setActive(index, scroll = true) {
+    options[active]?.classList.remove('active');
+    active = index;
+    const option = options[active];
+    if (!option) return;
+    option.classList.add('active');
+    search.setAttribute('aria-activedescendant', option.id);
+    // Scroll only the list: scrollIntoView() would also move the page under the sticky header.
+    if (scroll) {
+      const box = list.getBoundingClientRect();
+      const item = option.getBoundingClientRect();
+      if (item.top < box.top) list.scrollTop -= box.top - item.top;
+      else if (item.bottom > box.bottom) list.scrollTop += item.bottom - box.bottom;
+    }
+  }
+
+  // Language names in the page's current language too, so "Jepang" finds 日本語 on the Indonesian page.
+  function localName(code) {
+    try { return new Intl.DisplayNames([current], { type: 'language' }).of(code) || ''; } catch { return ''; }
+  }
+
+  function render() {
+    const q = search.value.trim().toLowerCase();
+    const items = LANGS.filter((l) => !q || l.native.toLowerCase().includes(q)
+      || l.english.toLowerCase().includes(q) || l.code.toLowerCase().startsWith(q)
+      || localName(l.code).toLowerCase().includes(q));
+    options = items.map((l) => {
+      const option = document.createElement('button');
+      option.type = 'button';
+      option.className = 'lang-option';
+      option.id = `lang-opt-${l.code}`;
+      option.setAttribute('role', 'option');
+      option.tabIndex = -1;
+      option.dataset.code = l.code;
+      option.setAttribute('aria-selected', String(l.code === current));
+      const flag = document.createElement('img');
+      flag.className = 'flag';
+      flag.alt = '';
+      flag.width = 20;
+      flag.height = 15;
+      flag.loading = 'lazy';
+      flag.src = flagSrc(l.flag);
+      const label = document.createElement('span');
+      label.className = 'lang-option-label';
+      label.lang = l.code;
+      label.textContent = l.native;
+      if (SCRIPT_FONT[l.script]) label.style.fontFamily = `"Noto Sans", "${SCRIPT_FONT[l.script]}", sans-serif`;
+      option.append(flag, label);
+      return option;
+    });
+    list.replaceChildren(...options);
+    empty.hidden = options.length > 0;
+    active = -1;
+    setActive(q ? 0 : options.findIndex((o) => o.dataset.code === current), false);
+  }
+
+  function open() {
     loadMenuFonts();
     search.value = '';
-    buildList(list, '');
-    dialog.showModal();
-    const active = list.querySelector('[aria-current]');
-    if (active) list.scrollTop = active.offsetTop - list.clientHeight / 2; // scroll the list only, not the page
-    if (matchMedia('(hover: hover)').matches) search.focus();
-  });
-  search.addEventListener('input', () => buildList(list, search.value));
+    render();
+    panel.hidden = false;
+    button.setAttribute('aria-expanded', 'true');
+    const selected = options[active];
+    if (selected) list.scrollTop = selected.offsetTop - list.clientHeight / 2 + selected.offsetHeight / 2;
+    if (matchMedia('(hover: hover)').matches) search.focus({ preventScroll: true });
+  }
+
+  function close(focusButton = false) {
+    if (panel.hidden) return;
+    panel.hidden = true;
+    button.setAttribute('aria-expanded', 'false');
+    // preventScroll: the button sits in the sticky header, so the page must stay where the visitor is.
+    if (focusButton) button.focus({ preventScroll: true });
+  }
+
+  function choose(code) {
+    close(true);
+    if (code === current) return;
+    remember(code);
+    switchTo(code);
+  }
+
+  button.addEventListener('click', () => (panel.hidden ? open() : close()));
+  search.addEventListener('input', render);
   list.addEventListener('click', (event) => {
-    const item = event.target.closest('.lang-item');
-    if (!item) return;
-    remember(item.dataset.code);
-    dialog.close();
-    switchTo(item.dataset.code);
+    const option = event.target.closest('.lang-option');
+    if (option) choose(option.dataset.code);
   });
-  document.getElementById('lang-close').addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+  list.addEventListener('mousemove', (event) => {
+    const index = options.indexOf(event.target.closest('.lang-option'));
+    if (index >= 0 && index !== active) setActive(index, false);
+  });
+  panel.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowDown') { event.preventDefault(); setActive(Math.min(active + 1, options.length - 1)); }
+    else if (event.key === 'ArrowUp') { event.preventDefault(); setActive(Math.max(active - 1, 0)); }
+    else if (event.key === 'Enter' && options[active]) { event.preventDefault(); choose(options[active].dataset.code); }
+  });
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') close(true); });
+  document.addEventListener('pointerdown', (event) => { if (!picker.contains(event.target)) close(); });
 }
 
 // Choices saved by the previous version of the site lived in localStorage; move them to the cookie.

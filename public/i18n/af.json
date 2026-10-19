@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Laai video's, foto's en oudio van enige sosiale media af",
-  "meta.description": "Laai video's, foto's en oudio van TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn en honderde ander webwerwe af.",
+  "meta.description": "Laai video's, foto's en oudio van TikTok, Instagram, Facebook en honderde ander webwerwe gratis af.",
 
   "skip": "Slaan oor na inhoud",
   "nav.label": "Hoofnavigasie",
+  "nav.downloader": "Aflaaier",
   "nav.how": "Hoe om dit te gebruik",
   "nav.platforms": "Platforms",
   "nav.faq": "Gereelde vrae",
@@ -50,6 +51,15 @@
   "faq.a6": "Nee. Lêers word reguit van die oorspronklike platform na jou toestel gestuur en word nie op ons bediener gehou nie.",
 
   "footer.madeBy": "Gemaak deur",
+  "footer.contact": "Kontak",
+  "footer.description": "Laai video's, foto's en oudio van TikTok, Instagram, Facebook en honderde ander webwerwe gratis af.",
+
+  "articles.title": "Artikels",
+  "articles.description": "Wenke en gidse om video's, foto's en oudio van sosiale media af te laai.",
+  "articles.readMore": "Lees meer",
+  "articles.all": "Sien alle artikels",
+  "articles.prev": "Vorige artikels",
+  "articles.next": "Volgende artikels",
 
   "results.loading": "Besig om media te haal… dit kan 'n paar sekondes neem.",
   "results.found": "{n} media gevind",

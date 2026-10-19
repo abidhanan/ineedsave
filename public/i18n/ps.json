@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — له هرې ټولنیزې رسنۍ ویډیوګانې، انځورونه او غږونه ډاونلوډ کړئ",
-  "meta.description": "له TikTok، Instagram، Facebook، X (Twitter)، Pinterest، LinkedIn او سلګونو نورو سایټونو ویډیوګانې، انځورونه او غږونه ډاونلوډ کړئ.",
+  "meta.description": "له TikTok، Instagram، Facebook او سلګونو نورو سایټونو ویډیوګانې، انځورونه او غږونه وړیا ډاونلوډ کړئ.",
 
   "skip": "منځپانګې ته ورشئ",
   "nav.label": "اصلي نیویګیشن",
+  "nav.downloader": "ډاونلوډر",
   "nav.how": "د کارولو لارښود",
   "nav.platforms": "پلیټفارمونه",
   "nav.faq": "پوښتنې",
@@ -50,6 +51,15 @@
   "faq.a6": "نه. فایلونه له اصلي پلیټفارم څخه مستقیم ستاسو وسیلې ته لیږل کیږي او زموږ په سرور کې نه ساتل کیږي.",
 
   "footer.madeBy": "جوړونکی",
+  "footer.contact": "اړیکه",
+  "footer.description": "له TikTok، Instagram، Facebook او سلګونو نورو سایټونو ویډیوګانې، انځورونه او غږونه وړیا ډاونلوډ کړئ.",
+
+  "articles.title": "مقالې",
+  "articles.description": "له ټولنیزو رسنیو څخه د ویډیوګانو، انځورونو او غږونو د ډاونلوډ لپاره لارښوونې او مشورې.",
+  "articles.readMore": "نور ولولئ",
+  "articles.all": "ټولې مقالې وګورئ",
+  "articles.prev": "پخوانۍ مقالې",
+  "articles.next": "راتلونکې مقالې",
 
   "results.loading": "رسنۍ راوړل کیږي… دا ښايي څو ثانیې ونیسي.",
   "results.found": "{n} رسنۍ وموندل شوې",

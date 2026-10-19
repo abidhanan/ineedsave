@@ -31,11 +31,25 @@
     script.src = src;
     document.head.append(script);
   };
-  const load = () => {
+  // GA4 (first-party cookies) loads once the page is idle. Clarity sets third-party cookies, so it
+  // waits for the visitor's first interaction: sessions are recorded from then on, and visitors who
+  // leave straight away never get its cookies.
+  const loadGa = () => {
     if (ga4) inject(`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(ga4)}`);
-    if (clarity) inject(`https://www.clarity.ms/tag/${encodeURIComponent(clarity)}`);
   };
-  const whenIdle = () => (window.requestIdleCallback ? requestIdleCallback(load, { timeout: 3000 }) : setTimeout(load, 1500));
+  const whenIdle = () => (window.requestIdleCallback ? requestIdleCallback(loadGa, { timeout: 3000 }) : setTimeout(loadGa, 1500));
   if (document.readyState === 'complete') whenIdle();
   else window.addEventListener('load', whenIdle, { once: true });
+
+  if (clarity) {
+    const events = ['pointerdown', 'keydown', 'touchstart'];
+    const loadClarity = () => {
+      events.forEach((e) => window.removeEventListener(e, loadClarity, true));
+      window.removeEventListener('scroll', loadClarity);
+      inject(`https://www.clarity.ms/tag/${encodeURIComponent(clarity)}`);
+    };
+    events.forEach((e) => window.addEventListener(e, loadClarity, { capture: true, passive: true }));
+    // Page scroll only (not capture), so the articles carousel moving by itself doesn't count.
+    window.addEventListener('scroll', loadClarity, { passive: true });
+  }
 })();

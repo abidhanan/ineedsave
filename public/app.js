@@ -351,8 +351,72 @@
     else renderResults(shown.data);
   });
 
-  // In-page links (navbar, skip link) scroll to their section without putting "#..." in the address bar.
+  // The copyright line stays on one line: on narrow phones (or long translations) shrink its font just enough.
+  const copyLine = document.querySelector('.footer-copy');
+  function fitCopyLine() {
+    copyLine.style.fontSize = '';
+    copyLine.style.whiteSpace = '';
+    let size = parseFloat(getComputedStyle(copyLine).fontSize);
+    while (copyLine.scrollWidth > copyLine.clientWidth && size > 9) {
+      size -= 0.5;
+      copyLine.style.fontSize = `${size}px`;
+    }
+    // Still too long at the smallest readable size (very narrow screens): let it wrap rather than overflow.
+    if (copyLine.scrollWidth > copyLine.clientWidth) copyLine.style.whiteSpace = 'normal';
+  }
+  fitCopyLine();
+  document.fonts?.ready.then(fitCopyLine);
+  window.addEventListener('resize', fitCopyLine);
+  document.addEventListener('i18n:change', fitCopyLine);
+
   const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Articles carousel: moves only on its own (it can't be scrolled by hand), every few seconds, also
+  // under the mouse cursor. Reduced-motion users get instant steps.
+  const carousel = document.querySelector('[data-carousel]');
+  if (carousel) {
+    const track = carousel.querySelector('.carousel-track');
+    const rtl = () => document.documentElement.dir === 'rtl';
+    const step = () => (track.firstElementChild?.getBoundingClientRect().width || 0) + parseFloat(getComputedStyle(track).columnGap || 0);
+    const atEnd = () => Math.abs(track.scrollLeft) + track.clientWidth >= track.scrollWidth - 4;
+    const behavior = () => (reducedMotion() ? 'auto' : 'smooth');
+    setInterval(() => {
+      if (document.hidden) return;
+      if (atEnd()) track.scrollTo({ left: 0, behavior: behavior() });
+      else track.scrollBy({ left: step() * (rtl() ? -1 : 1), behavior: behavior() });
+    }, 4000);
+
+    // The cards are pre-rendered per language; after a switch in the picker, take them from that
+    // language's page.
+    document.addEventListener('i18n:change', async ({ detail }) => {
+      try {
+        const res = await fetch(`/_l/${detail.lang}.html`);
+        if (!res.ok) return;
+        const page = new DOMParser().parseFromString(await res.text(), 'text/html');
+        const cards = page.querySelector('.carousel-track');
+        if (cards && window.i18n?.lang === detail.lang) {
+          track.replaceChildren(...[...cards.children].map((card) => document.importNode(card, true)));
+          track.scrollTo({ left: 0, behavior: 'auto' });
+        }
+      } catch { /* keep the current cards */ }
+    });
+  }
+
+  // Navbar marker: highlights the link of the section currently on screen while scrolling.
+  const navLinks = [...document.querySelectorAll('.nav a[href^="#"]')];
+  const sections = navLinks.map((a) => document.getElementById(a.getAttribute('href').slice(1)));
+  const updateNav = () => {
+    const line = document.querySelector('.header').offsetHeight + window.innerHeight * 0.3;
+    let current = 0;
+    sections.forEach((section, i) => { if (section && section.getBoundingClientRect().top <= line) current = i; });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) current = sections.length - 1;
+    navLinks.forEach((a, i) => (i === current ? a.setAttribute('aria-current', 'true') : a.removeAttribute('aria-current')));
+  };
+  window.addEventListener('scroll', updateNav, { passive: true });
+  window.addEventListener('resize', updateNav);
+  updateNav();
+
+  // In-page links (navbar, skip link) scroll to their section without putting "#..." in the address bar.
   document.addEventListener('click', (event) => {
     const link = event.target.closest('a[href^="#"]');
     const target = link && document.getElementById(link.getAttribute('href').slice(1));

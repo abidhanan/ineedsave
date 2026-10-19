@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Lataa videoita, kuvia ja ääntä mistä tahansa sosiaalisesta mediasta",
-  "meta.description": "Lataa videoita, kuvia ja ääntä TikTokista, Instagramista, Facebookista, X:stä (Twitter), Pinterestistä, LinkedInistä ja sadoilta muilta sivustoilta.",
+  "meta.description": "Lataa ilmaiseksi videoita, kuvia ja ääntä TikTokista, Instagramista, Facebookista ja sadoilta muilta sivustoilta.",
 
   "skip": "Siirry sisältöön",
   "nav.label": "Päävalikko",
+  "nav.downloader": "Lataaja",
   "nav.how": "Käyttöohjeet",
   "nav.platforms": "Alustat",
   "nav.faq": "UKK",
@@ -50,6 +51,15 @@
   "faq.a6": "Ei. Tiedostot lähetetään alkuperäiseltä alustalta suoraan laitteellesi, eikä niitä säilytetä palvelimellamme.",
 
   "footer.madeBy": "Tekijä",
+  "footer.contact": "Yhteystiedot",
+  "footer.description": "Lataa ilmaiseksi videoita, kuvia ja ääntä TikTokista, Instagramista, Facebookista ja sadoilta muilta sivustoilta.",
+
+  "articles.title": "Artikkelit",
+  "articles.description": "Vinkkejä ja oppaita videoiden, kuvien ja äänen lataamiseen sosiaalisesta mediasta.",
+  "articles.readMore": "Lue lisää",
+  "articles.all": "Näytä kaikki artikkelit",
+  "articles.prev": "Edelliset artikkelit",
+  "articles.next": "Seuraavat artikkelit",
 
   "results.loading": "Haetaan mediaa… tämä voi kestää muutaman sekunnin.",
   "results.found": "Mediaa löytyi: {n}",

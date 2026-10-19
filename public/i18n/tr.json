@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Tüm sosyal medyadan video, fotoğraf ve ses indirin",
-  "meta.description": "TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ve yüzlerce başka siteden video, fotoğraf ve ses indirin.",
+  "meta.description": "TikTok, Instagram, Facebook ve yüzlerce başka siteden video, fotoğraf ve ses ücretsiz indirin.",
 
   "skip": "İçeriğe geç",
   "nav.label": "Ana gezinme",
+  "nav.downloader": "İndirici",
   "nav.how": "Nasıl kullanılır",
   "nav.platforms": "Platformlar",
   "nav.faq": "SSS",
@@ -50,6 +51,15 @@
   "faq.a6": "Hayır. Dosyalar orijinal platformdan doğrudan cihazınıza gönderilir ve sunucumuzda saklanmaz.",
 
   "footer.madeBy": "Geliştiren",
+  "footer.contact": "İletişim",
+  "footer.description": "TikTok, Instagram, Facebook ve yüzlerce başka siteden video, fotoğraf ve ses ücretsiz indirin.",
+
+  "articles.title": "Makaleler",
+  "articles.description": "Sosyal medyadan video, fotoğraf ve ses indirmeye yönelik ipuçları ve rehberler.",
+  "articles.readMore": "Devamını oku",
+  "articles.all": "Tüm makaleleri gör",
+  "articles.prev": "Önceki makaleler",
+  "articles.next": "Sonraki makaleler",
 
   "results.loading": "Medya alınıyor… bu birkaç saniye sürebilir.",
   "results.found": "{n} medya bulundu",

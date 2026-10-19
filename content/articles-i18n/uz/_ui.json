@@ -1,0 +1,20 @@
+{
+  "tryNow": "Hozir sinab koʻring",
+  "home": "Bosh sahifa",
+  "popular": "Mashhur maqolalar",
+  "more": "Boshqa maqolalar",
+  "seeAll": "Barchasini koʻrish",
+  "photo": "Rasm",
+  "views": "Koʻrishlar",
+  "viewsSr": "marta koʻrilgan",
+  "like": "Maqola yoqdi",
+  "share": "Maqolani ulashish",
+  "shareVia": "{name} orqali ulashish",
+  "copyLink": "Havolani nusxalash",
+  "copied": "Havola nusxalandi.",
+  "copyPrompt": "Ushbu havolani nusxalang:",
+  "indexTitle": "Maqolalar: video, rasm va audio yuklab olish boʻyicha maslahatlar",
+  "indexDescription": "I Need Save qoʻllanmalari: TikTok, Instagram, Facebook, X va Pinterestdan video yuklab olish, videoni MP3 ga aylantirish va boshqa foydali maslahatlar.",
+  "allCategories": "Hammasi",
+  "categories": "Toifalar"
+}

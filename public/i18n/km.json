@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — ទាញយកវីដេអូ រូបថត និងសំឡេងពីបណ្ដាញសង្គមណាមួយ",
-  "meta.description": "ទាញយកវីដេអូ រូបថត និងសំឡេងពី TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn និងគេហទំព័ររាប់រយផ្សេងទៀត។",
+  "meta.description": "ទាញយកវីដេអូ រូបថត និងសំឡេងពី TikTok, Instagram, Facebook និងគេហទំព័ររាប់រយផ្សេងទៀតដោយឥតគិតថ្លៃ។",
 
   "skip": "រំលងទៅខ្លឹមសារ",
   "nav.label": "ម៉ឺនុយមេ",
+  "nav.downloader": "កម្មវិធីទាញយក",
   "nav.how": "របៀបប្រើ",
   "nav.platforms": "វេទិកា",
   "nav.faq": "សំណួរញឹកញាប់",
@@ -50,6 +51,15 @@
   "faq.a6": "ទេ។ ឯកសារត្រូវបានផ្ញើពីវេទិកាដើមទៅកាន់ឧបករណ៍របស់អ្នកដោយផ្ទាល់ ហើយមិនត្រូវបានរក្សាទុកនៅលើម៉ាស៊ីនមេរបស់យើងទេ។",
 
   "footer.madeBy": "បង្កើតដោយ",
+  "footer.contact": "ទំនាក់ទំនង",
+  "footer.description": "ទាញយកវីដេអូ រូបថត និងសំឡេងពី TikTok, Instagram, Facebook និងគេហទំព័ររាប់រយផ្សេងទៀតដោយឥតគិតថ្លៃ។",
+
+  "articles.title": "អត្ថបទ",
+  "articles.description": "គន្លឹះ និងការណែនាំសម្រាប់ទាញយកវីដេអូ រូបថត និងសំឡេងពីបណ្ដាញសង្គម។",
+  "articles.readMore": "អានបន្ថែម",
+  "articles.all": "មើលអត្ថបទទាំងអស់",
+  "articles.prev": "អត្ថបទមុន",
+  "articles.next": "អត្ថបទបន្ទាប់",
 
   "results.loading": "កំពុងទាញយកមេឌៀ… អាចចំណាយពេលពីរបីវិនាទី។",
   "results.found": "រកឃើញមេឌៀ {n}",

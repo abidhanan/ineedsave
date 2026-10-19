@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Landa amavidiyo, izithombe nomsindo kunoma iyiphi inkundla yezokuxhumana",
-  "meta.description": "Landa amavidiyo, izithombe nomsindo ku-TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn namakhulu amanye amasayithi.",
+  "meta.description": "Landa mahhala amavidiyo, izithombe nomsindo ku-TikTok, Instagram, Facebook namakhulu amanye amasayithi.",
 
   "skip": "Yeqela kokuqukethwe",
   "nav.label": "Ukuzulazula okuyinhloko",
+  "nav.downloader": "Isilandi",
   "nav.how": "Indlela yokusebenzisa",
   "nav.platforms": "Izinkundla",
   "nav.faq": "Imibuzo",
@@ -50,6 +51,15 @@
   "faq.a6": "Cha. Amafayela athunyelwa ngqo esuka enkundleni yokuqala aye kudivayisi yakho, futhi awagcinwa kuseva yethu.",
 
   "footer.madeBy": "Yenziwe ngu",
+  "footer.contact": "Xhumana nathi",
+  "footer.description": "Landa mahhala amavidiyo, izithombe nomsindo ku-TikTok, Instagram, Facebook namakhulu amanye amasayithi.",
+
+  "articles.title": "Izindatshana",
+  "articles.description": "Amathiphu neziqondiso zokulanda amavidiyo, izithombe nomsindo ezinkundleni zokuxhumana.",
+  "articles.readMore": "Funda kabanzi",
+  "articles.all": "Bona zonke izindatshana",
+  "articles.prev": "Izindatshana ezedlule",
+  "articles.next": "Izindatshana ezilandelayo",
 
   "results.loading": "Ithola imidiya… lokhu kungathatha imizuzwana embalwa.",
   "results.found": "Kutholwe imidiya engu-{n}",

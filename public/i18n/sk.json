@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — sťahujte videá, fotky a zvuk z akejkoľvek sociálnej siete",
-  "meta.description": "Sťahujte videá, fotky a zvuk zo sietí TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn a zo stoviek ďalších webov.",
+  "meta.description": "Sťahujte zadarmo videá, fotky a zvuk zo sietí TikTok, Instagram, Facebook a zo stoviek ďalších webov.",
 
   "skip": "Preskočiť na obsah",
   "nav.label": "Hlavná navigácia",
+  "nav.downloader": "Sťahovanie",
   "nav.how": "Ako na to",
   "nav.platforms": "Platformy",
   "nav.faq": "Časté otázky",
@@ -50,6 +51,15 @@
   "faq.a6": "Nie. Súbory idú z pôvodnej platformy priamo do vášho zariadenia a na našom serveri sa neuchovávajú.",
 
   "footer.madeBy": "Autor:",
+  "footer.contact": "Kontakt",
+  "footer.description": "Sťahujte zadarmo videá, fotky a zvuk zo sietí TikTok, Instagram, Facebook a zo stoviek ďalších webov.",
+
+  "articles.title": "Články",
+  "articles.description": "Tipy a návody na sťahovanie videí, fotiek a zvuku zo sociálnych sietí.",
+  "articles.readMore": "Čítať ďalej",
+  "articles.all": "Zobraziť všetky články",
+  "articles.prev": "Predchádzajúce články",
+  "articles.next": "Ďalšie články",
 
   "results.loading": "Načítavame médiá… môže to trvať niekoľko sekúnd.",
   "results.found": "Nájdené médiá: {n}",

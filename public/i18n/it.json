@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Scarica video, foto e audio da qualsiasi social",
-  "meta.description": "Scarica video, foto e audio da TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn e centinaia di altri siti.",
+  "meta.description": "Scarica gratis video, foto e audio da TikTok, Instagram, Facebook e centinaia di altri siti.",
 
   "skip": "Vai al contenuto",
   "nav.label": "Navigazione principale",
+  "nav.downloader": "Downloader",
   "nav.how": "Come si usa",
   "nav.platforms": "Piattaforme",
   "nav.faq": "FAQ",
@@ -50,6 +51,15 @@
   "faq.a6": "No. I file vengono inviati direttamente dalla piattaforma originale al tuo dispositivo e non vengono conservati sul nostro server.",
 
   "footer.madeBy": "Realizzato da",
+  "footer.contact": "Contatti",
+  "footer.description": "Scarica gratis video, foto e audio da TikTok, Instagram, Facebook e centinaia di altri siti.",
+
+  "articles.title": "Articoli",
+  "articles.description": "Consigli e guide per scaricare video, foto e audio dai social media.",
+  "articles.readMore": "Leggi di più",
+  "articles.all": "Vedi tutti gli articoli",
+  "articles.prev": "Articoli precedenti",
+  "articles.next": "Articoli successivi",
 
   "results.loading": "Recupero dei contenuti… potrebbe richiedere qualche secondo.",
   "results.found": "Contenuti trovati: {n}",

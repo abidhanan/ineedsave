@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Ji her medyaya civakî vîdeo, wêne û deng daxîne",
-  "meta.description": "Ji TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn û bi sedan malperên din vîdeo, wêne û deng daxîne.",
+  "meta.description": "Ji TikTok, Instagram, Facebook û bi sedan malperên din vîdeo, wêne û deng belaş daxîne.",
 
   "skip": "Here naverokê",
   "nav.label": "Navîgasyona sereke",
+  "nav.downloader": "Daxêner",
   "nav.how": "Çawa tê bikaranîn",
   "nav.platforms": "Platform",
   "nav.faq": "Pirs",
@@ -50,6 +51,15 @@
   "faq.a6": "Na. Pel ji platforma resen rasterast ji cîhaza te re têne şandin û li ser servera me nayên hilanîn.",
 
   "footer.madeBy": "Afirîner",
+  "footer.contact": "Têkilî",
+  "footer.description": "Ji TikTok, Instagram, Facebook û bi sedan malperên din vîdeo, wêne û deng belaş daxîne.",
+
+  "articles.title": "Gotar",
+  "articles.description": "Şîret û rêber ji bo daxistina vîdeo, wêne û dengan ji medyaya civakî.",
+  "articles.readMore": "Zêdetir bixwîne",
+  "articles.all": "Hemû gotaran bibîne",
+  "articles.prev": "Gotarên berê",
+  "articles.next": "Gotarên paşê",
 
   "results.loading": "Medya tê anîn… dibe ku çend çirkeyan bidome.",
   "results.found": "{n} medya hat dîtin",

@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — завантажуйте відео, фото й аудіо з будь-яких соцмереж",
-  "meta.description": "Завантажуйте відео, фото й аудіо з TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn і сотень інших сайтів.",
+  "meta.description": "Завантажуйте безкоштовно відео, фото й аудіо з TikTok, Instagram, Facebook і сотень інших сайтів.",
 
   "skip": "Перейти до вмісту",
   "nav.label": "Головне меню",
+  "nav.downloader": "Завантажувач",
   "nav.how": "Як користуватися",
   "nav.platforms": "Платформи",
   "nav.faq": "Питання",
@@ -50,6 +51,15 @@
   "faq.a6": "Ні. Файли передаються з оригінальної платформи прямо на ваш пристрій і не зберігаються на нашому сервері.",
 
   "footer.madeBy": "Автор:",
+  "footer.contact": "Контакти",
+  "footer.description": "Завантажуйте безкоштовно відео, фото й аудіо з TikTok, Instagram, Facebook і сотень інших сайтів.",
+
+  "articles.title": "Статті",
+  "articles.description": "Поради та інструкції щодо завантаження відео, фото й аудіо із соцмереж.",
+  "articles.readMore": "Читати далі",
+  "articles.all": "Усі статті",
+  "articles.prev": "Попередні статті",
+  "articles.next": "Наступні статті",
 
   "results.loading": "Отримуємо медіафайли… це може тривати кілька секунд.",
   "results.found": "Знайдено файлів: {n}",

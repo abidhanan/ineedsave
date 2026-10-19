@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — İstənilən sosial şəbəkədən video, foto və səs endirin",
-  "meta.description": "TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn və yüzlərlə digər saytdan video, foto və səs endirin.",
+  "meta.description": "TikTok, Instagram, Facebook və yüzlərlə digər saytdan video, foto və səs pulsuz endirin.",
 
   "skip": "Məzmuna keç",
   "nav.label": "Əsas naviqasiya",
+  "nav.downloader": "Yükləyici",
   "nav.how": "Necə istifadə etməli",
   "nav.platforms": "Platformalar",
   "nav.faq": "Suallar",
@@ -50,6 +51,15 @@
   "faq.a6": "Xeyr. Fayllar orijinal platformadan birbaşa cihazınıza göndərilir və serverimizdə saxlanılmır.",
 
   "footer.madeBy": "Hazırladı",
+  "footer.contact": "Əlaqə",
+  "footer.description": "TikTok, Instagram, Facebook və yüzlərlə digər saytdan video, foto və səs pulsuz endirin.",
+
+  "articles.title": "Məqalələr",
+  "articles.description": "Sosial şəbəkələrdən video, foto və səs endirmək üçün məsləhətlər və bələdçilər.",
+  "articles.readMore": "Ətraflı oxu",
+  "articles.all": "Bütün məqalələrə bax",
+  "articles.prev": "Əvvəlki məqalələr",
+  "articles.next": "Növbəti məqalələr",
 
   "results.loading": "Media alınır… bu bir neçə saniyə çəkə bilər.",
   "results.found": "{n} media tapıldı",

@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Download video's, foto's en audio van elke social media",
-  "meta.description": "Download video's, foto's en audio van TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn en honderden andere sites.",
+  "meta.description": "Download gratis video's, foto's en audio van TikTok, Instagram, Facebook en honderden andere sites.",
 
   "skip": "Naar inhoud",
   "nav.label": "Hoofdnavigatie",
+  "nav.downloader": "Downloader",
   "nav.how": "Hoe werkt het",
   "nav.platforms": "Platforms",
   "nav.faq": "FAQ",
@@ -50,6 +51,15 @@
   "faq.a6": "Nee. Bestanden gaan rechtstreeks van het oorspronkelijke platform naar je apparaat en worden niet op onze server bewaard.",
 
   "footer.madeBy": "Gemaakt door",
+  "footer.contact": "Contact",
+  "footer.description": "Download gratis video's, foto's en audio van TikTok, Instagram, Facebook en honderden andere sites.",
+
+  "articles.title": "Artikelen",
+  "articles.description": "Tips en handleidingen voor het downloaden van video's, foto's en audio van social media.",
+  "articles.readMore": "Lees meer",
+  "articles.all": "Bekijk alle artikelen",
+  "articles.prev": "Vorige artikelen",
+  "articles.next": "Volgende artikelen",
 
   "results.loading": "Media ophalen… dit kan een paar seconden duren.",
   "results.found": "{n} media gevonden",

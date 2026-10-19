@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Изтегляйте видеа, снимки и аудио от всяка социална мрежа",
-  "meta.description": "Изтегляйте видеа, снимки и аудио от TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn и стотици други сайтове.",
+  "meta.description": "Изтегляйте безплатно видеа, снимки и аудио от TikTok, Instagram, Facebook и стотици други сайтове.",
 
   "skip": "Към съдържанието",
   "nav.label": "Основна навигация",
+  "nav.downloader": "Изтегляне",
   "nav.how": "Как се използва",
   "nav.platforms": "Платформи",
   "nav.faq": "Въпроси",
@@ -50,6 +51,15 @@
   "faq.a6": "Не. Файловете се изпращат от оригиналната платформа направо на устройството ви и не се пазят на нашия сървър.",
 
   "footer.madeBy": "Автор:",
+  "footer.contact": "Контакти",
+  "footer.description": "Изтегляйте безплатно видеа, снимки и аудио от TikTok, Instagram, Facebook и стотици други сайтове.",
+
+  "articles.title": "Статии",
+  "articles.description": "Съвети и ръководства за изтегляне на видеа, снимки и аудио от социалните мрежи.",
+  "articles.readMore": "Прочетете още",
+  "articles.all": "Вижте всички статии",
+  "articles.prev": "Предишни статии",
+  "articles.next": "Следващи статии",
 
   "results.loading": "Извличаме файловете… това може да отнеме няколко секунди.",
   "results.found": "Намерени файлове: {n}",

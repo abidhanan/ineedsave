@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Llwythwch fideos, lluniau a sain i lawr o unrhyw gyfryngau cymdeithasol",
-  "meta.description": "Llwythwch fideos, lluniau a sain i lawr o TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn a channoedd o wefannau eraill.",
+  "meta.description": "Llwythwch fideos, lluniau a sain i lawr am ddim o TikTok, Instagram, Facebook a channoedd o wefannau eraill.",
 
   "skip": "Neidio i'r cynnwys",
   "nav.label": "Prif lywio",
+  "nav.downloader": "Lawrlwythwr",
   "nav.how": "Sut i'w ddefnyddio",
   "nav.platforms": "Platfformau",
   "nav.faq": "Cwestiynau cyffredin",
@@ -50,6 +51,15 @@
   "faq.a6": "Nac ydyn. Mae ffeiliau'n cael eu hanfon o'r platfform gwreiddiol yn syth i'ch dyfais, a dydyn nhw ddim yn cael eu cadw ar ein gweinydd.",
 
   "footer.madeBy": "Crëwyd gan",
+  "footer.contact": "Cysylltu",
+  "footer.description": "Llwythwch fideos, lluniau a sain i lawr am ddim o TikTok, Instagram, Facebook a channoedd o wefannau eraill.",
+
+  "articles.title": "Erthyglau",
+  "articles.description": "Awgrymiadau a chanllawiau ar gyfer llwytho fideos, lluniau a sain i lawr o gyfryngau cymdeithasol.",
+  "articles.readMore": "Darllen mwy",
+  "articles.all": "Gweld pob erthygl",
+  "articles.prev": "Erthyglau blaenorol",
+  "articles.next": "Erthyglau nesaf",
 
   "results.loading": "Wrthi'n nôl cyfryngau… gall hyn gymryd ychydig eiliadau.",
   "results.found": "Wedi dod o hyd i {n} eitem",

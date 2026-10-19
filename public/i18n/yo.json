@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Ṣe ìgbàsílẹ̀ fídíò, fọ́tò àti ohùn láti orí ìkànnì àjọlò èyíkéyìí",
-  "meta.description": "Ṣe ìgbàsílẹ̀ fídíò, fọ́tò àti ohùn láti TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn àti ọgọ́rọ̀ọ̀rún ojú òpó mìíràn.",
+  "meta.description": "Ṣe ìgbàsílẹ̀ fídíò, fọ́tò àti ohùn láti TikTok, Instagram, Facebook àti ọgọ́rọ̀ọ̀rún ojú òpó mìíràn lọ́fẹ̀ẹ́.",
 
   "skip": "Fò lọ sí àkóónú",
   "nav.label": "Àtòjọ àṣàyàn àkọ́kọ́",
+  "nav.downloader": "Olùgbàsílẹ̀",
   "nav.how": "Bí a ṣe ń lò ó",
   "nav.platforms": "Àwọn ìkànnì",
   "nav.faq": "Ìbéèrè",
@@ -50,6 +51,15 @@
   "faq.a6": "Rárá. Àwọn fáìlì máa ń lọ tààrà láti ìkànnì ìpilẹ̀ṣẹ̀ sí ẹ̀rọ rẹ, a kò sì tọ́jú wọn sórí olùpín wa.",
 
   "footer.madeBy": "Láti ọwọ́",
+  "footer.contact": "Kàn sí wa",
+  "footer.description": "Ṣe ìgbàsílẹ̀ fídíò, fọ́tò àti ohùn láti TikTok, Instagram, Facebook àti ọgọ́rọ̀ọ̀rún ojú òpó mìíràn lọ́fẹ̀ẹ́.",
+
+  "articles.title": "Àwọn àpilẹ̀kọ",
+  "articles.description": "Àwọn ìmọ̀ràn àti ìtọ́sọ́nà fún ṣíṣe ìgbàsílẹ̀ fídíò, fọ́tò àti ohùn láti orí ìkànnì àjọlò.",
+  "articles.readMore": "Kà síwájú sí i",
+  "articles.all": "Wo gbogbo àpilẹ̀kọ",
+  "articles.prev": "Àwọn àpilẹ̀kọ ti tẹ́lẹ̀",
+  "articles.next": "Àwọn àpilẹ̀kọ tó kàn",
 
   "results.loading": "À ń mú mídíà wá… èyí lè gba ìṣẹ́jú-àáyá díẹ̀.",
   "results.found": "A rí mídíà {n}",

@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Telechaje videyo, foto ak odyo sou nenpòt rezo sosyal",
-  "meta.description": "Telechaje videyo, foto ak odyo sou TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn ak plizyè santèn lòt sit.",
+  "meta.description": "Telechaje videyo, foto ak odyo gratis sou TikTok, Instagram, Facebook ak plizyè santèn lòt sit.",
 
   "skip": "Ale nan kontni an",
   "nav.label": "Navigasyon prensipal",
+  "nav.downloader": "Telechajè",
   "nav.how": "Kijan pou itilize l",
   "nav.platforms": "Platfòm",
   "nav.faq": "Kesyon",
@@ -50,6 +51,15 @@
   "faq.a6": "Non. Fichye yo voye dirèkteman soti nan platfòm orijinal la rive sou aparèy ou, epi nou pa kenbe yo sou sèvè nou an.",
 
   "footer.madeBy": "Fèt pa",
+  "footer.contact": "Kontak",
+  "footer.description": "Telechaje videyo, foto ak odyo gratis sou TikTok, Instagram, Facebook ak plizyè santèn lòt sit.",
+
+  "articles.title": "Atik",
+  "articles.description": "Konsèy ak gid pou telechaje videyo, foto ak odyo sou rezo sosyal yo.",
+  "articles.readMore": "Li plis",
+  "articles.all": "Wè tout atik yo",
+  "articles.prev": "Atik anvan yo",
+  "articles.next": "Pwochen atik yo",
 
   "results.loading": "N ap chèche medya yo… sa ka pran kèk segonn.",
   "results.found": "Nou jwenn {n} medya",

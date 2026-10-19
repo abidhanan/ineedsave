@@ -4,15 +4,58 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { BY_CODE, LANGS, RTL, SCRIPT_FONT, flagEmoji } from '../public/languages.js';
+import { BY_CODE, LANGS, RTL, SCRIPT_FONT, flagSrc, ogLocaleTags } from '../public/languages.js';
+import { buildArticles, homeCards, loadArticles, localizedArticles } from './build-articles.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+const SITE = 'https://ineedsave.com';
+const articles = loadArticles();
 const template = readFileSync(join(root, 'templates/index.html'), 'utf8');
 const outDir = join(root, 'public/_l');
 mkdirSync(outDir, { recursive: true });
 
 const escapeText = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const escapeAttr = (s) => escapeText(s).replace(/"/g, '&quot;');
+const plainText = (s) => String(s).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+
+function homeStructuredData(code, t) {
+  const faq = Array.from({ length: 6 }, (_, index) => ({
+    '@type': 'Question',
+    name: t(`faq.q${index + 1}`),
+    acceptedAnswer: { '@type': 'Answer', text: plainText(t(`faq.a${index + 1}`)) },
+  }));
+  const steps = Array.from({ length: 3 }, (_, index) => ({
+    '@type': 'HowToStep',
+    position: index + 1,
+    name: t(`how.step${index + 1}.title`),
+    text: plainText(t(`how.step${index + 1}.text`)),
+    url: `${SITE}/#cara`,
+  }));
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization', '@id': `${SITE}/#organization`, name: 'I Need Save', url: `${SITE}/`,
+        logo: { '@type': 'ImageObject', url: `${SITE}/apple-touch-icon.png`, width: 180, height: 180 },
+        sameAs: ['https://github.com/abidhanan', 'https://www.instagram.com/ahawi_channel', 'https://youtube.com/@ahawichannel', 'https://x.com/ahawi_channel'],
+      },
+      { '@type': 'WebSite', '@id': `${SITE}/#website`, name: 'I Need Save', url: `${SITE}/`, publisher: { '@id': `${SITE}/#organization` }, inLanguage: code },
+      {
+        '@type': 'WebPage', '@id': `${SITE}/#webpage`, url: `${SITE}/`, name: t('meta.title'),
+        description: t('meta.description'), inLanguage: code, isPartOf: { '@id': `${SITE}/#website` },
+        about: { '@id': `${SITE}/#app` }, mainEntity: [{ '@id': `${SITE}/#app` }, { '@id': `${SITE}/#howto` }, { '@id': `${SITE}/#faq` }],
+      },
+      {
+        '@type': 'WebApplication', '@id': `${SITE}/#app`, name: 'I Need Save', url: `${SITE}/`,
+        description: t('meta.description'), applicationCategory: 'MultimediaApplication', operatingSystem: 'Any',
+        browserRequirements: 'Requires a modern web browser', isAccessibleForFree: true,
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, publisher: { '@id': `${SITE}/#organization` },
+      },
+      { '@type': 'HowTo', '@id': `${SITE}/#howto`, name: t('how.title'), description: t('hero.lead'), totalTime: 'PT1M', step: steps },
+      { '@type': 'FAQPage', '@id': `${SITE}/#faq`, mainEntity: faq },
+    ],
+  };
+}
 
 function render(code) {
   const lang = BY_CODE[code.toLowerCase()];
@@ -22,7 +65,8 @@ function render(code) {
     return strings[key];
   };
   const family = SCRIPT_FONT[lang.script];
-  let html = template;
+  // The article cards in the carousel are in the page's language too.
+  let html = template.replace('<!--ARTICLE_CARDS-->', homeCards(localizedArticles(articles, code)));
 
   html = html.replace('<html lang="en" dir="ltr">',
     `<html lang="${code}" dir="${RTL.has(code) ? 'rtl' : 'ltr'}"${family ? ` style="--font-script: &quot;${family}&quot;"` : ''}>`);
@@ -42,10 +86,17 @@ function render(code) {
   });
 
   html = html.replace(/(<meta name="description" content=")[^"]*(")/, `$1${escapeAttr(t('meta.description'))}$2`);
+  html = html.replace(/(<title>)[^<]*(<\/title>)/, `$1${escapeText(t('meta.title'))}$2`);
+  html = html.replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${escapeAttr(t('meta.title'))}$2`);
+  html = html.replace(/(<meta name="twitter:title" content=")[^"]*(")/, `$1${escapeAttr(t('meta.title'))}$2`);
   html = html.replace(/(<meta property="og:description" content=")[^"]*(")/, `$1${escapeAttr(t('meta.description'))}$2`);
+  html = html.replace(/(<meta name="twitter:description" content=")[^"]*(")/, `$1${escapeAttr(t('meta.description'))}$2`);
+  html = html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/,
+    `<script type="application/ld+json">${JSON.stringify(homeStructuredData(code, t)).replace(/</g, '\\u003c')}</script>`);
+  html = html.replace('<!--OG_LOCALE-->', ogLocaleTags(code));
   html = html.replace(/(<button class="lang-button"[^>]*aria-label=")[^"]*(")/, `$1${escapeAttr(`${t('lang.button')}: ${lang.native}`)}$2`);
-  html = html.replace('<span class="lang-flag" aria-hidden="true">🇺🇸</span>', `<span class="lang-flag" aria-hidden="true">${flagEmoji(lang.flag)}</span>`);
-  html = html.replace('<span class="lang-code">EN</span>', `<span class="lang-code">${code.split('-')[0].toUpperCase()}</span>`);
+  html = html.replace('src="/flags/gb.png">', `src="${flagSrc(lang.flag)}">`);
+  html = html.replace('<span class="lang-name" id="lang-name">English</span>', `<span class="lang-name" id="lang-name">${escapeText(lang.native)}</span>`);
 
   // Scripts outside Noto Sans's own coverage get their sister font, loaded without blocking the first paint.
   const fontCss = family
@@ -73,3 +124,4 @@ for (const { code } of LANGS) {
   if (code === 'en') writeFileSync(join(root, 'public/index.html'), html);
 }
 console.log(`built ${LANGS.length} language pages`);
+console.log(`built ${buildArticles(articles)} articles, sitemap.xml and robots.txt`);

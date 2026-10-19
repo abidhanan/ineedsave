@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — спампоўвайце відэа, фота і аўдыя з любых сацсетак",
-  "meta.description": "Спампоўвайце відэа, фота і аўдыя з TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn і соцень іншых сайтаў.",
+  "meta.description": "Спампоўвайце бясплатна відэа, фота і аўдыя з TikTok, Instagram, Facebook і соцень іншых сайтаў.",
 
   "skip": "Перайсці да змесціва",
   "nav.label": "Галоўнае меню",
+  "nav.downloader": "Загрузчык",
   "nav.how": "Як карыстацца",
   "nav.platforms": "Платформы",
   "nav.faq": "Пытанні",
@@ -50,6 +51,15 @@
   "faq.a6": "Не. Файлы перадаюцца з арыгінальнай платформы проста на вашу прыладу і не захоўваюцца на нашым серверы.",
 
   "footer.madeBy": "Аўтар:",
+  "footer.contact": "Кантакты",
+  "footer.description": "Спампоўвайце бясплатна відэа, фота і аўдыя з TikTok, Instagram, Facebook і соцень іншых сайтаў.",
+
+  "articles.title": "Артыкулы",
+  "articles.description": "Парады і інструкцыі па спампоўванні відэа, фота і аўдыя з сацсетак.",
+  "articles.readMore": "Чытаць далей",
+  "articles.all": "Усе артыкулы",
+  "articles.prev": "Папярэднія артыкулы",
+  "articles.next": "Наступныя артыкулы",
 
   "results.loading": "Атрымліваем медыяфайлы… гэта можа заняць некалькі секунд.",
   "results.found": "Знойдзена файлаў: {n}",

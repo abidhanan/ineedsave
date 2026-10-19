@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Baixa vídeos, fotos i àudio de qualsevol xarxa social",
-  "meta.description": "Baixa vídeos, fotos i àudio de TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn i centenars de llocs més.",
+  "meta.description": "Baixa de franc vídeos, fotos i àudio de TikTok, Instagram, Facebook i centenars de llocs més.",
 
   "skip": "Salta al contingut",
   "nav.label": "Navegació principal",
+  "nav.downloader": "Descarregador",
   "nav.how": "Com s'utilitza",
   "nav.platforms": "Plataformes",
   "nav.faq": "Preguntes freqüents",
@@ -50,6 +51,15 @@
   "faq.a6": "No. Els fitxers s'envien directament des de la plataforma original al teu dispositiu i no es guarden al nostre servidor.",
 
   "footer.madeBy": "Fet per",
+  "footer.contact": "Contacte",
+  "footer.description": "Baixa de franc vídeos, fotos i àudio de TikTok, Instagram, Facebook i centenars de llocs més.",
+
+  "articles.title": "Articles",
+  "articles.description": "Consells i guies per baixar vídeos, fotos i àudio de les xarxes socials.",
+  "articles.readMore": "Llegeix-ne més",
+  "articles.all": "Mostra tots els articles",
+  "articles.prev": "Articles anteriors",
+  "articles.next": "Articles següents",
 
   "results.loading": "S'està obtenint el contingut… pot trigar uns segons.",
   "results.found": "{n} elements trobats",

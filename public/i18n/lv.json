@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Lejupielādējiet video, fotoattēlus un audio no jebkura sociālā tīkla",
-  "meta.description": "Lejupielādējiet video, fotoattēlus un audio no TikTok, Instagram, Facebook, X (Twitter), Pinterest, LinkedIn un simtiem citu vietņu.",
+  "meta.description": "Bez maksas lejupielādējiet video, fotoattēlus un audio no TikTok, Instagram, Facebook un simtiem citu vietņu.",
 
   "skip": "Pāriet uz saturu",
   "nav.label": "Galvenā navigācija",
+  "nav.downloader": "Lejupielāde",
   "nav.how": "Kā lietot",
   "nav.platforms": "Platformas",
   "nav.faq": "BUJ",
@@ -50,6 +51,15 @@
   "faq.a6": "Nē. Faili tiek nosūtīti no sākotnējās platformas tieši uz jūsu ierīci un netiek glabāti mūsu serverī.",
 
   "footer.madeBy": "Izveidoja",
+  "footer.contact": "Kontakti",
+  "footer.description": "Bez maksas lejupielādējiet video, fotoattēlus un audio no TikTok, Instagram, Facebook un simtiem citu vietņu.",
+
+  "articles.title": "Raksti",
+  "articles.description": "Padomi un ceļveži video, fotoattēlu un audio lejupielādei no sociālajiem tīkliem.",
+  "articles.readMore": "Lasīt vairāk",
+  "articles.all": "Skatīt visus rakstus",
+  "articles.prev": "Iepriekšējie raksti",
+  "articles.next": "Nākamie raksti",
 
   "results.loading": "Iegūst multividi… tas var aizņemt dažas sekundes.",
   "results.found": "Atrasti multivides faili: {n}",

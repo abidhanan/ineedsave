@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — دانلود ویدیو، عکس و صدا از هر شبکه اجتماعی",
-  "meta.description": "ویدیو، عکس و صدا را از TikTok، Instagram، Facebook، X (Twitter)، Pinterest، LinkedIn و صدها سایت دیگر دانلود کنید.",
+  "meta.description": "ویدیو، عکس و صدا را از TikTok، Instagram، Facebook و صدها سایت دیگر به‌صورت رایگان دانلود کنید.",
 
   "skip": "رفتن به محتوا",
   "nav.label": "ناوبری اصلی",
+  "nav.downloader": "دانلودر",
   "nav.how": "راهنمای استفاده",
   "nav.platforms": "پلتفرم‌ها",
   "nav.faq": "سؤالات متداول",
@@ -50,6 +51,15 @@
   "faq.a6": "خیر. فایل‌ها مستقیماً از پلتفرم اصلی به دستگاه شما ارسال می‌شوند و روی سرور ما نگهداری نمی‌شوند.",
 
   "footer.madeBy": "ساخته شده توسط",
+  "footer.contact": "تماس",
+  "footer.description": "ویدیو، عکس و صدا را از TikTok، Instagram، Facebook و صدها سایت دیگر به‌صورت رایگان دانلود کنید.",
+
+  "articles.title": "مقاله‌ها",
+  "articles.description": "نکات و راهنماهایی برای دانلود ویدیو، عکس و صدا از شبکه‌های اجتماعی.",
+  "articles.readMore": "بیشتر بخوانید",
+  "articles.all": "مشاهده همه مقاله‌ها",
+  "articles.prev": "مقاله‌های قبلی",
+  "articles.next": "مقاله‌های بعدی",
 
   "results.loading": "در حال دریافت رسانه… ممکن است چند ثانیه طول بکشد.",
   "results.found": "{n} رسانه پیدا شد",

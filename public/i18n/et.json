@@ -1,9 +1,10 @@
 {
   "meta.title": "I Need Save — Laadi alla videoid, fotosid ja heli igast sotsiaalmeediast",
-  "meta.description": "Laadi alla videoid, fotosid ja heli TikTokist, Instagramist, Facebookist, X-ist (Twitter), Pinterestist, LinkedInist ja sadadelt teistelt saitidelt.",
+  "meta.description": "Laadi tasuta alla videoid, fotosid ja heli TikTokist, Instagramist, Facebookist ja sadadelt teistelt saitidelt.",
 
   "skip": "Liigu sisu juurde",
   "nav.label": "Peamenüü",
+  "nav.downloader": "Allalaadija",
   "nav.how": "Kasutusjuhend",
   "nav.platforms": "Platvormid",
   "nav.faq": "KKK",
@@ -50,6 +51,15 @@
   "faq.a6": "Ei. Failid saadetakse algselt platvormilt otse sinu seadmesse ja neid ei hoita meie serveris.",
 
   "footer.madeBy": "Loonud",
+  "footer.contact": "Kontakt",
+  "footer.description": "Laadi tasuta alla videoid, fotosid ja heli TikTokist, Instagramist, Facebookist ja sadadelt teistelt saitidelt.",
+
+  "articles.title": "Artiklid",
+  "articles.description": "Nõuanded ja juhendid videote, fotode ja heli allalaadimiseks sotsiaalmeediast.",
+  "articles.readMore": "Loe edasi",
+  "articles.all": "Vaata kõiki artikleid",
+  "articles.prev": "Eelmised artiklid",
+  "articles.next": "Järgmised artiklid",
 
   "results.loading": "Meedia toomine… see võib võtta mõne sekundi.",
   "results.found": "Leitud meediat: {n}",
