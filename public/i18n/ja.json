@@ -1,5 +1,5 @@
 {
-  "meta.title": "I Need Save — あらゆるSNSから動画・写真・音声をダウンロード",
+  "meta.title": "I Need Save - あらゆるSNSから動画・写真・音声をダウンロード",
   "meta.description": "TikTok、Instagram、Facebook など数百のサイトから動画・写真・音声を無料でダウンロード。",
 
   "skip": "コンテンツへスキップ",
@@ -53,6 +53,8 @@
   "footer.madeBy": "制作",
   "footer.contact": "連絡先",
   "footer.description": "TikTok、Instagram、Facebook など数百のサイトから動画・写真・音声を無料でダウンロード。",
+  "footer.privacy": "プライバシーポリシー",
+  "footer.terms": "利用規約",
 
   "articles.title": "記事",
   "articles.description": "SNSから動画・写真・音声をダウンロードするためのヒントとガイド。",

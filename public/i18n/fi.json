@@ -1,5 +1,5 @@
 {
-  "meta.title": "I Need Save — Lataa videoita, kuvia ja ääntä mistä tahansa sosiaalisesta mediasta",
+  "meta.title": "I Need Save - Lataa videoita, kuvia ja ääntä mistä tahansa sosiaalisesta mediasta",
   "meta.description": "Lataa ilmaiseksi videoita, kuvia ja ääntä TikTokista, Instagramista, Facebookista ja sadoilta muilta sivustoilta.",
 
   "skip": "Siirry sisältöön",
@@ -53,6 +53,8 @@
   "footer.madeBy": "Tekijä",
   "footer.contact": "Yhteystiedot",
   "footer.description": "Lataa ilmaiseksi videoita, kuvia ja ääntä TikTokista, Instagramista, Facebookista ja sadoilta muilta sivustoilta.",
+  "footer.privacy": "Tietosuojakäytäntö",
+  "footer.terms": "Käyttöehdot",
 
   "articles.title": "Artikkelit",
   "articles.description": "Vinkkejä ja oppaita videoiden, kuvien ja äänen lataamiseen sosiaalisesta mediasta.",

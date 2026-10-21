@@ -48,6 +48,13 @@ FORWARD_HEADERS = {"user-agent", "referer", "origin", "cookie", "accept"}
 PROXY_FIRST_HOSTS = ("youtube.com", "youtu.be", "reddit.com", "redd.it", "vimeo.com")
 # Media hosts whose URLs are bound to the extracting IP, so downloads must use the proxy too.
 PROXY_MEDIA_HOSTS = ("googlevideo.com",)
+# Sites that now and then turn away a datacenter IP for a moment ("rate-limit reached or login required"
+# on a public post): one more try usually gets through.
+# Media CDNs that let a browser on our site download a file itself (CORS allowed; no cookies, Referer or
+# IP binding needed; checked per platform). Those files go straight from the platform to the visitor
+# instead of through /api/download, which saves our bandwidth; everything else still goes through it.
+DIRECT_HOSTS = ("fbcdn.net", "cdninstagram.com", "twimg.com", "tiktokcdn.com", "tiktokcdn-us.com")
+RETRY_HOSTS = ("instagram.com", "facebook.com", "fb.watch", "threads.net", "threads.com")
 BLOCKED_HINTS = ("not a bot", "login", "logged-in", "authenticat", "cookies", "429", "rate", "403", "blocked")
 
 
@@ -73,6 +80,27 @@ def source(url, headers=None):
         "u": url,
         "h": {k: v for k, v in (headers or {}).items() if k.lower() in FORWARD_HEADERS and v},
     }
+
+
+def direct_url(mode, inputs):
+    """The media URL itself when the browser can fetch it straight from the platform (see DIRECT_HOSTS)."""
+    if mode != "direct" or len(inputs) != 1:
+        return None
+    src = inputs[0]
+    if src.get("p") or any(k.lower() == "cookie" for k in src.get("h") or {}):
+        return None
+    url = src["u"]
+    return url if url.startswith("https://") and host_matches(url, DIRECT_HOSTS) else None
+
+
+def link(mode, inputs, filename, size=None):
+    """A download: our signed /api/download URL, plus the platform's own URL and the file name when the
+    browser can download it directly (app.js tries that first and falls back to "url")."""
+    out = {"url": sign(mode, inputs, filename, size)}
+    direct = direct_url(mode, inputs)
+    if direct:
+        out.update(direct=direct, filename=filename)
+    return out
 
 
 def sign(mode, inputs, filename, size=None):
@@ -232,11 +260,11 @@ class Builder:
 
             if kind == "muxed" and via == "direct":
                 option = self.option("video", quality, ext, size_of(fmt), note,
-                                     sign("direct", [self.src(fmt)], safe_name(self.title, ext, quality)))
+                                     link("direct", [self.src(fmt)], safe_name(self.title, ext, quality)))
                 offer(key, (3,) + pref, option)
             elif kind == "muxed":
                 option = self.option("video", quality, "mp4", size_of(fmt), note,
-                                     sign("remux", [self.src(fmt)], safe_name(self.title, "mp4", quality),
+                                     link("remux", [self.src(fmt)], safe_name(self.title, "mp4", quality),
                                           self.estimate(fmt)))
                 offer(key, (1,) + pref, option)
             else:
@@ -244,12 +272,12 @@ class Builder:
                 if audio:
                     out = "webm" if ext == "webm" and ext_of(audio) in ("webm", "weba") else "mp4"
                     option = self.option("video", quality, out, add_sizes(fmt, audio), note,
-                                         sign("merge", [self.src(fmt), self.src(audio)],
+                                         link("merge", [self.src(fmt), self.src(audio)],
                                               safe_name(self.title, out, quality), self.estimate(fmt, audio)))
                     offer(key, (2,) + pref, option)
                 elif via == "direct":
                     option = self.option("video", quality, ext, size_of(fmt), "@no_audio",
-                                         sign("direct", [self.src(fmt)], safe_name(self.title, ext, quality)))
+                                         link("direct", [self.src(fmt)], safe_name(self.title, ext, quality)))
                     offer(key, (0,) + pref, option)
 
         # Silent video is only worth offering when nothing with sound exists.
@@ -286,10 +314,10 @@ class Builder:
             abr = int(audio.get("abr") or 0)
             if transport(audio) == "direct":
                 options.append(self.option("audio", f"{abr} kbps" if abr else "@original_audio", ext, size_of(audio), "@original_quality",
-                                           sign("direct", [self.src(audio)], safe_name(self.title, ext))))
+                                           link("direct", [self.src(audio)], safe_name(self.title, ext))))
             if ext != "mp3":
                 options.append(self.option("audio", "MP3", "mp3", None, "192 kbps",
-                                           sign("mp3", [self.src(audio)], safe_name(self.title, "mp3"),
+                                           link("mp3", [self.src(audio)], safe_name(self.title, "mp3"),
                                                 self.estimate(audio))))
             return options
 
@@ -298,7 +326,7 @@ class Builder:
             # No separate audio track (TikTok, Instagram, Facebook...): pull it out of the smallest video.
             fmt = min(muxed, key=lambda f: (transport(f) != "direct", size_of(f) or f.get("tbr") or 0))
             options.append(self.option("audio", "MP3", "mp3", None, "192 kbps",
-                                       sign("mp3", [self.src(fmt)], safe_name(self.title, "mp3"),
+                                       link("mp3", [self.src(fmt)], safe_name(self.title, "mp3"),
                                             self.estimate(fmt))))
         return options
 
@@ -308,18 +336,18 @@ class Builder:
             if kind_of(fmt) == "image":
                 ext = ext_of(fmt, "jpg")
                 options.append(self.option("image", "@photo", ext, size_of(fmt), "",
-                                           sign("direct", [self.src(fmt)], safe_name(self.title, ext))))
+                                           link("direct", [self.src(fmt)], safe_name(self.title, ext))))
         thumb = best_thumbnail(self.info)
         if thumb:
             ext = thumb_ext(thumb)
             options.append(self.option("image", "@thumbnail" if has_av else "@photo", ext, None, "",
-                                       sign("direct", [source(thumb, self.base_headers())],
+                                       link("direct", [source(thumb, self.base_headers())],
                                             safe_name(self.title, ext, "thumbnail" if has_av else ""))))
         return options
 
     @staticmethod
-    def option(kind, quality, ext, size, note, url):
-        return {"type": kind, "quality": quality, "ext": ext, "size": size, "note": note, "url": url}
+    def option(kind, quality, ext, size, note, download):
+        return {"type": kind, "quality": quality, "ext": ext, "size": size, "note": note, **download}
 
     def build(self):
         videos = self.video_options()
@@ -358,6 +386,7 @@ def make_item(ydl, info, platform, session=None):
         "duration": info.get("duration"),
         "platform": platform,
         "thumbnail": sign("direct", [source(thumb, builder.base_headers())], "thumbnail.jpg") if thumb else None,
+        "thumbnail_direct": direct_url("direct", [source(thumb, builder.base_headers())]) if thumb else None,
         "options": options,
     }
 
@@ -390,6 +419,10 @@ def extract_ytdlp(url, session=None):
         "noprogress": True,
         "logger": _SilentLogger(),
     }
+    if host_matches(url, ("instagram.com",)):
+        # Photo posts have no video: yt-dlp would stop with "There is no video in this post" even though it
+        # already has the full-size photos, which make_item() offers from the thumbnails.
+        opts["ignore_no_formats_error"] = True
     if session:
         opts["proxy"] = proxy_url(session)
     with yt_dlp.YoutubeDL(opts) as ydl:
@@ -447,6 +480,7 @@ def extract_gallery(url, session=None):
             "duration": None,
             "platform": platform,
             "thumbnail": None,
+            "thumbnail_direct": None,
             "options": [],
         })
         num = len(group["options"]) + 1
@@ -454,11 +488,12 @@ def extract_gallery(url, session=None):
         src = source(media_url, headers)
         if kind == "image" and not group["thumbnail"]:
             group["thumbnail"] = sign("direct", [src], "thumbnail." + ext)
+            group["thumbnail_direct"] = direct_url("direct", [src])
         label = {"image": "photo", "video": "video", "audio": "audio"}[kind]
         group["options"].append(Builder.option(
             kind, f"@{label}:{num}", ext, meta.get("filesize") or None,
             f"{meta['width']}×{meta['height']}" if meta.get("width") and meta.get("height") else "",
-            sign("direct", [src], safe_name(title, ext, str(num))),
+            link("direct", [src], safe_name(title, ext, str(num))),
         ))
     return platform, list(groups.values())[:MAX_ENTRIES]
 
@@ -509,6 +544,7 @@ def extract(url):
         attempts = [(extract_ytdlp, False), (extract_gallery, False)]
 
     errors = []
+    retried = False
     while attempts:
         extractor, use_proxy = attempts.pop(0)
         try:
@@ -519,12 +555,20 @@ def extract(url):
             if str(exc) == "server_config":
                 raise
             errors.append(str(exc))
+        blocked = any(h in " ".join(errors).lower() for h in BLOCKED_HINTS)
+        # Turned away for a moment (public post, but "rate-limit reached or login required"): try once more.
+        if not attempts and blocked and not retried and not has_proxy and host_matches(url, RETRY_HOSTS):
+            retried = True
+            time.sleep(1.5)
+            attempts = [(extract_ytdlp, False)]
         # Blocked from the datacenter IP (Instagram login wall, rate limits...): retry once via the proxy.
-        if not attempts and has_proxy and not use_proxy and any(h in " ".join(errors).lower() for h in BLOCKED_HINTS):
+        elif not attempts and has_proxy and not use_proxy and blocked:
             attempts = [(extract_ytdlp, True), (extract_gallery, True)]
 
     if errors:
-        raise ExtractError(friendly_error(" ".join(errors)))
+        # yt-dlp's own reason first: the gallery-dl fallback often only adds "redirected to login page".
+        first = friendly_error(errors[0])
+        raise ExtractError(first if first not in ("failed", "unsupported") else friendly_error(" ".join(errors)))
     raise ExtractError("no_media")
 
 

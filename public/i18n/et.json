@@ -1,5 +1,5 @@
 {
-  "meta.title": "I Need Save — Laadi alla videoid, fotosid ja heli igast sotsiaalmeediast",
+  "meta.title": "I Need Save - Laadi alla videoid, fotosid ja heli igast sotsiaalmeediast",
   "meta.description": "Laadi tasuta alla videoid, fotosid ja heli TikTokist, Instagramist, Facebookist ja sadadelt teistelt saitidelt.",
 
   "skip": "Liigu sisu juurde",
@@ -53,6 +53,8 @@
   "footer.madeBy": "Loonud",
   "footer.contact": "Kontakt",
   "footer.description": "Laadi tasuta alla videoid, fotosid ja heli TikTokist, Instagramist, Facebookist ja sadadelt teistelt saitidelt.",
+  "footer.privacy": "Privaatsuspoliitika",
+  "footer.terms": "Kasutustingimused",
 
   "articles.title": "Artiklid",
   "articles.description": "Nõuanded ja juhendid videote, fotode ja heli allalaadimiseks sotsiaalmeediast.",

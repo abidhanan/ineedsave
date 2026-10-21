@@ -1,5 +1,5 @@
 {
-  "meta.title": "I Need Save — 从任意社交媒体下载视频、图片和音频",
+  "meta.title": "I Need Save - 从任意社交媒体下载视频、图片和音频",
   "meta.description": "从 TikTok、Instagram、Facebook 以及数百个其他网站免费下载视频、图片和音频。",
 
   "skip": "跳到主要内容",
@@ -53,6 +53,8 @@
   "footer.madeBy": "制作者",
   "footer.contact": "联系方式",
   "footer.description": "从 TikTok、Instagram、Facebook 以及数百个其他网站免费下载视频、图片和音频。",
+  "footer.privacy": "隐私政策",
+  "footer.terms": "条款和条件",
 
   "articles.title": "文章",
   "articles.description": "从社交媒体下载视频、图片和音频的技巧与指南。",

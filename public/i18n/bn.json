@@ -1,5 +1,5 @@
 {
-  "meta.title": "I Need Save — যেকোনো সোশ্যাল মিডিয়া থেকে ভিডিও, ছবি ও অডিও ডাউনলোড করুন",
+  "meta.title": "I Need Save - যেকোনো সোশ্যাল মিডিয়া থেকে ভিডিও, ছবি ও অডিও ডাউনলোড করুন",
   "meta.description": "TikTok, Instagram, Facebook এবং আরও শত শত সাইট থেকে বিনামূল্যে ভিডিও, ছবি ও অডিও ডাউনলোড করুন।",
 
   "skip": "মূল কন্টেন্টে যান",
@@ -53,6 +53,8 @@
   "footer.madeBy": "তৈরি করেছেন",
   "footer.contact": "যোগাযোগ",
   "footer.description": "TikTok, Instagram, Facebook এবং আরও শত শত সাইট থেকে বিনামূল্যে ভিডিও, ছবি ও অডিও ডাউনলোড করুন।",
+  "footer.privacy": "গোপনীয়তা নীতি",
+  "footer.terms": "শর্তাবলী",
 
   "articles.title": "নিবন্ধ",
   "articles.description": "সোশ্যাল মিডিয়া থেকে ভিডিও, ছবি ও অডিও ডাউনলোড করার টিপস ও গাইড।",

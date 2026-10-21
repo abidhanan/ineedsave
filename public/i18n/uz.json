@@ -1,5 +1,5 @@
 {
-  "meta.title": "I Need Save — Istalgan ijtimoiy tarmoqdan video, rasm va audio yuklab oling",
+  "meta.title": "I Need Save - Istalgan ijtimoiy tarmoqdan video, rasm va audio yuklab oling",
   "meta.description": "TikTok, Instagram, Facebook va yuzlab boshqa saytlardan video, rasm va audio bepul yuklab oling.",
 
   "skip": "Asosiy qismga oʻtish",
@@ -53,6 +53,8 @@
   "footer.madeBy": "Muallif",
   "footer.contact": "Aloqa",
   "footer.description": "TikTok, Instagram, Facebook va yuzlab boshqa saytlardan video, rasm va audio bepul yuklab oling.",
+  "footer.privacy": "Maxfiylik siyosati",
+  "footer.terms": "Foydalanish shartlari",
 
   "articles.title": "Maqolalar",
   "articles.description": "Ijtimoiy tarmoqlardan video, rasm va audio yuklab olish boʻyicha maslahatlar va qoʻllanmalar.",

@@ -1,5 +1,5 @@
 {
-  "meta.title": "I Need Save — pobieraj filmy, zdjęcia i audio z dowolnych mediów społecznościowych",
+  "meta.title": "I Need Save - pobieraj filmy, zdjęcia i audio z dowolnych mediów społecznościowych",
   "meta.description": "Pobieraj za darmo filmy, zdjęcia i audio z serwisów TikTok, Instagram, Facebook i setek innych stron.",
 
   "skip": "Przejdź do treści",
@@ -53,6 +53,8 @@
   "footer.madeBy": "Autor:",
   "footer.contact": "Kontakt",
   "footer.description": "Pobieraj za darmo filmy, zdjęcia i audio z serwisów TikTok, Instagram, Facebook i setek innych stron.",
+  "footer.privacy": "Polityka prywatności",
+  "footer.terms": "Regulamin",
 
   "articles.title": "Artykuły",
   "articles.description": "Porady i poradniki dotyczące pobierania filmów, zdjęć i audio z mediów społecznościowych.",

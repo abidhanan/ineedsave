@@ -158,6 +158,45 @@
     }, 500);
   }
 
+  // Straight from the platform's CDN (option.direct, only for CDNs that allow it): the file never passes
+  // through our server. Read into memory, then saved under our file name. Throws if anything goes wrong.
+  const DIRECT_MAX_BYTES = 300 * 1024 * 1024; // bigger files go through /api/download (phone memory)
+  async function directDownload(option, onProgress) {
+    const res = await fetch(option.direct, { mode: 'cors', credentials: 'omit', referrerPolicy: 'no-referrer' });
+    if (!res.ok || !res.body) throw new Error(`HTTP ${res.status}`);
+    const total = Number(res.headers.get('content-length')) || option.size || 0;
+    if (total > DIRECT_MAX_BYTES) { res.body.cancel(); throw new Error('too big'); }
+    const reader = res.body.getReader();
+    const chunks = [];
+    let received = 0;
+    for (;;) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      chunks.push(value);
+      received += value.length;
+      if (received > DIRECT_MAX_BYTES) { reader.cancel(); throw new Error('too big'); }
+      if (total) onProgress(Math.min(99, Math.floor((received / total) * 100)));
+    }
+    if (!received) throw new Error('empty');
+    const blobUrl = URL.createObjectURL(new Blob(chunks, { type: res.headers.get('content-type') || 'application/octet-stream' }));
+    const a = el('a', { href: blobUrl, download: option.filename || '' });
+    document.body.append(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(blobUrl), 60000);
+  }
+
+  // Through our server (/api/download), which also does merging/conversion. Its response sets a
+  // dl_<key> cookie (1 = started, 0 = failed) that watchDownload() polls for.
+  function serverDownload(option, done) {
+    const key = Math.random().toString(36).slice(2, 12).padEnd(8, '0');
+    const a = el('a', { href: `${option.url}&k=${key}`, download: '', rel: 'nofollow' });
+    document.body.append(a);
+    a.click();
+    a.remove();
+    watchDownload(key, done);
+  }
+
   function renderOption(option) {
     const quality = label(option.quality);
     const details = [option.ext && option.ext.toUpperCase(), formatSize(option.size), label(option.note)].filter(Boolean).join(' · ');
@@ -169,21 +208,29 @@
       rel: 'nofollow',
       'aria-label': `${t('download.button')} ${quality} ${option.ext || ''}`.trim(),
     }, [icon(ICON_DOWNLOAD), el('span', { class: 'spinner', 'aria-hidden': 'true' }), text]);
-    link.addEventListener('click', (event) => {
-      if (link.classList.contains('is-busy')) { event.preventDefault(); return; }
-      const key = Math.random().toString(36).slice(2, 12).padEnd(8, '0');
-      link.href = `${option.url}&k=${key}`; // read by the browser after this handler returns
+    link.addEventListener('click', async (event) => {
+      event.preventDefault();
+      if (link.classList.contains('is-busy')) return;
       link.classList.add('is-busy');
       text.textContent = t('download.preparing');
       showToast(t('toast.preparing'));
       const event_ = { platform: platformName(option.platform), media_type: option.type, quality: option.quality, format: option.ext };
       window.track?.('download_click', event_);
-      watchDownload(key, (ok) => {
+      const finish = (ok, via) => {
         link.classList.remove('is-busy');
         text.textContent = t('download.button');
         if (ok !== null) showToast(t(ok ? 'toast.started' : 'toast.failed'));
-        if (ok !== null) window.track?.(ok ? 'download_started' : 'download_failed', event_);
-      });
+        if (ok !== null) window.track?.(ok ? 'download_started' : 'download_failed', { ...event_, via });
+      };
+      if (option.direct && !(option.size > DIRECT_MAX_BYTES)) {
+        try {
+          await directDownload(option, (pct) => { text.textContent = `${t('download.preparing')} ${pct}%`; });
+          finish(true, 'direct');
+          return;
+        } catch { /* CDN refused, link expired, too big... fall back to our server */ }
+        text.textContent = t('download.preparing');
+      }
+      serverDownload(option, (ok) => finish(ok, 'server'));
     });
     return el('li', { class: 'option' }, [
       el('div', { class: 'option-info' }, [
@@ -213,14 +260,18 @@
     const thumb = el('div', { class: 'thumb' });
     const fallback = el('div', { class: 'thumb-fallback' }, [icon(ICON_IMAGE, 32)]);
     if (item.thumbnail) {
+      const proxied = `${item.thumbnail}&inline=1`;
       const img = el('img', {
-        src: `${item.thumbnail}&inline=1`,
+        src: item.thumbnail_direct || proxied, // straight from the platform when it allows it
         alt: '',
         loading: 'lazy',
         decoding: 'async',
         referrerpolicy: 'no-referrer',
       });
-      img.addEventListener('error', () => img.replaceWith(fallback));
+      img.addEventListener('error', () => {
+        if (img.getAttribute('src') !== proxied) img.src = proxied;
+        else img.replaceWith(fallback);
+      });
       img.addEventListener('load', () => {
         // Match the box to the media shape (portrait for TikTok/Reels, wide for YouTube).
         const ratio = Math.min(16 / 9, Math.max(3 / 4, img.naturalWidth / img.naturalHeight || 1));

@@ -1,5 +1,5 @@
 {
-  "meta.title": "I Need Save — Descarga videos, fotos y audio de cualquier red social",
+  "meta.title": "I Need Save - Descarga videos, fotos y audio de cualquier red social",
   "meta.description": "Descarga gratis videos, fotos y audio de TikTok, Instagram, Facebook y cientos de sitios más.",
 
   "skip": "Saltar al contenido",
@@ -53,6 +53,8 @@
   "footer.madeBy": "Hecho por",
   "footer.contact": "Contacto",
   "footer.description": "Descarga gratis videos, fotos y audio de TikTok, Instagram, Facebook y cientos de sitios más.",
+  "footer.privacy": "Política de privacidad",
+  "footer.terms": "Términos y condiciones",
 
   "articles.title": "Artículos",
   "articles.description": "Consejos y guías para descargar videos, fotos y audio de redes sociales.",

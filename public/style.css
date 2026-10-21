@@ -1,4 +1,4 @@
-/* One type family (Noto Sans and its sister fonts for non-Latin scripts), flat colors only — no gradients. */
+/* One type family (Noto Sans and its sister fonts for non-Latin scripts), flat colors only - no gradients. */
 
 /* Noto Sans, self-hosted (SIL Open Font License); variable weight 400–700, split by script. */
 @font-face {
@@ -644,6 +644,13 @@ button.social { cursor: pointer; }
 .footer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; }
 .footer-brand { max-width: 360px; }
 .footer-desc { margin-top: 12px; color: var(--muted); font-size: 14px; }
+/* legal links, then the copyright line, under one divider */
+.footer-links {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+  margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border);
+}
+/* small outline buttons */
+.footer-links .btn { min-height: 36px; padding: 0 14px; font-size: 14px; border-radius: var(--radius-sm); text-decoration: none; }
 .footer-contact { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
 .footer-title { font-size: 15px; font-weight: 700; color: var(--text); }
 .socials { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -655,16 +662,20 @@ button.social { cursor: pointer; }
 }
 .social:hover { border-color: var(--text); }
 .footer-copy {
-  margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border); white-space: nowrap;
+  margin-top: 12px; white-space: nowrap;
   color: var(--muted); font-size: 14px; text-align: center;
 }
 .footer-copy a { color: var(--text); font-weight: 700; text-decoration: none; white-space: nowrap; }
 
 @media (max-width: 720px) {
   .footer { padding-top: 32px; }
-  .footer-top { flex-direction: column; gap: 24px; }
-  .footer-contact { align-items: flex-start; }
-  .footer-copy { margin-top: 24px; }
+  .footer-top { flex-direction: column; align-items: center; gap: 24px; text-align: center; }
+  .footer-brand { display: flex; flex-direction: column; align-items: center; max-width: none; }
+  .footer-contact { align-items: center; }
+  .socials { justify-content: center; }
+  /* both legal buttons stay on one row, shrinking (and wrapping their text) on very narrow screens */
+  .footer-links { flex-wrap: nowrap; margin-top: 24px; }
+  .footer-links .btn { flex: 0 1 auto; min-width: 0; padding: 0 10px; font-size: 13px; text-align: center; line-height: 1.2; }
 }
 
 /* ---------- toast ---------- */
@@ -696,7 +707,7 @@ button.social { cursor: pointer; }
   .result-media .thumb img { object-fit: contain; }
   .steps { grid-template-columns: 1fr; }
   .step { display: grid; grid-template-columns: auto 1fr; column-gap: 16px; padding: 20px; }
-  .step-num { grid-row: span 2; margin-bottom: 0; }
+  .step-num { grid-row: span 2; align-self: center; margin-bottom: 0; } /* number centred between the card's top and bottom */
   .platforms { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
@@ -717,8 +728,6 @@ button.social { cursor: pointer; }
   .field input { padding-inline-start: 14px; }
   .option { flex-wrap: wrap; padding: 12px; }
   .option .btn { width: 100%; }
-  .step { grid-template-columns: 1fr; }
-  .step-num { grid-row: auto; margin-bottom: 12px; }
   .platforms li { font-size: 14px; }
 }
 
@@ -741,3 +750,8 @@ button.social { cursor: pointer; }
 
 /* The skip link focuses <main>; it needs no visible ring. */
 main:focus { outline: none; }
+
+/* ---------- Privacy Policy, Terms & Conditions ---------- */
+.legal-layout { padding-bottom: 64px; }
+.legal .post-head { margin-bottom: 8px; }
+.legal-body h2 { margin-top: 32px; }

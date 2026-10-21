@@ -1,6 +1,6 @@
 # Brief for I Need Save articles (Indonesian)
 
-Site: https://ineedsave.com — free web tool to download videos, photos and audio from social media. No app, no login.
+Site: https://ineedsave.com - free web tool to download videos, photos and audio from social media. No app, no login.
 
 ## Facts you may state (and nothing beyond these)
 - Works with public posts from: TikTok, Instagram (public posts; sometimes Instagram blocks requests or asks for login), Facebook, X (Twitter), Pinterest, Snapchat Spotlight, Tumblr, LinkedIn, Bluesky, Twitch clips, SoundCloud, Dailymotion, Imgur, 9GAG, Streamable.

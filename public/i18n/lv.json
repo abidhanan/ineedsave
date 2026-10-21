@@ -1,5 +1,5 @@
 {
-  "meta.title": "I Need Save — Lejupielādējiet video, fotoattēlus un audio no jebkura sociālā tīkla",
+  "meta.title": "I Need Save - Lejupielādējiet video, fotoattēlus un audio no jebkura sociālā tīkla",
   "meta.description": "Bez maksas lejupielādējiet video, fotoattēlus un audio no TikTok, Instagram, Facebook un simtiem citu vietņu.",
 
   "skip": "Pāriet uz saturu",
@@ -53,6 +53,8 @@
   "footer.madeBy": "Izveidoja",
   "footer.contact": "Kontakti",
   "footer.description": "Bez maksas lejupielādējiet video, fotoattēlus un audio no TikTok, Instagram, Facebook un simtiem citu vietņu.",
+  "footer.privacy": "Privātuma politika",
+  "footer.terms": "Lietošanas noteikumi",
 
   "articles.title": "Raksti",
   "articles.description": "Padomi un ceļveži video, fotoattēlu un audio lejupielādei no sociālajiem tīkliem.",

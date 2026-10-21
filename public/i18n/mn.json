@@ -1,5 +1,5 @@
 {
-  "meta.title": "I Need Save — Аливаа сошиал медиагаас видео, зураг, аудио татах",
+  "meta.title": "I Need Save - Аливаа сошиал медиагаас видео, зураг, аудио татах",
   "meta.description": "TikTok, Instagram, Facebook болон өөр олон зуун сайтаас видео, зураг, аудио үнэгүй татаж аваарай.",
 
   "skip": "Агуулга руу шилжих",
@@ -53,6 +53,8 @@
   "footer.madeBy": "Бүтээсэн",
   "footer.contact": "Холбоо барих",
   "footer.description": "TikTok, Instagram, Facebook болон өөр олон зуун сайтаас видео, зураг, аудио үнэгүй татаж аваарай.",
+  "footer.privacy": "Нууцлалын бодлого",
+  "footer.terms": "Үйлчилгээний нөхцөл",
 
   "articles.title": "Нийтлэлүүд",
   "articles.description": "Нийгмийн сүлжээнээс видео, зураг, аудио татах зөвлөгөө, заавар.",

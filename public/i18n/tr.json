@@ -1,5 +1,5 @@
 {
-  "meta.title": "I Need Save — Tüm sosyal medyadan video, fotoğraf ve ses indirin",
+  "meta.title": "I Need Save - Tüm sosyal medyadan video, fotoğraf ve ses indirin",
   "meta.description": "TikTok, Instagram, Facebook ve yüzlerce başka siteden video, fotoğraf ve ses ücretsiz indirin.",
 
   "skip": "İçeriğe geç",
@@ -53,6 +53,8 @@
   "footer.madeBy": "Geliştiren",
   "footer.contact": "İletişim",
   "footer.description": "TikTok, Instagram, Facebook ve yüzlerce başka siteden video, fotoğraf ve ses ücretsiz indirin.",
+  "footer.privacy": "Gizlilik Politikası",
+  "footer.terms": "Şartlar ve Koşullar",
 
   "articles.title": "Makaleler",
   "articles.description": "Sosyal medyadan video, fotoğraf ve ses indirmeye yönelik ipuçları ve rehberler.",

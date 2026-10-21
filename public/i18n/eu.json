@@ -1,5 +1,5 @@
 {
-  "meta.title": "I Need Save — Deskargatu edozein sare sozialetako bideoak, argazkiak eta audioak",
+  "meta.title": "I Need Save - Deskargatu edozein sare sozialetako bideoak, argazkiak eta audioak",
   "meta.description": "Deskargatu doan TikTok, Instagram, Facebook eta beste ehunka gunetako bideoak, argazkiak eta audioak.",
 
   "skip": "Joan edukira",
@@ -53,6 +53,8 @@
   "footer.madeBy": "Egilea:",
   "footer.contact": "Kontaktua",
   "footer.description": "Deskargatu doan TikTok, Instagram, Facebook eta beste ehunka gunetako bideoak, argazkiak eta audioak.",
+  "footer.privacy": "Pribatutasun-politika",
+  "footer.terms": "Baldintzak",
 
   "articles.title": "Artikuluak",
   "articles.description": "Sare sozialetako bideoak, argazkiak eta audioak deskargatzeko aholkuak eta gidak.",

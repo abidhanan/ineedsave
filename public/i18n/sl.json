@@ -1,5 +1,5 @@
 {
-  "meta.title": "I Need Save — Prenesite videe, fotografije in zvok s katerega koli družbenega omrežja",
+  "meta.title": "I Need Save - Prenesite videe, fotografije in zvok s katerega koli družbenega omrežja",
   "meta.description": "Brezplačno prenesite videe, fotografije in zvok iz storitev TikTok, Instagram, Facebook in več sto drugih spletnih mest.",
 
   "skip": "Preskoči na vsebino",
@@ -53,6 +53,8 @@
   "footer.madeBy": "Avtor:",
   "footer.contact": "Kontakt",
   "footer.description": "Brezplačno prenesite videe, fotografije in zvok iz storitev TikTok, Instagram, Facebook in več sto drugih spletnih mest.",
+  "footer.privacy": "Politika zasebnosti",
+  "footer.terms": "Pogoji uporabe",
 
   "articles.title": "Članki",
   "articles.description": "Nasveti in vodniki za prenos videov, fotografij in zvoka z družbenih omrežij.",

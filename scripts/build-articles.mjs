@@ -152,7 +152,11 @@ function head({ code, title, pageTitle = `${title} - I Need Save`, description, 
   <meta name="twitter:description" content="${escapeAttr(description)}">
   <meta name="twitter:image" content="${image}">
   <meta name="twitter:image:alt" content="${escapeAttr(imageAlt)}">
-  <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml">
+  <link rel="icon" href="/favicon-light.svg?v=3" type="image/svg+xml" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="/favicon-dark.svg?v=3" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon-light.png?v=3" type="image/png" sizes="48x48" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="/favicon-dark.png?v=3" type="image/png" sizes="48x48" media="(prefers-color-scheme: dark)">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
   <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/style.css">${scriptFontTags(code)}
@@ -160,7 +164,7 @@ function head({ code, title, pageTitle = `${title} - I Need Save`, description, 
 </head>`;
 }
 
-function pageHeader(strings, ui) {
+function pageHeader(strings, ui, current = 'artikel') {
   return `<header class="header">
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="I Need Save">
@@ -174,7 +178,7 @@ function pageHeader(strings, ui) {
         <a href="/#cara">${escapeText(strings['nav.how'])}</a>
         <a href="/#platform">${escapeText(strings['nav.platforms'])}</a>
         <a href="/#faq">${escapeText(strings['nav.faq'])}</a>
-        <a href="/#artikel" aria-current="page">${escapeText(strings['articles.title'])}</a>
+        <a href="/#artikel"${current === 'artikel' ? ' aria-current="page"' : ''}>${escapeText(strings['articles.title'])}</a>
       </nav>
       <a class="btn btn-primary header-cta" href="/">${escapeText(ui.tryNow)}</a>
     </div>
@@ -205,7 +209,7 @@ function statsBar(a, url, ui) {
         </div>`;
 }
 
-function shell({ code, headHtml, strings, ui, footer, main }) {
+function shell({ code, headHtml, strings, ui, footer, main, current }) {
   const family = SCRIPT_FONT[BY_CODE[code.toLowerCase()]?.script];
   const t = { copied: ui.copied, copyPrompt: ui.copyPrompt };
   return `<!doctype html>
@@ -213,7 +217,7 @@ function shell({ code, headHtml, strings, ui, footer, main }) {
 ${headHtml}
 <body>
   <a class="skip" href="#main">${escapeText(strings.skip)}</a>
-  ${pageHeader(strings, ui)}
+  ${pageHeader(strings, ui, current)}
 
   <main id="main" tabindex="-1" class="article-page pattern-dots">
 ${main}
@@ -256,6 +260,34 @@ const ORG = {
   '@type': 'Organization', '@id': `${SITE}/#organization`, name: 'I Need Save', url: `${SITE}/`,
   logo: { '@type': 'ImageObject', url: `${SITE}/apple-touch-icon.png`, width: 180, height: 180 }, sameAs: SOCIALS,
 };
+const AUTHOR = {
+  '@type': 'Person', '@id': `${SITE}/#author`, name: 'Abid Hanan Wicaksono', url: 'https://abidhanan.my.id',
+  jobTitle: 'Web developer and creator of I Need Save', sameAs: ['https://abidhanan.my.id', ...SOCIALS], worksFor: { '@id': `${SITE}/#organization` },
+};
+
+/** The FAQ at the end of an article (an <h2> followed by <h3> questions with <p> answers) as FAQPage markup,
+ *  so search and answer engines can quote each answer. Works for every language: the structure is the same. */
+function faqEntities(body) {
+  const sections = body.split(/<h2[^>]*>/).slice(1);
+  const last = sections[sections.length - 1] || '';
+  const entities = [];
+  for (const m of last.matchAll(/<h3[^>]*>([\s\S]*?)<\/h3>\s*((?:<p[^>]*>[\s\S]*?<\/p>\s*)+)/g)) {
+    const text = (html) => html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    entities.push({ '@type': 'Question', name: text(m[1]), acceptedAnswer: { '@type': 'Answer', text: text(m[2]) } });
+  }
+  return entities;
+}
+
+/** Plain-text / Markdown rendering of an article body for llms-full.txt. */
+function bodyToMarkdown(html) {
+  return html
+    .replace(/<h2[^>]*>([\s\S]*?)<\/h2>/g, '\n## $1\n').replace(/<h3[^>]*>([\s\S]*?)<\/h3>/g, '\n### $1\n')
+    .replace(/<li[^>]*>([\s\S]*?)<\/li>/g, '- $1\n').replace(/<\/p>/g, '\n\n')
+    .replace(/<a href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/g, (_, href, label) => `[${label}](${href.startsWith('/') ? SITE + href : href})`)
+    .replace(/<(strong|b)>([\s\S]*?)<\/\1>/g, '**$2**').replace(/<(em|i)>([\s\S]*?)<\/\1>/g, '*$2*')
+    .replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\n{3,}/g, '\n\n').trim();
+}
+
 const WEBSITE = { '@type': 'WebSite', '@id': `${SITE}/#website`, name: 'I Need Save', url: `${SITE}/`, publisher: { '@id': `${SITE}/#organization` } };
 
 /** One row in the "Artikel Populer" sidebar; article.js builds the same markup when reordering. */
@@ -313,6 +345,7 @@ function articlePage(a, articles, { code, strings, ui, footer }) {
         primaryImageOfPage: { '@id': `${url}#primaryimage` },
         breadcrumb: { '@id': `${url}#breadcrumb` },
         mainEntity: { '@id': `${url}#article` },
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.post-body > p:first-of-type'] },
       },
       {
         '@type': 'Article',
@@ -328,9 +361,12 @@ function articlePage(a, articles, { code, strings, ui, footer }) {
         keywords: a.tags.join(', '),
         wordCount: words(a.body),
         mainEntityOfPage: { '@id': `${url}#webpage` },
-        author: { '@id': `${SITE}/#organization` },
+        author: { '@id': `${SITE}/#author` },
         publisher: { '@id': `${SITE}/#organization` },
+        isPartOf: { '@id': `${SITE}/#website` },
+        about: a.tags.map((t) => ({ '@type': 'Thing', name: t })),
       },
+      AUTHOR,
       {
         '@type': 'BreadcrumbList',
         '@id': `${url}#breadcrumb`,
@@ -340,9 +376,13 @@ function articlePage(a, articles, { code, strings, ui, footer }) {
           { '@type': 'ListItem', position: 3, name: a.title, item: url },
         ],
       },
+      ...(faqEntities(a.body).length ? [{ '@type': 'FAQPage', '@id': `${url}#faq`, mainEntity: faqEntities(a.body) }] : []),
     ],
   };
-  const extraMeta = `<meta property="article:published_time" content="${isoTime(a.date)}">
+  const extraMeta = `<meta name="author" content="Abid Hanan Wicaksono">
+  <link rel="author" href="https://abidhanan.my.id">
+  <meta property="article:author" content="https://abidhanan.my.id">
+  <meta property="article:published_time" content="${isoTime(a.date)}">
   <meta property="article:modified_time" content="${isoTime(a.date)}">
   <meta property="article:section" content="${escapeAttr(a.tags[0])}">
   ${a.tags.map((t) => `<meta property="article:tag" content="${escapeAttr(t)}">`).join('\n  ')}
@@ -446,6 +486,51 @@ function indexPage(articles, { code, strings, ui, footer }) {
   return shell({ code, headHtml, strings, ui, footer, main });
 }
 
+/** Privacy Policy and Terms & Conditions (content/legal/<kind>.<code>.json) in the visitor's language;
+ *  English if a translation is missing. */
+export const LEGAL_PAGES = { privacy: 'kebijakan-privasi', terms: 'syarat-ketentuan' };
+
+function legalPage(kind, { code, strings, ui, footer }) {
+  const docLang = existsSync(join(root, `content/legal/${kind}.${code}.json`)) ? code : 'en';
+  const doc = readJson(join(root, `content/legal/${kind}.${docLang}.json`));
+  const slug = LEGAL_PAGES[kind];
+  const url = `${SITE}/${slug}/`;
+  const title = strings[`footer.${kind}`];
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      ORG,
+      { '@type': 'WebPage', name: title, description: doc.description, url, inLanguage: docLang, publisher: { '@id': `${SITE}/#organization` } },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: ui.home, item: `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: title, item: url },
+        ],
+      },
+    ],
+  };
+  const main = `    <div class="container narrow legal-layout">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">${escapeText(ui.home)}</a></li>
+          <li aria-current="page">${escapeText(title)}</li>
+        </ol>
+      </nav>
+      <article class="post legal"${docLang !== code ? ` lang="${docLang}"` : ''}>
+        <header class="post-head">
+          <h1>${escapeText(docLang === code ? doc.title : title)}</h1>
+          <p class="post-meta">${CALENDAR}<span>${escapeText(doc.updated)}</span></p>
+        </header>
+        <div class="post-body legal-body">
+          ${doc.body}
+        </div>
+      </article>
+    </div>`;
+  const headHtml = head({ code, title, pageTitle: `${title} - I Need Save`, description: doc.description, url, image: `${SITE}/og-image.png?v=4`, imageAlt: 'I Need Save', jsonLd });
+  return shell({ code, headHtml, strings, ui, footer, main, current: null });
+}
+
 const xml = (s) => escapeText(s).replace(/'/g, '&apos;').replace(/"/g, '&quot;');
 
 /** Writes article pages and machine-readable discovery files for search engines and answer engines. */
@@ -465,6 +550,11 @@ export function buildArticles(articles) {
       writeFileSync(join(base, a.slug, 'index.html'), articlePage(a, list, lang));
     }
     writeFileSync(join(base, 'index.html'), indexPage(list, lang));
+    for (const [kind, slug] of Object.entries(LEGAL_PAGES)) {
+      const dir = code === 'id' ? join(root, 'public', slug) : join(root, 'public/_l', code, slug);
+      mkdirSync(dir, { recursive: true });
+      writeFileSync(join(dir, 'index.html'), legalPage(kind, lang));
+    }
   }
 
   const newest = articles[0]?.date || new Date().toISOString().slice(0, 10);
@@ -472,17 +562,31 @@ export function buildArticles(articles) {
     { loc: `${SITE}/`, lastmod: newest, priority: '1.0' },
     { loc: `${SITE}/artikel/`, lastmod: newest, priority: '0.8' },
     ...articles.map((a) => ({ loc: `${SITE}/artikel/${a.slug}/`, lastmod: a.date, priority: '0.7' })),
+    ...Object.values(LEGAL_PAGES).map((slug) => ({ loc: `${SITE}/${slug}/`, lastmod: '2026-10-21', priority: '0.3' })),
   ];
   writeFileSync(join(root, 'public/sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-${urls.map((u, index) => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><priority>${u.priority}</priority>${index > 1 ? `<image:image><image:loc>${SITE}/artikel/img/${articles[index - 2].slug}.jpg</image:loc><image:title>${xml(articles[index - 2].title)}</image:title></image:image>` : ''}</url>`).join('\n')}
+${urls.map((u, index) => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><priority>${u.priority}</priority>${index > 1 && index - 2 < articles.length ? `<image:image><image:loc>${SITE}/artikel/img/${articles[index - 2].slug}.jpg</image:loc><image:title>${xml(articles[index - 2].title)}</image:title></image:image>` : ''}</url>`).join('\n')}
 </urlset>
 `);
+  // Search and AI crawlers are welcome on the pages (never on /api/). Listing them by name makes the
+  // intent explicit for answer engines; each group repeats the rules because a named group replaces "*".
+  const AI_BOTS = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-User', 'Claude-SearchBot', 'anthropic-ai',
+    'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot', 'Applebot-Extended', 'Bingbot', 'DuckAssistBot',
+    'Meta-ExternalAgent', 'Amazonbot', 'CCBot', 'cohere-ai', 'MistralAI-User', 'YouBot'];
   writeFileSync(join(root, 'public/robots.txt'), `User-agent: *
 Allow: /
 Disallow: /api/
 
+${AI_BOTS.map((bot) => `User-agent: ${bot}\nAllow: /\nDisallow: /api/\n`).join('\n')}
 Sitemap: ${SITE}/sitemap.xml
+`);
+  mkdirSync(join(root, 'public/.well-known'), { recursive: true });
+  writeFileSync(join(root, 'public/.well-known/security.txt'), `Contact: https://abidhanan.my.id
+Expires: 2027-10-21T00:00:00.000Z
+Preferred-Languages: id, en
+Canonical: ${SITE}/.well-known/security.txt
+Policy: ${SITE}/kebijakan-privasi/
 `);
   const feedItems = articles.map((a) => ({
     id: `${SITE}/artikel/${a.slug}/`, url: `${SITE}/artikel/${a.slug}/`, title: a.title,
@@ -508,6 +612,16 @@ ${articles.map((a) => `<item><guid isPermaLink="true">${SITE}/artikel/${a.slug}/
 - [Articles](${SITE}/artikel/): Practical guides, troubleshooting, quality explanations, and responsible-use information.
 - [RSS feed](${SITE}/feed.xml): Latest article summaries in RSS 2.0.
 - [JSON feed](${SITE}/feed.json): Latest article summaries in JSON Feed 1.1.
+- [Full text of all articles](${SITE}/llms-full.txt): Every article in Markdown, in Indonesian and English.
+- [Privacy Policy](${SITE}/kebijakan-privasi/): What data is processed, cookies, analytics, and user rights.
+- [Terms & Conditions](${SITE}/syarat-ketentuan/): Permitted use, copyright responsibility, and limits of the service.
+
+## About
+
+- Created and maintained by Abid Hanan Wicaksono (https://abidhanan.my.id).
+- The site and its articles are available in 93 languages; the page language follows the visitor's browser or country. Original articles are written in Indonesian.
+- Works with public posts from TikTok, Instagram, Facebook, X (Twitter), Pinterest, and many other sites. It does not support YouTube.
+- Output options: video in several qualities, audio (original or MP3 192 kbps), and photos or thumbnails.
 
 ## Usage notes
 
@@ -518,6 +632,28 @@ ${articles.map((a) => `<item><guid isPermaLink="true">${SITE}/artikel/${a.slug}/
 ## Article guides
 
 ${articles.map((a) => `- [${a.title}](${SITE}/artikel/${a.slug}/): ${a.description}`).join('\n')}
+`);
+  const english = localizedArticles(articles, 'en');
+  const full = (list, label) => list.map((a) => `# ${a.title}
+
+URL: ${SITE}/artikel/${a.slug}/
+Language: ${label}
+Published: ${a.date}
+Topics: ${a.tags.join(', ')}
+
+${bodyToMarkdown(a.body)}
+`).join('\n---\n\n');
+  writeFileSync(join(root, 'public/llms-full.txt'), `# I Need Save: full article text
+
+> Free browser-based tool for downloading public videos, photos, and audio from social platforms. Articles below are by Abid Hanan Wicaksono. Source: ${SITE}/artikel/
+
+## Indonesian originals
+
+${full(articles, 'id')}
+
+## English translations
+
+${full(english, 'en')}
 `);
   return articles.length;
 }

@@ -1,5 +1,5 @@
 {
-  "meta.title": "I Need Save — Töltsön le videókat, fotókat és hangot bármely közösségi oldalról",
+  "meta.title": "I Need Save - Töltsön le videókat, fotókat és hangot bármely közösségi oldalról",
   "meta.description": "Töltsön le ingyenesen videókat, fotókat és hangot a TikTok, Instagram, Facebook és több száz más oldalról.",
 
   "skip": "Ugrás a tartalomra",
@@ -53,6 +53,8 @@
   "footer.madeBy": "Készítette:",
   "footer.contact": "Kapcsolat",
   "footer.description": "Töltsön le ingyenesen videókat, fotókat és hangot a TikTok, Instagram, Facebook és több száz más oldalról.",
+  "footer.privacy": "Adatvédelmi irányelvek",
+  "footer.terms": "Felhasználási feltételek",
 
   "articles.title": "Cikkek",
   "articles.description": "Tippek és útmutatók videók, fotók és hangok letöltéséhez a közösségi oldalakról.",

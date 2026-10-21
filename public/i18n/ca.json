@@ -1,5 +1,5 @@
 {
-  "meta.title": "I Need Save — Baixa vídeos, fotos i àudio de qualsevol xarxa social",
+  "meta.title": "I Need Save - Baixa vídeos, fotos i àudio de qualsevol xarxa social",
   "meta.description": "Baixa de franc vídeos, fotos i àudio de TikTok, Instagram, Facebook i centenars de llocs més.",
 
   "skip": "Salta al contingut",
@@ -53,6 +53,8 @@
   "footer.madeBy": "Fet per",
   "footer.contact": "Contacte",
   "footer.description": "Baixa de franc vídeos, fotos i àudio de TikTok, Instagram, Facebook i centenars de llocs més.",
+  "footer.privacy": "Política de privadesa",
+  "footer.terms": "Termes i condicions",
 
   "articles.title": "Articles",
   "articles.description": "Consells i guies per baixar vídeos, fotos i àudio de les xarxes socials.",

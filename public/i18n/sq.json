@@ -1,5 +1,5 @@
 {
-  "meta.title": "I Need Save — Shkarko video, foto dhe audio nga çdo rrjet social",
+  "meta.title": "I Need Save - Shkarko video, foto dhe audio nga çdo rrjet social",
   "meta.description": "Shkarko falas video, foto dhe audio nga TikTok, Instagram, Facebook dhe qindra faqe të tjera.",
 
   "skip": "Kalo te përmbajtja",
@@ -53,6 +53,8 @@
   "footer.madeBy": "Krijuar nga",
   "footer.contact": "Kontakt",
   "footer.description": "Shkarko falas video, foto dhe audio nga TikTok, Instagram, Facebook dhe qindra faqe të tjera.",
+  "footer.privacy": "Politika e privatësisë",
+  "footer.terms": "Kushtet e përdorimit",
 
   "articles.title": "Artikuj",
   "articles.description": "Këshilla dhe udhëzues për shkarkimin e videove, fotove dhe audios nga rrjetet sociale.",

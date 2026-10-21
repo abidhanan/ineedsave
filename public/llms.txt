@@ -8,6 +8,16 @@
 - [Articles](https://ineedsave.com/artikel/): Practical guides, troubleshooting, quality explanations, and responsible-use information.
 - [RSS feed](https://ineedsave.com/feed.xml): Latest article summaries in RSS 2.0.
 - [JSON feed](https://ineedsave.com/feed.json): Latest article summaries in JSON Feed 1.1.
+- [Full text of all articles](https://ineedsave.com/llms-full.txt): Every article in Markdown, in Indonesian and English.
+- [Privacy Policy](https://ineedsave.com/kebijakan-privasi/): What data is processed, cookies, analytics, and user rights.
+- [Terms & Conditions](https://ineedsave.com/syarat-ketentuan/): Permitted use, copyright responsibility, and limits of the service.
+
+## About
+
+- Created and maintained by Abid Hanan Wicaksono (https://abidhanan.my.id).
+- The site and its articles are available in 93 languages; the page language follows the visitor's browser or country. Original articles are written in Indonesian.
+- Works with public posts from TikTok, Instagram, Facebook, X (Twitter), Pinterest, and many other sites. It does not support YouTube.
+- Output options: video in several qualities, audio (original or MP3 192 kbps), and photos or thumbnails.
 
 ## Usage notes
 
