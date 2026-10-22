@@ -1,0 +1,31 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "ineedsave",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-21",
+  "workers_dev": true,
+  "preview_urls": true,
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 0.1
+  },
+  "vars": {
+    "BACKEND_ORIGIN": "https://ineedsave.vercel.app"
+  },
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": [
+      "/",
+      "/index.html",
+      "/artikel",
+      "/artikel/*",
+      "/kebijakan-privasi/*",
+      "/syarat-ketentuan/*",
+      "/api/*",
+      "/_vercel/*"
+    ]
+  }
+}
