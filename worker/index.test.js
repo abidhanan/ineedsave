@@ -35,6 +35,17 @@ test('serves a localized homepage from Accept-Language', async () => {
   assert.equal(response.headers.get('x-frame-options'), 'DENY');
 });
 
+test('respects English browser preferences before country fallback', async () => {
+  const request = new Request('https://ineedsave.com/', {
+    headers: {
+      'accept-language': 'en-US,en;q=0.9',
+      'cf-ipcountry': 'ID',
+    },
+  });
+  const response = await worker.fetch(request, environment());
+  assert.equal(await response.text(), '/_l/en');
+});
+
 test('serves translated article routes while preserving Indonesian routes', async () => {
   const translated = new Request('https://ineedsave.com/artikel/example/', {
     headers: { cookie: 'ins-lang=de' },
