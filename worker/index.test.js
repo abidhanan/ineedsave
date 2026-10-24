@@ -31,7 +31,7 @@ test('serves a localized homepage from Accept-Language', async () => {
     headers: { 'accept-language': 'fr-FR,fr;q=0.9,en;q=0.8' },
   });
   const response = await worker.fetch(request, environment());
-  assert.equal(await response.text(), '/_l/fr.html');
+  assert.equal(await response.text(), '/_l/fr');
   assert.equal(response.headers.get('x-frame-options'), 'DENY');
 });
 

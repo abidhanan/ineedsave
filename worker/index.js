@@ -48,7 +48,7 @@ function assetRequest(request, pathname) {
 async function localizedAsset(request, env, url) {
   if (url.pathname === '/' || url.pathname === '/index.html') {
     const language = languageFor(request, url);
-    return env.ASSETS.fetch(assetRequest(request, `/_l/${language}.html`));
+    return env.ASSETS.fetch(assetRequest(request, `/_l/${language}`));
   }
 
   const legal = LEGAL.exec(url.pathname);
