@@ -92,6 +92,13 @@ export default {
       return Response.redirect(url, 308);
     }
 
+    if (url.hostname === 'www.ineedsave.com') {
+      url.protocol = 'https:';
+      url.hostname = 'ineedsave.com';
+      url.port = '';
+      return Response.redirect(url, 308);
+    }
+
     let response;
     if (url.pathname === '/api/stats') {
       response = await handleStats(request, env);

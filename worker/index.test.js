@@ -20,6 +20,12 @@ test('redirects the old domain to ineedsave.com', async () => {
   assert.equal(response.headers.get('location'), 'https://ineedsave.com/artikel/?x=1');
 });
 
+test('redirects www to the canonical apex domain', async () => {
+  const response = await worker.fetch(new Request('https://www.ineedsave.com/artikel/?x=1'), environment());
+  assert.equal(response.status, 308);
+  assert.equal(response.headers.get('location'), 'https://ineedsave.com/artikel/?x=1');
+});
+
 test('serves a localized homepage from Accept-Language', async () => {
   const request = new Request('https://ineedsave.com/', {
     headers: { 'accept-language': 'fr-FR,fr;q=0.9,en;q=0.8' },
