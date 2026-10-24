@@ -10,7 +10,7 @@
     "head_sampling_rate": 0.1
   },
   "vars": {
-    "BACKEND_ORIGIN": "https://ineedsave.vercel.app"
+    "BACKEND_ORIGIN": "https://origin.ineedsave.com"
   },
   "assets": {
     "directory": "./public",
