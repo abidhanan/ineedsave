@@ -63,6 +63,15 @@
       ]
     },
     {
+      "source": "/(.*)\\.min\\.(js|css)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
       "source": "/artikel/img/(.*)",
       "headers": [
         {
