@@ -2,10 +2,11 @@
 // carousel, sitemap.xml and robots.txt from content/articles/*.json (Indonesian originals) and
 // content/articles-i18n/<code>/ (translations). Indonesian pages are written to public/artikel/,
 // every other language to public/_l/<code>/artikel/; middleware.js serves the visitor's language.
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { BY_CODE, LANGS, RTL, SCRIPT_FONT, ogLocaleTags } from '../public/languages.js';
+import { writeTextFile } from './write-text.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://ineedsave.com';
@@ -109,9 +110,7 @@ function analyticsTags() {
   const ga4 = process.env.GA4_ID?.trim() || null;
   const clarity = process.env.CLARITY_ID?.trim() || null;
   const config = ga4 || clarity ? `<script>window.INS_ANALYTICS=${JSON.stringify({ ga4, clarity })};</script>\n  ` : '';
-  return `${config}<script src="/analytics.js" defer></script>
-  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
-  <script src="/_vercel/insights/script.js" defer></script>`;
+  return `${config}<script src="/analytics.min.js?v=5" defer></script>`;
 }
 
 function scriptFontTags(code) {
@@ -159,7 +158,7 @@ function head({ code, title, pageTitle = `${title} - I Need Save`, description, 
   <link rel="icon" href="/favicon-dark.png?v=3" type="image/png" sizes="48x48" media="(prefers-color-scheme: dark)">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
   <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/style.css">${scriptFontTags(code)}
+  <link rel="stylesheet" href="/style.min.css?v=5">${scriptFontTags(code)}
   <script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>
 </head>`;
 }
@@ -227,7 +226,7 @@ ${footer}
 
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
   <script>window.INS_T=${JSON.stringify(t).replace(/</g, '\\u003c')};</script>
-  <script src="/article.js" defer></script>
+  <script src="/article.min.js?v=5" defer></script>
   ${analyticsTags()}
 </body>
 </html>
@@ -547,13 +546,13 @@ export function buildArticles(articles) {
     const base = code === 'id' ? join(root, 'public/artikel') : join(root, 'public/_l', code, 'artikel');
     for (const a of list) {
       mkdirSync(join(base, a.slug), { recursive: true });
-      writeFileSync(join(base, a.slug, 'index.html'), articlePage(a, list, lang));
+      writeTextFile(join(base, a.slug, 'index.html'), articlePage(a, list, lang));
     }
-    writeFileSync(join(base, 'index.html'), indexPage(list, lang));
+    writeTextFile(join(base, 'index.html'), indexPage(list, lang));
     for (const [kind, slug] of Object.entries(LEGAL_PAGES)) {
       const dir = code === 'id' ? join(root, 'public', slug) : join(root, 'public/_l', code, slug);
       mkdirSync(dir, { recursive: true });
-      writeFileSync(join(dir, 'index.html'), legalPage(kind, lang));
+      writeTextFile(join(dir, 'index.html'), legalPage(kind, lang));
     }
   }
 
@@ -564,7 +563,7 @@ export function buildArticles(articles) {
     ...articles.map((a) => ({ loc: `${SITE}/artikel/${a.slug}/`, lastmod: a.date, priority: '0.7' })),
     ...Object.values(LEGAL_PAGES).map((slug) => ({ loc: `${SITE}/${slug}/`, lastmod: '2026-10-21', priority: '0.3' })),
   ];
-  writeFileSync(join(root, 'public/sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
+  writeTextFile(join(root, 'public/sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${urls.map((u, index) => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><priority>${u.priority}</priority>${index > 1 && index - 2 < articles.length ? `<image:image><image:loc>${SITE}/artikel/img/${articles[index - 2].slug}.jpg</image:loc><image:title>${xml(articles[index - 2].title)}</image:title></image:image>` : ''}</url>`).join('\n')}
 </urlset>
@@ -574,7 +573,7 @@ ${urls.map((u, index) => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastm
   const AI_BOTS = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-User', 'Claude-SearchBot', 'anthropic-ai',
     'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot', 'Applebot-Extended', 'Bingbot', 'DuckAssistBot',
     'Meta-ExternalAgent', 'Amazonbot', 'CCBot', 'cohere-ai', 'MistralAI-User', 'YouBot'];
-  writeFileSync(join(root, 'public/robots.txt'), `User-agent: *
+  writeTextFile(join(root, 'public/robots.txt'), `User-agent: *
 Allow: /
 Disallow: /api/
 
@@ -582,7 +581,7 @@ ${AI_BOTS.map((bot) => `User-agent: ${bot}\nAllow: /\nDisallow: /api/\n`).join('
 Sitemap: ${SITE}/sitemap.xml
 `);
   mkdirSync(join(root, 'public/.well-known'), { recursive: true });
-  writeFileSync(join(root, 'public/.well-known/security.txt'), `Contact: https://abidhanan.my.id
+  writeTextFile(join(root, 'public/.well-known/security.txt'), `Contact: https://abidhanan.my.id
 Expires: 2027-10-21T00:00:00.000Z
 Preferred-Languages: id, en
 Canonical: ${SITE}/.well-known/security.txt
@@ -593,16 +592,16 @@ Policy: ${SITE}/kebijakan-privasi/
     summary: a.description, image: `${SITE}/artikel/img/${a.slug}.jpg`, date_published: isoTime(a.date),
     tags: a.tags, language: 'id',
   }));
-  writeFileSync(join(root, 'public/feed.json'), `${JSON.stringify({
+  writeTextFile(join(root, 'public/feed.json'), `${JSON.stringify({
     version: 'https://jsonfeed.org/version/1.1', title: 'I Need Save Articles', home_page_url: `${SITE}/artikel/`,
     feed_url: `${SITE}/feed.json`, description: 'Panduan mengunduh video, foto, dan audio dari media sosial.', language: 'id', items: feedItems,
   }, null, 2)}\n`);
-  writeFileSync(join(root, 'public/feed.xml'), `<?xml version="1.0" encoding="UTF-8"?>
+  writeTextFile(join(root, 'public/feed.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel><title>I Need Save Articles</title><link>${SITE}/artikel/</link><description>Panduan mengunduh video, foto, dan audio dari media sosial.</description><language>id</language>
 ${articles.map((a) => `<item><guid isPermaLink="true">${SITE}/artikel/${a.slug}/</guid><title>${xml(a.title)}</title><link>${SITE}/artikel/${a.slug}/</link><description>${xml(a.description)}</description><pubDate>${new Date(isoTime(a.date)).toUTCString()}</pubDate></item>`).join('\n')}
 </channel></rss>
 `);
-  writeFileSync(join(root, 'public/llms.txt'), `# I Need Save
+  writeTextFile(join(root, 'public/llms.txt'), `# I Need Save
 
 > I Need Save is a free browser-based tool for downloading publicly accessible videos, photos, and audio from supported social platforms. No account or app is required.
 
@@ -643,7 +642,7 @@ Topics: ${a.tags.join(', ')}
 
 ${bodyToMarkdown(a.body)}
 `).join('\n---\n\n');
-  writeFileSync(join(root, 'public/llms-full.txt'), `# I Need Save: full article text
+  writeTextFile(join(root, 'public/llms-full.txt'), `# I Need Save: full article text
 
 > Free browser-based tool for downloading public videos, photos, and audio from social platforms. Articles below are by Abid Hanan Wicaksono. Source: ${SITE}/artikel/
 

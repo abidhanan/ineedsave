@@ -7,6 +7,7 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
+    "check:no-emdash": "node scripts/check-no-emdash.mjs",
     "cloudflare:dev": "wrangler dev",
     "cloudflare:deploy": "npm run build && wrangler deploy",
     "test:worker": "node --test worker/index.test.js"
@@ -17,6 +18,7 @@
     "undici": "^7.30.0"
   },
   "devDependencies": {
+    "esbuild": "^0.28.2",
     "wrangler": "^4.151.3"
   },
   "allowScripts": {

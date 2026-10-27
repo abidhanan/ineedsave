@@ -2,7 +2,7 @@
 // language, scripts/build.mjs renders one HTML file per language) with its strings embedded in
 // window.I18N_BOOT, so nothing is fetched on load. This file only powers t() for app.js and the
 // language picker, which switches the page in place and remembers the choice in a cookie.
-import { BY_CODE, LANGS, RTL, SCRIPT_FONT, flagSrc } from '/languages.js';
+import { BY_CODE, LANGS, RTL, SCRIPT_FONT, flagSrc } from './languages.js';
 
 const COOKIE = 'ins-lang';
 const boot = window.I18N_BOOT || { lang: 'en', strings: {} };
