@@ -1,11 +1,14 @@
 // Renders templates/index.html once per language into public/_l/<code>.html (and public/index.html
 // in English). middleware.js serves the right file for each visitor, so the page shows up already
 // translated, without waiting for JavaScript.
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildSync } from 'esbuild';
 import { BY_CODE, LANGS, RTL, SCRIPT_FONT, flagSrc, ogLocaleTags } from '../public/languages.js';
 import { buildArticles, homeCards, loadArticles, localizedArticles } from './build-articles.mjs';
+import { assertNoEmDash } from './check-no-emdash.mjs';
+import { writeTextFile } from './write-text.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://ineedsave.com';
@@ -13,6 +16,31 @@ const articles = loadArticles();
 const template = readFileSync(join(root, 'templates/index.html'), 'utf8');
 const outDir = join(root, 'public/_l');
 mkdirSync(outDir, { recursive: true });
+
+buildSync({
+  entryPoints: {
+    i18n: join(root, 'public/i18n.js'),
+    app: join(root, 'public/app.js'),
+    article: join(root, 'public/article.js'),
+    analytics: join(root, 'public/analytics.js'),
+  },
+  outdir: join(root, 'public'),
+  entryNames: '[name].min',
+  bundle: true,
+  minify: true,
+  format: 'iife',
+  target: ['es2020'],
+  logLevel: 'silent',
+});
+buildSync({
+  entryPoints: { style: join(root, 'public/style.css') },
+  outdir: join(root, 'public'),
+  entryNames: '[name].min',
+  bundle: true,
+  minify: true,
+  external: ['/fonts/*'],
+  logLevel: 'silent',
+});
 
 const escapeText = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const escapeAttr = (s) => escapeText(s).replace(/"/g, '&quot;');
@@ -39,20 +67,25 @@ function homeStructuredData(code, t) {
         logo: { '@type': 'ImageObject', url: `${SITE}/apple-touch-icon.png`, width: 180, height: 180 },
         sameAs: ['https://github.com/abidhanan', 'https://www.instagram.com/ahawi_channel', 'https://youtube.com/@ahawichannel', 'https://x.com/ahawi_channel'],
       },
-      { '@type': 'WebSite', '@id': `${SITE}/#website`, name: 'I Need Save', url: `${SITE}/`, publisher: { '@id': `${SITE}/#organization` }, inLanguage: code },
+      {
+        '@type': 'WebSite', '@id': `${SITE}/#website`, name: 'I Need Save', alternateName: 'I Need Save Downloader',
+        url: `${SITE}/`, description: t('meta.description'), publisher: { '@id': `${SITE}/#organization` }, inLanguage: code,
+      },
       {
         '@type': 'WebPage', '@id': `${SITE}/#webpage`, url: `${SITE}/`, name: t('meta.title'),
         description: t('meta.description'), inLanguage: code, isPartOf: { '@id': `${SITE}/#website` },
         about: { '@id': `${SITE}/#app` }, mainEntity: [{ '@id': `${SITE}/#app` }, { '@id': `${SITE}/#howto` }, { '@id': `${SITE}/#faq` }],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.hero h1', '.hero .lead', '#faq'] },
       },
       {
         '@type': 'WebApplication', '@id': `${SITE}/#app`, name: 'I Need Save', url: `${SITE}/`,
         description: t('meta.description'), applicationCategory: 'MultimediaApplication', operatingSystem: 'Any',
         browserRequirements: 'Requires a modern web browser', isAccessibleForFree: true,
+        featureList: [t('hero.title'), t('how.step3.text')],
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, publisher: { '@id': `${SITE}/#organization` },
       },
-      { '@type': 'HowTo', '@id': `${SITE}/#howto`, name: t('how.title'), description: t('hero.lead'), totalTime: 'PT1M', step: steps },
-      { '@type': 'FAQPage', '@id': `${SITE}/#faq`, mainEntity: faq },
+      { '@type': 'HowTo', '@id': `${SITE}/#howto`, name: t('how.title'), description: t('hero.lead'), inLanguage: code, totalTime: 'PT1M', step: steps },
+      { '@type': 'FAQPage', '@id': `${SITE}/#faq`, inLanguage: code, mainEntity: faq },
     ],
   };
 }
@@ -111,7 +144,7 @@ function render(code) {
   const analyticsConfig = analytics.ga4 || analytics.clarity
     ? `<script>window.INS_ANALYTICS=${JSON.stringify(analytics).replace(/</g, '\\u003c')};</script>\n  `
     : '';
-  html = html.replace('<!--ANALYTICS-->', `${analyticsConfig}<script src="/analytics.js" defer></script>`);
+  html = html.replace('<!--ANALYTICS-->', `${analyticsConfig}<script src="/analytics.min.js?v=5" defer></script>`);
 
   const boot = JSON.stringify({ lang: code, strings }).replace(/</g, '\\u003c');
   html = html.replace('<!--I18N_BOOT-->', `<script>window.I18N_BOOT=${boot};</script>`);
@@ -120,8 +153,9 @@ function render(code) {
 
 for (const { code } of LANGS) {
   const html = render(code);
-  writeFileSync(join(outDir, `${code}.html`), html);
-  if (code === 'en') writeFileSync(join(root, 'public/index.html'), html);
+  writeTextFile(join(outDir, `${code}.html`), html);
+  if (code === 'en') writeTextFile(join(root, 'public/index.html'), html);
 }
 console.log(`built ${LANGS.length} language pages`);
 console.log(`built ${buildArticles(articles)} articles, sitemap.xml and robots.txt`);
+assertNoEmDash();

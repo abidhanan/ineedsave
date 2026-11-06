@@ -201,15 +201,14 @@ export function match(tag) {
 }
 
 /**
- * The visitor's own choice wins, then a non-English browser language, then the main language of
- * their country (e.g. an English phone in India gets Hindi), then English.
+ * The visitor's own choice wins, then the browser's preferred supported language, then the main
+ * language of their country, then English.
  */
 export function pickLanguage({ choice, acceptLanguage, country }) {
   const chosen = match(choice);
   if (chosen) return chosen;
   const browser = (acceptLanguage || '').split(',').map((part) => match(part.split(';')[0])).filter(Boolean);
-  const nonEnglish = browser.find((code) => code !== 'en');
-  if (nonEnglish) return nonEnglish;
+  if (browser[0]) return browser[0];
   return COUNTRY_LANG[(country || '').toUpperCase()] || 'en';
 }
 
