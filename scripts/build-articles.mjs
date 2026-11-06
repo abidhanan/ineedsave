@@ -158,7 +158,7 @@ function head({ code, title, pageTitle = `${title} - I Need Save`, description, 
   <link rel="icon" href="/favicon-dark.png?v=3" type="image/png" sizes="48x48" media="(prefers-color-scheme: dark)">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
   <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/style.min.css?v=5">${scriptFontTags(code)}
+  <link rel="stylesheet" href="/style.min.css?v=6">${scriptFontTags(code)}
   <script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>
 </head>`;
 }
